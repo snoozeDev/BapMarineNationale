@@ -13,3 +13,9 @@ html,body {
 	text-align: center;
 	box-shadow: 0 0px 0px rgba(0,0,0,0);
 }
+.hide {
+	display: none;
+}
+.show {
+	display: block;
+}
