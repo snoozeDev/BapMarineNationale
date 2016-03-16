@@ -3,23 +3,27 @@
         <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
         <link rel="stylesheet" href="http://cdn.leafletjs.com/leaflet-0.7.3/leaflet.css" />
         <link rel="stylesheet" type="text/css" href="css/style.css">
-        <script type="text/javascript" src="scripts/leaflet.label.js"></script>
+        <link rel="stylesheet" href="../dist/leaflet.label.css" />
+        <!--<script type="text/javascript" src="scripts/leaflet.label.js"></script>-->
         <script type="text/javascript" src="http://cdn.leafletjs.com/leaflet-0.7.3/leaflet.js"></script>
         <script src="//code.jquery.com/jquery-1.12.0.min.js"></script>
-        <script type="text/javascript" src="MovingMarker.js"></script>
-        <script type="text/javascript" src="js/map.js"></script>
-        <!--<script type="text/javascript" src="js/test.js"></script>-->
+        <script src='https://api.mapbox.com/mapbox.js/plugins/leaflet-label/v0.2.1/leaflet.label.js'></script>
+<link href='https://api.mapbox.com/mapbox.js/plugins/leaflet-label/v0.2.1/leaflet.label.css' rel='stylesheet' />
+        
+        
+        
 
-        <!--<link href='https://api.mapbox.com/mapbox.js/plugins/leaflet-draw/v0.2.3/leaflet.draw.css' rel='stylesheet' />
-<script src='https://api.mapbox.com/mapbox.js/plugins/leaflet-draw/v0.2.3/leaflet.draw.js'></script>-->
+        <link href='https://api.mapbox.com/mapbox.js/plugins/leaflet-draw/v0.2.3/leaflet.draw.css' rel='stylesheet' />
+        <script src='https://api.mapbox.com/mapbox.js/plugins/leaflet-draw/v0.2.3/leaflet.draw.js'></script>
     </head>
  
-    <body>
-        <div id="profondeur">Montre moi ces putains de profondeur !</div> 
+    <body onload="initialize()">
+        <button id="profondeur">Montre moi ces putains de profondeur !</button> 
         <div id="map"></div>
 
 
-
+        <script type="text/javascript" src="js/map.js"></script>
+        <script type="text/javascript" src="js/test.js"></script>
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
 
     </body>
