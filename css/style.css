@@ -1,3 +1,4 @@
+
 html,body {
 	width: 100%;
 	height: 100%;
@@ -5,8 +6,19 @@ html,body {
 	padding: 0;
 }
 #map {
-	width: 100%;
-	height: 90%;
+	width: 80%;
+	height: 100%;
+	display: inline-block;
+	vertical-align: top;
+}
+.settings {
+
+	width: 19%;
+	display: inline-block;
+	vertical-align: top;
+}
+.settings h1 {
+	text-align: center;
 }
 .leaflet-popup-content-wrapper, .leaflet-popup-tip {
 	background: transparent;
@@ -18,4 +30,14 @@ html,body {
 }
 .show {
 	display: block;
+}
+
+.pop_up {
+	z-index: 1000;
+	position: absolute;
+	background-color: red;
+	width: 50%;
+	margin-left: 25%;
+	height: 60%;
+	margin-top: 10%;
 }
