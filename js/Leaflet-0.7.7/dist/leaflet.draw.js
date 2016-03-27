@@ -6,6 +6,8 @@
 	http://leafletjs.com
 	https://github.com/jacobtoye
 */
+
+
 ! function(t, e) {
     L.drawVersion = "0.2.4-dev",
         L.drawLocal = {
@@ -108,6 +110,9 @@
                 this._map = t, this._container = t._container, this._overlayPane = t._panes.overlayPane, this._popupPane = t._panes.popupPane, e && e.shapeOptions && (e.shapeOptions = L.Util.extend({}, this.options.shapeOptions, e.shapeOptions)), L.setOptions(this, e)
             },
             enable: function() {
+
+               
+                
                 this._enabled || (L.Handler.prototype.enable.call(this), this.fire("enabled", {
                     handler: this.type
                 }), this._map.fire("draw:drawstart", {
@@ -149,7 +154,7 @@
                 allowIntersection: !0,
                 repeatMode: !1,
                 drawError: {
-                    color: "#b00b00",
+                    color: "#FF0000",
                     timeout: 2500
                 },
                 icon: new L.DivIcon({
@@ -160,7 +165,7 @@
                 maxGuideLineLength: 4e3,
                 shapeOptions: {
                     stroke: !0,
-                    color: "#f06eaa",
+                    color:  "#FF0000",
                     weight: 4,
                     opacity: .5,
                     fill: !1,
@@ -977,6 +982,7 @@
                 this._toolbarClass = "leaflet-draw-draw", L.Toolbar.prototype.initialize.call(this, t)
             },
             getModeHandlers: function(t) {
+
                 return [{
                     enabled: this.options.polyline,
                     handler: new L.Draw.Polyline(t, this.options.polyline),

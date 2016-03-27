@@ -4,8 +4,8 @@
 
        <!--  <link rel="stylesheet" href="http://cdn.leafletjs.com/leaflet-0.7.3/leaflet.css" /> -->
         <link rel="stylesheet" type="text/css" href="css/style.css">
-        <link href='js/Leaflet-0.7.7/leaflet.label.css' rel='stylesheet' />
-        <link href='js/Leaflet-0.7.7/dist/leaflet.draw.css' rel='stylesheet' />
+        <link href='js/Leaflet-0.7.7/dist/leaflet.label.css' rel='stylesheet' />
+        <!--<link href='js/Leaflet-0.7.7/dist/leaflet.draw.css' rel='stylesheet' />-->
 
         <!--<script type="text/javascript" src="scripts/leaflet.label.js"></script>-->
         <link rel="stylesheet" href="js/Leaflet-0.7.7/leaflet.css" />
@@ -21,21 +21,36 @@
     <body onload="initialize()">
 
         <div id="map">
-            <div id="ajout" class="pop_up hide">
-                <p>aaaaaaaaaaaaaaaaaaaaaaaaaaaaaa</p>
-            </div>
+            
         </div>
         <div class="settings">
             <h1 id="ll">Paramètres</h1>
             <button id="profondeur">Cacher les profondeurs</button> 
-            <button id="drawPolygon">Draw</button>
+            <button id="drawPolygon">Draw Poly</button>
             <button id="stopDraw">Finish Drawing</button>
+            <button id="drawCircle">Draw Circle</button>
+            <button id="stopDrawCircle">Finish Drawing</button>
+            <button id="drawPolyline">Draw Polyline</button>
+            <button id="stopDrawPolyline">Finish Drawing</button>
+            <button id="drawTrajet">Draw Trajet</button>
+            <button id="stopDrawTrajet">Finish Drawing</button>
+            <div id="ajout_pins" class="pop_up hide">
+               <form>
+                <p id="bleu">bleu</p>
+                <p id="rouge">Rouge</p>
+                <p id="valider">Valider</p>
+               </form>
+            </div>
         </div>
-
+        
         <script type="text/javascript" src="js/map.js"></script>
+       
         <script src="js/Leaflet-0.7.7/leaflet.js"></script> 
         <script src='js/Leaflet-0.7.7/dist/leaflet.label.js'></script>
-        <script src='js/Leaflet-0.7.7/dist/leaflet.draw.js'></script>
+        <!--<script src='js/Leaflet-0.7.7/dist/leaflet.draw.js'></script>-->
+         <!--<script src="js/plugindraw.js"></script>-->
+         <script src="js/MovingMarker.js"></script>
+        
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
 
 
