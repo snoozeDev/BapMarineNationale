@@ -31,13 +31,31 @@ html,body {
 .show {
 	display: block;
 }
-
-.pop_up {
+.pop_up_inv {
+	height: 100%;
 	z-index: 1000;
 	position: absolute;
-	background-color: red;
-	width: 100%;
+	width: 80%;
+	background-color: rgba(0,0,0,0.2);
+	margin: 0;
+	padding: 0;
+}
+.pop_up {
+	z-index: 1000;
+	
+	background-color: rgba(255,255,255,0.9);
+	width: 60%;
 	
 	height: 60%;
 	margin-top: 10%;
+	margin-left: 20%;
+}
+#toolbar{
+	position: absolute;
+	top :25%;
+	left:1%;
+	width: 5%;
+}
+#toolbar img {
+	width: 100%;
 }

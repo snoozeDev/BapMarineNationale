@@ -20,8 +20,29 @@
  
     <body onload="initialize()">
 
+        <div id="ajout_pins" class="pop_up_inv hide"><div  class="pop_up">
+               <form>
+                <p id="bleu">bleu</p>
+                <p id="rouge">Rouge</p>
+                <p id="valider">Valider</p>
+               </form>
+        </div></div>
+        <div id="ajout_bateau" class="pop_up_inv hide"><div  class="pop_up">
+               <form>
+                <p id="bleu">bleu</p>
+                <p id="rouge">Rouge</p>
+                <a href="#" id="drawTrajet">Draw Trajet</a>
+                
+               </form>
+        </div></div>
         <div id="map">
+
+
             
+        </div>
+        <div id="toolbar">
+            <div class="forme" id="bateau"> <img src="image/bateau.png"></div>
+            <div class="forme" id="forme"> <img src=""></div>
         </div>
         <div class="settings">
             <h1 id="ll">Paramètres</h1>
@@ -32,16 +53,9 @@
             <button id="stopDrawCircle">Finish Drawing</button>
             <button id="drawPolyline">Draw Polyline</button>
             <button id="stopDrawPolyline">Finish Drawing</button>
-            <button id="drawTrajet">Draw Trajet</button>
-            <button id="stopDrawTrajet">Finish Drawing</button>
-            <div id="ajout_pins" class="pop_up hide">
-               <form>
-                <p id="bleu">bleu</p>
-                <p id="rouge">Rouge</p>
-                <p id="valider">Valider</p>
-               </form>
-            </div>
-        </div>
+            <button class="hide" id="stopDrawTrajet">Fin du trajet</button>
+            
+                    </div>
         
         <script type="text/javascript" src="js/map.js"></script>
        
