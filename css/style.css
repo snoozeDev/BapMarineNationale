@@ -55,7 +55,7 @@ html,body {
 	background-color: rgba(255,255,255,0.9);
 	width: 80%;
 	
-	height: 60%;
+	min-height: 60%;
 	margin-top: 10%;
 	margin-left: 10%;
 }
@@ -90,4 +90,26 @@ html,body {
   margin: 1%;
 
 
+}
+.formulaire {
+	min-height: 50%;
+	position: relative;
+}
+.ajouter {
+	position: absolute;
+	bottom: 0;
+	left:40%;
+	width: 20%;
+	text-align: center;
+  -webkit-border-radius: 0;
+  -moz-border-radius: 0;
+  border-radius: 0px;
+  font-family: Arial;
+  color: #242424;
+  font-size: 15px;
+  background: #abbfcc;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  border: solid #1f628d 2px;
+  text-decoration: none;
 }

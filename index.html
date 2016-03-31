@@ -24,11 +24,11 @@
                <form>
                 <div id="selecteur"><a class="btn" id="btn_text">Texte</a><a class="btn" id="btn_circle">Cercle</a><a class="btn" id="btn_polygone">Polygone</a><a class="btn" id="btn_polyline">Lignes</a></div>
                 <div id="form_text" class="formulaire hide">
-                    <h2>Informations:</h2>
-                    <input id="label_text" placeholder="Votre texte">
+                    <h2>Ecrire sur la carte</h2>
+                    <input id="label_text" placeholder="Votre texte"><br><br>
                     
                     
-                    <a href="#" id="drawText">Créer Texte</a>
+                    <a href="#" class="ajouter"  id="drawText">Ajouter texte</a>
                     
                 </div>
                 <div id="form_circle" class="formulaire hide">
@@ -41,19 +41,19 @@
                       <option value="50000">Grand</option>
                     </select><br>
                     <p class="align">Texte (optionnel) <input id="label_circle" placeholder="texte à l'intérieur du cercle"></p><br>
-                    <a href="#" id="drawCircle">Créer Cercle</a>
+                    <a href="#" class="ajouter"  id="drawCircle">Ajouter Cercle</a>
                     
                 </div>
                 <div id="form_polygone" class="formulaire hide">
                     <h2>Créer un polygone</h2>
                     <p>Taille du polygone</p>
-                    <a href="#" id="drawPolygon">Draw Polygone</a>
+                    <a href="#"  class="ajouter" id="drawPolygon">Ajouter Polygone</a>
                     
                 </div>
                 <div id="form_polyline" class="formulaire hide">
                     <h2>Créer une ligne</h2>
                     <p>Taille du ligne</p>
-                     <a href="#" id="drawPolyline">Draw Polyline</a>
+                     <a href="#" class="ajouter"  id="drawPolyline">Ajouter Polyline</a>
                     
                 </div>
                 
@@ -63,12 +63,12 @@
                </form>
         </div></div>
         <div id="ajout_bateau" class="pop_up_inv hide"><div  class="pop_up">
-               <form>
+               <div class="formulaire">
                 <p id="bleu">bleu</p>
                 <p id="rouge">Rouge</p>
-                <a href="#" id="drawTrajet">Draw Trajet</a>
+                <a href="#" class="ajouter" id="drawTrajet">Ajouter Trajet</a>
                 
-               </form>
+               </div>
         </div></div>
         <div id="map">
 
