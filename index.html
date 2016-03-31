@@ -22,9 +22,35 @@
 
         <div id="ajout_pins" class="pop_up_inv hide"><div  class="pop_up">
                <form>
-                <p id="bleu">bleu</p>
-                <p id="rouge">Rouge</p>
-                <p id="valider">Valider</p>
+                <div id="selecteur"><a class="btn" id="btn_text">Texte</a><a class="btn" id="btn_circle">Cercle</a><a class="btn" id="btn_polygone">Polygone</a><a class="btn" id="btn_polyline">Lignes</a></div>
+                <div id="form_text" class="formulaire hide">
+                    <h2>Informations:</h2>
+                    <p>Taille du cercle</p>
+                    <a href="#" id="drawTexte">Créer Texte</a>
+                    
+                </div>
+                <div id="form_circle" class="formulaire hide">
+                    <h2>Créer un cercle</h2>
+                    <p>Taille du cercle</p>
+                    <a href="#" id="drawCircle">Créer Cercle</a>
+                    
+                </div>
+                <div id="form_polygone" class="formulaire hide">
+                    <h2>Créer un polygone</h2>
+                    <p>Taille du polygone</p>
+                    <a href="#" id="drawPolygon">Draw Polygone</a>
+                    
+                </div>
+                <div id="form_polyline" class="formulaire hide">
+                    <h2>Créer une ligne</h2>
+                    <p>Taille du ligne</p>
+                     <a href="#" id="drawPolyline">Draw Polyline</a>
+                    
+                </div>
+                
+                
+               
+
                </form>
         </div></div>
         <div id="ajout_bateau" class="pop_up_inv hide"><div  class="pop_up">
@@ -42,18 +68,15 @@
         </div>
         <div id="toolbar">
             <div class="forme" id="bateau"> <img src="image/bateau.png"></div>
-            <div class="forme" id="forme"> <img src=""></div>
+            <div class="forme" id="forme"> <img src="image/forme.png"></div>
         </div>
         <div class="settings">
             <h1 id="ll">Paramètres</h1>
             <button id="profondeur">Cacher les profondeurs</button> 
-            <button id="drawPolygon">Draw Poly</button>
-            <button id="stopDraw">Finish Drawing</button>
-            <button id="drawCircle">Draw Circle</button>
-            <button id="stopDrawCircle">Finish Drawing</button>
-            <button id="drawPolyline">Draw Polyline</button>
-            <button id="stopDrawPolyline">Finish Drawing</button>
-            <button class="hide" id="stopDrawTrajet">Fin du trajet</button>
+            
+            <button class="hide btn_finish" id="stopDraw">Finish Drawing Polygon</button>
+            <button class="hide btn_finish" id="stopDrawPolyline">Finish Drawing Polyline</button>
+            <button class="hide btn_finish" id="stopDrawTrajet">Fin du trajet</button>
             
                     </div>
         
