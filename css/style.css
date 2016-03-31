@@ -91,6 +91,14 @@ html,body {
 
 
 }
+#play {
+	z-index: 1000;
+	position: absolute;
+	bottom: 5px;
+	width: 10%;
+	left:30%;
+	text-align: center;
+}
 .formulaire, .formulaire_bat {
 	min-height: 50%;
 	position: relative;
