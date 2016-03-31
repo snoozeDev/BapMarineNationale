@@ -26,11 +26,19 @@ html,body {
 	text-align: center;
 	box-shadow: 0 0px 0px rgba(0,0,0,0);
 }
+.text {
+	background: transparent;
+	text-align: center;
+	box-shadow: 0 0px 0px rgba(0,0,0,0);
+}
 .hide {
 	display: none;
 }
 .show {
 	display: block;
+}
+.align {
+	display: inline-block;
 }
 .pop_up_inv {
 	height: 100%;
@@ -45,11 +53,11 @@ html,body {
 	z-index: 1000;
 	
 	background-color: rgba(255,255,255,0.9);
-	width: 60%;
+	width: 80%;
 	
 	height: 60%;
 	margin-top: 10%;
-	margin-left: 20%;
+	margin-left: 10%;
 }
 #toolbar{
 	position: absolute;
