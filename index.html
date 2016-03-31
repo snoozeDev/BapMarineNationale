@@ -52,8 +52,14 @@
                     
                 </div>
                 <div id="form_polygone" class="formulaire hide">
-                    <h2>Créer un polygone</h2>
-                    <p>Taille du polygone</p>
+                    <h2>Créer une forme</h2>
+                    <p class="align">Couleur de la forme</p>
+                    <select class="align" id="color_polygone" name="color_polygone">
+                      <option value="blue">bleu</option>
+                      <option value="red">rouge</option>
+                      <option value="green">vert</option>
+                      <option value="gray">gris</option>
+                    </select><br>
                     <a href="#"  class="ajouter" id="drawPolygon">Ajouter Polygone</a>
                     
                 </div>
@@ -70,7 +76,7 @@
                </form>
         </div></div>
         <div id="ajout_bateau" class="pop_up_inv hide"><div  class="pop_up">
-               <div class="formulaire">
+               <div class="formulaire_bat">
                 <p id="bleu">bleu</p>
                 <p id="rouge">Rouge</p>
                 <a href="#" class="ajouter" id="drawTrajet">Ajouter Trajet</a>

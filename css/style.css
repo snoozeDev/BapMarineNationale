@@ -91,7 +91,7 @@ html,body {
 
 
 }
-.formulaire {
+.formulaire, .formulaire_bat {
 	min-height: 50%;
 	position: relative;
 }
