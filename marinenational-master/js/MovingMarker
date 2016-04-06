@@ -1,0 +1,4 @@
+var myMovingMarker = L.Marker.movingMarker([[48.8567, 2.3508],[50.45, 30.523333]],
+                        [20000]).addTo(map);
+//...
+myMovingMarker.start();
