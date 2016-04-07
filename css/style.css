@@ -11,6 +11,7 @@ html,body {
 	height: 100%;
 	display: inline-block;
 	vertical-align: top;
+  
 }
 .settings {
 
@@ -98,6 +99,16 @@ html,body {
 	width: 10%;
 	left:30%;
 	text-align: center;
+}
+#boussole{
+    height: 150px;
+    z-index: 1000;
+	position: absolute;
+	bottom: 1.5%;
+	width: 150px;
+	left:1.5%;
+	text-align: center;
+    background-image: url(../image/boussole.png);
 }
 .formulaire, .formulaire_bat {
 	min-height: 50%;

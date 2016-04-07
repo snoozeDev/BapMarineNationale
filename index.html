@@ -4,11 +4,11 @@
 
         <link rel="stylesheet" type="text/css" href="css/style.css">
         <link rel="stylesheet" href="js/Leaflet-0.7.7/leaflet.css" />
+        <script src='https://api.mapbox.com/mapbox.js/v2.4.0/mapbox.js'></script>
         
-        
-        
-        
-        
+       
+
+<link href='https://api.mapbox.com/mapbox.js/plugins/leaflet-fullscreen/v1.0.1/leaflet.fullscreen.css' rel='stylesheet' />
 
         
     </head>
@@ -80,20 +80,21 @@
                <div class="formulaire_bat">
                 <p>Type de déplacement</p>
                 <select class="align" id="type_bateau" name="type_bateau">
-                      <option value="bateau">bateau</option>
+                      <option value="porte-avion">porte-avion</option>
+                      <option value="cuirasse">cuirasse</option>
+                      <option value="destroyer">destroyer</option>
                       <option value="helico">helico</option>
+                      <option value="avion">avion</option>
                 </select><br>
                 <select class="align" id="vitesse_bateau" name="vitesse_bateau">
                       <option value="1.8">lente</option>
                       <option value="1">moyenne</option>
                       <option value="0.5">rapide</option>
-                      <option value="0.1">pédalo magique</option>
                 </select><br>
                 <select class="align" id="color_bateau" name="color_bateau">
-                      <option value="blue">Alié</option>
+                      <option value="blue">Allié</option>
                       <option value="green">Neutre</option>
-                      <option value="red">Enemié</option>
-                      <option value="black">Pédalo magique</option>
+                      <option value="red">Ennemi</option>
                 </select><br>
                 <a href="#" class="ajouter" id="drawTrajet">Ajouter Trajet</a>
                 
@@ -102,6 +103,7 @@
         <div>
           <a href="#" id="play" class="btn">LANCER</a>
         </div>
+        <div id="boussole"><img style="height:100%;width:100%" src="image/boussole.png"></div>
         <div id="map">
 
 
@@ -122,10 +124,13 @@
             
                     </div>
         
-        
         <script type="text/javascript" src="js/map.js"></script>
         <script src="js/Leaflet-0.7.7/leaflet.js"></script> 
         <script src="js/MovingMarker.js"></script>
+                   
+        <script src='https://api.mapbox.com/mapbox.js/plugins/leaflet-fullscreen/v1.0.1/Leaflet.fullscreen.min.js'></script>
+<link href='https://api.mapbox.com/mapbox.js/plugins/leaflet-fullscreen/v1.0.1/leaflet.fullscreen.css' rel='stylesheet' />
+      
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
 
 
