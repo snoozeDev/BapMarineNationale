@@ -78,7 +78,8 @@
         </div></div>
         <div id="ajout_bateau" class="pop_up_inv hide"><div  class="pop_up">
                <div class="formulaire_bat">
-                <p>Type de déplacement</p>
+                <h3>DEPLACEMENT</h3><br>
+                <label>Type de vehicule</label><br>
                 <select class="align" id="type_bateau" name="type_bateau">
                       <option value="porte-avion">porte-avion</option>
                       <option value="cuirasse">cuirasse</option>
@@ -86,16 +87,20 @@
                       <option value="helico">helico</option>
                       <option value="avion">avion</option>
                 </select><br>
+                <label>Vitesse du trajet</label><br>
                 <select class="align" id="vitesse_bateau" name="vitesse_bateau">
                       <option value="1.8">lente</option>
                       <option value="1">moyenne</option>
                       <option value="0.5">rapide</option>
                 </select><br>
+                <label>Alignement</label><br>
                 <select class="align" id="color_bateau" name="color_bateau">
                       <option value="blue">Allié</option>
                       <option value="green">Neutre</option>
                       <option value="red">Ennemi</option>
                 </select><br>
+                <label>Description (facutatif)</label><br>
+                <textarea id="description" name="description"></textarea>
                 <a href="#" class="ajouter" id="drawTrajet">Ajouter Trajet</a>
                 
                </div>
@@ -116,8 +121,11 @@
         <div class="settings">
             <h1 id="ll">Paramètres</h1>
             <p class="align">Cacher les profondeurs</p> 
-            <div class="align" id="profondeur"><input type="checkbox"></div>
-            
+            <div class="align" id="profondeur"><input type="checkbox"></div><br>
+             <p class="align">Cacher les côtes et les rivières</p> 
+            <div class="align" id="riv"><input type="checkbox"></div><br>
+                     <p class="align">Cacher les structures</p> 
+            <div class="align" id="structures"><input type="checkbox"></div><br>
             <button class="hide btn_finish" id="stopDraw">Arrêter de dessiner</button>
             <button class="hide btn_finish" id="stopDrawPolyline">Arrêter de dessiner</button>
             <button class="hide btn_finish" id="stopDrawTrajet">Arrêter de dessiner</button>
