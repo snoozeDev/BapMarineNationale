@@ -92,14 +92,16 @@ html,body {
 
 
 }
-#play {
+.big_btn {
 	z-index: 1000;
 	position: absolute;
-	bottom: 5px;
+	bottom: 40px;
 	width: 10%;
 	left:30%;
 	text-align: center;
 }
+
+
 #boussole{
     height: 150px;
     z-index: 1000;
