@@ -24,4 +24,61 @@ stopEditTrajet.addEventListener('click', function(){
     map.off('click', editLatLngToPolyline); //Stop listening for clicks on map.
 });
 */
+var doubleclique=0;
+function annuler(elem, form){
+    $('.'+elem).css('display', 'block');
+    $('#'+elem).html('supprimer '+form);
+    doubleclique=0;
+    
+
+}
+function delete_obj(elem, form){
+    if($('.'+elem).css('display') == 'none'){
+            $('.'+elem).css('display', 'block');
+            $('.'+elem).css({
+                            'animation-name': '',
+                            'animation-duration': '',
+                            'animation-delay': '',
+                            'animation-iteration-count': ''
+                    });
+            $('#'+elem).html('supprimer '+form);
+        }else{
+
+            if(doubleclique==0){
+                doubleclique=1;
+                $('.'+elem).css({
+                            'animation-name': 'animation',
+                            'animation-duration': '1s',
+                            'animation-delay': '2s',
+                            'animation-iteration-count': 'infinite'
+                    });
+
+                $('#'+elem).html('valider la suppression');
+                $('#'+elem).append('<p onclick="doubleclique=2;">annuler la suppression</p>');
+            }else if(doubleclique==1){
+                    $('.'+elem).removeClass('anim');
+                    $('.'+elem).css('display', 'none');
+                    $('#'+elem).html('remettre '+form);
+                
+                doubleclique=0;
+
+        }
+
+
+        if(doubleclique==2){
+            $('.'+elem).css('display', 'block');
+            $('.'+elem).css({
+                            'animation-name': '',
+                            'animation-duration': '',
+                            'animation-delay': '',
+                            'animation-iteration-count': ''
+                    });
+            $('#'+elem).html('supprimer '+form);
+            doubleclique=0;
+        }
+    
+    }
+    
+}
+
 
