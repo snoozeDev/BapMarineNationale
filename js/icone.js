@@ -114,3 +114,17 @@ var helico_ennemi = L.icon({
     iconAnchor:   [15, 15], // point of the icon which will correspond to marker's location
    popupAnchor:  [-0, -9] // point from which the popup should open relative to the iconAnchor
 });
+var port = L.icon({
+    iconUrl: 'image/anchor.png',
+
+    iconSize:     [30, 30], // size of the icon
+    iconAnchor:   [15, 15], // point of the icon which will correspond to marker's location
+   popupAnchor:  [-0, -9] // point from which the popup should open relative to the iconAnchor
+});
+var offshore = L.icon({
+    iconUrl: 'image/offshore.png',
+
+    iconSize:     [30, 30], // size of the icon
+    iconAnchor:   [15, 15], // point of the icon which will correspond to marker's location
+   popupAnchor:  [-0, -9] // point from which the popup should open relative to the iconAnchor
+});
