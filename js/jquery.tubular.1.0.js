@@ -21,7 +21,7 @@
         mute: true,
         repeat: true,
         width: $(helper).width(),
-        wrapperZIndex: 99,
+        wrapperZIndex: 10,
         playButtonClass: 'tubular-play',
         pauseButtonClass: 'tubular-pause',
         muteButtonClass: 'tubular-mute',
@@ -112,27 +112,7 @@
             resize();
         })
 
-        $('body').on('click','.' + options.playButtonClass, function(e) { // play button
-            e.preventDefault();
-            player.playVideo();
-        }).on('click', '.' + options.pauseButtonClass, function(e) { // pause button
-            e.preventDefault();
-            player.pauseVideo();
-        }).on('click', '.' + options.muteButtonClass, function(e) { // mute button
-            e.preventDefault();
-            (player.isMuted()) ? player.unMute() : player.mute();
-        }).on('click', '.' + options.volumeDownClass, function(e) { // volume down button
-            e.preventDefault();
-            var currentVolume = player.getVolume();
-            if (currentVolume < options.increaseVolumeBy) currentVolume = options.increaseVolumeBy;
-            player.setVolume(currentVolume - options.increaseVolumeBy);
-        }).on('click', '.' + options.volumeUpClass, function(e) { // volume up button
-            e.preventDefault();
-            if (player.isMuted()) player.unMute(); // if mute is on, unmute
-            var currentVolume = player.getVolume();
-            if (currentVolume > 100 - options.increaseVolumeBy) currentVolume = 100 - options.increaseVolumeBy;
-            player.setVolume(currentVolume + options.increaseVolumeBy);
-        })
+        
     }
 
     // load yt iframe js api

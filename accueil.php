@@ -41,29 +41,17 @@
   </div>
 </div>
     </div>
-    <div  id="loadDiv">
+    <div  id="loadDiv" style="position:absolute; z-index:100">
     <div class="top">
-    <h4 style="margin-bottom:7px; color:#2c3e50">Charger une carte sauveguardée</h4>
+    <h4 style="margin-bottom:7px; color:#ffffff">Charger une carte sauveguardée</h4>
     
-<ul class="">
-  <li class="resource--article"><a href="" class="resource__link">
-      <h10 class="resource__title">Resource Title about animation</h10>
-      <p class="resource__summary">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aspernatur magni aut veniam ullam sunt magnam repellat dolor praesentium, aliquid, veritatis, ipsa consectetur maiores?</p>
-      <p class="resource--article__author"><span>By: </span>David Johnson</p>
-    <div class="recommended"><svg viewBox="0 0 23.333 22.167"><use xlink:href="#star"></use></svg>RECOMMENDED</div>
-    </a></li>
- <li class="resource--article"><a href="" class="resource__link">
-      <h10 class="resource__title">Resource Title about animation</h10>
-      <p class="resource__summary">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aspernatur magni aut veniam ullam sunt magnam repellat dolor praesentium, aliquid, veritatis, ipsa consectetur maiores?</p>
-      <p class="resource--article__author"><span>By: </span>David Johnson</p>
-    <div class="recommended"><svg viewBox="0 0 23.333 22.167"><use xlink:href="#star"></use></svg>RECOMMENDED</div>
-    </a></li>
-    <li class="resource--article"><a href="" class="resource__link">
-      <h10 class="resource__title">Resource Title about animation</h10>
-      <p class="resource__summary">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aspernatur magni aut veniam ullam sunt magnam repellat dolor praesentium, aliquid, veritatis, ipsa consectetur maiores?</p>
-      <p class="resource--article__author"><span>By: </span>David Johnson</p>
-    <div class="recommended"><svg viewBox="0 0 23.333 22.167"><use xlink:href="#star"></use></svg>RECOMMENDED</div>
-    </a></li>
+<ul class="" style=" z-index:110">
+  <li class="resource--article ">
+      <h10 class="resource__title" style="color:black">Titre de la carte</h10>
+      <p class="resource__summary">Description de la carte</p>
+      <p class="resource--article__author"><span>Auteur de la carte </span>David Johnson</p>
+    
+
     </ul>
     
     </div>
@@ -94,6 +82,12 @@
                 $('#tutoDiv').css('display', 'none');
          console.log("dashboard");
 });
+        
+         $('.resource--article').click(function(){ //faire apparaittre le popup des bateaux
+   
+      alert("zob");
+             
+});
 
      $('.icon-dashboard').click(function(){ //faire apparaittre le popup des bateaux
    
@@ -108,7 +102,7 @@
            console.log("new");
            setTimeout(function () {
        window.location.href = "index.html"; //will redirect to your blog page (an ex: blog.html)
-    }, 1500); //will call the function after 2 secs.
+    }, 0); //will call the function after 2 secs.
 
 });
            $('.icon-customers').click(function(){ //faire apparaittre le popup des bateaux
@@ -149,7 +143,7 @@
   font-family: "Open Sans", Helvetica Neue, Helvetica, Arial, sans-serif;
   color: #fff;
   padding-left: 240px;
-            overflow:hidden;
+            
 }
 main {
   position: relative;
@@ -177,10 +171,12 @@ main .helper {
   font-size: 3em;
   font-weight: bold;
         }
-       
+        #newDiv{
+            overflow:hidden;
+        } 
 #loadDiv{
             
-      
+  
      text-align: center;
   border-radius: 20px;
   font-size: 3em;
@@ -231,7 +227,7 @@ main .helper span {
   background-position: left 15px center;
   background-size: auto 20px;
   transition: all 0.15s linear;
-  cursor: pointer;
+cursor: pointer;
 }
 .menu ul li.icon-dashboard {
   background-image: url("images/sheet.png");
@@ -503,7 +499,7 @@ a {
   margin: 0 auto;
   list-style-type: none;
   padding: .5rem 1.75rem 3rem;
-  border-top: 15px solid #ff1616;
+  border-top: 15px solid #2406a2;
   margin-bottom: 1.75rem;
   border-radius: 5px;
   -webkit-transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
@@ -601,7 +597,7 @@ a {
 }
 
 .resource--add svg {
-  cursor: pointer;
+ 
 }
 .resource--add__title {
   text-align: center;
