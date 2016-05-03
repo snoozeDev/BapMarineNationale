@@ -1,5 +1,7 @@
 
-   
+   <?php 
+include 'db.php';
+?>
 
    <head>
     <script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.0/jquery.min.js" type="text/javascript"></script>
@@ -49,12 +51,26 @@
     <h4 style="margin-bottom:7px; color:#ffffff">Charger une carte sauveguardée</h4>
     
 <ul class="" style=" z-index:110">
-  <li class="resource--article ">
-      <h10 class="resource__title" style="color:black">Titre de la carte</h10>
-      <p class="resource__summary">Description de la carte</p>
-      <p class="resource--article__author"><span>Auteur de la carte </span>David Johnson</p>
+ 
+    <?php
+    $connect = mysql_connect($dbhost,$dbuser,$dbpass);
+                mysql_select_db("save_marine_nationale_db");
+                $query = mysql_query("SELECT * FROM save_marine_nationale_table");
+                while($rows = mysql_fetch_array($query)):
+              $id = $rows['id'];
+    $name = $rows['name'];
+     $description = $rows['description'];
+     $author = $rows['author'];
+    echo "
+  <li class='resource--article '>
+      <h10 class='resource__title' style='color:black'><a href='map.php'>$name</a></h10>
+      <p class='resource__summary'>$description</p>
+      <p class='resource--article__author'><span>Auteur de la carte </span>$author</p>
     
-
+    </li>";
+    endwhile;
+                ?>
+   
     </ul>
        
     
@@ -89,12 +105,6 @@
                 $('#loadDiv').css('display', 'none');
                 $('#tutoDiv').css('display', 'none');
          console.log("dashboard");
-});
-        
-         $('.resource--article').click(function(){ //faire apparaittre le popup des bateaux
-   
-      alert("zob");
-             
 });
 
      $('.icon-dashboard').click(function(){ //faire apparaittre le popup des bateaux

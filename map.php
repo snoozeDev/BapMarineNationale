@@ -225,6 +225,26 @@
 
             </div>
 
+<!--       Partie Sauveguarde-->
+       
+        <form action='sauveguarde.php' method='post' id='myform' >
+           <label>Nom Carte:</label>
+            <input type="text" name="name" value ="zouz"><br>
+            <label>Description:</label>
+<input type="text" name="description" value ="zouzeazezazeaze"><br>
+<label>Auteur:</label>
+ <input type="text" name="author" value ="8888888"><br>
+ <button id='insert'>Sauveguarder Carte</button>
+ 
+
+ </form>
+      
+ 	
+
+       
+       
+<!--      ************************** -->
+       
         </section>
 
         <script type="text/javascript" src="js/function.js"></script>
@@ -237,7 +257,7 @@
 <link href='https://api.mapbox.com/mapbox.js/plugins/leaflet-fullscreen/v1.0.1/leaflet.fullscreen.css' rel='stylesheet' />
       
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
-
+<script src='sauveguarde.js'></script>
 
         <script>
 
