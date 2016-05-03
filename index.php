@@ -1,4 +1,7 @@
-<head>
+
+   
+
+   <head>
     <script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.0/jquery.min.js" type="text/javascript"></script>
 </head>
 
@@ -53,10 +56,15 @@
     
 
     </ul>
+       
     
     </div>
     </div>
-		<div  id="tutoDiv">TUTO</div>
+		<div  id="tutoDiv">TUTO
+		
+  
+
+		</div>
 	<script type="text/javascript" charset="utf-8" src="js/jquery.tubular.1.0.js"></script>
 	<script>
 	    
@@ -101,7 +109,7 @@
                 $('#tutoDiv').css('display', 'none');
            console.log("new");
            setTimeout(function () {
-       window.location.href = "index.html"; //will redirect to your blog page (an ex: blog.html)
+       window.location.href = "map.php"; //will redirect to your blog page (an ex: blog.html)
     }, 0); //will call the function after 2 secs.
 
 });
