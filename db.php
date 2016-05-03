@@ -11,3 +11,4 @@ propre (pour éviter les conflits MAMP/WAMP...)
             $dbpass = 'root';
 
 ?>
+<h1>ZZZZZZZZZZZZZZ</h1>
