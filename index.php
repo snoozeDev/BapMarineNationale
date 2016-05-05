@@ -1,10 +1,6 @@
-
-   <?php 
-include 'db.php';
-?>
-
-   <head>
+<head>
     <script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.0/jquery.min.js" type="text/javascript"></script>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 </head>
 
 
@@ -12,7 +8,7 @@ include 'db.php';
 	<div class="smartphone-menu-trigger"></div>
 	<header class="avatar">
 		<img src="http://www.defense.gouv.fr/var/dicod/storage/images/base-de-medias/images/marine/photos-au-fil-de-l-eau/image001/2252802-1-fre-FR/image001.jpg" />
-		<h2>Centre d'Etudes Stratégiques de la Marine</h2>
+		<h2>Centre d'Études Stratégiques de la Marine</h2>
         </header>
 	<ul>
 		<li tabindex="0" id="new" class="icon-dashboard"><span>Nouvelle Carte</span></li>
@@ -51,36 +47,17 @@ include 'db.php';
     <h4 style="margin-bottom:7px; color:#ffffff">Charger une carte sauveguardée</h4>
     
 <ul class="" style=" z-index:110">
- 
-    <?php
-    $connect = mysql_connect($dbhost,$dbuser,$dbpass);
-                mysql_select_db("save_marine_nationale_db");
-                $query = mysql_query("SELECT * FROM save_marine_nationale_table");
-                while($rows = mysql_fetch_array($query)):
-              $id = $rows['id'];
-    $name = $rows['name'];
-     $description = $rows['description'];
-     $author = $rows['author'];
-    echo "
-  <li class='resource--article '>
-      <h10 class='resource__title' style='color:black'><a href='map.php'>$name</a></h10>
-      <p class='resource__summary'>$description</p>
-      <p class='resource--article__author'><span>Auteur de la carte </span>$author</p>
+  <li class="resource--article ">
+      <h10 class="resource__title" style="color:black">Titre de la carte</h10>
+      <p class="resource__summary">Description de la carte</p>
+      <p class="resource--article__author"><span>Auteur de la carte </span>David Johnson</p>
     
-    </li>";
-    endwhile;
-                ?>
-   
-    </ul>
-       
-    
-    </div>
-    </div>
-		<div  id="tutoDiv">TUTO
-		
-  
 
-		</div>
+    </ul>
+    
+    </div>
+    </div>
+		<div  id="tutoDiv">TUTO</div>
 	<script type="text/javascript" charset="utf-8" src="js/jquery.tubular.1.0.js"></script>
 	<script>
 	    
@@ -105,6 +82,12 @@ include 'db.php';
                 $('#loadDiv').css('display', 'none');
                 $('#tutoDiv').css('display', 'none');
          console.log("dashboard");
+});
+        
+         $('.resource--article').click(function(){ //faire apparaittre le popup des bateaux
+   
+      alert("zob");
+             
 });
 
      $('.icon-dashboard').click(function(){ //faire apparaittre le popup des bateaux

@@ -17,7 +17,13 @@
 
         <div id="ajout_pins" class="pop_up_inv hide"><div  class="pop_up">
                <form>
-                <div id="selecteur"><a class="btn" id="btn_text">Texte</a><a class="btn" id="btn_circle">Cercle</a><a class="btn" id="btn_polygone">Polygone</a><a class="btn" id="btn_polyline">Lignes</a></div>
+                <p class="title"> FORMES </p>
+                <div id="selecteur">
+                <a class="btn" id="btn_text">Texte</a>
+                <a class="btn" id="btn_circle">Cercle</a>  </br> </br>  </br>
+            <a class="btn" id="btn_polygone">Polygone</a>
+                <a class="btn" id="btn_polyline">Lignes</a></div>
+                </br></br>
                 <div id="form_text" class="formulaire hide">
                     <p class="title"> Ecrire sur la carte </p>
                     <input id="label_text" class="formula" placeholder="Votre texte"><br><br>
@@ -34,14 +40,14 @@
                       <option value="50000">Petit</option>
                       <option value="100000">Moyen</option>
                       <option value="200000">Grand</option>
-                    </select><br>
+                    </select>
                     <p class="align">Couleur du cercle</p>
                     <select class="formula" id="color_circle" name="color_circle">
                       <option value="blue">Bleu</option>
                       <option value="red">Rouge</option>
                       <option value="green">Vert</option>
                       <option value="gray">Gris</option>
-                    </select><br>
+                    </select>
                     
                     <a href="#" class="btn"  id="drawCircle">Ajouter Cercle</a>
                     
