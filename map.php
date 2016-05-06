@@ -17,7 +17,13 @@
 
         <div id="ajout_pins" class="pop_up_inv hide"><div  class="pop_up">
                <form>
-                <div id="selecteur"><a class="btn" id="btn_text">Texte</a><a class="btn" id="btn_circle">Cercle</a><a class="btn" id="btn_polygone">Polygone</a><a class="btn" id="btn_polyline">Lignes</a></div>
+                <p class="title"> FORMES </p>
+                <div id="selecteur">
+                <a class="btn" id="btn_text">Texte</a>
+                <a class="btn" id="btn_circle">Cercle</a>  </br> </br>  </br>
+            <a class="btn" id="btn_polygone">Polygone</a>
+                <a class="btn" id="btn_polyline">Lignes</a></div>
+                </br></br>
                 <div id="form_text" class="formulaire hide">
                     <p class="title"> Ecrire sur la carte </p>
                     <input id="label_text" class="formula" placeholder="Votre texte"><br><br>
@@ -34,14 +40,14 @@
                       <option value="50000">Petit</option>
                       <option value="100000">Moyen</option>
                       <option value="200000">Grand</option>
-                    </select><br>
+                    </select>
                     <p class="align">Couleur du cercle</p>
                     <select class="formula" id="color_circle" name="color_circle">
                       <option value="blue">Bleu</option>
                       <option value="red">Rouge</option>
                       <option value="green">Vert</option>
                       <option value="gray">Gris</option>
-                    </select><br>
+                    </select>
                     
                     <a href="#" class="btn"  id="drawCircle">Ajouter Cercle</a>
                     
@@ -201,27 +207,58 @@
                 <button class="hide btn_finish" id="stopEditPolyline">Arrêter de dessiner</button>
                 <input class="hide" id="editVitesse" placeholder="Votre Vitesse"><br>
 
+
                 <div class="delete">
+
+
                     <div class="delete_polyline">
-                        <h2>Supprimer les lignes</h2>
-                        <p class="delete_polyline_p"></p>
+                        <div class="share-wrap">
+                            <div class="main-bar">Ligne<span><img src="http://static.tumblr.com/43vgkmu/ftqmmywe6/drop-down.png"/></span></div>
+                            <ul>
+                                <h4>Supprimer les lignes</h4>
+                                <li>  <p class="delete_polyline_p"></p> </li>
+                            </ul>
+                        </div>
                     </div>
+
+
                     <div class="delete_cercle">
-                        <h2>Supprimer les cercles</h2>
-                        <p class="delete_cercle_p"></p>
+                        <div class="share-wrap">
+                            <div class="main-bar">cercle<span><img src="http://static.tumblr.com/43vgkmu/ftqmmywe6/drop-down.png"/></span></div>
+                            <ul>
+                                <h4>Supprimer les cercles</h4>
+                                <li> <p class="delete_cercle_p"></p></li>
+                            </ul>
+                        </div>
                     </div>
+
+
                     <div class="delete_texte">
-                        <h2>Supprimer les textes</h2>
-                        <p class="delete_texte_p"></p>
+                        <div class="share-wrap">
+                            <div class="main-bar">texte<span><img src="http://static.tumblr.com/43vgkmu/ftqmmywe6/drop-down.png"/></span></div>
+                            <ul>
+                                <h4>Supprimer les textes</h4>
+                                <li> <p class="delete_texte_p"></p></li>
+                            </ul>
+                        </div>
                     </div>
+
+
                     <div class="delete_polygone">
-                        <h2>Supprimer les polygones</h2>
-                        <p class="delete_polygone_p"></p>
+                        <div class="share-wrap">
+                            <div class="main-bar">polygone<span><img src="http://static.tumblr.com/43vgkmu/ftqmmywe6/drop-down.png"/></span></div>
+                            <ul>
+                                <h4>Supprimer les polygones</h4>
+                                <li>  <p class="delete_polygone_p"></p></li>
+                            </ul>
+                        </div>
                     </div>
+
+
+
+
                 </div>
 
-
-            </div>
 
         </section>
 
@@ -311,6 +348,14 @@
 
         </script>
 
+
+        <script>
+            $(document).ready(function(e){
+                $('.main-bar').on('click',function(){
+                    $('ul').slideToggle(580);
+                });
+            })
+        </script>
 
     </body>
 </html>

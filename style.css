@@ -23,7 +23,7 @@ html,body {
 	text-align: center;
 }
 .leaflet-popup-content-wrapper, .leaflet-popup-tip {
-	background: transparent;
+	background-color: #283848;
 	text-align: center;
 	box-shadow: 0 0px 0px rgba(0,0,0,0);
 }
@@ -45,19 +45,16 @@ html,body {
 	height: 100%;
 	z-index: 1000;
 	position: absolute;
-	width: 80%;
-	background-color: rgba(0,0,0,0.2);
-	margin: 0;
-	padding: 0;
+	width: 30%;
+	margin-left: 3%;
 }
 .pop_up_inv2 {
 	height: 100%;
 	z-index: 1000;
 	position: absolute;
-	width: 100%;
-	background-color: rgba(0,0,0,0.2);
-	margin: 0;
-	padding: 0;
+	width: 30%;
+	background-color: #283848;
+	margin-left: 3%;
 }
 @keyframes animation {
     from {opacity: 0.5;}
@@ -88,9 +85,9 @@ html,body {
 .pop_up {
 	z-index: 1000;
 	
-	background-color: rgba(255,255,255,0.9);
+	background-color: #1d64ab;
 	width: 80%;
-	
+	border: solid #ffffff 1px;
 	min-height: 60%;
 	margin-top: 10%;
 	margin-left: 10%;
@@ -103,6 +100,7 @@ html,body {
 	background-color: rgba(0,0,0,0.2);
 	margin: 0;
 	padding: 0;
+	border: solid #ffffff 1px;
 }
 #toolbar{
 	position: absolute;
@@ -114,6 +112,7 @@ html,body {
 .forme {
 	padding: 10%;
 }
+
 #toolbar img {
 	width: 100%;
 }
@@ -130,7 +129,7 @@ html,body {
   font-size: 20px;
   background: #216996;
   padding: 10px 20px 10px 20px;
-  border: solid #1f628d 2px;
+  border: solid #ffffff 1px;
   text-decoration: none;
   margin: 1%;
 
@@ -291,54 +290,55 @@ body.sidebar-show {
 }
 
 .formulaire {
-	min-height: 50%;
 	position: relative;
-	margin-top: 100px;
-
+	color: white;
 
 
 }
 .formulaire_bat {
 	min-height: 50%;
 	position: relative;
+	color: white;
 	
 
 }
 
 .formula {
- 	display: block;
-  color: black;
-  margin: 0 0 4px;
-  font-family: sans-serif;
-  background-color: White;  
-  padding: 10px;
-  font-size: 1.2em;
-  width: 100%;
-  margin-bottom: 20px;
+	  display: block;
+	  color: white;
+	  margin: 0 0 8px;
+	  font-family: sans-serif;
+	  background-color: #004080;  
+	  padding: 8px;
+	  font-size: 1.2em;
+	  width: 100%;
+	  margin-bottom: 30px;
 
 }
 
 .btn {
-
-  background: #3498db;
-  -webkit-border-radius: 28;
-  -moz-border-radius: 28;
-  border-radius: 28px;
   font-family: Arial;
   color: #ffffff;
-  font-size: 25px;
-  padding: 8px 50px 8px 60px;
+  font-size: 20px;
+  background: #004080;
+  padding: 6px 18px 9px 20px;
+  text-decoration: none;
+}
+
+.btn:hover {
+  background: #1d64ab;
+  text-decoration: none;
 }
 
 .title {
-	font-size: 40px;
-  text-shadow: -1px -1px #000, 1px 1px #000, -3px 0 4px #000;
-  font-family:Arial, Helvetica, sans-serif;
+	font-size: 35px;
+ 
+  font-family: sans-serif;
   color: white;
   padding:16px;
   text-align:center;
   display:block;
-  margin:16px;
+  margin:10px;
 }
 
 .btntime{

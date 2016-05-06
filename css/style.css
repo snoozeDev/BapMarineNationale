@@ -292,3 +292,155 @@ body.sidebar-show {
 	margin-top:-4px;
 
 }
+
+.share-wrap {
+	width:285px;
+	margin:100px auto;
+	cursor:pointer;
+}
+
+.main-bar {
+	position:relative;
+	background:#fff;
+	border:1px solid rgba(0, 0, 0 , 0.2);
+	box-shadow:0px 2px 0px rgba(0, 0, 0, .1);
+	padding:15px;
+	font-size:16px;
+	font-weight:600;
+	color:#82C9BD;
+}
+
+
+
+.main-bar > span {
+	position:absolute;
+	right:20px;
+	cursor:pointer;
+}
+
+ul {
+	display:none;
+	margin-top:-1px;
+	background:#fff;
+
+
+}
+
+li {
+	border-bottom:1px solid rgba(0, 0, 0, 0.1);
+}
+
+a, a:visited {
+	text-decoration:none;
+	color:#777;
+	transition: all .3s ease-in-out;
+	-moz-transition: all .3s ease-in-out;
+	-webkit-transition: all .3s ease-in-out;
+	border-right:4px solid #fff;
+}
+
+.boutonvert{
+	width: 100%;
+	height: 35px;
+	display: block;
+	float: right;
+	border-radius: 3px;
+	margin: -40px 0px -30px 0px;
+	padding: 15px 20px;
+	text-align: center;
+	text-decoration: none;
+	font: 14px "Helvetica Neue", Helvetica, Arial, sans-serif;
+	box-shadow: 0px 6px #27ae60;
+	background: #2ecc71;
+}
+}
+.boutonrouge{
+	width: 100%;
+	display: block;
+	float: right;
+	border-radius:3px;
+	margin: 10px 0px 10px 0px;
+	padding:15px 0px;
+	text-align:center;
+	text-decoration:none;
+	font: 14px "Helvetica Neue", Helvetica, Arial, sans-serif;
+
+	box-shadow: 0px 6px red;
+	background: red;
+}
+
+.croixsuppression{
+	border-radius: 20px;
+	box-shadow: 2px 2px 6px;
+	z-index: 9999;
+	background: red;
+	height: 44px;
+	width: 44px;
+	top: -63px;
+	left: 148.5px;
+	position: relative;
+
+}
+
+.boutoncroix2 {
+	position: relative;
+	height: 4px;
+	width: 35px;
+	top: 15px;
+	left: 3px;
+	margin-top: 7px auto;
+	background-color: #FFF;
+	border-radius: 5px;
+	transform: rotate(136deg);
+}
+
+.boutoncroix {
+	position: relative;
+	height: 4px;
+	width: 35px;
+	top: 21px;
+	left: 3px;
+	margin-top: 7px auto;
+	background-color: #FFF;
+	border-radius: 5px;
+	transform: rotate(42deg);
+
+}
+
+.croixvalide{
+	border-radius: 20px;
+	box-shadow: 2px 2px 6px;
+	z-index: 9999;
+	background: lawngreen;
+	height: 44px;
+	width: 44px;
+	top: -19px;
+	left: 18.5px;
+	position: relative;
+
+}
+
+.boutonvalide {
+	position: relative;
+	height: 4px;
+	width: 35px;
+	top: 15px;
+	left: 6px;
+	margin-top: 7px auto;
+	background-color: #FFF;
+	border-radius: 5px;
+	transform: rotate(116deg);
+}
+
+.boutonvalide2 {
+	position: relative;
+	height: 4px;
+	width: 15px;
+	top: 23px;
+	left: 4px;
+	margin-top: 7px auto;
+	background-color: #FFF;
+	border-radius: 5px;
+	transform: rotate(42deg);
+
+}
