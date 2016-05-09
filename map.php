@@ -195,19 +195,19 @@
             <div class="settings">
                 <h1>Parametres</h1>
 
-                <div class="bouton" id="profondeur">
-                <input class="checkbox" type="checkbox">
-                <label></label>
+                <div class="bouton">
+                <input class="checkbox" id="checkbox1"  type="checkbox">
+                <label id="profondeur" for="checkbox1"></label>
                 <span>Cacher les profondeurs</span>
               </div><br>
-              <div class="bouton" id="riv">
-                <input class="checkbox" type="checkbox">
-                <label></label>
+              <div class="bouton">
+                <input class="checkbox" id="checkbox2"  type="checkbox">
+                <label  id="riv" for="checkbox2"></label>
                 <span>Cacher les côtes et les rivières</span>
               </div><br>
-              <div class="bouton" id="structures">
+              <div class="bouton">
                 <input class="checkbox" id="checkbox3" type="checkbox">
-                <label for="checkbox3"></label>
+                <label  id="structures" for="checkbox3"></label>
                 <span>Cacher les structures</span>
               </div><br>
 
