@@ -118,11 +118,10 @@
   <span id="hours">00H:</span>
   <span id="mins">00M</span>  
   </div>
-  
+
 <div id="controls">
   <button id="play" class="btntime">Start</button>
 <button id="pause"class="btntime">Stop</button>
-
 <select id="speed">
   <option value="1">1</option>
   <option value="2">3</option>
@@ -148,8 +147,10 @@
         </div>
         <div id="toolbar">
             <div class="forme" id="bateau"> <img src="image/bateau.png"></div>
-            <div class="forme" id="forme"> <img src="image/forme.png"></div>
+         
+           <div class="forme" id="forme"> <img src="image/forme.png"></div>
         </div>
+
         <div class="stop">
           <input class="hide" id="editVitesse" placeholder="Votre Vitesse"><br>
           <button class="hide btn_finish" id="stopDraw">Valider la forme</button>
@@ -157,6 +158,7 @@
           <button class="hide btn_finish" id="stopDrawTrajet">Ajouter le bateau</button>
           <button class="hide btn_finish" id="stopEditPolyline">Valider la forme</button>
         </div>
+
 
 
      <!--   <div class="settings">
@@ -204,36 +206,80 @@
             <div class="settings">
                 <h1>Parametres</h1>
 
+
                 <p class="align">Cacher les profondeurs</p>
-                <div class="align" id="profondeur"><input type="checkbox"></div><br>
-                <p class="align">Cacher les côtes et les rivières</p>
-                <div class="align" id="riv"><input type="checkbox"></div><br>
-                <p class="align">Cacher les structures</p>
-                <div class="align" id="structures"><input type="checkbox"></div><br>
-                
-                
+
+                <div class="bouton" id="profondeur">
+                <input class="checkbox" type="checkbox">
+                <label></label>
+                <span>Cacher les profondeurs</span>
+              </div><br>
+              <div class="bouton" id="riv">
+                <input class="checkbox" type="checkbox">
+                <label></label>
+                <span>Cacher les côtes et les rivières</span>
+              </div><br>
+              <div class="bouton" id="structures">
+                <input class="checkbox" id="checkbox3" type="checkbox">
+                <label for="checkbox3"></label>
+                <span>Cacher les structures</span>
+              </div><br>
+
+          
+
 
                 <div class="delete">
+
+
                     <div class="delete_polyline">
-                        <h2>Supprimer les lignes</h2>
-                        <p class="delete_polyline_p"></p>
+                        <div class="share-wrap">
+                            <div class="main-bar">Ligne<span><img src="http://static.tumblr.com/43vgkmu/ftqmmywe6/drop-down.png"/></span></div>
+                            <ul>
+                                <h4>Supprimer les lignes</h4>
+                                <li>  <p class="delete_polyline_p"></p> </li>
+                            </ul>
+                        </div>
                     </div>
+
+
                     <div class="delete_cercle">
-                        <h2>Supprimer les cercles</h2>
-                        <p class="delete_cercle_p"></p>
+                        <div class="share-wrap">
+                            <div class="main-bar">cercle<span><img src="http://static.tumblr.com/43vgkmu/ftqmmywe6/drop-down.png"/></span></div>
+                            <ul>
+                                <h4>Supprimer les cercles</h4>
+                                <li> <p class="delete_cercle_p"></p></li>
+                            </ul>
+                        </div>
                     </div>
+
+
                     <div class="delete_texte">
-                        <h2>Supprimer les textes</h2>
-                        <p class="delete_texte_p"></p>
+                        <div class="share-wrap">
+                            <div class="main-bar">texte<span><img src="http://static.tumblr.com/43vgkmu/ftqmmywe6/drop-down.png"/></span></div>
+                            <ul>
+                                <h4>Supprimer les textes</h4>
+                                <li> <p class="delete_texte_p"></p></li>
+                            </ul>
+                        </div>
                     </div>
+
+
                     <div class="delete_polygone">
-                        <h2>Supprimer les polygones</h2>
-                        <p class="delete_polygone_p"></p>
+                        <div class="share-wrap">
+                            <div class="main-bar">polygone<span><img src="http://static.tumblr.com/43vgkmu/ftqmmywe6/drop-down.png"/></span></div>
+                            <ul>
+                                <h4>Supprimer les polygones</h4>
+                                <li>  <p class="delete_polygone_p"></p></li>
+                            </ul>
+                        </div>
                     </div>
+
+
+
+
                 </div>
 
-
-            </div>
+>>>>>>> 1abfc6fb8ff3ceb7c3f4bbb0314162f1b22ee8ed
 
         </section>
 
@@ -323,6 +369,14 @@
 
         </script>
 
+
+        <script>
+            $(document).ready(function(e){
+                $('.main-bar').on('click',function(){
+                    $('ul').slideToggle(580);
+                });
+            })
+        </script>
 
     </body>
 </html>
