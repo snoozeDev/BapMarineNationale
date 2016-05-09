@@ -118,9 +118,11 @@
   <span id="hours">00H:</span>
   <span id="mins">00M</span>  
   </div>
+  
 <div id="controls">
   <button id="play" class="btntime">Start</button>
 <button id="pause"class="btntime">Stop</button>
+
 <select id="speed">
   <option value="1">1</option>
   <option value="2">3</option>
@@ -147,6 +149,12 @@
         <div id="toolbar">
             <div class="forme" id="bateau"> <img src="image/bateau.png"></div>
             <div class="forme" id="forme"> <img src="image/forme.png"></div>
+        </div>
+        <div class="stop">
+          <button class="hide btn_finish" id="stopDraw">Valider la forme</button>
+          <button class="hide btn_finish" id="stopDrawPolyline">Valider la forme</button>
+          <button class="hide btn_finish" id="stopDrawTrajet">Ajouter le bateau</button>
+          <button class="hide btn_finish" id="stopEditPolyline">Valider la forme</button>
         </div>
 
 
@@ -201,10 +209,7 @@
                 <div class="align" id="riv"><input type="checkbox"></div><br>
                 <p class="align">Cacher les structures</p>
                 <div class="align" id="structures"><input type="checkbox"></div><br>
-                <button class="hide btn_finish" id="stopDraw">Arrêter de dessiner</button>
-                <button class="hide btn_finish" id="stopDrawPolyline">Arrêter de dessiner</button>
-                <button class="hide btn_finish" id="stopDrawTrajet">Arrêter de dessiner</button>
-                <button class="hide btn_finish" id="stopEditPolyline">Arrêter de dessiner</button>
+                
                 <input class="hide" id="editVitesse" placeholder="Votre Vitesse"><br>
 
 

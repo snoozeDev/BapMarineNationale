@@ -111,6 +111,13 @@ html,body {
 	width: 4%;
 
 }
+.stop{
+	position: absolute;
+	top :25%;
+	left:1%;
+	width: 4%;
+
+}
 .forme {
 	padding: 10%;
 }
