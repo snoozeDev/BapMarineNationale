@@ -195,12 +195,28 @@
             <div class="settings">
                 <h1>Parametres</h1>
 
-                <p class="align">Cacher les profondeurs</p>
+                <div class="bouton" id="profondeur">
+                <input class="checkbox" type="checkbox">
+                <label></label>
+                <span>Cacher les profondeurs</span>
+              </div><br>
+              <div class="bouton" id="riv">
+                <input class="checkbox" type="checkbox">
+                <label></label>
+                <span>Cacher les côtes et les rivières</span>
+              </div><br>
+              <div class="bouton" id="structures">
+                <input class="checkbox" id="checkbox3" type="checkbox">
+                <label for="checkbox3"></label>
+                <span>Cacher les structures</span>
+              </div><br>
+
+                <!-- <p class="align">Cacher les profondeurs</p>
                 <div class="align" id="profondeur"><input type="checkbox"></div><br>
                 <p class="align">Cacher les côtes et les rivières</p>
                 <div class="align" id="riv"><input type="checkbox"></div><br>
                 <p class="align">Cacher les structures</p>
-                <div class="align" id="structures"><input type="checkbox"></div><br>
+                <div class="align" id="structures"><input type="checkbox"></div><br> -->
                 <button class="hide btn_finish" id="stopDraw">Arrêter de dessiner</button>
                 <button class="hide btn_finish" id="stopDrawPolyline">Arrêter de dessiner</button>
                 <button class="hide btn_finish" id="stopDrawTrajet">Arrêter de dessiner</button>

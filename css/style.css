@@ -15,7 +15,7 @@ html,body {
 }
 .settings {
 
-	width: 19%;
+	width: 100%;
 	display: inline-block;
 	vertical-align: top;
 }
@@ -217,8 +217,8 @@ body.sidebar-show {
 	right: 0;
 	width: 300px;
 	height: 100%;
-	background: #FFF;
-	color: #333;
+	background: #2C3E50;
+	color: white;
 	transform: translate(300px);
 	z-index: 5001;
 }
@@ -484,3 +484,78 @@ a, a:visited {
 	-webkit-transform: rotate(7deg);
 	transform: rotate(90deg);
 }
+
+/*-------------------------------*/
+/*          Bouton menu          */
+/*-------------------------------*/
+
+.radio {
+  display: none;
+  font-size: 15px;
+}
+
+.checkbox {
+  display: none;
+  font-size: 15px;
+}
+
+.bouton {
+  margin-bottom: 20px;
+}
+
+.bouton label {
+  width: 18px;
+  height: 18px;
+  margin-bottom: -3px;
+  margin-right: 10px;
+  background: #e74c3c;
+  border-radius: 3px;
+  cursor: pointer;
+  position: relative;
+  display: inline-block;
+  -webkit-transition: 300ms all;
+  -moz-transition: 300ms all;
+  -ms-transition: 300ms all;
+  -o-transition: 300ms all;
+  transition: 300ms all;
+}
+
+.bouton label::after {
+  content: "";
+  position: absolute;
+  width: 3px;
+  height: 11px;
+  left: 7px;
+  top: 1px;
+  border-right: 2px solid #fff;
+  border-bottom: 2px solid #fff;
+  -webkit-transform: rotate(45deg);
+  -moz-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  -o-transform: rotate(45deg);
+  transform: rotate(45deg);
+  opacity: 0;
+  -webkit-backface-visibility: hidden;
+  z-index: 1;
+  -webkit-transition: 300ms opacity;
+  -moz-transition: 300ms opacity;
+  -ms-transition: 300ms opacity;
+  -o-transition: 300ms opacity;
+  transition: 300ms opacity;
+}
+
+.bouton input:checked + label {
+  background: #27ae60;
+}
+
+.bouton input:checked + label::after {
+  opacity: 1;
+}
+
+.bouton input[type=radio] + label {
+  border-radius: 100%;
+}
+.bouton input[type=radio] + label::after {
+  left: 6px;
+  top: 2px;
+  height: 10px;
