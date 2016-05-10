@@ -112,7 +112,12 @@
                 
                </div>
         </div></div>
-        <div  style="background:white;margin-left:10%"  class="big_btn">
+        <div class="big_btn">
+                   <div id="cont">
+                    <div class="half2">
+                   <img src="image/play.png" style="display:inline-block" id="play" class="btntime">
+                        <img src="image/pause.png" style="display:none"  id="pause" class="btntime"></div>
+                   <div class="half1">
                     <div id="timer">
  
  <span id="days">00J:</span> 
@@ -120,9 +125,7 @@
   <span id="mins">00M</span>  
   </div>
 
-<div id="controls">
-<img src="image/play.png" style="display:inline-block" id="play" class="btntime">
-<img src="image/pause.png" style="display:none"  id="pause" class="btntime">
+
 <div>
 <select class=" speed">
   <option value="1">1</option>
@@ -134,12 +137,9 @@
   
   
   
-    </select></div>
-</div>
-<!--
-          <a href="#" id="play" class="btn">LANCER</a></br></br></br>
-          <a href="#" id="pause" class="btn">PAUSE</a>
--->
+    </select></div></div></div>
+
+
         </div>
        
         <img id="boussole" src="image/boussole.png">
