@@ -331,24 +331,32 @@ body.sidebar-show {
 	position:absolute;
 	right:20px;
 	cursor:pointer;
+	color: #82C9BD;
+}
+
+.sidebar.show.main-bar1{
+	color: #82C9BD;
 }
 
 .main-bar2 > span {
 	position:absolute;
 	right:20px;
 	cursor:pointer;
+	color: #82C9BD;
 }
 
 .main-bar3 > span {
 	position:absolute;
 	right:20px;
 	cursor:pointer;
+	color: #82C9BD;
 }
 
 .main-bar4 > span {
 	position:absolute;
 	right:20px;
 	cursor:pointer;
+	color: #82C9BD;
 }
 
 ul {
