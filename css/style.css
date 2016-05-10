@@ -535,6 +535,7 @@ a, a:visited {
 	background: #e74c3c;
 	position: relative;
 	left: 225px;
+	top: -17px;
 	z-index: 2;
 }
 
