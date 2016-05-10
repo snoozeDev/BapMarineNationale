@@ -155,6 +155,12 @@ html,body {
 	width: 10%;
 	left:30%;
 	text-align: center;
+    -moz-box-shadow: 6px 6px 6px 1px #656565;
+-webkit-box-shadow: 6px 6px 6px 1px #656565;
+-o-box-shadow: 6px 6px 6px 1px #656565;
+box-shadow: 6px 6px 6px 1px #656565;
+filter:progid:DXImageTransform.Microsoft.Shadow(color=#656565, Direction=135, Strength=6);
+    border-radius: 10px;
 }
 
 
@@ -166,7 +172,7 @@ html,body {
 	width: 150px;
 	left:1.5%;
 	text-align: center;
-    background-image: url(../image/boussole.png);
+  
 }
 .formulaire, .formulaire_bat {
 	min-height: 50%;
@@ -607,4 +613,51 @@ a, a:visited {
 	left: 6px;
 	top: 2px;
 	height: 10px;
+}
+.formula {
+	  display: block;
+	  color: white;
+	  margin: 0 0 8px;
+	  font-family: sans-serif;
+	  background-color: #004080;  
+	  padding: 8px;
+	  font-size: 1.2em;
+	  width: 100%;
+	  margin-bottom: 30px;
+
+}
+
+.btn {
+  font-family: Arial;
+  color: #ffffff;
+  font-size: 20px;
+  background: #004080;
+  padding: 6px 18px 9px 20px;
+  text-decoration: none;
+}
+
+.btn:hover {
+  background: #1d64ab;
+  text-decoration: none;
+}
+
+.title {
+	font-size: 35px;
+ 
+  font-family: sans-serif;
+  color: white;
+  padding:16px;
+  text-align:center;
+  display:block;
+  margin:10px;
+}
+.pop_up {
+	z-index: 1000;
+	
+	background-color: #1d64ab;
+	width: 80%;
+	border: solid #ffffff 1px;
+	min-height: 60%;
+	margin-top: 10%;
+	margin-left: 10%;
 }

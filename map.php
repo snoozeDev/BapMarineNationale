@@ -16,6 +16,17 @@
     <body onload="initialize()">
 
         <div id="ajout_pins" class="pop_up_inv hide"><div  class="pop_up">
+              <select class="selectbox speed">
+  <option value="1">1</option>
+  <option value="2">3</option>
+  <option value="5">5</option>
+  <option value="10">10</option>
+  <option value="50">50</option>
+  <option value="100">100</option>
+  
+  
+  
+    </select>
                <form>
                 <p class="title"> FORMES </p>
                 <div id="selecteur">
@@ -82,7 +93,7 @@
 
                </form>
         </div></div>
-        <div id="ajout_bateau" class="pop_up_inv hide"><div  class="pop_up">
+      <div id="ajout_bateau" class="pop_up_inv hide"><div  class="pop_up">
                <div class="formulaire_bat">
                <p class="title"> DÉPLACEMENT </p>
                 <label>Type de vehicule</label><br>
@@ -121,7 +132,7 @@
 
 <div id="controls">
 <img src="image/play.png" style="display:inline-block" id="play" class="btntime">
-<img src="image/pause.png" id="pause" class="btntime">
+<img src="image/pause.png" style="display:none"  id="pause" class="btntime">
 <div>
 <select class="speed">
   <option value="1">1</option>
@@ -285,13 +296,12 @@
         <script type="text/javascript" src="js/icone.js"></script>
         <script type="text/javascript" src="js/map.js"></script>
         <script src="js/Leaflet-0.7.7/leaflet.js"></script> 
-        <script src="js/MovingMarker.js"></script>
+        
                    
         <script src='https://api.mapbox.com/mapbox.js/plugins/leaflet-fullscreen/v1.0.1/Leaflet.fullscreen.min.js'></script>
 <link href='https://api.mapbox.com/mapbox.js/plugins/leaflet-fullscreen/v1.0.1/leaflet.fullscreen.css' rel='stylesheet' />
       
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
-
 
         <script>
 
