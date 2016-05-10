@@ -258,7 +258,7 @@ body.sidebar-show {
 	position: relative;
 	height: 4px;
 	width: 35px;
-	margin-top: 7px auto;
+	margin-top: 7px;
 	background-color: #FFF;
 	border-radius: 5px;
 	transform: rotate(136deg);
@@ -277,7 +277,7 @@ body.sidebar-show {
 	position: relative;
 	height: 4px;
 	width: 35px;
-	margin-top: 7px auto;
+	margin-top: 7px;
 	background-color: #FFF;
 	border-radius: 5px;
 	transform: rotate(42deg);
@@ -403,7 +403,7 @@ a, a:visited {
 	box-shadow: 0px 6px #27ae60;
 	background: #2ecc71;
 }
-}
+
 .boutonrouge{
 	width: 100%;
 	display: block;
@@ -438,7 +438,7 @@ a, a:visited {
 	width: 35px;
 	top: 15px;
 	left: 3px;
-	margin-top: 7px auto;
+
 	background-color: #FFF;
 	border-radius: 5px;
 	transform: rotate(136deg);
@@ -450,7 +450,7 @@ a, a:visited {
 	width: 35px;
 	top: 21px;
 	left: 3px;
-	margin-top: 7px auto;
+
 	background-color: #FFF;
 	border-radius: 5px;
 	transform: rotate(42deg);
@@ -476,7 +476,6 @@ a, a:visited {
 	width: 35px;
 	top: 15px;
 	left: 6px;
-	margin-top: 7px auto;
 	background-color: #FFF;
 	border-radius: 5px;
 	transform: rotate(116deg);
@@ -488,7 +487,6 @@ a, a:visited {
 	width: 15px;
 	top: 23px;
 	left: 4px;
-	margin-top: 7px auto;
 	background-color: #FFF;
 	border-radius: 5px;
 	transform: rotate(42deg);
@@ -606,6 +604,7 @@ a, a:visited {
   border-radius: 100%;
 }
 .bouton input[type=radio] + label::after {
-  left: 6px;
-  top: 2px;
-  height: 10px;
+	left: 6px;
+	top: 2px;
+	height: 10px;
+}
