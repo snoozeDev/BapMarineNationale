@@ -126,7 +126,7 @@
 <div>
 <select class=" speed">
   <option value="1">1</option>
-  <option value="2">3</option>
+  <option value="3">3</option>
   <option value="5">5</option>
   <option value="10">10</option>
   <option value="50">50</option>
@@ -156,10 +156,13 @@
 
         <div class="stop">
           <input class="hide" id="editVitesse" placeholder="Votre Vitesse"><br>
-          <button class="hide btn_finish" id="stopDraw">Valider la forme</button>
-          <button class="hide btn_finish" id="stopDrawPolyline">Valider la forme</button>
-          <button class="hide btn_finish" id="stopDrawTrajet">Ajouter le bateau</button>
-          <button class="hide btn_finish" id="stopEditPolyline">Valider la forme</button>
+          
+          <div class="hide btn_finish forme" id="stopDraw"> <img src="image/formev2.png"></div>
+           <div class="hide btn_finish forme" id="stopDrawPolyline"> <img src="image/formev2.png"></div>
+            <div class="hide btn_finish forme" id="stopEditPolyline"> <img src="image/bateauv2.png"></div>
+           <div class="hide btn_finish forme" id="stopDrawTrajet"> <img src="image/bateauv2.png"></div>
+          
+      
         </div>
 
 

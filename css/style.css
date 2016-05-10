@@ -84,6 +84,10 @@ html,body {
 .deleteUltim a {
 	color: white;
 }
+#timer{
+    
+    margin-bottom:2%;
+}
 #delete{
     
     background-color:white;
@@ -639,6 +643,17 @@ a, a:visited {
 	  margin-bottom: 30px;
 
 }
+#editVitesse{
+     
+	  color: white;
+	  margin: 0 0 8px;
+	  font-family: sans-serif;
+	  background-color: #004080;  
+	  padding: 8px;
+	  font-size: 1.2em;
+	  width: 200%;
+	  margin-bottom: 30px;
+}
 
 .btn {
   font-family: Arial;
@@ -673,7 +688,8 @@ a, a:visited {
 	  padding: 8px;
 	  font-size: 1.2em;
 	  width: 80%;
-	  margin-bottom: 3%;
+    margin-top: 2%;
+	  margin-bottom: 2%;
     margin-left: 10%;
     margin-right: 10%;
 
