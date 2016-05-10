@@ -46,7 +46,6 @@ html,body {
 	z-index: 1000;
 	position: absolute;
 	width: 80%;
-	background-color: rgba(0,0,0,0.2);
 	margin: 0;
 	padding: 0;
 }
@@ -84,6 +83,11 @@ html,body {
 }
 .deleteUltim a {
 	color: white;
+}
+#delete{
+    
+    background-color:white;
+    
 }
 .pop_up {
 	z-index: 1000;
@@ -142,6 +146,7 @@ html,body {
   border: solid #1f628d 2px;
   text-decoration: none;
   margin: 1%;
+    display: inline-block;
 
 
 }
@@ -175,7 +180,8 @@ filter:progid:DXImageTransform.Microsoft.Shadow(color=#656565, Direction=135, St
   
 }
 .formulaire, .formulaire_bat {
-	min-height: 50%;
+	min-height: 20%;
+    max-height: auto;
 	position: relative;
 }
 .ajouter {
@@ -396,7 +402,6 @@ li {
 
 a, a:visited {
 	text-decoration:none;
-	color:#777;
 	transition: all .3s ease-in-out;
 	-moz-transition: all .3s ease-in-out;
 	-webkit-transition: all .3s ease-in-out;
@@ -640,7 +645,7 @@ a, a:visited {
   color: #ffffff;
   font-size: 20px;
   background: #004080;
-  padding: 6px 18px 9px 20px;
+/*  padding: 6px 18px 9px 20px;*/
   text-decoration: none;
 }
 
@@ -659,13 +664,28 @@ a, a:visited {
   display:block;
   margin:10px;
 }
+.speed{
+      display: block;
+	  color: white;
+	  margin: 0 0 8px;
+	  font-family: sans-serif;
+	  background-color: #004080;  
+	  padding: 8px;
+	  font-size: 1.2em;
+	  width: 80%;
+	  margin-bottom: 3%;
+    margin-left: 10%;
+    margin-right: 10%;
+
+}
 .pop_up {
 	z-index: 1000;
 	border-radius: 10px;
 	background-color:white;
-	width: 80%;
+	width: 40%;
 	border: solid #ffffff 1px;
-	min-height: 60%;
+	min-height: 30%;
+    max-height: auto;
 	margin-top: 10%;
 	margin-left: 10%;
       -moz-box-shadow: 6px 6px 6px 1px #656565;

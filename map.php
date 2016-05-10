@@ -124,7 +124,7 @@
 <img src="image/play.png" style="display:inline-block" id="play" class="btntime">
 <img src="image/pause.png" style="display:none"  id="pause" class="btntime">
 <div>
-<select class="speed">
+<select class=" speed">
   <option value="1">1</option>
   <option value="2">3</option>
   <option value="5">5</option>
@@ -234,10 +234,7 @@
                     <div class="delete_polyline">
                         <div class="share-wrap">
                             <div class="main-bar1" style="color: #82C9BD;">Ligne<span><img src="http://static.tumblr.com/43vgkmu/ftqmmywe6/drop-down.png"/></span></div>
-                            <ul class="lignes">
-<br/>
-                                <li>  <p class="delete_polyline_p"></p> </li>
-                            </ul>
+                          
                         </div>
                     </div>
 
