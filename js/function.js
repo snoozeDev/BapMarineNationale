@@ -44,6 +44,9 @@ function delete_obj(elem, form){
             'animation-delay': '',
             'animation-iteration-count': ''
         });
+        $('.oeilvert').css({'display': 'block',
+            'position': 'relative',
+            'top': '-37px',});
         $('#'+elem).html('supprimer '+form);
     }else{
 
@@ -80,8 +83,6 @@ function delete_obj(elem, form){
                 'animation-delay': '',
                 'animation-iteration-count': ''
             });
-            $('.oeilvert').css({'display': 'block',
-                'position': 'relative'});
             $('#'+elem).html('supprimer '+form);
             doubleclique=0;
         }
