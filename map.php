@@ -16,22 +16,12 @@
     <body onload="initialize()">
 
         <div id="ajout_pins" class="pop_up_inv hide"><div  class="pop_up">
-              <select class="selectbox speed">
-  <option value="1">1</option>
-  <option value="2">3</option>
-  <option value="5">5</option>
-  <option value="10">10</option>
-  <option value="50">50</option>
-  <option value="100">100</option>
-  
-  
-  
-    </select>
+
                <form>
                 <p class="title"> FORMES </p>
                 <div id="selecteur">
                 <a class="btn" id="btn_text">Texte</a>
-                <a class="btn" id="btn_circle">Cercle</a>  </br> </br>  </br>
+                <a class="btn" id="btn_circle">Cercle</a>  
             <a class="btn" id="btn_polygone">Polygone</a>
                 <a class="btn" id="btn_polyline">Lignes</a></div>
                 </br></br>

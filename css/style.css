@@ -644,7 +644,7 @@ a, a:visited {
 	font-size: 35px;
  
   font-family: sans-serif;
-  color: white;
+  color: black;
   padding:16px;
   text-align:center;
   display:block;
@@ -652,11 +652,16 @@ a, a:visited {
 }
 .pop_up {
 	z-index: 1000;
-	
-	background-color: #1d64ab;
+	border-radius: 10px;
+	background-color:white;
 	width: 80%;
 	border: solid #ffffff 1px;
 	min-height: 60%;
 	margin-top: 10%;
 	margin-left: 10%;
+      -moz-box-shadow: 6px 6px 6px 1px #656565;
+-webkit-box-shadow: 6px 6px 6px 1px #656565;
+-o-box-shadow: 6px 6px 6px 1px #656565;
+box-shadow: 6px 6px 6px 1px #656565;
+filter:progid:DXImageTransform.Microsoft.Shadow(color=#656565, Direction=135, Strength=6);
 }
