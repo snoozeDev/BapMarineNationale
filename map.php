@@ -140,7 +140,8 @@
           <a href="#" id="pause" class="btn">PAUSE</a>
 -->
         </div>
-        <div id="boussole"><img style="height:100%;width:100%" src="image/boussole.png"></div>
+       
+        <img id="boussole" src="image/boussole.png">
         <div id="map">
 
 
