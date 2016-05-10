@@ -59,7 +59,7 @@ function delete_obj(elem, form){
         }else if(doubleclique==1){
             $('.'+elem).removeClass('anim');
             $('.'+elem).css('display', 'none');
-            $('#'+elem).html('remettre '+form + '<div class="yeuxrouge"></div>').toggleClass("boutonrouge");
+            $('#'+elem).html('remettre '+form + '<div class="yeuxrouge"></div>');
 
             doubleclique=0;
 

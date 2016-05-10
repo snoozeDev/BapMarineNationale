@@ -354,32 +354,32 @@ body.sidebar-show {
 ul {
 	display:none;
 	margin-top:-1px;
-	background:#fff;
+	background:#2C3E50;
 
 }
 
 ul.lignes{
 	display:none;
 	margin-top:-1px;
-	background:#fff;
+	background:#2C3E50;
 }
 
 ul.cercle{
 	display:none;
 	margin-top:-1px;
-	background:#fff;
+	background:#2C3E50;
 }
 
 ul.texte{
 	display:none;
 	margin-top:-1px;
-	background:#fff;
+	background:#2C3E50;
 }
 
 ul.polygone{
 	display:none;
 	margin-top:-1px;
-	background:#fff;
+	background:#2C3E50;
 }
 
 li {
@@ -406,8 +406,8 @@ a, a:visited {
 	text-align: center;
 	text-decoration: none;
 	font: 14px "Helvetica Neue", Helvetica, Arial, sans-serif;
-	box-shadow: 0px 6px #27ae60;
-	background: #2ecc71;
+	box-shadow: 0px 6px #2C3E50;
+	background: #2C3E50;
 }
 
 .boutonrouge{
@@ -426,10 +426,9 @@ a, a:visited {
 }
 
 .croixsuppression{
-	border-radius: 20px;
-	box-shadow: 2px 2px 6px;
+	border-radius: 5px;
 	z-index: 9999;
-	background: red;
+	background: #e74c3c;
 	height: 44px;
 	width: 44px;
 	top: -63px;
@@ -442,9 +441,8 @@ a, a:visited {
 	position: relative;
 	height: 4px;
 	width: 35px;
-	top: 15px;
-	left: 3px;
-
+	top: 16px;
+	left: 5px;
 	background-color: #FFF;
 	border-radius: 5px;
 	transform: rotate(136deg);
@@ -454,20 +452,18 @@ a, a:visited {
 	position: relative;
 	height: 4px;
 	width: 35px;
-	top: 21px;
-	left: 3px;
-
+	top: 20px;
+	left: 5px;
 	background-color: #FFF;
 	border-radius: 5px;
-	transform: rotate(42deg);
+	transform: rotate(45deg);
 
 }
 
 .croixvalide{
-	border-radius: 20px;
-	box-shadow: 2px 2px 6px;
+	border-radius: 5px;
 	z-index: 9999;
-	background: lawngreen;
+	background: #27ae60;
 	height: 44px;
 	width: 44px;
 	top: -19px;
@@ -480,8 +476,8 @@ a, a:visited {
 	position: relative;
 	height: 4px;
 	width: 35px;
-	top: 15px;
-	left: 6px;
+	top: 20px;
+	left: 8px;
 	background-color: #FFF;
 	border-radius: 5px;
 	transform: rotate(116deg);
@@ -491,12 +487,11 @@ a, a:visited {
 	position: relative;
 	height: 4px;
 	width: 15px;
-	top: 23px;
-	left: 4px;
+	top: 26px;
+	left: 6px;
 	background-color: #FFF;
 	border-radius: 5px;
 	transform: rotate(42deg);
-
 }
 
 .oeilvert{
@@ -512,31 +507,35 @@ a, a:visited {
 }
 
 .yeux{
-	display:block;
-	width: 12px;
-	height: 18px;
-	background-color: greenyellow;
-	-webkit-border-radius: 6px 6px 6px 6px / 10px 10px 7px 7px;
-	border-radius: 60% 60% 50% / 60% 60% 40% 40%;
+	width: 16px;
+	height: 16px;
+	border-radius: 12px;
+	border: 1.5px solid #fff;
+	font-family: Cambria;
+	font-size: 11px;
+	color: white;
+	line-height: 20px;
+	text-align: center;
+	background: #27ae60;
 	position: relative;
-	left: 14px;
-	-webkit-transform: rotate(7deg);
-	transform: rotate(90deg);
+	left: 11px;
+	top: 1px;
 }
 
 .yeuxrouge{
-	display:block;
-	width: 12px;
-	height: 18px;
-	background-color: red;
-	-webkit-border-radius: 6px 6px 6px 6px / 10px 10px 7px 7px;
-	border-radius: 60% 60% 50% / 60% 60% 40% 40%;
+	width: 16px;
+	height: 16px;
+	border-radius: 12px;
+	border: 1.5px solid #fff;
+	font-family: Cambria;
+	font-size: 11px;
+	color: white;
+	line-height: 20px;
+	text-align: center;
+	background: #e74c3c;
 	position: relative;
-	top: -1px;
-	left: 228px;
-	z-index: 3;
-	-webkit-transform: rotate(7deg);
-	transform: rotate(90deg);
+	left: 225px;
+	z-index: 2;
 }
 
 /*-------------------------------*/
