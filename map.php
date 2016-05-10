@@ -230,8 +230,8 @@
 
                     <div class="delete_polyline">
                         <div class="share-wrap">
-                            <div class="main-bar">Ligne<span><img src="http://static.tumblr.com/43vgkmu/ftqmmywe6/drop-down.png"/></span></div>
-                            <ul>
+                            <div class="main-bar1">Ligne<span><img src="http://static.tumblr.com/43vgkmu/ftqmmywe6/drop-down.png"/></span></div>
+                            <ul class="lignes">
                                 <h4>Supprimer les lignes</h4>
                                 <li>  <p class="delete_polyline_p"></p> </li>
                             </ul>
@@ -241,8 +241,8 @@
 
                     <div class="delete_cercle">
                         <div class="share-wrap">
-                            <div class="main-bar">cercle<span><img src="http://static.tumblr.com/43vgkmu/ftqmmywe6/drop-down.png"/></span></div>
-                            <ul>
+                            <div class="main-bar2">cercle<span><img src="http://static.tumblr.com/43vgkmu/ftqmmywe6/drop-down.png"/></span></div>
+                            <ul class="cercle">
                                 <h4>Supprimer les cercles</h4>
                                 <li> <p class="delete_cercle_p"></p></li>
                             </ul>
@@ -252,8 +252,8 @@
 
                     <div class="delete_texte">
                         <div class="share-wrap">
-                            <div class="main-bar">texte<span><img src="http://static.tumblr.com/43vgkmu/ftqmmywe6/drop-down.png"/></span></div>
-                            <ul>
+                            <div class="main-bar3">texte<span><img src="http://static.tumblr.com/43vgkmu/ftqmmywe6/drop-down.png"/></span></div>
+                            <ul class="texte">
                                 <h4>Supprimer les textes</h4>
                                 <li> <p class="delete_texte_p"></p></li>
                             </ul>
@@ -263,8 +263,8 @@
 
                     <div class="delete_polygone">
                         <div class="share-wrap">
-                            <div class="main-bar">polygone<span><img src="http://static.tumblr.com/43vgkmu/ftqmmywe6/drop-down.png"/></span></div>
-                            <ul>
+                            <div class="main-bar4">polygone<span><img src="http://static.tumblr.com/43vgkmu/ftqmmywe6/drop-down.png"/></span></div>
+                            <ul class="polygone">
                                 <h4>Supprimer les polygones</h4>
                                 <li>  <p class="delete_polygone_p"></p></li>
                             </ul>
@@ -368,8 +368,29 @@
 
         <script>
             $(document).ready(function(e){
-                $('.main-bar').on('click',function(){
-                    $('ul').slideToggle(580);
+                $('.main-bar1').on('click',function(){
+                    $('ul.lignes').slideToggle(580);
+                });
+            })
+        </script>
+        <script>
+            $(document).ready(function(e){
+                $('.main-bar2').on('click',function(){
+                    $('ul.cercle').slideToggle(580);
+                });
+            })
+        </script>
+        <script>
+            $(document).ready(function(e){
+                $('.main-bar3').on('click',function(){
+                    $('ul.texte').slideToggle(580);
+                });
+            })
+        </script>
+        <script>
+            $(document).ready(function(e){
+                $('.main-bar4').on('click',function(){
+                    $('ul.polygone').slideToggle(580);
                 });
             })
         </script>

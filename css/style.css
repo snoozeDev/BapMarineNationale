@@ -321,7 +321,25 @@ body.sidebar-show {
 
 
 
-.main-bar > span {
+.main-bar1 > span {
+	position:absolute;
+	right:20px;
+	cursor:pointer;
+}
+
+.main-bar2 > span {
+	position:absolute;
+	right:20px;
+	cursor:pointer;
+}
+
+.main-bar3 > span {
+	position:absolute;
+	right:20px;
+	cursor:pointer;
+}
+
+.main-bar4 > span {
 	position:absolute;
 	right:20px;
 	cursor:pointer;
@@ -332,7 +350,30 @@ ul {
 	margin-top:-1px;
 	background:#fff;
 
+}
 
+ul.lignes{
+	display:none;
+	margin-top:-1px;
+	background:#fff;
+}
+
+ul.cercle{
+	display:none;
+	margin-top:-1px;
+	background:#fff;
+}
+
+ul.texte{
+	display:none;
+	margin-top:-1px;
+	background:#fff;
+}
+
+ul.polygone{
+	display:none;
+	margin-top:-1px;
+	background:#fff;
 }
 
 li {
