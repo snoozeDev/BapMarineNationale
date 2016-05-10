@@ -111,7 +111,7 @@
                 
                </div>
         </div></div>
-        <div class="big_btn">
+        <div  style="background:white;margin-left:10%"  class="big_btn">
                     <div id="timer">
  
  <span id="days">00J:</span> 
@@ -120,9 +120,10 @@
   </div>
 
 <div id="controls">
-  <button id="play" class="btntime">Start</button>
-<button id="pause"class="btntime">Stop</button>
-<select id="speed">
+<img src="image/play.png" style="display:inline-block" id="play" class="btntime">
+<img src="image/pause.png" id="pause" class="btntime">
+<div>
+<select class="speed">
   <option value="1">1</option>
   <option value="2">3</option>
   <option value="5">5</option>
@@ -132,7 +133,7 @@
   
   
   
-</select>
+    </select></div>
 </div>
 <!--
           <a href="#" id="play" class="btn">LANCER</a></br></br></br>
