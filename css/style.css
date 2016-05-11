@@ -348,7 +348,7 @@ body.sidebar-show {
 
 .share-wrap {
 	width:285px;
-	margin:100px auto;
+	margin:2px auto;
 	cursor:pointer;
 }
 
@@ -361,6 +361,8 @@ body.sidebar-show {
 	font-size:16px;
 	font-weight:600;
 	color:#82C9BD;
+    z-index: 10;
+
 }
 
 
@@ -406,26 +408,38 @@ ul {
 
 ul.lignes{
 	display:none;
-	margin-top:-1px;
+	margin-top: -10px;
+	min-height: 100px;
+	overflow-y: scroll;
 	background:#2C3E50;
+	z-index: 10000;
 }
 
 ul.cercle{
 	display:none;
 	margin-top:-1px;
+	min-height: 100px;
+	overflow-y: scroll;
 	background:#2C3E50;
+	z-index: 10000;
 }
 
 ul.texte{
 	display:none;
 	margin-top:-1px;
+	min-height: 100px;
+	overflow-y: scroll;
 	background:#2C3E50;
+	z-index: 10000;
 }
 
 ul.polygone{
 	display:none;
 	margin-top:-1px;
+	min-height: 100px;
+	overflow-y: scroll;
 	background:#2C3E50;
+	z-index: 10000;
 }
 
 li {

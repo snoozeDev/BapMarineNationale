@@ -238,61 +238,62 @@
               </div>
 
 
-              <div class="onglet2 is-closed">
+              <div class="onglet2 is-closed" style="background-color: #2C3E50;">
 
-                <div class="delete">
+                  <div class="delete" style="position: relative;top:100px;">
 
 
-              <div class="delete_polyline">
+                      <div class="delete_polyline" style="color: #82C9BD;">
                           <div class="share-wrap">
-                            <div class="main-bar1 main-bar" style="color: #82C9BD;">Ligne<span><img src="http://static.tumblr.com/43vgkmu/ftqmmywe6/drop-down.png"/></span></div>
-                           
-                              <ul class="liste lignes">
-                             
- <br/>
+                              <div class="main-bar1 main-bar" style="color: #82C9BD;">Ligne<span><img src="http://static.tumblr.com/43vgkmu/ftqmmywe6/drop-down.png"/></span></div>
+
+                              <ul class="lignes">
+
+                                  <br/>
                                   <li>  <p class="delete_polyline_p"></p> </li>
                               </ul>
                           </div>
 
 
-                  <div class="delete_cercle">
-                    <div class="share-wrap">
-                      <div class="main-bar2 main-bar" style="color: #82C9BD;">cercle<span><img src="http://static.tumblr.com/43vgkmu/ftqmmywe6/drop-down.png"/></span></div>
-                      <ul class="liste cercle">
-                        <br/>
-                        <li> <p class="delete_cercle_p"></p></li>
-                      </ul>
-                    </div>
+                          <div class="delete_cercle">
+                              <div class="share-wrap">
+                                  <div class="main-bar2 main-bar" style="color: #82C9BD;">cercle<span><img src="http://static.tumblr.com/43vgkmu/ftqmmywe6/drop-down.png"/></span></div>
+                                  <ul class="cercle">
+                                      <br/>
+                                      <li> <p class="delete_cercle_p"></p></li>
+                                  </ul>
+                              </div>
+                          </div>
+
+
+                          <div class="delete_texte">
+                              <div class="share-wrap">
+                                  <div class="main-bar3 main-bar" style="color: #82C9BD;">texte<span><img src="http://static.tumblr.com/43vgkmu/ftqmmywe6/drop-down.png"/></span></div>
+                                  <ul class="texte">
+                                      <br/>
+                                      <li> <p class="delete_texte_p"></p></li>
+                                  </ul>
+                              </div>
+                          </div>
+
+
+                          <div class="delete_polygone">
+                              <div class="share-wrap">
+                                  <div class="main-bar4 main-bar" style="color: #82C9BD;">polygone<span><img src="http://static.tumblr.com/43vgkmu/ftqmmywe6/drop-down.png"/></span></div>
+                                  <ul class="polygone">
+                                      <br/>
+                                      <li>  <p class="delete_polygone_p"></p></li>
+                                  </ul>
+                              </div>
+                          </div>
+
+                      </div>
+
                   </div>
 
 
-                  <div class="delete_texte">
-                    <div class="share-wrap">
-                      <div class="main-bar3 main-bar" style="color: #82C9BD;">texte<span><img src="http://static.tumblr.com/43vgkmu/ftqmmywe6/drop-down.png"/></span></div>
-                      <ul class="liste texte">
-                        <br/>
-                        <li> <p class="delete_texte_p"></p></li>
-                      </ul>
-                    </div>
-                  </div>
 
-
-                  <div class="delete_polygone">
-                    <div class="share-wrap">
-                      <div class="main-bar4 main-bar" style="color: #82C9BD;">polygone<span><img src="http://static.tumblr.com/43vgkmu/ftqmmywe6/drop-down.png"/></span></div>
-                      <ul class="liste polygone">
-                        <br/>
-                        <li>  <p class="delete_polygone_p"></p></li>
-                      </ul>
-                    </div>
-                  </div>
-
-                </div>
-
-              </div>
-
-
-            </section>
+          </section>
 
             <script src="https://code.jquery.com/jquery-1.12.0.min.js"></script>
             <script src="https://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
@@ -388,7 +389,34 @@
 
             </script>
 
-
+  <script>
+      $(document).ready(function(e){
+          $('.main-bar1').on('click',function(){
+              $('ul.lignes').slideToggle(1000);
+          });
+      })
+  </script>
+  <script>
+      $(document).ready(function(e){
+          $('.main-bar2').on('click',function(){
+              $('ul.cercle').slideToggle(1580);
+          });
+      })
+  </script>
+  <script>
+      $(document).ready(function(e){
+          $('.main-bar3').on('click',function(){
+              $('ul.texte').slideToggle(1580);
+          });
+      })
+  </script>
+  <script>
+      $(document).ready(function(e){
+          $('.main-bar4').on('click',function(){
+              $('ul.polygone').slideToggle(1580);
+          });
+      })
+  </script>
            
 
           </body>
