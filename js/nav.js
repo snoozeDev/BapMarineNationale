@@ -1,28 +1,50 @@
 $(document).ready(function () {
-  var trigger = $('.hamburger'),
-      overlay = $('.overlay'),
-     isClosed = false;
+  var trigger1 = $('.onglet1-btn'),
+  trigger2 = $('.onglet2-btn'),
+  overlay1 = $('.onglet1'),
+  overlay2 = $('.onglet2');
+  isClosed = false;
 
-    trigger.click(function () {
-      hamburger_cross();      
-    });
+  trigger1.click(function () {
+    onglet1();      
+  });
 
-    function hamburger_cross() {
+  function onglet1() {
 
-      if (isClosed == true) {          
-        overlay.hide();
-        trigger.removeClass('is-open');
-        trigger.addClass('is-closed');
-        isClosed = false;
-      } else {   
-        overlay.show();
-        trigger.removeClass('is-closed');
-        trigger.addClass('is-open');
-        isClosed = true;
-      }
+    if (isClosed == true) {
+      overlay1.removeClass('is-open');
+      overlay1.addClass('is-closed');
+      overlay2.removeClass('is-closed');
+      overlay2.addClass('is-open');
+      isClosed = false;
+    } else {   
+      overlay1.removeClass('is-closed');
+      overlay1.addClass('is-open');
+      overlay2.removeClass('is-open');
+      overlay2.addClass('is-closed');
+      isClosed = true;
+    }
+  }
+
+  trigger2.click(function () {
+    onglet2();
+  });
+
+  function onglet2() {
+    
+    if (isClosed == true) {
+      overlay2.removeClass('is-open');
+      overlay2.addClass('is-closed');
+      overlay1.removeClass('is-closed');
+      overlay1.addClass('is-open');
+      isClosed = false;
+    } else {
+      overlay2.removeClass('is-closed');
+      overlay2.addClass('is-open');
+      overlay1.removeClass('is-open');
+      overlay1.addClass('is-closed');
+      isClosed = true;
+    }
   }
   
-  $('[data-toggle="offcanvas"]').click(function () {
-        $('#wrapper').toggleClass('toggled');
-  });  
 });

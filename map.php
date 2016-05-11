@@ -1,169 +1,169 @@
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="fr">
-    <head>
-        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 
-        <link rel="stylesheet" type="text/css" href="css/style.css">
-        <link rel="stylesheet" href="js/Leaflet-0.7.7/leaflet.css" />
-        <script src='https://api.mapbox.com/mapbox.js/v2.4.0/mapbox.js'></script>
-        
-       
+  <link rel="stylesheet" type="text/css" href="css/style.css">
+  <link rel="stylesheet" href="js/Leaflet-0.7.7/leaflet.css" />
+  <script src='https://api.mapbox.com/mapbox.js/v2.4.0/mapbox.js'></script>
 
-<link href='https://api.mapbox.com/mapbox.js/plugins/leaflet-fullscreen/v1.0.1/leaflet.fullscreen.css' rel='stylesheet' />
 
-        
-    </head>
- 
-    <body onload="initialize()">
 
-        <div id="ajout_pins" class="pop_up_inv hide"><div  class="pop_up">
+  <link href='https://api.mapbox.com/mapbox.js/plugins/leaflet-fullscreen/v1.0.1/leaflet.fullscreen.css' rel='stylesheet' />
 
-               <form>
-                <p class="title"> FORMES </p>
-                <div id="selecteur">
-                <a class="btn" id="btn_text">Texte</a>
-                <a class="btn" id="btn_circle">Cercle</a>  
-            <a class="btn" id="btn_polygone">Polygone</a>
-                <a class="btn" id="btn_polyline">Lignes</a></div>
-                </br></br>
-                <div id="form_text" class="formulaire hide">
-                    <p class="title"> Ecrire sur la carte </p>
-                    <input id="label_text" class="formula" placeholder="Votre texte"><br><br>
-                    
-                    
-                    <a href="#" class="btn"  id="drawText">Ajouter texte</a>
-                    
-                </div>
-                <div id="form_circle" class="formulaire hide">
-                     <p class="title">Créer un cercle</p>
 
-                    <p class="align">Taille du cercle</p>
-                    <select class="formula" id="taille_circle" name="taille_cercle">
-                      <option value="50000">Petit</option>
-                      <option value="100000">Moyen</option>
-                      <option value="200000">Grand</option>
-                    </select>
-                    <p class="align">Couleur du cercle</p>
-                    <select class="formula" id="color_circle" name="color_circle">
-                      <option value="blue">Bleu</option>
-                      <option value="red">Rouge</option>
-                      <option value="green">Vert</option>
-                      <option value="gray">Gris</option>
-                    </select>
-                    
-                    <a href="#" class="btn"  id="drawCircle">Ajouter Cercle</a>
-                    
-                </div>
-                <div id="form_polygone" class="formulaire hide">
-                     <p class="title">Créer une forme</p>
-                    <p class="align">Couleur de la forme</p>
-                    <select class="formula" id="color_polygone" name="color_polygone">
-                      <option value="blue">Bleu</option>
-                      <option value="red">Rouge</option>
-                      <option value="green">Vert</option>
-                      <option value="gray">Gris</option>
-                    </select><br>
-                    <a href="#"  class="btn" id="drawPolygon">Ajouter Polygone</a>
-                    
-                </div>
-                <div id="form_polyline" class="formulaire hide">
-                     <p class="title">Créer une ligne</p>
-                    <p>Couleur de la ligne</p>
-                    <select class="formula" id="color_polyline" name="color_polyline">
-                      <option value="blue">Bleu</option>
-                      <option value="red">Rouge</option>
-                      <option value="green">Vert</option>
-                      <option value="gray">Gris</option>
-                    </select><br>
-                     <a href="#" class="btn"  id="drawPolyline">Ajouter Polyline</a>
-                    
-                </div>
-                
-                
-               
+</head>
 
-               </form>
-        </div></div>
-      <div id="ajout_bateau" class="pop_up_inv hide"><div  class="pop_up">
-               <div class="formulaire_bat">
-               <p class="title"> DÉPLACEMENT </p>
-                <label>Type de vehicule</label><br>
-                <select class="formula" id="type_bateau" name="type_bateau">
-                      <option value="porte-avion">Porte-avion</option>
-                      <option value="cuirasse">Cuirasse</option>
-                      <option value="destroyer">Destroyer</option>
-                      <option value="helico">Helico</option>
-                      <option value="avion">Avion</option>
-                </select><br>
-                <label>Vitesse du trajet</label><br>
-                <select class="formula" id="vitesse_bateau" name="vitesse_bateau">
-                      <option value="1.8">Lente</option>
-                      <option value="1">Moyenne</option>
-                      <option value="0.5">Rapide</option>
-                </select><br>
-                <label>Alignement</label><br>
-                <select class="formula" id="color_bateau" name="color_bateau">
-                      <option value="blue">Allié</option>
-                      <option value="green">Neutre</option>
-                      <option value="red">Ennemi</option>
-                </select><br>
-                <label>Description (facutatif)</label><br>
-                <textarea class="formula" id="description" name="description"></textarea>
-                <a href="#" class="btn" id="drawTrajet">Ajouter Trajet</a>
-                
-               </div>
-        </div></div>
-        <div class="big_btn">
-                   <div id="cont">
-                    <div class="half2">
-                   <img src="image/play.png" style="display:inline-block" id="play" class="btntime">
-                        <img src="image/pause.png" style="display:none"  id="pause" class="btntime"></div>
-                   <div class="half1">
-                    <div id="timer">
- 
- <span id="days">00J:</span> 
-  <span id="hours">00H:</span>
-  <span id="mins">00M</span>  
+<body onload="initialize()">
+
+  <div id="ajout_pins" class="pop_up_inv hide"><div  class="pop_up">
+
+   <form>
+    <p class="title"> FORMES </p>
+    <div id="selecteur">
+      <a class="btn" id="btn_text">Texte</a>
+      <a class="btn" id="btn_circle">Cercle</a>  
+      <a class="btn" id="btn_polygone">Polygone</a>
+      <a class="btn" id="btn_polyline">Lignes</a></div>
+    </br></br>
+    <div id="form_text" class="formulaire hide">
+      <p class="title"> Ecrire sur la carte </p>
+      <input id="label_text" class="formula" placeholder="Votre texte"><br><br>
+
+
+      <a href="#" class="btn"  id="drawText">Ajouter texte</a>
+
+    </div>
+    <div id="form_circle" class="formulaire hide">
+     <p class="title">Créer un cercle</p>
+
+     <p class="align">Taille du cercle</p>
+     <select class="formula" id="taille_circle" name="taille_cercle">
+      <option value="50000">Petit</option>
+      <option value="100000">Moyen</option>
+      <option value="200000">Grand</option>
+    </select>
+    <p class="align">Couleur du cercle</p>
+    <select class="formula" id="color_circle" name="color_circle">
+      <option value="blue">Bleu</option>
+      <option value="red">Rouge</option>
+      <option value="green">Vert</option>
+      <option value="gray">Gris</option>
+    </select>
+
+    <a href="#" class="btn"  id="drawCircle">Ajouter Cercle</a>
+
   </div>
+  <div id="form_polygone" class="formulaire hide">
+   <p class="title">Créer une forme</p>
+   <p class="align">Couleur de la forme</p>
+   <select class="formula" id="color_polygone" name="color_polygone">
+    <option value="blue">Bleu</option>
+    <option value="red">Rouge</option>
+    <option value="green">Vert</option>
+    <option value="gray">Gris</option>
+  </select><br>
+  <a href="#"  class="btn" id="drawPolygon">Ajouter Polygone</a>
+
+</div>
+<div id="form_polyline" class="formulaire hide">
+ <p class="title">Créer une ligne</p>
+ <p>Couleur de la ligne</p>
+ <select class="formula" id="color_polyline" name="color_polyline">
+  <option value="blue">Bleu</option>
+  <option value="red">Rouge</option>
+  <option value="green">Vert</option>
+  <option value="gray">Gris</option>
+</select><br>
+<a href="#" class="btn"  id="drawPolyline">Ajouter Polyline</a>
+
+</div>
 
 
-<div>
-<select class=" speed">
-  <option value="1">1</option>
-  <option value="3">3</option>
-  <option value="5">5</option>
-  <option value="10">10</option>
-  <option value="50">50</option>
-  <option value="100">100</option>
-  
-  
-  
+
+
+</form>
+</div></div>
+<div id="ajout_bateau" class="pop_up_inv hide"><div  class="pop_up">
+ <div class="formulaire_bat">
+   <p class="title"> DÉPLACEMENT </p>
+   <label>Type de vehicule</label><br>
+   <select class="formula" id="type_bateau" name="type_bateau">
+    <option value="porte-avion">Porte-avion</option>
+    <option value="cuirasse">Cuirasse</option>
+    <option value="destroyer">Destroyer</option>
+    <option value="helico">Helico</option>
+    <option value="avion">Avion</option>
+  </select><br>
+  <label>Vitesse du trajet</label><br>
+  <select class="formula" id="vitesse_bateau" name="vitesse_bateau">
+    <option value="1.8">Lente</option>
+    <option value="1">Moyenne</option>
+    <option value="0.5">Rapide</option>
+  </select><br>
+  <label>Alignement</label><br>
+  <select class="formula" id="color_bateau" name="color_bateau">
+    <option value="blue">Allié</option>
+    <option value="green">Neutre</option>
+    <option value="red">Ennemi</option>
+  </select><br>
+  <label>Description (facutatif)</label><br>
+  <textarea class="formula" id="description" name="description"></textarea>
+  <a href="#" class="btn" id="drawTrajet">Ajouter Trajet</a>
+
+</div>
+</div></div>
+<div class="big_btn">
+ <div id="cont">
+  <div class="half2">
+   <img src="image/play.png" style="display:inline-block" id="play" class="btntime">
+   <img src="image/pause.png" style="display:none"  id="pause" class="btntime"></div>
+   <div class="half1">
+    <div id="timer">
+
+     <span id="days">00J:</span> 
+     <span id="hours">00H:</span>
+     <span id="mins">00M</span>  
+   </div>
+
+
+   <div>
+    <select class=" speed">
+      <option value="1">1</option>
+      <option value="3">3</option>
+      <option value="5">5</option>
+      <option value="10">10</option>
+      <option value="50">50</option>
+      <option value="100">100</option>
+
+
+
     </select></div></div></div>
 
 
-        </div>
-       
-        <img id="boussole" src="image/boussole.png">
-        <div id="map">
+  </div>
+
+  <img id="boussole" src="image/boussole.png">
+  <div id="map">
 
 
-            
-        </div>
-        <div id="toolbar">
-            <div class="forme" id="bateau"> <img src="image/bateau.png"></div>
-         
-           <div class="forme" id="forme"> <img src="image/forme.png"></div>
-        </div>
 
-        <div class="stop">
-          <input class="hide" id="editVitesse" placeholder="Votre Vitesse"><br>
-          
-          <div class="hide btn_finish forme" id="stopDraw"> <img src="image/formev2.png"></div>
-           <div class="hide btn_finish forme" id="stopDrawPolyline"> <img src="image/formev2.png"></div>
-            <div class="hide btn_finish forme" id="stopEditPolyline"> <img src="image/bateauv2.png"></div>
-           <div class="hide btn_finish forme" id="stopDrawTrajet"> <img src="image/bateauv2.png"></div>
-          
-      
-        </div>
+  </div>
+  <div id="toolbar">
+    <div class="forme" id="bateau"> <img src="image/bateau.png"></div>
+
+    <div class="forme" id="forme"> <img src="image/forme.png"></div>
+  </div>
+
+  <div class="stop">
+    <input class="hide" id="editVitesse" placeholder="Votre Vitesse"><br>
+
+    <div class="hide btn_finish forme" id="stopDraw"> <img src="image/formev2.png"></div>
+    <div class="hide btn_finish forme" id="stopDrawPolyline"> <img src="image/formev2.png"></div>
+    <div class="hide btn_finish forme" id="stopEditPolyline"> <img src="image/bateauv2.png"></div>
+    <div class="hide btn_finish forme" id="stopDrawTrajet"> <img src="image/bateauv2.png"></div>
+
+
+  </div>
 
 
 
@@ -203,147 +203,160 @@
           </div> -->
 
 
-        <button id="sidebar-btn" class="sidebar-btn">
+          <button id="sidebar-btn" class="sidebar-btn">
             <div class="menu-stripes1"></div>
             <div class="menu-stripes"></div>
             <div class="menu-stripes2"></div>
-        </button>
-        <section id="sidebar" class="sidebar">
+          </button>
+          <section id="sidebar" class="sidebar">
             <div class="settings">
-                <h1>Parametres</h1>
+              <h1>Parametres</h1>
+
+              <button id="onglet-btn" class="onglet1-btn onglet-btn">
+                <img class="onglet1-img" src="image/settings.png">
+              </button>
+              <button id="onglet-btn" class="onglet2-btn onglet-btn">
+                <img class="onglet2-img" src="image/hamburger.png">
+              </button>
+
+              <div class="onglet1 is-open">
 
                 <div class="bouton">
-                <input class="checkbox" id="checkbox1"  type="checkbox">
-                <label id="profondeur" for="checkbox1"></label>
-                <span>Cacher les profondeurs</span>
-              </div><br>
-              <div class="bouton">
-                <input class="checkbox" id="checkbox2"  type="checkbox">
-                <label  id="riv" for="checkbox2"></label>
-                <span>Cacher les côtes et les rivières</span>
-              </div><br>
-              <div class="bouton">
-                <input class="checkbox" id="checkbox3" type="checkbox">
-                <label  id="structures" for="checkbox3"></label>
-                <span>Cacher les structures</span>
-              </div><br>
+                  <input class="checkbox" id="checkbox1"  type="checkbox">
+                  <label id="profondeur" for="checkbox1"></label>
+                  <span>Cacher les profondeurs</span>
+                </div><br>
+                <div class="bouton">
+                  <input class="checkbox" id="checkbox2"  type="checkbox">
+                  <label  id="riv" for="checkbox2"></label>
+                  <span>Cacher les côtes et les rivières</span>
+                </div><br>
+                <div class="bouton">
+                  <input class="checkbox" id="checkbox3" type="checkbox">
+                  <label  id="structures" for="checkbox3"></label>
+                  <span>Cacher les structures</span>
+                </div><br>
 
-          
+              </div>
 
+
+              <div class="onglet2 is-closed">
 
                 <div class="delete">
 
 
-                    <div class="delete_polyline">
-                        <div class="share-wrap">
-                            <div class="main-bar1" style="color: #82C9BD;">Ligne<span><img src="http://static.tumblr.com/43vgkmu/ftqmmywe6/drop-down.png"/></span></div>
-                          
-                        </div>
+                  <div class="delete_polyline">
+                    <div class="share-wrap">
+                      <div class="main-bar1" style="color: #82C9BD;">Ligne<span><img src="http://static.tumblr.com/43vgkmu/ftqmmywe6/drop-down.png"/></span></div>
                     </div>
+                  </div>
 
 
-                    <div class="delete_cercle">
-                        <div class="share-wrap">
-                            <div class="main-bar2" style="color: #82C9BD;">cercle<span><img src="http://static.tumblr.com/43vgkmu/ftqmmywe6/drop-down.png"/></span></div>
-                            <ul class="cercle">
-                                <br/>
-                                <li> <p class="delete_cercle_p"></p></li>
-                            </ul>
-                        </div>
+                  <div class="delete_cercle">
+                    <div class="share-wrap">
+                      <div class="main-bar2" style="color: #82C9BD;">cercle<span><img src="http://static.tumblr.com/43vgkmu/ftqmmywe6/drop-down.png"/></span></div>
+                      <ul class="cercle">
+                        <br/>
+                        <li> <p class="delete_cercle_p"></p></li>
+                      </ul>
                     </div>
+                  </div>
 
 
-                    <div class="delete_texte">
-                        <div class="share-wrap">
-                            <div class="main-bar3" style="color: #82C9BD;">texte<span><img src="http://static.tumblr.com/43vgkmu/ftqmmywe6/drop-down.png"/></span></div>
-                            <ul class="texte">
-                                <br/>
-                                <li> <p class="delete_texte_p"></p></li>
-                            </ul>
-                        </div>
+                  <div class="delete_texte">
+                    <div class="share-wrap">
+                      <div class="main-bar3" style="color: #82C9BD;">texte<span><img src="http://static.tumblr.com/43vgkmu/ftqmmywe6/drop-down.png"/></span></div>
+                      <ul class="texte">
+                        <br/>
+                        <li> <p class="delete_texte_p"></p></li>
+                      </ul>
                     </div>
+                  </div>
 
 
-                    <div class="delete_polygone">
-                        <div class="share-wrap">
-                            <div class="main-bar4" style="color: #82C9BD;">polygone<span><img src="http://static.tumblr.com/43vgkmu/ftqmmywe6/drop-down.png"/></span></div>
-                            <ul class="polygone">
-                                <br/>
-                                <li>  <p class="delete_polygone_p"></p></li>
-                            </ul>
-                        </div>
+                  <div class="delete_polygone">
+                    <div class="share-wrap">
+                      <div class="main-bar4" style="color: #82C9BD;">polygone<span><img src="http://static.tumblr.com/43vgkmu/ftqmmywe6/drop-down.png"/></span></div>
+                      <ul class="polygone">
+                        <br/>
+                        <li>  <p class="delete_polygone_p"></p></li>
+                      </ul>
                     </div>
-
-
-
+                  </div>
 
                 </div>
 
-
-        </section>
-
-        <script type="text/javascript" src="js/function.js"></script>
-        <script type="text/javascript" src="js/icone.js"></script>
-        <script type="text/javascript" src="js/map.js"></script>
-        <script src="js/Leaflet-0.7.7/leaflet.js"></script> 
-        
-                   
-        <script src='https://api.mapbox.com/mapbox.js/plugins/leaflet-fullscreen/v1.0.1/Leaflet.fullscreen.min.js'></script>
-<link href='https://api.mapbox.com/mapbox.js/plugins/leaflet-fullscreen/v1.0.1/leaflet.fullscreen.css' rel='stylesheet' />
-      
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
-
-        <script>
+              </div>
 
 
+            </section>
+
+            <script src="https://code.jquery.com/jquery-1.12.0.min.js"></script>
+            <script src="https://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+
+            <script type="text/javascript" src="js/function.js"></script>
+            <script type="text/javascript" src="js/icone.js"></script>
+            <script type="text/javascript" src="js/map.js"></script>
+            <script type="text/javascript" src="js/nav.js"></script>
+            <script src="js/Leaflet-0.7.7/leaflet.js"></script> 
+
+
+            <script src='https://api.mapbox.com/mapbox.js/plugins/leaflet-fullscreen/v1.0.1/Leaflet.fullscreen.min.js'></script>
+            <link href='https://api.mapbox.com/mapbox.js/plugins/leaflet-fullscreen/v1.0.1/leaflet.fullscreen.css' rel='stylesheet' />
+
+            <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
+
+            <script>
 
 
 
 
 
-            var sidebar = (function() {
+
+
+              var sidebar = (function() {
                 "use strict";
 
                 var $contnet         = $('#content'),
-                        $sidebar         = $('#sidebar'),
-                        $sidebarBtn      = $('#sidebar-btn'),
-                        $toggleCol       = $('body').add($contnet).add($sidebarBtn),
-                        sidebarIsVisible = false;
+                $sidebar         = $('#sidebar'),
+                $sidebarBtn      = $('#sidebar-btn'),
+                $toggleCol       = $('body').add($contnet).add($sidebarBtn),
+                sidebarIsVisible = false;
 
                 $sidebarBtn.on('click', function() {
 
-                    if (!sidebarIsVisible) {
-                        bindContent();
-                    } else {
-                        unbindContent();
-                    }
+                  if (!sidebarIsVisible) {
+                    bindContent();
+                  } else {
+                    unbindContent();
+                  }
 
-                    toggleMenu();
+                  toggleMenu();
                 });
 
 
                 function bindContent() {
 
-                    $contnet.on('click', function() {
-                        toggleMenu();
-                        unbindContent();
-                    });
+                  $contnet.on('click', function() {
+                    toggleMenu();
+                    unbindContent();
+                  });
                 }
 
                 function unbindContent() {
-                    $contnet.unbind();
+                  $contnet.unbind();
                 }
 
                 function toggleMenu() {
 
-                    $toggleCol.toggleClass('sidebar-show');
-                    $sidebar.toggleClass('show');
+                  $toggleCol.toggleClass('sidebar-show');
+                  $sidebar.toggleClass('show');
 
-                    if (!sidebarIsVisible) {
-                        sidebarIsVisible = true;
-                    } else {
-                        sidebarIsVisible = false;
-                    }
+                  if (!sidebarIsVisible) {
+                    sidebarIsVisible = true;
+                  } else {
+                    sidebarIsVisible = false;
+                  }
                 }
 
 
@@ -351,52 +364,52 @@
 
                 $menuToggle.each(function() {
 
-                    var $this       = $(this),
-                            $submenuBtn = $this.children('.menu-toggle-btns').find('.menu-btn'),
-                            $submenu    = $this.children('.submenu');
+                  var $this       = $(this),
+                  $submenuBtn = $this.children('.menu-toggle-btns').find('.menu-btn'),
+                  $submenu    = $this.children('.submenu');
 
-                    $submenuBtn.on('click', function(e) {
-                        e.preventDefault();
-                        $submenu.slideToggle();
-                        $(this).toggleClass('active');
-                    });
+                  $submenuBtn.on('click', function(e) {
+                    e.preventDefault();
+                    $submenu.slideToggle();
+                    $(this).toggleClass('active');
+                  });
                 });
 
-            })();
+              })();
 
 
-        </script>
+            </script>
 
 
-        <script>
-            $(document).ready(function(e){
+            <script>
+              $(document).ready(function(e){
                 $('.main-bar1').on('click',function(){
-                    $('ul.lignes').slideToggle(580);
+                  $('ul.lignes').slideToggle(580);
                 });
-            })
-        </script>
-        <script>
-            $(document).ready(function(e){
+              })
+            </script>
+            <script>
+              $(document).ready(function(e){
                 $('.main-bar2').on('click',function(){
-                    $('ul.cercle').slideToggle(580);
+                  $('ul.cercle').slideToggle(580);
                 });
-            })
-        </script>
-        <script>
-            $(document).ready(function(e){
+              })
+            </script>
+            <script>
+              $(document).ready(function(e){
                 $('.main-bar3').on('click',function(){
-                    $('ul.texte').slideToggle(580);
+                  $('ul.texte').slideToggle(580);
                 });
-            })
-        </script>
-        <script>
-            $(document).ready(function(e){
+              })
+            </script>
+            <script>
+              $(document).ready(function(e){
                 $('.main-bar4').on('click',function(){
-                    $('ul.polygone').slideToggle(580);
+                  $('ul.polygone').slideToggle(580);
                 });
-            })
-        </script>
+              })
+            </script>
 
-    </body>
-</html>
+          </body>
+          </html>
 
