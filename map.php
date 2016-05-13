@@ -114,33 +114,45 @@
 </div></div>
 <div class="big_btn">
  <div id="cont">
-  <div class="half2">
+  <div class="timer">
    <img src="image/play.png" style="display:inline-block" id="play" class="btntime">
-   <img src="image/pause.png" style="display:none"  id="pause" class="btntime"></div>
-   <div class="half1">
+   <img src="image/pause.png" style="display:none"  id="pause" class="btntime">
+   
     <div id="timer">
 
-     <span id="days">00J:</span> 
-     <span id="hours">00H:</span>
-     <span id="mins">00M</span>  
+     <span id="days"class="time"> 00  :</span>
+     <span id="hours"class="time"> 00  :</span>
+     <span id="mins"class="time"> 00</span>  
    </div>
+
+  <div class="timer_number_titles">
+<!--
+              <div class="timer_number_days">
+                Jours
+              </div>
+              <div class="timer_number_hours">
+                Heures
+              </div>
+              <div class="timer_number_mins">
+                Minutes
+              </div>
+-->
+  </div>
 
 
    <div>
     <select class=" speed">
-      <option value="1">1</option>
-      <option value="3">3</option>
-      <option value="5">5</option>
-      <option value="10">10</option>
-      <option value="50">50</option>
+
+      <option value="1">x1</option>
+      <option value="3">x3</option>
+      <option value="5">x5</option>
+      <option value="10">x10</option>
+      <option value="50">x50</option>
       <option value="100">100</option>
 
 
 
-    </select></div></div></div>
-
-
-  </div>
+    </select></div></div></div></div>
 
   <img id="boussole" src="image/boussole.png">
   <div id="map">
