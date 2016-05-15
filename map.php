@@ -93,19 +93,17 @@
     <option value="destroyer">Destroyer</option>
     <option value="helico">Helico</option>
     <option value="avion">Avion</option>
-  </select><br>
-  <label>Vitesse du trajet</label><br>
-  <select class="formula" id="vitesse_bateau" name="vitesse_bateau">
-    <option value="1.8">Lente</option>
-    <option value="1">Moyenne</option>
-    <option value="0.5">Rapide</option>
-  </select><br>
+  </select>
+  <label>Vitesse du trajet (en noeud)</label><br>
+   <input type="text" id="vitesse_bateau" value="189.525"><br><br>
+  
   <label>Alignement</label><br>
   <select class="formula" id="color_bateau" name="color_bateau">
     <option value="blue">Allié</option>
     <option value="green">Neutre</option>
     <option value="red">Ennemi</option>
   </select><br>
+ 
   <label>Description (facutatif)</label><br>
   <textarea class="formula" id="description" name="description"></textarea>
   <a href="#" class="btn" id="drawTrajet">Ajouter Trajet</a>
@@ -120,7 +118,7 @@
    <div class="half1">
     <div id="timer">
 
-     <span id="days">00J:</span> 
+     <span id="days">00J</span><br> 
      <span id="hours">00H:</span>
      <span id="mins">00M</span>  
    </div>
@@ -164,43 +162,6 @@
 
 
   </div>
-
-
-
-     <!--   <div class="settings">
-            <h1 id="ll">Paramètres</h1>
-            <p class="align">Cacher les profondeurs</p>
-            <div class="align" id="profondeur"><input type="checkbox"></div><br>
-             <p class="align">Cacher les côtes et les rivières</p>
-            <div class="align" id="riv"><input type="checkbox"></div><br>
-                     <p class="align">Cacher les structures</p>
-            <div class="align" id="structures"><input type="checkbox"></div><br>
-            <button class="hide btn_finish" id="stopDraw">Arrêter de dessiner</button>
-            <button class="hide btn_finish" id="stopDrawPolyline">Arrêter de dessiner</button>
-            <button class="hide btn_finish" id="stopDrawTrajet">Arrêter de dessiner</button>
-            <button class="hide btn_finish" id="stopEditPolyline">Arrêter de dessiner</button>
-            <input class="hide" id="editVitesse" placeholder="Votre Vitesse"><br>
-
-            <div class="delete">
-              <div class="delete_polyline">
-                <h2>Supprimer les lignes</h2>
-                <p class="delete_polyline_p"></p>
-              </div>
-              <div class="delete_cercle">
-                <h2>Supprimer les cercles</h2>
-                <p class="delete_cercle_p"></p>
-              </div>
-              <div class="delete_texte">
-                <h2>Supprimer les textes</h2>
-                <p class="delete_texte_p"></p>
-              </div>
-              <div class="delete_polygone">
-                <h2>Supprimer les polygones</h2>
-                <p class="delete_polygone_p"></p>
-              </div>
-            </div>
-
-          </div> -->
 
 
           <button id="sidebar-btn" class="sidebar-btn">
