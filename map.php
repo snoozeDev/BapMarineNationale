@@ -113,12 +113,14 @@
 <div class="big_btn">
  <div id="cont">
   <div class="timer">
-   <img src="image/play.png" style="display:inline-block" id="play" class="btntime">
-   <img src="image/pause.png" style="display:none"  id="pause" class="btntime">
+    <div id="timerbtn">
+     <img src="image/play.png" style="display:inline-block" id="play" class="btntime">
+     <img src="image/pause.png" style="display:none"  id="pause" class="btntime">
+   </div>
    
     <div id="timer">
 
-<<<<<<< HEAD
+
      <span id="days">00J</span><br> 
      <span id="hours">00H:</span>
      <span id="mins">00M</span>  
