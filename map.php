@@ -112,33 +112,47 @@
 </div></div>
 <div class="big_btn">
  <div id="cont">
-  <div class="half2">
+  <div class="timer">
    <img src="image/play.png" style="display:inline-block" id="play" class="btntime">
-   <img src="image/pause.png" style="display:none"  id="pause" class="btntime"></div>
-   <div class="half1">
+   <img src="image/pause.png" style="display:none"  id="pause" class="btntime">
+   
     <div id="timer">
 
+<<<<<<< HEAD
      <span id="days">00J</span><br> 
      <span id="hours">00H:</span>
      <span id="mins">00M</span>  
+
    </div>
+
+  <div class="timer_number_titles">
+<!--
+              <div class="timer_number_days">
+                Jours
+              </div>
+              <div class="timer_number_hours">
+                Heures
+              </div>
+              <div class="timer_number_mins">
+                Minutes
+              </div>
+-->
+  </div>
 
 
    <div>
     <select class=" speed">
-      <option value="1">1</option>
-      <option value="3">3</option>
-      <option value="5">5</option>
-      <option value="10">10</option>
-      <option value="50">50</option>
+
+      <option value="1">x1</option>
+      <option value="3">x3</option>
+      <option value="5">x5</option>
+      <option value="10">x10</option>
+      <option value="50">x50</option>
       <option value="100">100</option>
 
 
 
-    </select></div></div></div>
-
-
-  </div>
+    </select></div></div></div></div>
 
   <img id="boussole" src="image/boussole.png">
   <div id="map">
@@ -165,92 +179,96 @@
 
 
           <button id="sidebar-btn" class="sidebar-btn">
-            <div class="menu-stripes1"></div>
-            <div class="menu-stripes"></div>
-            <div class="menu-stripes2"></div>
+          <img id="menu-stripes1" src="image/menu.png">
           </button>
           <section id="sidebar" class="sidebar">
             <div class="settings">
               <h1>Parametres</h1>
 
               <button id="onglet-btn" class="onglet1-btn onglet-btn">
-                <img class="onglet1-img" src="image/settings.png">
+             <h2>Filtres</h2>
               </button>
               <button id="onglet-btn" class="onglet2-btn onglet-btn">
-                <img class="onglet2-img" src="image/hamburger.png">
+                <h2>Suppression</h2>
               </button>
 
               <div class="onglet1 is-open">
-
-                <div class="bouton">
+<div class="filtres-cont">
+                <div style="padding-top:30px" class="bouton">
                   <input class="checkbox" id="checkbox1"  type="checkbox">
                   <label id="profondeur" for="checkbox1"></label>
-                  <span>Cacher les profondeurs</span>
+                  <span class="filtres">Cacher les profondeurs</span>
                 </div><br>
                 <div class="bouton">
                   <input class="checkbox" id="checkbox2"  type="checkbox">
                   <label  id="riv" for="checkbox2"></label>
-                  <span>Cacher les côtes et les rivières</span>
+                  <span class="filtres">Cacher les côtes et les rivières</span>
                 </div><br>
                 <div class="bouton">
                   <input class="checkbox" id="checkbox3" type="checkbox">
                   <label  id="structures" for="checkbox3"></label>
-                  <span>Cacher les structures</span>
+                  <span class="filtres">Cacher les structures</span>
                 </div><br>
-
+                  </div>
               </div>
 
 
-              <div class="onglet2 is-closed">
+              <div class="onglet2 is-closed" style="background-color: #2C3E50;">
 
-                <div class="delete">
+                  <div class="delete" style="position: relative;top:100px;">
 
 
-                  <div class="delete_polyline">
-                    <div class="share-wrap">
-                      <div class="main-bar1" style="color: #82C9BD;">Ligne<span><img src="http://static.tumblr.com/43vgkmu/ftqmmywe6/drop-down.png"/></span></div>
-                    </div>
+                      <div class="delete_polyline" style="color: #82C9BD;">
+                          <div class="share-wrap">
+                              <div class="main-bar1 main-bar" style="color: #82C9BD;">Ligne<span><img src="http://static.tumblr.com/43vgkmu/ftqmmywe6/drop-down.png"/></span></div>
+
+                              <ul class="lignes">
+
+                                  <br/>
+                                  <li>  <p class="delete_polyline_p"></p> </li>
+                              </ul>
+                          </div>
+
+
+                          <div class="delete_cercle">
+                              <div class="share-wrap">
+                                  <div class="main-bar2 main-bar" style="color: #82C9BD;">cercle<span><img src="http://static.tumblr.com/43vgkmu/ftqmmywe6/drop-down.png"/></span></div>
+                                  <ul class="cercle">
+                                      <br/>
+                                      <li> <p class="delete_cercle_p"></p></li>
+                                  </ul>
+                              </div>
+                          </div>
+
+
+                          <div class="delete_texte">
+                              <div class="share-wrap">
+                                  <div class="main-bar3 main-bar" style="color: #82C9BD;">texte<span><img src="http://static.tumblr.com/43vgkmu/ftqmmywe6/drop-down.png"/></span></div>
+                                  <ul class="texte">
+                                      <br/>
+                                      <li> <p class="delete_texte_p"></p></li>
+                                  </ul>
+                              </div>
+                          </div>
+
+
+                          <div class="delete_polygone">
+                              <div class="share-wrap">
+                                  <div class="main-bar4 main-bar" style="color: #82C9BD;">polygone<span><img src="http://static.tumblr.com/43vgkmu/ftqmmywe6/drop-down.png"/></span></div>
+                                  <ul class="polygone">
+                                      <br/>
+                                      <li>  <p class="delete_polygone_p"></p></li>
+                                  </ul>
+                              </div>
+                          </div>
+
+                      </div>
+
                   </div>
 
 
-                  <div class="delete_cercle">
-                    <div class="share-wrap">
-                      <div class="main-bar2" style="color: #82C9BD;">cercle<span><img src="http://static.tumblr.com/43vgkmu/ftqmmywe6/drop-down.png"/></span></div>
-                      <ul class="cercle">
-                        <br/>
-                        <li> <p class="delete_cercle_p"></p></li>
-                      </ul>
-                    </div>
-                  </div>
 
-
-                  <div class="delete_texte">
-                    <div class="share-wrap">
-                      <div class="main-bar3" style="color: #82C9BD;">texte<span><img src="http://static.tumblr.com/43vgkmu/ftqmmywe6/drop-down.png"/></span></div>
-                      <ul class="texte">
-                        <br/>
-                        <li> <p class="delete_texte_p"></p></li>
-                      </ul>
-                    </div>
-                  </div>
-
-
-                  <div class="delete_polygone">
-                    <div class="share-wrap">
-                      <div class="main-bar4" style="color: #82C9BD;">polygone<span><img src="http://static.tumblr.com/43vgkmu/ftqmmywe6/drop-down.png"/></span></div>
-                      <ul class="polygone">
-                        <br/>
-                        <li>  <p class="delete_polygone_p"></p></li>
-                      </ul>
-                    </div>
-                  </div>
-
-                </div>
-
-              </div>
-
-
-            </section>
+          </section>
 
             <script src="https://code.jquery.com/jquery-1.12.0.min.js"></script>
             <script src="https://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
@@ -313,9 +331,14 @@
                   $toggleCol.toggleClass('sidebar-show');
                   $sidebar.toggleClass('show');
 
+                        var image = document.getElementById('menu-stripes1');
+
                   if (!sidebarIsVisible) {
+                      
+                      image.src = "image/cancel.png"; 
                     sidebarIsVisible = true;
                   } else {
+                        image.src = "image/menu.png"; 
                     sidebarIsVisible = false;
                   }
                 }
@@ -341,35 +364,35 @@
 
             </script>
 
-
-            <script>
-              $(document).ready(function(e){
-                $('.main-bar1').on('click',function(){
-                  $('ul.lignes').slideToggle(580);
-                });
-              })
-            </script>
-            <script>
-              $(document).ready(function(e){
-                $('.main-bar2').on('click',function(){
-                  $('ul.cercle').slideToggle(580);
-                });
-              })
-            </script>
-            <script>
-              $(document).ready(function(e){
-                $('.main-bar3').on('click',function(){
-                  $('ul.texte').slideToggle(580);
-                });
-              })
-            </script>
-            <script>
-              $(document).ready(function(e){
-                $('.main-bar4').on('click',function(){
-                  $('ul.polygone').slideToggle(580);
-                });
-              })
-            </script>
+  <script>
+      $(document).ready(function(e){
+          $('.main-bar1').on('click',function(){
+              $('ul.lignes').slideToggle(1000);
+          });
+      })
+  </script>
+  <script>
+      $(document).ready(function(e){
+          $('.main-bar2').on('click',function(){
+              $('ul.cercle').slideToggle(1580);
+          });
+      })
+  </script>
+  <script>
+      $(document).ready(function(e){
+          $('.main-bar3').on('click',function(){
+              $('ul.texte').slideToggle(1580);
+          });
+      })
+  </script>
+  <script>
+      $(document).ready(function(e){
+          $('.main-bar4').on('click',function(){
+              $('ul.polygone').slideToggle(1580);
+          });
+      })
+  </script>
+           
 
           </body>
           </html>

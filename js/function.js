@@ -1,4 +1,3 @@
-
 /*var bateaux = []; //tableau de tous les bateaux
  //edit de bateaux
  function editbateau(bat){
@@ -44,7 +43,9 @@ function delete_obj(elem, form){
         });
         $('.oeilvert').css({'display': 'block',
             'position': 'relative',
-            'top': '-37px',});
+            'top': '-37px'});
+        $('.yeux').css({'display': 'block',
+            background: '#27ae60'});
         $('#'+elem).html('supprimer '+form);
     }else{
 
@@ -65,8 +66,10 @@ function delete_obj(elem, form){
             $('.'+elem).css('display', 'none');
             $('.oeilvert').css({'display': 'block',
                 'position': 'relative',
-                'top': '-55px'});
-            $('#'+elem).html('remettre '+form + '<div class="yeuxrouge"></div>');
+                'top': '-40px'});
+            $('.yeux').css({'display': 'block',
+                background: '#e74c3c'});
+            $('#'+elem).html('remettre '+form );
 
             doubleclique=0;
 
@@ -91,4 +94,5 @@ function delete_obj(elem, form){
     }
 
 }
+
 
