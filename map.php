@@ -97,6 +97,11 @@
 
 </form>
 </div></div>
+<div class="fin">
+  <h1>Vous avez été détecté !</h1>
+  <a href="#" class="btn" id="fin">Retourner sur la carte</a>
+
+</div>
 <div id="ajout_bateau" class="pop_up_inv hide"><div  class="pop_up">
  <div class="formulaire_bat">
    <p class="title"> DÉPLACEMENT </p>
