@@ -810,6 +810,30 @@ a, a:visited {
 	margin-top: -6px;
 }
 
+.btn_text
+{
+	background: #BDC0BF;
+}
+
+.btn_circle
+{
+	background: #BDC0BF;
+}
+
+.btn_polygone
+{
+	background: #BDC0BF;
+}
+
+.btn_polyline
+{
+	background: #BDC0BF;
+}
+
+.active
+{
+	background: #004080;
+}
 
 /*-------------------------------*/
 /*          Fin onglet           */

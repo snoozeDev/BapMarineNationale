@@ -31,10 +31,10 @@
    <form>
     <p class="title"> FORMES </p>
     <div id="selecteur">
-      <a class="btn" id="btn_text">Texte</a>
-      <a class="btn" id="btn_circle">Cercle</a>  
-      <a class="btn" id="btn_polygone">Polygone</a>
-      <a class="btn" id="btn_polyline">Lignes</a></div>
+      <a class="btn_text btn" id="btn_text">Texte</a>
+      <a class="btn_circle btn" id="btn_circle">Cercle</a>  
+      <a class="btn_polygone btn" id="btn_polygone">Polygone</a>
+      <a class="btn_polyline btn" id="btn_polyline">Lignes</a></div>
       <div class="ligne">
     <div id="form_text" class="formulaire hide">
       <p class="title"> Ecrire sur la carte </p>
@@ -306,7 +306,7 @@
             <script type="text/javascript" src="js/function.js"></script>
             <script type="text/javascript" src="js/icone.js"></script>
             <script type="text/javascript" src="js/map.js"></script>
-            <script type="text/javascript" src="js/nav.js"></script>
+            <script type="text/javascript" src="js/onglet.js"></script>
             <script src="js/Leaflet-0.7.7/leaflet.js"></script> 
 
 
