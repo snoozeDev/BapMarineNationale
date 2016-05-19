@@ -109,7 +109,10 @@
     <option value="avion">Avion</option>
   </select>
   <label>Vitesse du trajet (en noeud)</label><br>
-  <input type="text" id="vitesse_bateau" value="189.525"><br><br>
+  <input type="text" id="vitesse_bateau" value="15"><br><br>
+
+  <label>Distance du radar (en km)</label><br>
+  <input type="text" id="radar" value="800"><br><br>
   
   <label>Alignement</label><br>
   <select class="formula" id="color_bateau" name="color_bateau">
@@ -124,6 +127,11 @@
 
 </div>
 </div></div>
+ <div class="simulation">
+
+                <a href="#" class="btn" id="simulation">Mode Simulation</a>
+                <a href="#" class="btn" id="admin">Mode Administrateur</a>
+              </div>
 <div class="big_btn">
  <div id="cont">
   <div class="timer">
@@ -290,6 +298,7 @@
                 </div>
 
               </div>
+             
 
               <script type="text/javascript">
                 var anc_onglet = 'filtres';

@@ -96,3 +96,19 @@ function delete_obj(elem, form){
 }
 
 
+$("#simulation").hide();
+/*    mode simulation ou non   */
+$("#admin").click(function () {
+    $("#simulation").show();
+    $("#admin").hide();
+    $('.red').css("display", "none");
+    $('.red2').hide();
+});
+$("#simulation").click(function () {
+    $("#simulation").hide();
+    $("#admin").show();
+     $('.red').css("display", "block");
+     $('.red2').show();
+});
+
+
