@@ -241,9 +241,9 @@
               <div class="delete" style="position: relative;">
 
 
-                  <div class="delete_polyline" style="color: #82C9BD;">
+                  <div class="delete_polyline" style="color: white;">
                     <div class="share-wrap">
-                      <div class="main-bar1 main-bar" style="color: #82C9BD;">Ligne<span><img src="http://static.tumblr.com/43vgkmu/ftqmmywe6/drop-down.png"/></span></div>
+                      <div class="main-bar1 main-bar" style="color: #2C3E50;">Ligne(s)<span><img src="http://image.noelshack.com/fichiers/2016/20/1463653455-dropdown.png"/></span></div>
 
                       <ul class="lignes">
 
@@ -255,7 +255,7 @@
 
                     <div class="delete_cercle">
                       <div class="share-wrap">
-                        <div class="main-bar2 main-bar" style="color: #82C9BD;">cercle<span><img src="http://static.tumblr.com/43vgkmu/ftqmmywe6/drop-down.png"/></span></div>
+                        <div class="main-bar2 main-bar" style="color: #2C3E50;">Cercle(s)<span><img src="http://image.noelshack.com/fichiers/2016/20/1463653455-dropdown.png"/></span></div>
                         <ul class="cercle">
                           <br/>
                           <li> <p class="delete_cercle_p"></p></li>
@@ -266,7 +266,7 @@
 
                     <div class="delete_texte">
                       <div class="share-wrap">
-                        <div class="main-bar3 main-bar" style="color: #82C9BD;">texte<span><img src="http://static.tumblr.com/43vgkmu/ftqmmywe6/drop-down.png"/></span></div>
+                        <div class="main-bar3 main-bar" style="color: #2C3E50;">Texte(s)<span><img src="http://image.noelshack.com/fichiers/2016/20/1463653455-dropdown.png"/></span></div>
                         <ul class="texte">
                           <br/>
                           <li> <p class="delete_texte_p"></p></li>
@@ -277,7 +277,7 @@
 
                     <div class="delete_polygone">
                       <div class="share-wrap">
-                        <div class="main-bar4 main-bar" style="color: #82C9BD;">polygone<span><img src="http://static.tumblr.com/43vgkmu/ftqmmywe6/drop-down.png"/></span></div>
+                        <div class="main-bar4 main-bar" style="color: #2C3E50;">Polygone(s)<span><img src="http://image.noelshack.com/fichiers/2016/20/1463653455-dropdown.png"/></span></div>
                         <ul class="polygone">
                           <br/>
                           <li>  <p class="delete_polygone_p"></p></li>
