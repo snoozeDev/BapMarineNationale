@@ -116,3 +116,8 @@ $("#simulation").click(function () {      // on repasse en mode admin
 });
 
 
+/*  fonciton changement image icone    */
+$('#icone_select').change(function () {   
+    var ico="image/"+$('#icone_select').val()+".png";
+    $("#icone_img").attr("src",ico);
+});

@@ -23,6 +23,16 @@ html,body {
 	font-size: 0.8em;
 	background-color: transparent;
 }
+/*pop up de batiments*/
+#ajout_batiment{
+	text-align: center;
+}
+#ajout_batiment img {
+	width: 30%;
+	padding: 5%;
+	margin: auto;
+	display: block;
+}
 .fin {
 	z-index: 1000;
 	position: absolute;

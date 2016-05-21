@@ -25,7 +25,21 @@
 </head>
 
 <body onload="initialize()">
+  <div id="ajout_batiment" class="pop_up_inv hide">
+    <div class="pop_up">
+      <p class="title"> BATIMENTS </p>
+      <select class="formula" id="icone_select" name="icone_select">
+        <option value="anchor">Port</option>
+        <option value="offshore">offshore</option>
+        <option value="lighthouse">phare</option>
+      </select>
+      <img src="image/anchor.png" id="icone_img">
+      <a href="#" class="btn"  id="drawBatiment">Ajouter le batiment</a>
+    </div>
+  </div>
 
+
+  </div>
   <div id="ajout_pins" class="pop_up_inv hide"><div  class="pop_up">
 
    <form>
@@ -201,6 +215,7 @@
               <div class="forme" id="bateau"> <img src="image/bateau.png"></div>
 
               <div class="forme" id="forme"> <img src="image/forme.png"></div>
+              <div class="batiment" id="batiment"> <img src="image/anchor.png"></div>
             </div>
 
             <div class="stop">
@@ -260,7 +275,16 @@
               <div class="contenu_onglet" id="contenu_onglet_suppression">
 
               <div class="delete" style="position: relative;">
+                  <div class="delete_batiment" style="color: white;">
+                    <div class="share-wrap">
+                      <div class="main-bar1 main-bar" style="color: #2C3E50;">Batiment(s)<span><img src="http://image.noelshack.com/fichiers/2016/20/1463653455-dropdown.png"/></span></div>
 
+                      <ul class="batiments">
+
+                        <br/>
+                        <li>  <p class="delete_batiment_p"></p> </li>
+                      </ul>
+                    </div>
 
                   <div class="delete_polyline" style="color: white;">
                     <div class="share-wrap">
