@@ -431,7 +431,16 @@ body.sidebar-show {
 	color:#82C9BD;
 }
 
+.main-bar5 > span {
+	position:absolute;
+	right:20px;
+	cursor:pointer;
+	color: #82C9BD;
+}
 
+.sidebar.show.main-bar5{
+	color: #82C9BD;
+}
 
 .main-bar1 > span {
 	position:absolute;

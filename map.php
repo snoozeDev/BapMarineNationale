@@ -38,8 +38,6 @@
     </div>
   </div>
 
-
-  </div>
   <div id="ajout_pins" class="pop_up_inv hide"><div  class="pop_up">
 
    <form>
@@ -275,9 +273,10 @@
               <div class="contenu_onglet" id="contenu_onglet_suppression">
 
               <div class="delete" style="position: relative;">
+                 
                   <div class="delete_batiment" style="color: white;">
                     <div class="share-wrap">
-                      <div class="main-bar1 main-bar" style="color: #2C3E50;">Batiment(s)<span><img src="http://image.noelshack.com/fichiers/2016/20/1463653455-dropdown.png"/></span></div>
+                      <div class="main-bar5 main-bar" style="color: #2C3E50;">Batiment(s)<span><img src="http://image.noelshack.com/fichiers/2016/20/1463653455-dropdown.png"/></span></div>
 
                       <ul class="batiments">
 
@@ -285,6 +284,7 @@
                         <li>  <p class="delete_batiment_p"></p> </li>
                       </ul>
                     </div>
+                  </div>
 
                   <div class="delete_polyline" style="color: white;">
                     <div class="share-wrap">
@@ -296,7 +296,7 @@
                         <li>  <p class="delete_polyline_p"></p> </li>
                       </ul>
                     </div>
-
+                      </div>
 
                     <div class="delete_cercle">
                       <div class="share-wrap">
@@ -332,7 +332,7 @@
 
                   </div>
 
-                </div>
+               
 
               </div>
              
@@ -343,7 +343,7 @@
               </script>
 
 
-
+                </div>
             </section>
 
             <script src="https://code.jquery.com/jquery-1.12.0.min.js"></script>
@@ -437,34 +437,29 @@
 
               })();
 
-
-            </script>
-
-            <script>
               $(document).ready(function(e){
                 $('.main-bar1').on('click',function(){
                   $('ul.lignes').slideToggle(1000);
                 });
               })
-            </script>
-            <script>
+              $(document).ready(function(e){
+                $('.main-bar5').on('click',function(){
+                  $('ul.batiments').slideToggle(1000);
+                });
+              })
               $(document).ready(function(e){
                 $('.main-bar2').on('click',function(){
-                  $('ul.cercle').slideToggle(1580);
+                  $('ul.cercle').slideToggle(1000);
                 });
               })
-            </script>
-            <script>
               $(document).ready(function(e){
                 $('.main-bar3').on('click',function(){
-                  $('ul.texte').slideToggle(1580);
+                  $('ul.texte').slideToggle(1000);
                 });
               })
-            </script>
-            <script>
               $(document).ready(function(e){
                 $('.main-bar4').on('click',function(){
-                  $('ul.polygone').slideToggle(1580);
+                  $('ul.polygone').slideToggle(1000);
                 });
               })
             </script>
