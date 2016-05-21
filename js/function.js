@@ -97,18 +97,22 @@ function delete_obj(elem, form){
 
 
 $("#simulation").hide();
+$('#console').hide();
 /*    mode simulation ou non   */
-$("#admin").click(function () {
+$("#admin").click(function () {    // on lance la simulation donc on montre la console, on cache les bateaux ennemis
     $("#simulation").show();
+    $('#console').show();
     $("#admin").hide();
     $('.red').css("display", "none");
-    $('.red2').hide();
+    $('#boussole').css("left", "27%")
+    $('.rred2').hide();
 });
-$("#simulation").click(function () {
+$("#simulation").click(function () {      // on repasse en mode admin
     $("#simulation").hide();
     $("#admin").show();
      $('.red').css("display", "block");
-     $('.red2').show();
+     $('.rred2').show();
+     $('#console').hide();
 });
 
 

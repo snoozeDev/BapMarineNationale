@@ -149,8 +149,8 @@
 
 
      <span id="days">00J</span><br> 
-     <span id="hours">00H:</span>
-     <span id="mins">00M</span>  
+     <span id="hours">00H</span>
+     <span id="mins">00</span>  
 
    </div>
 
@@ -187,6 +187,14 @@
             <div id="map">
 
 
+
+            </div>
+            <div id="console">
+              <p>Vous ne devez pas vous faire repérer</p>
+              <ul>
+
+
+              </ul>
 
             </div>
             <div id="toolbar">

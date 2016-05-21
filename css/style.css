@@ -6,6 +6,23 @@ html,body {
 	padding: 0;
 	font-family: Arial;
 }
+/*   la console  */
+#console{
+	background-color: rgba(0,0,0,0.5);
+	position: absolute;
+	width: 28%;
+	bottom: 0;
+	height: 50%;
+	overflow-y: scroll;
+	color: white;
+	z-index: 100;
+}
+#console ul {
+	color: white;
+	display: block;
+	font-size: 0.8em;
+	background-color: transparent;
+}
 .fin {
 	z-index: 1000;
 	position: absolute;
