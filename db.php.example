@@ -1,4 +1,4 @@
-<<<<<<< HEAD
+
 <!--Page de connexion à la base de donnée 
 Elle se trouve dans le git-ignore et vous est donc 
 propre (pour éviter les conflits MAMP/WAMP...)
@@ -10,19 +10,6 @@ propre (pour éviter les conflits MAMP/WAMP...)
  $dbhost = 'localhost';
             $dbuser = 'root';
             $dbpass = 'root';
+            $db = 'save_marine';
 
-=======
-<!--Page de connexion à la base de donnée 
-Elle se trouve dans le git-ignore et vous est donc 
-propre (pour éviter les conflits MAMP/WAMP...)
--->
-
-
-<?php
-
- $dbhost = 'localhost';
-            $dbuser = 'root';
-            $dbpass = 'root';
-
->>>>>>> 1abfc6fb8ff3ceb7c3f4bbb0314162f1b22ee8ed
 ?>

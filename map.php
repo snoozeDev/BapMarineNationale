@@ -266,6 +266,13 @@
                     <span class="filtres">Cacher les structures</span>
                   </div><br>
                 </div>
+                <div>
+                    <form action='sauveguarde.php' method='post' id='myform' >
+                        <input type="text" name="mapName">
+                        <textarea name="mapDescription"></textarea>
+                        <button id='insert'>Save</button>
+                    </form>
+                </div>
               </div>
 
 
@@ -464,7 +471,7 @@
               })
             </script>
 
-
+ <script src='js/sauveguarde.js'></script>
           </body>
           </html>
 
