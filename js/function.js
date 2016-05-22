@@ -27,7 +27,7 @@
 var doubleclique=0;
 function annuler(elem, form){
     $('.'+elem).css('display', 'block');
-    $('#'+elem).html('supprimer '+form);
+    $('#'+elem).html('Supprimer '+form);
     doubleclique=0;
 
 
@@ -41,12 +41,15 @@ function delete_obj(elem, form){
             'animation-delay': '',
             'animation-iteration-count': ''
         });
-        $('.oeilvert').css({'display': 'block',
+        $('.' +elem + ' .oeilvert').css({'display': 'block',
             'position': 'relative',
             'top': '-37px'});
-        $('.yeux').css({'display': 'block',
+
+        $('.' + elem + ' .yeux').css({'display': 'block',
             background: '#27ae60'});
-        $('#'+elem).html('supprimer '+form);
+        $("#oeil" + elem).addClass('vert').removeClass('rouge');
+
+        $('#'+elem).html('Supprimer '+form);
     }else{
 
         if(doubleclique==0){
@@ -58,6 +61,8 @@ function delete_obj(elem, form){
                 'animation-iteration-count': 'infinite'
             });
 
+
+
             $('#'+elem).html('<div class="croixvalide">  <div class="boutonvalide"> </div>  <div class="boutonvalide2"> </div>  </div> ');
             $('#'+elem).append('<div class="croixsuppression" onclick="doubleclique=2;"> <div class="boutoncroix"> </div>  <div class="boutoncroix2"> </div>  </div> ');
             $('.oeilvert').css('display', 'none');
@@ -66,12 +71,16 @@ function delete_obj(elem, form){
             $('.'+elem).css('display', 'none');
             $('.oeilvert').css({'display': 'block',
                 'position': 'relative',
-                'top': '-40px'});
-            $('.yeux').css({'display': 'block',
-                background: '#e74c3c'});
-            $('#'+elem).html('remettre '+form );
+                'top': '-50px'});
+            $("#oeil" + elem).addClass('rouge').removeClass('vert');
+            /*  $('.' +elem + '.yeux').css({'display': 'block',
+             background: '#e74c3c'}); */
+
+            $('#'+elem).html('Remettre '+form);
 
             doubleclique=0;
+
+
 
         }
 
@@ -86,14 +95,19 @@ function delete_obj(elem, form){
             });
             $('.oeilvert').css({'display': 'block',
                 'position': 'relative',
-                'top': '-37px'});
-            $('#'+elem).html('supprimer '+form);
+                'top': '-50px'});
+            $("#oeil" + elem).addClass('vert').removeClass('rouge');
+
+            $('#'+elem).html('Supprimer '+form);
+
+
             doubleclique=0;
         }
 
     }
 
 }
+
 
 
 $("#simulation").hide();
