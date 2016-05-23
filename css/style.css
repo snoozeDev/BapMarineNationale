@@ -431,7 +431,16 @@ body.sidebar-show {
 	color:#82C9BD;
 }
 
+.main-bar5 > span {
+	position:absolute;
+	right:20px;
+	cursor:pointer;
+	color: #82C9BD;
+}
 
+.sidebar.show.main-bar5{
+	color: #82C9BD;
+}
 
 .main-bar1 > span {
 	position:absolute;
@@ -474,6 +483,8 @@ ul {
 	display:none;
 	margin-top:-1px;
 	background:#2C3E50;
+	overflow-y: scroll;
+	height:90px;
 
 }
 
@@ -545,13 +556,14 @@ a, a:visited {
 
 .croixsuppression{
 	border-radius: 5px;
-	z-index: 9999;
+
 	background: #e74c3c;
 	height: 44px;
 	width: 44px;
-	top: -63px;
+	top: -50px;
 	left: 148.5px;
 	position: relative;
+
 
 }
 
@@ -580,11 +592,11 @@ a, a:visited {
 
 .croixvalide{
 	border-radius: 5px;
-	z-index: 9999;
+
 	background: #27ae60;
 	height: 44px;
 	width: 44px;
-	top: -19px;
+	top: -7px;
 	left: 18.5px;
 	position: relative;
 
@@ -613,49 +625,43 @@ a, a:visited {
 }
 
 .oeilvert{
-	width:40px;
+	width:30px;
 	height:20px;
 	background-color:rgba(200,200,200,0.5);
 	position: relative;
-	top: -38px;
-	left: 209px;
+	top: -50px;
+	left: 90px;
 	border-style: solid;
-	border-width: 5px;
+	border-width: 2px;
 
 }
+
+
 
 .yeux{
 	width: 16px;
 	height: 16px;
 	border-radius: 12px;
 	border: 1.5px solid #fff;
-	font-family: Cambria;
+
 	font-size: 11px;
 	color: white;
 	line-height: 20px;
 	text-align: center;
-	background: #27ae60;
 	position: relative;
-	left: 11px;
+	left: 6px;
 	top: 1px;
 }
 
-.yeuxrouge{
-	width: 16px;
-	height: 16px;
-	border-radius: 12px;
-	border: 1.5px solid #fff;
-	font-family: Cambria;
-	font-size: 11px;
-	color: white;
-	line-height: 20px;
-	text-align: center;
-	background: #e74c3c;
-	position: relative;
-	left: 225px;
-	top: -17px;
-	z-index: 2;
+.rouge{
+	background: red
 }
+.vert{
+	background:green;
+	color : green;
+}
+
+
 
 /*-------------------------------*/
 /*          Bouton menu          */
@@ -1148,4 +1154,18 @@ a:hover
 a:visited
 {
 	color: #ffffff;
+}
+
+li{
+	list-style-type: circle;
+
+}
+
+
+.form{
+	border: solid white;
+	width: 218px;
+	position: relative;
+	right:2px;
+	height: 60px;
 }
