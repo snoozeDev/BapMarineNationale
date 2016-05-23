@@ -16,6 +16,7 @@ html,body {
 	overflow-y: scroll;
 	color: white;
 	z-index: 100;
+    display :none;
 }
 #console ul {
 	color: white;
@@ -129,6 +130,9 @@ html,body {
 	border: solid #1f628d 2px;
 	text-decoration: none;
 	margin-top: 10%;
+}
+#simulation{
+    display:none
 }
 .deleteUltim a {
 	color: white;

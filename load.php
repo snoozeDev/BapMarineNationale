@@ -7,16 +7,46 @@ function phpAlert($msg) {
 }   
 include 'db.php';   
  
-    $query="SELECT * FROM save_marine_nationale";
-$results = mysql_query($query);
-
-while ($row = mysql_fetch_array($results)) {
-    echo '<tr>';
-    foreach($row as $field) {
-        echo '<td>' . htmlspecialchars($field) . '</td>';
+     
+    $connect = mysql_connect($dbhost,$dbuser,$dbpass);
+                mysql_select_db($db);
+                mysql_query("SET NAMES UTF8"); 
+                $query = mysql_query("SELECT * FROM save_marine_table WHERE ID = $_GET[id]");
+                while($rows = mysql_fetch_array($query)):
+                $id = $rows['id'];
+                $mapName = $rows['mapName'];
+                $cercles = $rows['cercles']; 
+    echo "
+    
+    
+    
+    <script>
+    var cerclesPhp = $cercles;
+    for (var e = 0; e < cerclesPhp.length; e++) {
+    
+    console.log(cerclesPhp[e]);
+    
     }
-    echo '</tr>';
-}
+    
+
+    
+    
+    
+    
+    </script>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    ";
+                    endwhile;
+                 
     
 }
 
