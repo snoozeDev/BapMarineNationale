@@ -565,7 +565,7 @@ a, a:visited {
 	background: #e74c3c;
 	height: 44px;
 	width: 44px;
-	top: -50px;
+	top: -67px;
 	left: 148.5px;
 	position: relative;
 
@@ -601,9 +601,10 @@ a, a:visited {
 	background: #27ae60;
 	height: 44px;
 	width: 44px;
-	top: -7px;
+	top: -25px;
 	left: 18.5px;
 	position: relative;
+
 
 }
 
@@ -630,16 +631,22 @@ a, a:visited {
 }
 
 .oeilvert{
+
 	width:30px;
 	height:20px;
 	background-color:rgba(200,200,200,0.5);
+
+
 	position: relative;
-	top: -50px;
-	left: 90px;
 	border-style: solid;
 	border-width: 2px;
 
+	left: 80px;
+	top: -15px;
+
 }
+
+
 
 
 
@@ -1167,10 +1174,10 @@ li{
 }
 
 
-.form{
+.bord{
 	border: solid white;
-	width: 218px;
+	width: 228px;
 	position: relative;
 	right:2px;
-	height: 60px;
+	height: 80px;
 }
