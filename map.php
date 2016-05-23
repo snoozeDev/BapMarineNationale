@@ -289,7 +289,7 @@
                       <ul class="batiments">
 
                         <br/>
-                        <li>  <p class="delete_batiment_p"></p> </li>
+                         <p class="delete_batiment_p"></p>
                       </ul>
                     </div>
                   </div>
@@ -301,7 +301,7 @@
                       <ul class="lignes">
 
                         <br/>
-                        <li>  <p class="delete_polyline_p"></p> </li>
+                          <p class="delete_polyline_p"></p>
                       </ul>
                     </div>
                       </div>
@@ -311,7 +311,7 @@
                         <div class="main-bar2 main-bar" style="color: #2C3E50;">Cercle(s)<span><img src="http://image.noelshack.com/fichiers/2016/20/1463653455-dropdown.png"/></span></div>
                         <ul class="cercle">
                           <br/>
-                          <li> <p class="delete_cercle_p"></p></li>
+                           <p class="delete_cercle_p"></p>
                         </ul>
                       </div>
                     </div>
@@ -322,7 +322,7 @@
                         <div class="main-bar3 main-bar" style="color: #2C3E50;">Texte(s)<span><img src="http://image.noelshack.com/fichiers/2016/20/1463653455-dropdown.png"/></span></div>
                         <ul class="texte">
                           <br/>
-                          <li> <p class="delete_texte_p"></p></li>
+                           <p class="delete_texte_p"></p>
                         </ul>
                       </div>
                     </div>
@@ -333,7 +333,7 @@
                         <div class="main-bar4 main-bar" style="color: #2C3E50;">Polygone(s)<span><img src="http://image.noelshack.com/fichiers/2016/20/1463653455-dropdown.png"/></span></div>
                         <ul class="polygone">
                           <br/>
-                          <li>  <p class="delete_polygone_p"></p></li>
+                            <p class="delete_polygone_p"></p>
                         </ul>
                       </div>
                     </div>
@@ -447,27 +447,27 @@
 
               $(document).ready(function(e){
                 $('.main-bar1').on('click',function(){
-                  $('ul.lignes').slideToggle(1000);
+                  $('ul.lignes').slideToggle(120);
                 });
               })
               $(document).ready(function(e){
                 $('.main-bar5').on('click',function(){
-                  $('ul.batiments').slideToggle(1000);
+                  $('ul.batiments').slideToggle(120);
                 });
               })
               $(document).ready(function(e){
                 $('.main-bar2').on('click',function(){
-                  $('ul.cercle').slideToggle(1000);
+                  $('ul.cercle').slideToggle(120);
                 });
               })
               $(document).ready(function(e){
                 $('.main-bar3').on('click',function(){
-                  $('ul.texte').slideToggle(1000);
+                  $('ul.texte').slideToggle(120);
                 });
               })
               $(document).ready(function(e){
                 $('.main-bar4').on('click',function(){
-                  $('ul.polygone').slideToggle(1000);
+                  $('ul.polygone').slideToggle(120);
                 });
               })
             </script>
