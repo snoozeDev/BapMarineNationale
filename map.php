@@ -270,6 +270,7 @@
                     <form action='sauveguarde.php' method='post' id='myform' >
                         <input type="text" name="mapName">
                         <textarea name="mapDescription"></textarea>
+                        <input type="hidden" id="cer" name="cercles">
                         <button id='insert'>Save</button>
                     </form>
                 </div>
@@ -472,6 +473,7 @@
             </script>
 
  <script src='js/sauveguarde.js'></script>
+         <?php include 'load.php' ?>
           </body>
           </html>
 

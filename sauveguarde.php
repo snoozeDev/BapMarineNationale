@@ -5,10 +5,11 @@
 
 $name = $_POST['mapName'];
 $description = $_POST['mapDescription'];
+$cercles = $_POST['cercles'];
 
 
 
-$sql = "INSERT INTO save_marine_table (mapName, mapDescription) VALUES ('$name','$description')";
+$sql = "INSERT INTO save_marine_table (mapName, mapDescription, cercles) VALUES ('$name','$description','$cercles')";
 
  if(mysqli_query($con, $sql)){
  
