@@ -277,7 +277,7 @@
               <div class="delete" style="position: relative;">
                   <div class="delete_batiment" style="color: white;">
                     <div class="share-wrap">
-                      <div class="main-bar1 main-bar" style="color: #2C3E50;">Batiment(s)<span><img src="http://image.noelshack.com/fichiers/2016/20/1463653455-dropdown.png"/></span></div>
+                      <div class="main-bar5 main-bar" style="color: #2C3E50;">Batiment(s)<span><img src="http://image.noelshack.com/fichiers/2016/20/1463653455-dropdown.png"/></span></div>
 
                       <ul class="batiments">
 

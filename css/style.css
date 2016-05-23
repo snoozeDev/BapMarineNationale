@@ -464,7 +464,12 @@ body.sidebar-show {
 	cursor:pointer;
 	color: #82C9BD;
 }
-
+.main-bar5 > span {
+	position:absolute;
+	right:20px;
+	cursor:pointer;
+	color: #82C9BD;
+}
 ul {
 	display:none;
 	margin-top:-1px;
