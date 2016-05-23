@@ -21,6 +21,7 @@ html,body {
 	color: white;
 	display: block;
 	font-size: 0.8em;
+	height: auto;
 	background-color: transparent;
 }
 /*pop up de batiments*/
