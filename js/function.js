@@ -2,7 +2,7 @@
  //edit de bateaux
  function editbateau(bat){
  addEventListener('click', function(){
- console.log("bien joué"+bat);
+ console.log("bien jouÃ©"+bat);
  $('#stopEditPolyline').css('display','block');
 
  bateau[bat]=moveTo([3,3], 20000);
@@ -27,6 +27,11 @@
 var doubleclique=0;
 function annuler(elem, form){
     $('.'+elem).css('display', 'block');
+
+    $( "p" ).one( "click", function() {
+        $( this ).width( 230).height( 8 )
+    });
+
     $('#'+elem).html('Supprimer '+form);
     doubleclique=0;
 
@@ -41,15 +46,27 @@ function delete_obj(elem, form){
             'animation-delay': '',
             'animation-iteration-count': ''
         });
-        $('.' +elem + ' .oeilvert').css({'display': 'block',
-            'position': 'relative',
-            'top': '-37px'});
+
 
         $('.' + elem + ' .yeux').css({'display': 'block',
             background: '#27ae60'});
         $("#oeil" + elem).addClass('vert').removeClass('rouge');
 
+        /*    $( "p" ).on( "click", function() {
+         $( this ).width( 230).height( 8).off ();
+         });
+         */
+        $(".oeilvert").css({
+            'display': 'block',
+            'top': '4',
+        });
+
         $('#'+elem).html('Supprimer '+form);
+
+        $( "p" ).on( "click", function() {
+            $( this ).width( 205).height( 0)
+        });
+
     }else{
 
         if(doubleclique==0){
@@ -61,20 +78,43 @@ function delete_obj(elem, form){
                 'animation-iteration-count': 'infinite'
             });
 
+            $( "p" ).one( "click", function() {
+                $( this ).width( 44).height( 44 )
+            });
+
+            /* $( "p" ).on( "click", function() {
+             $(this).off();
+             }); */
+            $(".oeilvert").css({
+                'display': 'none',
+            });
+
+            $('#'+elem).html('<div class="croixvalide"><div class="boutonvalide"></div><div class="boutonvalide2"></div></div><div class="croixsuppression" onclick="doubleclique=2;"><div class="boutoncroix"></div><div class="boutoncroix2"></div></div>');
+            /* $('#'+elem).append('<div class="croixsuppression" onclick="doubleclique=2;"><div class="boutoncroix"></div><div class="boutoncroix2"></div></div>');
+             */
 
 
-            $('#'+elem).html('<div class="croixvalide">  <div class="boutonvalide"> </div>  <div class="boutonvalide2"> </div>  </div> ');
-            $('#'+elem).append('<div class="croixsuppression" onclick="doubleclique=2;"> <div class="boutoncroix"> </div>  <div class="boutoncroix2"> </div>  </div> ');
-            $('.oeilvert').css('display', 'none');
+
         }else if(doubleclique==1){
             $('.'+elem).removeClass('anim');
             $('.'+elem).css('display', 'none');
-            $('.oeilvert').css({'display': 'block',
-                'position': 'relative',
-                'top': '-50px'});
+
+$("p").css({
+    'width' : '250px',
+    'height': '8',
+});
+
+            $(".oeilvert").css({
+                'display': 'block',
+                'top': '-5',
+            });
+
+             $( "p" ).one( "click", function() {
+             $( this ).width( 250).height( 8 )
+             });
+
+
             $("#oeil" + elem).addClass('rouge').removeClass('vert');
-            /*  $('.' +elem + '.yeux').css({'display': 'block',
-             background: '#e74c3c'}); */
 
             $('#'+elem).html('Remettre '+form);
 
@@ -93,10 +133,28 @@ function delete_obj(elem, form){
                 'animation-delay': '',
                 'animation-iteration-count': ''
             });
-            $('.oeilvert').css({'display': 'block',
-                'position': 'relative',
-                'top': '-50px'});
+
+            $("p").css({
+                'width' : '250px',
+                'height': '8',
+            });
+
+            $(".oeilvert").css({
+                'display': 'block',
+                'top': '2',
+            });
             $("#oeil" + elem).addClass('vert').removeClass('rouge');
+
+
+
+            $( "p" ).one( "click", function() {
+                $( this ).width( 250).height( 8 )
+            });
+
+            $("form").css({
+                'width': '100',
+                'height':'8',
+            });
 
             $('#'+elem).html('Supprimer '+form);
 
@@ -107,6 +165,7 @@ function delete_obj(elem, form){
     }
 
 }
+
 
 
 

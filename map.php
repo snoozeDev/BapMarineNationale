@@ -24,7 +24,7 @@
 
 </head>
 
-<body onload="initialize()">
+<body>
   <div id="ajout_batiment" class="pop_up_inv hide">
     <div class="pop_up">
       <p class="title"> BATIMENTS </p>
@@ -355,19 +355,19 @@
             </section>
 
             <script src="https://code.jquery.com/jquery-1.12.0.min.js"></script>
-            <script src="https://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
-
-            <script type="text/javascript" src="js/function.js"></script>
-            <script type="text/javascript" src="js/icone.js"></script>
-            <script type="text/javascript" src="js/map.js"></script>
-            <script type="text/javascript" src="js/onglet.js"></script>
             <script src="js/Leaflet-0.7.7/leaflet.js"></script> 
+             <script type="text/javascript" src="js/icone.js"></script>
+            <script type="text/javascript" src="js/map.js"></script>
+             <script src='js/coord.js'></script>
+            <script type="text/javascript" src="js/function.js"></script>
+           
+            
+            <script type="text/javascript" src="js/onglet.js"></script>
+            
 
 
             <script src='https://api.mapbox.com/mapbox.js/plugins/leaflet-fullscreen/v1.0.1/Leaflet.fullscreen.min.js'></script>
             <link href='https://api.mapbox.com/mapbox.js/plugins/leaflet-fullscreen/v1.0.1/leaflet.fullscreen.css' rel='stylesheet' />
-
-            <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
 
             <script>
 
@@ -473,6 +473,7 @@
             </script>
 
  <script src='js/sauveguarde.js'></script>
+
          <?php include 'load.php' ?>
           </body>
           </html>
