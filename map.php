@@ -24,7 +24,7 @@
 
 </head>
 
-<body onload="initialize()">
+<body>
   <div id="ajout_batiment" class="pop_up_inv hide">
     <div class="pop_up">
       <p class="title"> BATIMENTS </p>
@@ -359,7 +359,8 @@
 
             <script type="text/javascript" src="js/function.js"></script>
             <script type="text/javascript" src="js/icone.js"></script>
-            <script type="text/javascript" src="js/map.js"></script>
+            <script type="text/javascript" src="map.js"></script>
+            <t></t>
             <script type="text/javascript" src="js/onglet.js"></script>
             <script src="js/Leaflet-0.7.7/leaflet.js"></script> 
 
@@ -472,8 +473,7 @@
               })
             </script>
 
- <script src='js/sauveguarde.js'></script>
-         <?php include 'load.php' ?>
+ <script src='js/sauveguarde.js'></script><?php include "load.php"; ?>
           </body>
           </html>
 
