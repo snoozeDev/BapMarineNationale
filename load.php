@@ -21,10 +21,10 @@ include 'db.php';
     
     
     <script>
-    var cerclesPhp = $cercles;
+    var cerclesPhp = JSON.parse($cercles);
     
   
-    loadCercle(cerclesPhp);
+    console.log(cerclesPhp);
     
 
     

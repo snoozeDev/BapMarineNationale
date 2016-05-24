@@ -667,9 +667,6 @@ function initialize() { //fonction qui permet de charger la carte au lancement d
     };
 
     function addLatLngToCircle(clickEventData) {
-        console.log(clickEventData);
-        console.log(clickEventData.latlng.lat);
-        console.log(clickEventData.latlng.lng);
         var taille = $('#taille_circle option:selected').val();
         var color = $('#color_circle option:selected').val();
         var cercle_name = "cercle" + cer;
@@ -681,10 +678,11 @@ function initialize() { //fonction qui permet de charger la carte au lancement d
             fillOpacity: 0.5,
             clickable: false
         }).addTo(map);
-        /*cercle[cer]._map.options = null;
-         cercleJson = JSON.stringify(cercle);
+        console.log(cer + "cer");
+            cercleJson[cer] = JSON.stringify([cercle[cer]._mRadius,cercle[cer]._latlng,cercle[cer].options]);
+        console.log(cercleJson);
        console.log(cercleJson);
-        $('#cer').val(cercleJson);*/
+        $('#cer').val(cercleJson);
         stop(); //pour ne pas dessiner d'autres cercles
 
 
@@ -1487,7 +1485,38 @@ $('.speed').change(function () {             //lorsque le coef de vitesse change
 
     }*/
 
-  
+   function loadCercle(cerclesPhp){
+     
+      console.log(map);
+    for (var e = 0; e < cerclesPhp.length; e++) {
+        console.log("----------------------");
+    console.log(cerclesPhp[e]._mRadius + ":taille");    
+    console.log(cerclesPhp[e].options.color + ":color");
+        console.log(cerclesPhp[e]._latlng.lat + ":lati");
+         console.log(cerclesPhp[e]._latlng.lng + ":long");
+        console.log(cer);
+        console.log("----------------------");
+              var cercle_name = "cercle" + cer;
+            var taillecercle = cerclesPhp[e]._mRadius;
+        var colorcercle = cerclesPhp[e].options.color;
+        var latcercle = cerclesPhp[e]._latlng.lat;
+        var lngcercle = cerclesPhp[e]._latlng.lng;
+        cercle[cer] = L.circle([latcercle, lngcercle], taillecercle, {
+            className: cercle_name
+            , color: colorcercle
+            , fillColor: colorcercle
+            , fillOpacity: 0.5
+            , clickable: false
+        , }).addTo(map);
+           // cercle[cer]._map = null;
+        console.log(cercle);
+         cercleJson = JSON.stringify(cercle);
+       console.log(cercleJson);
+        $('#cer').val(cercleJson);
+        stop(); //pour ne pas dessiner d'autres cercles
+        
+    }
+};
 
     
 //Conversion des degrés en radian

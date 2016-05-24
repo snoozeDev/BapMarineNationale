@@ -474,13 +474,10 @@
               })
             </script>
 
-<<<<<<< HEAD
  <script src='js/sauveguarde.js'></script>
 
          <?php include 'load.php' ?>
-=======
- <script src='js/sauveguarde.js'></script><?php include "load.php"; ?>
->>>>>>> 7b08960915ff3d1ed72161c0bf976f45d04a9e91
+
           </body>
           </html>
 
