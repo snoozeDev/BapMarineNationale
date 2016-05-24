@@ -693,7 +693,6 @@ var textJson = {};
         }).addTo(map);
             cercleJson[cer] = [cercle[cer]._mRadius,cercle[cer]._latlng,cercle[cer].options];
         var cercleJsonString = JSON.stringify(cercleJson);
-        console.log(cercleJsonString);
         $('#cer').val(cercleJsonString);
         stop(); //pour ne pas dessiner d'autres cercles
 
@@ -705,6 +704,7 @@ var textJson = {};
     var CurrentMarkerTrajet = {};
     var polyline = []; //tableau de toutes les polylines
     poly = 0; //equivalent de bat pour les bateaux
+    var polylineJson = {};
 
     drawPolylineButton.addEventListener('click', function () {
         $('#toolbar').hide();
@@ -740,6 +740,9 @@ var textJson = {};
         default:
             break;
         }
+          polylineJson[poly] = [polyline[poly]._latlngs,polyline[poly].options];
+        var polylineJsonString = JSON.stringify(polylineJson);
+        $('#polyl').val(polylineJsonString);
         var form = 'la ligne ' + color_fr + ' n°' + poly2;
         $( "p" ).on( "click", function() {
             $( this ).width( 208).height(0);
@@ -1883,7 +1886,6 @@ function loadText(textsPhp){
                 , iconSize: [200, 80]
             })
         }).addTo(map);
-        console.log(texte[tex]);
         
         textJson[tex] = [texte[tex]._latlng,text];
         var texteJsonString = JSON.stringify(textJson);
@@ -1892,6 +1894,56 @@ function loadText(textsPhp){
       }
     
 };
+
+function loadPolyl(polylsPhp){
+    var limit = Object.keys(polylsPhp).length ;
+    for (var z = 0; z < limit; z++) {
+            polyName = "polyline" + poly;
+        polyline[poly] = new L.polyline([], {
+            color: polylsPhp[z][1].color
+            , className: polyName
+        }).addTo(map);
+        
+    for (var q= 0; q < polylsPhp[z][0].length; q++) {
+            polyline[poly].addLatLng(polylsPhp[z][0][q]);
+        }
+        
+          $('#toolbar').show();
+        var elem = "polyline" + poly;
+        var color_fr = polyline[poly].options.color;
+        poly2 = poly + 1;
+        switch (color_fr) {
+        case "blue":
+            color_fr = 'bleu';
+            break;
+        case "green":
+            color_fr = 'vert';
+            break;
+        case "red":
+            color_fr = 'rouge';
+            break;
+        case "gray":
+            color_fr = 'gris';
+            break;
+        default:
+            break;
+        }
+          polylineJson[poly] = [polyline[poly]._latlngs,polyline[poly].options];
+        var polylineJsonString = JSON.stringify(polylineJson);
+        $('#polyl').val(polylineJsonString);
+        var form = 'la ligne ' + color_fr + ' n°' + poly2;
+        $( "p" ).on( "click", function() {
+            $( this ).width( 208).height(0);
+        });
+        $('.delete_polyline_p').append('<li><div class="bord"><p class="form" id="' + elem + '" onclick="delete_obj(&#34;' + elem + '&#34;,&#34;' + form + '&#34;);return false">Supprimer ' + form + ' </p> <div class="oeilvert"><div id="oeil'+ elem + '" class="vert yeux"></div></div></div></li>');
+        $( "p" ).on( "click", function() {
+            $( this).off();
+        });
+        poly++;
+
+        map.off('click', addLatLngToPolyline); //Stop listening for clicks on map.
+    }
+}
 
     
 //Conversion des degrés en radian

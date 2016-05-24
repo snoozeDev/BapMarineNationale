@@ -283,6 +283,7 @@
                         <input type="hidden" id="cer" name="cercles">
                         <input type="hidden" id="polyg" name="polygs">
                         <input type="hidden" id="text" name="texts">
+                        <input type="hidden" id="polyl" name="polyls">
                         <button id='insert'>Save</button>
                     </form>
                 </div>

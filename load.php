@@ -18,35 +18,30 @@ include 'db.php';
                 $cercles = $rows['cercles']; 
     $polygs = $rows['polygs']; 
       $texts = $rows['texts'];
-    echo "
+    $polyls = $rows['polyls'];
     
     
-    
-    <script>
-    var cerclesPhp = $cercles;
-    var polygsPhp = $polygs;
-    var textsPhp = $texts;
-    loadCercle(cerclesPhp);
-    loadPolyg(polygsPhp);
-    loadText(textsPhp);
-
-    
-    
-    
-    
-    </script>
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    ";
-                    endwhile;
+    if(strlen($cercles) !== 0){
+        echo "
+        <script> var cerclesPhp = $cercles;loadCercle(cerclesPhp);</script>
+        ";
+    }
+      if(strlen($polygs) !== 0){
+        echo "
+        <script> var polygsPhp = $polygs;loadPolyg(polygsPhp);</script>
+        ";
+    }
+      if(strlen($texts) !== 0){
+        echo "
+        <script> var textsPhp = $texts;loadText(textsPhp);</script>
+        ";
+    }
+     if(strlen($polyls) !== 0){
+        echo "
+        <script> var polylsPhp = $polyls;loadPolyl(polylsPhp);</script>
+        ";
+    }
+           endwhile;
                  
     
 }
