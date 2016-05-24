@@ -121,23 +121,19 @@ html,body {
 	animation-iteration-count: infinite;
 }
 .deleteUltim {
-	-webkit-border-radius: 0;
-	-moz-border-radius: 0;
-	border-radius: 0px;
-
-
-	font-size: 20px;
-	padding: 10px 20px 10px 20px;
-	border: solid #1f628d 2px;
-	text-decoration: none;
-	margin-top: 10%;
+	font-family: Arial;
+	color: #ffffff;
+	font-size: 30px;
+	padding: 20px 50px 20px 50px;*/
+text-decoration: none;
+	margin-top: 200px;
+	margin-left: 5%f;
+	margin border-right: 5%;
 }
 #simulation{
     display:none
 }
-.deleteUltim a {
-	color: white;
-}
+
 #timer{
 	font-size:180%;
 
@@ -1180,4 +1176,8 @@ li{
 	position: relative;
 	right:2px;
 	height: 80px;
+}
+
+h1 {
+	margin-bottom: 70px;
 }
