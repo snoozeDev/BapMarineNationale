@@ -16,15 +16,17 @@ include 'db.php';
                 $id = $rows['id'];
                 $mapName = $rows['mapName'];
                 $cercles = $rows['cercles']; 
+    $polygs = $rows['polygs']; 
     echo "
     
     
     
     <script>
     var cerclesPhp = $cercles;
+    var polygsPhp = $polygs;
     
-  
     loadCercle(cerclesPhp);
+    loadPolyg(polygsPhp);
     
 
     

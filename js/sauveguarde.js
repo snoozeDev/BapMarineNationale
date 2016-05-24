@@ -4,6 +4,7 @@ $('#myform').submit(function(){
 });
  
 $('#insert').click(function(){
+    console.log("azazza");
     alert('Carte sauveguardée');
  $.post( 
  $('#myform').attr('action'),

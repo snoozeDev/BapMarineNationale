@@ -511,6 +511,7 @@ function initialize() { //fonction qui permet de charger la carte au lancement d
     var currentPolygon = {}; //Empty object to be used later;
     var polygone = []; //tableau de toutes les polylines
     polyg = 0; //equivalent de bat pour les bateaux
+    var polygJson = {};
 
     drawPolygonButton.addEventListener('click', function () {
         $('#ajout_pins').css('display', 'none');
@@ -526,7 +527,7 @@ function initialize() { //fonction qui permet de charger la carte au lancement d
         map.on('click', addLatLngToPolygon); //Listen for clicks on map.
 
     });
-    stopDraw.addEventListener('click', function () {
+    stopDraw.addEventListener('click', function() {
         $('#toolbar').show();
 
         var elem = "polygone" + polyg;
@@ -548,6 +549,13 @@ function initialize() { //fonction qui permet de charger la carte au lancement d
         default:
             break;
         }
+     
+                polygJson[polyg] = [polygone[polyg]._latlngs,polygone[polyg].options];
+        var polygJsonString = JSON.stringify(polygJson);
+        console.log(polygJsonString);
+        $('#polyg').val(polygJsonString);
+        
+        
         var form = 'le polygone ' + color_fr + ' n°' + polyg2;
         $( "p" ).on( "click", function() {
             $( this ).width( 208).height(0);
@@ -667,9 +675,6 @@ function initialize() { //fonction qui permet de charger la carte au lancement d
     };
 
     function addLatLngToCircle(clickEventData) {
-        console.log(clickEventData);
-        console.log(clickEventData.latlng.lat);
-        console.log(clickEventData.latlng.lng);
         var taille = $('#taille_circle option:selected').val();
         var color = $('#color_circle option:selected').val();
         var cercle_name = "cercle" + cer;
@@ -681,10 +686,10 @@ function initialize() { //fonction qui permet de charger la carte au lancement d
             fillOpacity: 0.5,
             clickable: false
         }).addTo(map);
-        /*cercle[cer]._map.options = null;
-         cercleJson = JSON.stringify(cercle);
-       console.log(cercleJson);
-        $('#cer').val(cercleJson);*/
+            cercleJson[cer] = [cercle[cer]._mRadius,cercle[cer]._latlng,cercle[cer].options];
+        var cercleJsonString = JSON.stringify(cercleJson);
+        console.log(cercleJsonString);
+        $('#cer').val(cercleJsonString);
         stop(); //pour ne pas dessiner d'autres cercles
 
 
@@ -1785,7 +1790,83 @@ $('.speed').change(function () {             //lorsque le coef de vitesse change
 
     }*/
 
-  
+   function loadCercle(cerclesPhp){
+       var limit = Object.keys(cerclesPhp).length ;
+    for (var e = 0; e < limit; e++) {
+              var cercle_name = "cercle" + cer;
+            var taillecercle = cerclesPhp[e][0];
+        var colorcercle = cerclesPhp[e][2].color;
+        var latcercle = cerclesPhp[e][1].lat;
+        var lngcercle = cerclesPhp[e][1].lng;
+        cercle[cer] = L.circle([latcercle, lngcercle], taillecercle, {
+            className: cercle_name
+            , color: colorcercle
+            , fillColor: colorcercle
+            , fillOpacity: 0.5
+            , clickable: false
+        , }).addTo(map);
+      cercleJson[cer] = [cercle[cer]._mRadius,cercle[cer]._latlng,cercle[cer].options];
+        var cercleJsonString = JSON.stringify(cercleJson);
+        $('#cer').val(cercleJsonString);
+        stop();
+        
+    }
+};
+
+ function loadPolyg(polygsPhp){
+       var limit = Object.keys(polygsPhp).length ;
+    for (var e = 0; e < limit; e++) {
+        var polygName = "polygone" + polyg;
+        var color_polygone = polygsPhp[e][1].color;
+        polygone[polyg] = new L.polygon([], {
+            className: polygName
+            , clickable: false
+            , color: color_polygone
+        }).addTo(map);
+        for (var a = 0; a < polygsPhp[e][0].length; a++) {
+            polygone[polyg].addLatLng(polygsPhp[e][0][a]);
+        }
+           $('#toolbar').show();
+
+        var elem = "polygone" + polyg;
+        var color_fr = polygone[polyg].options.color;
+        polyg2 = polyg + 1;
+        switch (color_fr) {
+        case "blue":
+            color_fr = 'bleu';
+            break;
+        case "green":
+            color_fr = 'vert';
+            break;
+        case "red":
+            color_fr = 'rouge';
+            break;
+        case "gray":
+            color_fr = 'gris';
+            break;
+        default:
+            break;
+        }
+     
+                polygJson[polyg] = [polygone[polyg]._latlngs,polygone[polyg].options];
+        var polygJsonString = JSON.stringify(polygJson);
+        console.log(polygJsonString);
+        $('#polyg').val(polygJsonString);
+        
+        
+        var form = 'le polygone ' + color_fr + ' n°' + polyg2;
+        $( "p" ).on( "click", function() {
+            $( this ).width( 208).height(0);
+        });
+        $('.delete_polygone_p').append('<li><div class="bord"><p class="form" id="' + elem + '" onclick="delete_obj(&#34;' + elem + '&#34;,&#34;' + form + '&#34;);return false">Supprimer ' + form + ' </p> <div class="oeilvert"><div id="oeil'+ elem + '" class="vert yeux"></div></div></div></li>');
+        $( "p" ).on( "click", function() {
+            $( this).off();
+        });
+        polyg++;
+
+        map.off('click', addLatLngToPolygon); //Stop listening for clicks on map.
+    }
+};
 
     
 //Conversion des degrés en radian
