@@ -6,6 +6,7 @@
 $name = $_POST['mapName'];
 $description = $_POST['mapDescription'];
 $cercles = $_POST['cercles'];
+$polygs = $_POST['polygs'];
 
 
 

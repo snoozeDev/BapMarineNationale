@@ -511,6 +511,7 @@ function initialize() { //fonction qui permet de charger la carte au lancement d
     var currentPolygon = {}; //Empty object to be used later;
     var polygone = []; //tableau de toutes les polylines
     polyg = 0; //equivalent de bat pour les bateaux
+    var polygJson = {};
 
     drawPolygonButton.addEventListener('click', function () {
         $('#ajout_pins').css('display', 'none');
@@ -548,6 +549,13 @@ function initialize() { //fonction qui permet de charger la carte au lancement d
         default:
             break;
         }
+     
+                polygJson[polyg] = [polygone[polyg]._latlngs,polygone[polyg].options];
+        var polygJsonString = JSON.stringify(polygJson);
+        console.log(polygJsonString);
+        $('#polyg').val(polygJsonString);
+        
+        
         var form = 'le polygone ' + color_fr + ' n°' + polyg2;
         $( "p" ).on( "click", function() {
             $( this ).width( 208).height(0);
@@ -1777,11 +1785,8 @@ $('.speed').change(function () {             //lorsque le coef de vitesse change
     }*/
 
    function loadCercle(cerclesPhp){
-     
-      console.log(Object.keys(cerclesPhp).length);
        var limit = Object.keys(cerclesPhp).length ;
     for (var e = 0; e < limit; e++) {
-     console.log(e + "E");
               var cercle_name = "cercle" + cer;
             var taillecercle = cerclesPhp[e][0];
         var colorcercle = cerclesPhp[e][2].color;
@@ -1796,7 +1801,6 @@ $('.speed').change(function () {             //lorsque le coef de vitesse change
         , }).addTo(map);
       cercleJson[cer] = [cercle[cer]._mRadius,cercle[cer]._latlng,cercle[cer].options];
         var cercleJsonString = JSON.stringify(cercleJson);
-        console.log(cercleJsonString);
         $('#cer').val(cercleJsonString);
         stop();
         
