@@ -1621,6 +1621,8 @@ $('.speed').change(function () {             //lorsque le coef de vitesse change
         editType= bateaux[id].editType;
         editRadar = bateaux[id].editRadar;
         editDescription = bateaux[id].editDescription;
+
+        editDetection =bateaux[id].editDetection;
         $('#stopEditPolyline').css('display', 'block');
         $('#editVitesse').show();
 
@@ -1660,6 +1662,8 @@ $('.speed').change(function () {             //lorsque le coef de vitesse change
             editType = bateaux[id].editType;
             editSpeed = bateaux[id].editSpeed;
             editRadar = bateaux[id].editRadar;
+
+            editDetection = bateaux[id].editDetection;
 
             console.log(bateaux[id]);
             editCurrentLine = bateaux[id]._latlngs; //recup trajet
@@ -1761,6 +1765,8 @@ $('.speed').change(function () {             //lorsque le coef de vitesse change
         bateaux[id].suppression=suppression;
         bateaux[id].editSpeed = editSpeed;
         bateaux[id].editRadar = editRadar;
+
+        bateaux[id].editDetection = editDetection;
         bateaux[id].editIcon = editIcon;
         bateaux[id].editType =editType;
         bateaux[id].editColor = editColor;
@@ -1899,13 +1905,20 @@ var consolet=0; //pour ne pas avoir un spam de messages consoles
 var cercleRadar = [];
 var cerRadar=0;
 var detection= [];
+var detection2= [];
+var message = [];
+var mes=0;
 function calculDistance(){
 
     if(simulation==true){
 
-        // traitement
-        cerRadar++;
-        detection= [];
+        for (var i = bateaux.length - 1; i >= 0; i--) { //fonction de message
+            if(bateaux[i].suppression==false&&bateaux[i].editColor!="blue"){        //on donne la valeur avant le changement
+                detection2[i]=bateaux[i].editDetection;
+            }
+
+        };
+        detection = [];
         for (var i = bateaux.length - 1; i >= 0; i--) {       //calcul de distance pour le radar
             
             suppression = bateaux[i].suppression;
@@ -1929,7 +1942,7 @@ function calculDistance(){
                     
                         suppression = bateaux[j].suppression;
 
-                        if(bateaux[j].suppression==false && bateaux[i].editColor != bateaux[j].editColor ){  //si le bateau est deja détecté
+                        if(bateaux[j].suppression==false && bateaux[i].editColor != bateaux[j].editColor ){  //si le bateau est pas supprimé, pas bleu
                             
               
                             R = 6378000; //Rayon de la terre en mètre
@@ -1939,82 +1952,95 @@ function calculDistance(){
                             lon_b = convertRad(bateaux[i]._latlng.lng);
                             classIdBat = bateaux[j].editColor+j; //class bateau avec sa couleur et son id
                             d = R * (Math.PI/2 - Math.asin( Math.sin(lat_b) * Math.sin(lat_a) + Math.cos(lon_b - lon_a) * Math.cos(lat_b) * Math.cos(lat_a)))
-           
-                            if(d < bateaux[j].editRadar){
+                           /* if(detection[j]!=true){
+                                detection[j]="false";           
+                            }*/
+                            
+                            
+                            if(d < bateaux[j].editRadar){ //si un bateau allié est dans le radar ennemi
                                 if(bateaux[i].editDetection==false && bateaux[j].editColor=="red"){
-                                    etat="ennemie";
-                                    $("#console ul").prepend("<li>"+$('#hours').text()+$('#mins').text()+" Vous avez été repéré par "+ bateaux[i].editType +" "+etat+" aux coordonnées "+lat+","+lng+"</li><br>");
-                                    
+                                    $("#console ul").prepend("<li>"+$('#hours').text()+$('#mins').text()+" "+ bateaux[j].editType +" ennemi(e) vous a repéré</li><br>");
+                          
                                     bateaux[i].editDetection=true;
                                 }
                             
                             }
-                            if(d >= bateaux[i].editRadar && detection[j]!=true){
+                            if(d >= bateaux[i].editRadar){ //si un bateau ennemi este le radar
+                                if(detection[j]!=true){  //si ce bateau n'a pas été détécté par un autre bateau dans la boucle 
 
                               
                                     $('.'+classIdBat).hide();
                                     $('.green').hide();
                                     
-                                    d=Math.round(d/100);
-                                    lat=lat_a.toFixed(5);
-                                    lng=lon_a.toFixed(5);
-                                    if(bateaux[j].editDetection==true){
+                                    bateaux[j].editDetection=false; //passer en etat de détection
+                                    
+                              }
+                                
 
-                                    
-                                        if(bateaux[j].editColor=="red"){
-                                            etat="ennemi(e)";
-                                        }else{
-                                            etat="neutre";
-                                        }
-                                        $("#console ul").prepend("<li>"+$('#hours').text()+$('#mins').text()+" "+ bateaux[j].editType +" "+etat+" disparu aux coordonnées "+lat+","+lng+"</li><br>");
-                                    }
-                                    bateaux[j].editDetection=false;
-                                
-                                
-                            }else{
-                                if(bateaux[j].editDetection==false){
-                                
-                                        d=Math.round(d/100);
-                                        lat=lat_a.toFixed(5);
-                                        lng=lon_a.toFixed(5);
-                                        if(bateaux[j].editColor=="red"){
-                                            etat="ennemie";
-                                        }else{
-                                            etat="neutre";
-                                        }
-                                        $("#console ul").prepend("<li>"+$('#hours').text()+$('#mins').text()+" "+ bateaux[j].editType +" "+etat+" repéré à "+d+" km aux coordonnées "+lat+","+lng+"</li><br>");
-                                    
-                                }
+                            }else{  //bateau dans le radar
                                 $('.'+classIdBat).show();
                                 bateaux[j].editDetection=true;
                                 detection[j]=true;
-                                    
+                                console.log(j+" "+detection[j]);
                                    
                                 
                                 
                                 
                             }
 
-
-                            
-
-                                            
+                        
+                        /*message[j]=j;
+                        console.log(j+' '+mes);
+                        console.log(message[j]);
+                        message[j][mes]=detection[j];
+                        console.log(message[j][mes-1]);
+                        console.log(message[j][mes]);
+                        if(message[j][mes-1] && message[j][mes]!=message[j][mes-1]){
+                            console.log('ça change');
+                        }        */     
                        
                        
                     }
                         
                 };  
 
+              
+
             }
                 
         };
-        
+        for (var i = bateaux.length - 1; i >= 0; i--) { //fonction de message
+            if(bateaux[i].suppression==false&&bateaux[i].editColor!="blue"){        //le bateau n'a pas été supprimé
+                if(bateaux[i].editDetection!=detection2[i]){
+                    console.log('ça change');
+                    lat=bateaux[i]._latlng.lat.toFixed(5);
+                    lng=bateaux[i]._latlng.lng.toFixed(5);
+                    if(bateaux[i].editDetection==true){
+                        if(bateaux[i].editColor=="red"){
+                            etat="ennemie";
+                        }else{
+                            etat="neutre";
+                        }
+                        $("#console ul").prepend("<li>"+$('#hours').text()+$('#mins').text()+" "+ bateaux[i].editType +" "+etat+" repéré aux coordonnées "+lat+","+lng+"</li><br>");
+                                    
+                                     
+                    }else{
+                        if(bateaux[i].editColor=="red"){
+                            etat="ennemie";
+                        }else{
+                            etat="neutre";
+                        }
+                        $("#console ul").prepend("<li>"+$('#hours').text()+$('#mins').text()+" "+ bateaux[i].editType +" "+etat+" a disparu aux coordonnées "+lat+","+lng+"</li><br>");
+                                    
+                                          
+                    }
+                }
+            }
+
+        };
     }
     
-    consolet++;
-    if(consolet==3){
-        consolet=0;
-    }
+    
     setTimeout(calculDistance,1000); /* rappel après 2 secondes = 2000 millisecondes */
 }
 
