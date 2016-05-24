@@ -355,6 +355,7 @@
             </section>
 
             <script src="https://code.jquery.com/jquery-1.12.0.min.js"></script>
+
             <script src="js/Leaflet-0.7.7/leaflet.js"></script> 
              <script type="text/javascript" src="js/icone.js"></script>
             <script type="text/javascript" src="js/map.js"></script>
@@ -362,6 +363,7 @@
             <script type="text/javascript" src="js/function.js"></script>
            
             
+
             <script type="text/javascript" src="js/onglet.js"></script>
             
 
@@ -472,9 +474,13 @@
               })
             </script>
 
+<<<<<<< HEAD
  <script src='js/sauveguarde.js'></script>
 
          <?php include 'load.php' ?>
+=======
+ <script src='js/sauveguarde.js'></script><?php include "load.php"; ?>
+>>>>>>> 7b08960915ff3d1ed72161c0bf976f45d04a9e91
           </body>
           </html>
 

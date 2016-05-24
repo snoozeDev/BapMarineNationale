@@ -22,11 +22,9 @@ include 'db.php';
     
     <script>
     var cerclesPhp = $cercles;
-    for (var e = 0; e < cerclesPhp.length; e++) {
     
-    console.log(cerclesPhp[e]);
-    
-    }
+  
+    loadCercle(cerclesPhp);
     
 
     
