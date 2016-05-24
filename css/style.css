@@ -485,7 +485,7 @@ ul {
 	margin-top:-1px;
 	background:#2C3E50;
 	overflow-y: scroll;
-	height:90px;
+	height:200px;
 
 }
 
@@ -637,8 +637,8 @@ a, a:visited {
 	border-style: solid;
 	border-width: 2px;
 
-	left: 80px;
-	top: -15px;
+	left: 95px;
+	top: -4px;
 
 }
 
@@ -1164,10 +1164,6 @@ a:visited
 	color: #ffffff;
 }
 
-li{
-	list-style-type: circle;
-
-}
 
 
 .bord{

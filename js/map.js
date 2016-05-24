@@ -472,11 +472,11 @@ function initialize() { //fonction qui permet de charger la carte au lancement d
         var elem = "batiment" + bati;    //element utile pour la suppression 
         console.log(batiment[bati]);
         var form = batiment[bati].options.icon.options.html;
-        $( "p" ).on( "click", function() {
+        $( "p.blast" ).on( "click", function() {
             $( this ).width( 208).height(0);
         });
         $('.delete_batiment_p').append('<li><div class="bord"><p class="form" id="' + elem + '" onclick="delete_obj(&#34;' + elem + '&#34;,&#34;' + form + '&#34;);return false">supprimer : ' + form + ' </p> <div class="oeilvert"><div class="yeux"></div></div></div></li>');
-        $( "p" ).on( "click", function() {
+        $( "p.blast" ).on( "click", function() {
             $( this).off();
         });
         bati++;
@@ -557,11 +557,11 @@ function initialize() { //fonction qui permet de charger la carte au lancement d
         
         
         var form = 'le polygone ' + color_fr + ' n°' + polyg2;
-        $( "p" ).on( "click", function() {
+        $( "p.blast" ).on( "click", function() {
             $( this ).width( 208).height(0);
         });
         $('.delete_polygone_p').append('<li><div class="bord"><p class="form" id="' + elem + '" onclick="delete_obj(&#34;' + elem + '&#34;,&#34;' + form + '&#34;);return false">Supprimer ' + form + ' </p> <div class="oeilvert"><div id="oeil'+ elem + '" class="vert yeux"></div></div></div></li>');
-        $( "p" ).on( "click", function() {
+        $( "p.blast" ).on( "click", function() {
             $( this).off();
         });
         polyg++;
@@ -596,11 +596,11 @@ var textJson = {};
         map.off('click', addLatLngToMarker); //Stop listening for clicks on map.
         var elem = "texte" + tex;
         var form = texte[tex].options.icon.options.html;
-        $( "p" ).on( "click", function() {
+        $( "p.blast" ).on( "click", function() {
             $( this ).width( 208).height(0);
         });
         $('.delete_texte_p').append('<li><div class="bord"><p class="form" id="' + elem + '" onclick="delete_obj(&#34;' + elem + '&#34;,&#34;' + form + '&#34;);return false">Supprimer : ' + form + ' </p> <div class="oeilvert"><div id="oeil'+ elem + '" class="vert yeux"></div></div></div></li>');
-        $( "p" ).on( "click", function() {
+        $( "p.blast" ).on( "click", function() {
             $( this).off();
         });
         tex++;
@@ -666,11 +666,11 @@ var textJson = {};
             break;
         }
         var form = 'le cercle ' + color_fr + ' n°' + cer2;
-        $( "p" ).on( "click", function() {
+        $( "p.blast" ).on( "click", function() {
             $( this ).width( 208).height(0);
         });
         $('.delete_cercle_p').append('<li><div class="bord"><p class="form" id="' + elem + '" onclick="delete_obj(&#34;' + elem + '&#34;,&#34;' + form + '&#34;);return false">Supprimer ' + form + ' </p> <div class="oeilvert"><div id="oeil'+ elem + '" class="vert yeux"></div></div></div></li>');
-        $( "p" ).on( "click", function() {
+        $( "p.blast" ).on( "click", function() {
             $( this).off();
         });
         cer++;
@@ -744,11 +744,11 @@ var textJson = {};
         var polylineJsonString = JSON.stringify(polylineJson);
         $('#polyl').val(polylineJsonString);
         var form = 'la ligne ' + color_fr + ' n°' + poly2;
-        $( "p" ).on( "click", function() {
+        $( "p.blast" ).on( "click", function() {
             $( this ).width( 208).height(0);
         });
         $('.delete_polyline_p').append('<li><div class="bord"><p class="form" id="' + elem + '" onclick="delete_obj(&#34;' + elem + '&#34;,&#34;' + form + '&#34;);return false">Supprimer ' + form + ' </p> <div class="oeilvert"><div id="oeil'+ elem + '" class="vert yeux"></div></div></div></li>');
-        $( "p" ).on( "click", function() {
+        $( "p.blast" ).on( "click", function() {
             $( this).off();
         });
         poly++;
@@ -1862,11 +1862,11 @@ $('.speed').change(function () {             //lorsque le coef de vitesse change
         
         
         var form = 'le polygone ' + color_fr + ' n°' + polyg2;
-        $( "p" ).on( "click", function() {
+        $( "p.blast" ).on( "click", function() {
             $( this ).width( 208).height(0);
         });
         $('.delete_polygone_p').append('<li><div class="bord"><p class="form" id="' + elem + '" onclick="delete_obj(&#34;' + elem + '&#34;,&#34;' + form + '&#34;);return false">Supprimer ' + form + ' </p> <div class="oeilvert"><div id="oeil'+ elem + '" class="vert yeux"></div></div></div></li>');
-        $( "p" ).on( "click", function() {
+        $( "p.blast" ).on( "click", function() {
             $( this).off();
         });
         polyg++;
@@ -1932,11 +1932,11 @@ function loadPolyl(polylsPhp){
         var polylineJsonString = JSON.stringify(polylineJson);
         $('#polyl').val(polylineJsonString);
         var form = 'la ligne ' + color_fr + ' n°' + poly2;
-        $( "p" ).on( "click", function() {
+        $( "p.blast" ).on( "click", function() {
             $( this ).width( 208).height(0);
         });
         $('.delete_polyline_p').append('<li><div class="bord"><p class="form" id="' + elem + '" onclick="delete_obj(&#34;' + elem + '&#34;,&#34;' + form + '&#34;);return false">Supprimer ' + form + ' </p> <div class="oeilvert"><div id="oeil'+ elem + '" class="vert yeux"></div></div></div></li>');
-        $( "p" ).on( "click", function() {
+        $( "p.blast" ).on( "click", function() {
             $( this).off();
         });
         poly++;
