@@ -282,8 +282,6 @@
                         <textarea name="mapDescription"></textarea>
                         <input type="hidden" id="cer" name="cercles">
                         <input type="hidden" id="polyg" name="polygs">
-                        <input type="hidden" id="cer" name="cercles">
-                        <input type="hidden" id="cer" name="cercles">
                         <button id='insert'>Save</button>
                     </form>
                 </div>

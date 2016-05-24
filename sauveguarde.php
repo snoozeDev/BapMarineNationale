@@ -10,7 +10,7 @@ $polygs = $_POST['polygs'];
 
 
 
-$sql = "INSERT INTO save_marine_table (mapName, mapDescription, cercles) VALUES ('$name','$description','$cercles')";
+$sql = "INSERT INTO save_marine_table (mapName, mapDescription, cercles, polygs) VALUES ('$name','$description','$cercles','$polygs')";
 
  if(mysqli_query($con, $sql)){
  

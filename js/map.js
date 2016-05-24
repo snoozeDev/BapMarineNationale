@@ -527,7 +527,7 @@ function initialize() { //fonction qui permet de charger la carte au lancement d
         map.on('click', addLatLngToPolygon); //Listen for clicks on map.
 
     });
-    stopDraw.addEventListener('click', function () {
+    stopDraw.addEventListener('click', function() {
         $('#toolbar').show();
 
         var elem = "polygone" + polyg;
@@ -1804,6 +1804,61 @@ $('.speed').change(function () {             //lorsque le coef de vitesse change
         $('#cer').val(cercleJsonString);
         stop();
         
+    }
+};
+
+ function loadPolyg(polygsPhp){
+       var limit = Object.keys(polygsPhp).length ;
+    for (var e = 0; e < limit; e++) {
+        var polygName = "polygone" + polyg;
+        var color_polygone = polygsPhp[e][1].color;
+        polygone[polyg] = new L.polygon([], {
+            className: polygName
+            , clickable: false
+            , color: color_polygone
+        }).addTo(map);
+        for (var a = 0; a < polygsPhp[e][0].length; a++) {
+            polygone[polyg].addLatLng(polygsPhp[e][0][a]);
+        }
+           $('#toolbar').show();
+
+        var elem = "polygone" + polyg;
+        var color_fr = polygone[polyg].options.color;
+        polyg2 = polyg + 1;
+        switch (color_fr) {
+        case "blue":
+            color_fr = 'bleu';
+            break;
+        case "green":
+            color_fr = 'vert';
+            break;
+        case "red":
+            color_fr = 'rouge';
+            break;
+        case "gray":
+            color_fr = 'gris';
+            break;
+        default:
+            break;
+        }
+     
+                polygJson[polyg] = [polygone[polyg]._latlngs,polygone[polyg].options];
+        var polygJsonString = JSON.stringify(polygJson);
+        console.log(polygJsonString);
+        $('#polyg').val(polygJsonString);
+        
+        
+        var form = 'le polygone ' + color_fr + ' n°' + polyg2;
+        $( "p" ).on( "click", function() {
+            $( this ).width( 208).height(0);
+        });
+        $('.delete_polygone_p').append('<li><div class="bord"><p class="form" id="' + elem + '" onclick="delete_obj(&#34;' + elem + '&#34;,&#34;' + form + '&#34;);return false">Supprimer ' + form + ' </p> <div class="oeilvert"><div id="oeil'+ elem + '" class="vert yeux"></div></div></div></li>');
+        $( "p" ).on( "click", function() {
+            $( this).off();
+        });
+        polyg++;
+
+        map.off('click', addLatLngToPolygon); //Stop listening for clicks on map.
     }
 };
 
