@@ -119,12 +119,22 @@
    <p class="title"> DÉPLACEMENT </p>
    <label>Type de vehicule</label><br>
    <select class="formula" id="type_bateau" name="type_bateau">
-    <option value="porte-avion">Porte-avion</option>
-    <option value="cuirasse">Cuirasse</option>
-    <option value="destroyer">Destroyer</option>
-    <option value="helico">Helico</option>
-    <option value="avion">Avion</option>
-  </select>
+       <option value="porte-avion">Porte-avion</option>
+       <option value="asm">ASM</option>
+       <option value="bpc">BPC</option>
+       <option value="fs">FS</option>
+       <option value="phm">PHM</option>
+       <option value="fda">FDA</option>
+       <option value="bcr">BCR</option>
+       <option value="puma">Helico Puma</option>
+       <option value="tigre">Helico Tigre</option>
+       <option value="fennec">Helico Fennec</option>
+       <option value="avion">Mirage F1</option>
+       <option value="paquebot">Paquebot Civil</option>
+       <option value="cargo">Cargo Civil</option>
+       <option value="peche">Bateau de pêche Civil</option>
+
+   </select>
   <label>Vitesse du trajet (en noeud)</label><br>
   <input type="text" id="vitesse_bateau" value="15"><br><br>
 
