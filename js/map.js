@@ -887,185 +887,477 @@ var CurrentEtat;
 
             switch (type_bateau) {
 
-            case 'porte-avion':
+                case 'porte-avion':
 
 
-                if (color_bateau == "blue") {
-                    CurrentMarkerTrajet = L.marker([clickEventData.latlng.lat, clickEventData.latlng.lng], {
-                        icon: porte_avion_allie
-                    }).addTo(map);
+                    if (color_bateau == "blue") {
+                        CurrentMarkerTrajet = L.marker([clickEventData.latlng.lat, clickEventData.latlng.lng], {
+                            icon: porte_avion_allie
+                        }).addTo(map);
 
-                    CurrentIcon = {
-                        icon: porte_avion_allie,
-                        className: "blue"+bat
-                    };
+                        CurrentIcon = {
+                            icon: porte_avion_allie
+                        };
 
 
-                } else if (color_bateau == "red") {
-                    CurrentMarkerTrajet = L.marker([clickEventData.latlng.lat, clickEventData.latlng.lng], {
-                        icon: porte_avion_ennemi
-                    }).addTo(map);
+                    } else if (color_bateau == "red") {
+                        CurrentMarkerTrajet = L.marker([clickEventData.latlng.lat, clickEventData.latlng.lng], {
+                            icon: porte_avion_ennemi
+                        }).addTo(map);
 
-                    CurrentIcon = {
-                        icon: porte_avion_ennemi
-                    };
-                } else {
-                    CurrentMarkerTrajet = L.marker([clickEventData.latlng.lat, clickEventData.latlng.lng], {
-                        icon: porte_avion_neutre
-                    }).addTo(map);
+                        CurrentIcon = {
+                            icon: porte_avion_ennemi
+                        };
+                    } else {
+                        CurrentMarkerTrajet = L.marker([clickEventData.latlng.lat, clickEventData.latlng.lng], {
+                            icon: porte_avion_neutre
+                        }).addTo(map);
 
-                    CurrentIcon = {
-                        icon: porte_avion_neutre,
-                        className: "red"+bat
-                    };
-                }
+                        CurrentIcon = {
+                            icon: porte_avion_neutre
+                        };
+                    }
 
 
 
-                break;
+                    break;
 
 
 
 
 
 
-            case 'cuirasse':
+                case 'asm':
 
 
-                if (color_bateau == "blue") {
-                    CurrentMarkerTrajet = L.marker([clickEventData.latlng.lat, clickEventData.latlng.lng], {
-                        icon: cuirasse_allie
-                    }).addTo(map);
+                    if (color_bateau == "blue") {
+                        CurrentMarkerTrajet = L.marker([clickEventData.latlng.lat, clickEventData.latlng.lng], {
+                            icon: asm_allie
+                        }).addTo(map);
 
-                    CurrentIcon = {
-                        icon: cuirasse_allie,
-                        className: "blue"+bat
-                    };
-                } else if (color_bateau == "red") {
-                    CurrentMarkerTrajet = L.marker([clickEventData.latlng.lat, clickEventData.latlng.lng], {
-                        icon: cuirasse_ennemi
-                    }).addTo(map);
+                        CurrentIcon = {
+                            icon: asm_allie
+                        };
+                    } else if (color_bateau == "red") {
+                        CurrentMarkerTrajet = L.marker([clickEventData.latlng.lat, clickEventData.latlng.lng], {
+                            icon: asm_ennemi
+                        }).addTo(map);
 
-                    CurrentIcon = {
-                        icon: cuirasse_ennemi
-                    };
-                } else {
-                    CurrentMarkerTrajet = L.marker([clickEventData.latlng.lat, clickEventData.latlng.lng], {
-                        icon: cuirasse_neutre
-                    }).addTo(map);
+                        CurrentIcon = {
+                            icon: asm_ennemi
+                        };
+                    } else {
+                        CurrentMarkerTrajet = L.marker([clickEventData.latlng.lat, clickEventData.latlng.lng], {
+                            icon: asm_neutre
+                        }).addTo(map);
 
-                    CurrentIcon = {
-                        icon: cuirasse_neutre
-                    };
-                }
-
-
-                break;
+                        CurrentIcon = {
+                            icon: asm_neutre
+                        };
+                    }
 
 
-
-
-            case 'destroyer':
-
-                if (color_bateau == "blue") {
-                    CurrentMarkerTrajet = L.marker([clickEventData.latlng.lat, clickEventData.latlng.lng], {
-                        icon: destroyer_allie
-                    }).addTo(map);
-
-                    CurrentIcon = {
-                        icon: destroyer_allie
-                    };
-
-                } else if (color_bateau == "red") {
-                    CurrentMarkerTrajet = L.marker([clickEventData.latlng.lat, clickEventData.latlng.lng], {
-                        icon: destroyer_ennemi
-                    }).addTo(map);
-
-                    CurrentIcon = {
-                        icon: destroyer_ennemi
-                    };
-                } else {
-                    CurrentMarkerTrajet = L.marker([clickEventData.latlng.lat, clickEventData.latlng.lng], {
-                        icon: destroyer_neutre
-                    }).addTo(map);
-
-                    CurrentIcon = {
-                        icon: destroyer_neutre
-                    };
-                }
-
-
-
-                break;
+                    break;
 
 
 
 
+                case 'bpc':
 
-            case 'avion':
+                    if (color_bateau == "blue") {
+                        CurrentMarkerTrajet = L.marker([clickEventData.latlng.lat, clickEventData.latlng.lng], {
+                            icon: bpc_allie
+                        }).addTo(map);
 
-                if (color_bateau == "blue") {
-                    CurrentMarkerTrajet = L.marker([clickEventData.latlng.lat, clickEventData.latlng.lng], {
-                        icon: avion_allie
-                    }).addTo(map);
+                        CurrentIcon = {
+                            icon: bpc_allie
+                        };
 
-                    CurrentIcon = {
-                        icon: avion_allie
-                    };
-                } else if (color_bateau == "red") {
-                    CurrentMarkerTrajet = L.marker([clickEventData.latlng.lat, clickEventData.latlng.lng], {
-                        icon: avion_ennemi
-                    }).addTo(map);
+                    } else if (color_bateau == "red") {
+                        CurrentMarkerTrajet = L.marker([clickEventData.latlng.lat, clickEventData.latlng.lng], {
+                            icon: bpc_ennemi
+                        }).addTo(map);
 
-                    CurrentIcon = {
-                        icon: avion_ennemi
-                    };
-                } else {
-                    CurrentMarkerTrajet = L.marker([clickEventData.latlng.lat, clickEventData.latlng.lng], {
-                        icon: avion_neutre
-                    }).addTo(map);
+                        CurrentIcon = {
+                            icon: bpc_ennemi
+                        };
+                    } else {
+                        CurrentMarkerTrajet = L.marker([clickEventData.latlng.lat, clickEventData.latlng.lng], {
+                            icon: bpc_neutre
+                        }).addTo(map);
 
-                    CurrentIcon = {
-                        icon: avion_neutre
-                    };
-                }
-
-                break;
+                        CurrentIcon = {
+                            icon: bpc_neutre
+                        };
+                    }
 
 
 
+                    break;
 
-            case 'helico':
+                case 'fs':
 
-                if (color_bateau == "blue") {
-                    CurrentMarkerTrajet = L.marker([clickEventData.latlng.lat, clickEventData.latlng.lng], {
-                        icon: helico_allie
-                    }).addTo(map);
+                    if (color_bateau == "blue") {
+                        CurrentMarkerTrajet = L.marker([clickEventData.latlng.lat, clickEventData.latlng.lng], {
+                            icon: fs_allie
+                        }).addTo(map);
 
-                    CurrentIcon = {
-                        icon: helico_allie
-                    };
-                } else if (color_bateau == "red") {
-                    CurrentMarkerTrajet = L.marker([clickEventData.latlng.lat, clickEventData.latlng.lng], {
-                        icon: helico_ennemi
-                    }).addTo(map);
+                        CurrentIcon = {
+                            icon: fs_allie
+                        };
 
-                    CurrentIcon = {
-                        icon: helico_ennemi
-                    };
-                } else {
-                    CurrentMarkerTrajet = L.marker([clickEventData.latlng.lat, clickEventData.latlng.lng], {
-                        icon: helico_neutre
-                    }).addTo(map);
+                    } else if (color_bateau == "red") {
+                        CurrentMarkerTrajet = L.marker([clickEventData.latlng.lat, clickEventData.latlng.lng], {
+                            icon: fs_ennemi
+                        }).addTo(map);
 
-                    CurrentIcon = {
-                        icon: helico_neutre
-                    };
-                }
+                        CurrentIcon = {
+                            icon: fs_ennemi
+                        };
+                    } else {
+                        CurrentMarkerTrajet = L.marker([clickEventData.latlng.lat, clickEventData.latlng.lng], {
+                            icon: fs_neutre
+                        }).addTo(map);
+
+                        CurrentIcon = {
+                            icon: fs_neutre
+                        };
+                    }
 
 
 
-                break;
+                    break;
+
+                case 'phm':
+
+                    if (color_bateau == "blue") {
+                        CurrentMarkerTrajet = L.marker([clickEventData.latlng.lat, clickEventData.latlng.lng], {
+                            icon: phm_allie
+                        }).addTo(map);
+
+                        CurrentIcon = {
+                            icon: phm_allie
+                        };
+
+                    } else if (color_bateau == "red") {
+                        CurrentMarkerTrajet = L.marker([clickEventData.latlng.lat, clickEventData.latlng.lng], {
+                            icon: phm_ennemi
+                        }).addTo(map);
+
+                        CurrentIcon = {
+                            icon: phm_ennemi
+                        };
+                    } else {
+                        CurrentMarkerTrajet = L.marker([clickEventData.latlng.lat, clickEventData.latlng.lng], {
+                            icon: phm_neutre
+                        }).addTo(map);
+
+                        CurrentIcon = {
+                            icon: phm_neutre
+                        };
+                    }
+
+
+
+                    break;
+
+                case 'fda':
+
+                    if (color_bateau == "blue") {
+                        CurrentMarkerTrajet = L.marker([clickEventData.latlng.lat, clickEventData.latlng.lng], {
+                            icon: fda_allie
+                        }).addTo(map);
+
+                        CurrentIcon = {
+                            icon: fda_allie
+                        };
+
+                    } else if (color_bateau == "red") {
+                        CurrentMarkerTrajet = L.marker([clickEventData.latlng.lat, clickEventData.latlng.lng], {
+                            icon: fda_ennemi
+                        }).addTo(map);
+
+                        CurrentIcon = {
+                            icon: fda_ennemi
+                        };
+                    } else {
+                        CurrentMarkerTrajet = L.marker([clickEventData.latlng.lat, clickEventData.latlng.lng], {
+                            icon: fda_neutre
+                        }).addTo(map);
+
+                        CurrentIcon = {
+                            icon: fda_neutre
+                        };
+                    }
+
+
+
+                    break;
+
+
+                case 'bcr':
+
+                    if (color_bateau == "blue") {
+                        CurrentMarkerTrajet = L.marker([clickEventData.latlng.lat, clickEventData.latlng.lng], {
+                            icon: bcr_allie
+                        }).addTo(map);
+
+                        CurrentIcon = {
+                            icon: bcr_allie
+                        };
+
+                    } else if (color_bateau == "red") {
+                        CurrentMarkerTrajet = L.marker([clickEventData.latlng.lat, clickEventData.latlng.lng], {
+                            icon: bcr_ennemi
+                        }).addTo(map);
+
+                        CurrentIcon = {
+                            icon: bcr_ennemi
+                        };
+                    } else {
+                        CurrentMarkerTrajet = L.marker([clickEventData.latlng.lat, clickEventData.latlng.lng], {
+                            icon: bcr_neutre
+                        }).addTo(map);
+
+                        CurrentIcon = {
+                            icon: bcr_neutre
+                        };
+                    }
+
+
+
+                    break;
+
+
+
+
+
+
+                case 'avion':
+
+                    if (color_bateau == "blue") {
+                        CurrentMarkerTrajet = L.marker([clickEventData.latlng.lat, clickEventData.latlng.lng], {
+                            icon: avion_allie
+                        }).addTo(map);
+
+                        CurrentIcon = {
+                            icon: avion_allie
+                        };
+                    } else if (color_bateau == "red") {
+                        CurrentMarkerTrajet = L.marker([clickEventData.latlng.lat, clickEventData.latlng.lng], {
+                            icon: avion_ennemi
+                        }).addTo(map);
+
+                        CurrentIcon = {
+                            icon: avion_ennemi
+                        };
+                    } else {
+                        CurrentMarkerTrajet = L.marker([clickEventData.latlng.lat, clickEventData.latlng.lng], {
+                            icon: avion_neutre
+                        }).addTo(map);
+
+                        CurrentIcon = {
+                            icon: avion_neutre
+                        };
+                    }
+
+                    break;
+
+
+
+
+                case 'tigre':
+
+                    if (color_bateau == "blue") {
+                        CurrentMarkerTrajet = L.marker([clickEventData.latlng.lat, clickEventData.latlng.lng], {
+                            icon: tigre_allie
+                        }).addTo(map);
+
+                        CurrentIcon = {
+                            icon: tigre_allie
+                        };
+                    } else if (color_bateau == "red") {
+                        CurrentMarkerTrajet = L.marker([clickEventData.latlng.lat, clickEventData.latlng.lng], {
+                            icon: tigre_ennemi
+                        }).addTo(map);
+
+                        CurrentIcon = {
+                            icon: tigre_ennemi
+                        };
+                    } else {
+                        CurrentMarkerTrajet = L.marker([clickEventData.latlng.lat, clickEventData.latlng.lng], {
+                            icon: tigre_neutre
+                        }).addTo(map);
+
+                        CurrentIcon = {
+                            icon: tigre_neutre
+                        };
+                    }
+
+
+
+                    break;
+
+                case 'puma':
+
+                    if (color_bateau == "blue") {
+                        CurrentMarkerTrajet = L.marker([clickEventData.latlng.lat, clickEventData.latlng.lng], {
+                            icon: puma_allie
+                        }).addTo(map);
+
+                        CurrentIcon = {
+                            icon: puma_allie
+                        };
+                    } else if (color_bateau == "red") {
+                        CurrentMarkerTrajet = L.marker([clickEventData.latlng.lat, clickEventData.latlng.lng], {
+                            icon: puma_ennemi
+                        }).addTo(map);
+
+                        CurrentIcon = {
+                            icon: puma_ennemi
+                        };
+                    } else {
+                        CurrentMarkerTrajet = L.marker([clickEventData.latlng.lat, clickEventData.latlng.lng], {
+                            icon: puma_neutre
+                        }).addTo(map);
+
+                        CurrentIcon = {
+                            icon: puma_neutre
+                        };
+                    }
+
+                    break;
+
+
+
+
+                case 'fennec':
+
+                    if (color_bateau == "blue") {
+                        CurrentMarkerTrajet = L.marker([clickEventData.latlng.lat, clickEventData.latlng.lng], {
+                            icon: fennec_allie
+                        }).addTo(map);
+
+                        CurrentIcon = {
+                            icon: fennec_allie
+                        };
+                    } else if (color_bateau == "red") {
+                        CurrentMarkerTrajet = L.marker([clickEventData.latlng.lat, clickEventData.latlng.lng], {
+                            icon: fennec_ennemi
+                        }).addTo(map);
+
+                        CurrentIcon = {
+                            icon: fennec_ennemi
+                        };
+                    } else {
+                        CurrentMarkerTrajet = L.marker([clickEventData.latlng.lat, clickEventData.latlng.lng], {
+                            icon: fennec_neutre
+                        }).addTo(map);
+
+                        CurrentIcon = {
+                            icon: fennec_neutre
+                        };
+                    }
+
+
+
+                    break;
+
+                case 'paquebot':
+
+                    if (color_bateau == "blue") {
+                        CurrentMarkerTrajet = L.marker([clickEventData.latlng.lat, clickEventData.latlng.lng], {
+                            icon: paquebot_allie
+                        }).addTo(map);
+
+                        CurrentIcon = {
+                            icon: paquebot_allie
+                        };
+                    } else if (color_bateau == "red") {
+                        CurrentMarkerTrajet = L.marker([clickEventData.latlng.lat, clickEventData.latlng.lng], {
+                            icon: fpaquebot_ennemi
+                        }).addTo(map);
+
+                        CurrentIcon = {
+                            icon: paquebot_ennemi
+                        };
+                    } else {
+                        CurrentMarkerTrajet = L.marker([clickEventData.latlng.lat, clickEventData.latlng.lng], {
+                            icon: paquebot_neutre
+                        }).addTo(map);
+
+                        CurrentIcon = {
+                            icon: paquebot_neutre
+                        };
+                    }
+
+
+
+                    break;
+
+                case 'cargo':
+
+                    if (color_bateau == "blue") {
+                        CurrentMarkerTrajet = L.marker([clickEventData.latlng.lat, clickEventData.latlng.lng], {
+                            icon: cargo_allie
+                        }).addTo(map);
+
+                        CurrentIcon = {
+                            icon: cargo_allie
+                        };
+                    } else if (color_bateau == "red") {
+                        CurrentMarkerTrajet = L.marker([clickEventData.latlng.lat, clickEventData.latlng.lng], {
+                            icon: cargo_ennemi
+                        }).addTo(map);
+
+                        CurrentIcon = {
+                            icon: cargo_ennemi
+                        };
+                    } else {
+                        CurrentMarkerTrajet = L.marker([clickEventData.latlng.lat, clickEventData.latlng.lng], {
+                            icon: cargo_neutre
+                        }).addTo(map);
+
+                        CurrentIcon = {
+                            icon: cargo_neutre
+                        };
+                    }
+
+
+
+                    break;
+
+                case 'peche':
+
+                    if (color_bateau == "blue") {
+                        CurrentMarkerTrajet = L.marker([clickEventData.latlng.lat, clickEventData.latlng.lng], {
+                            icon: peche_allie
+                        }).addTo(map);
+
+                        CurrentIcon = {
+                            icon: peche_allie
+                        };
+                    } else if (color_bateau == "red") {
+                        CurrentMarkerTrajet = L.marker([clickEventData.latlng.lat, clickEventData.latlng.lng], {
+                            icon: peche_ennemi
+                        }).addTo(map);
+
+                        CurrentIcon = {
+                            icon: peche_ennemi
+                        };
+                    } else {
+                        CurrentMarkerTrajet = L.marker([clickEventData.latlng.lat, clickEventData.latlng.lng], {
+                            icon: peche_neutre
+                        }).addTo(map);
+
+                        CurrentIcon = {
+                            icon: peche_neutre
+                        };
+                    }
+
+
+
+                    break;
 
             }
         }
@@ -1283,7 +1575,7 @@ $('.speed').change(function () {             //lorsque le coef de vitesse change
     $('#map').on('click', '.bateau_suppr', function () {
         id = $(this).data('id');
         bateaux[id].pause();
-        $('#map').append('<div class="pop_up_inv2"><div class="pop_up"><h3>Voulez vous vraiment supprimer le bateau ? vous ne pourrez pas revenir en arrière</h3><a href="#" data-id="' + id + '" class="delete deleteUltim">Oui</a><a href="#" data-id="' + id + '" class="retour deleteUltim">Revenir en arrière</a></div></div>');
+        $('#map').append('<div class="pop_up_inv2"><div class="pop_up"><h1>ATTENTION : Voulez-vous vraiment supprimer le bateau ? </br> Vous ne pourrez pas revenir en arriÃ¨re.</h1><a href="#" data-id="' + id + '" class="delete deleteUltim">SUPPRIMER</a><a href="#" data-id="' + id + '" class="retour deleteUltim">ANNULER</a></div></div>');
 
     });
     $('#map').on('click', '.delete', function () {
