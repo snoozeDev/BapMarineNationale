@@ -17,6 +17,7 @@ include 'db.php';
                 $mapName = $rows['mapName'];
                 $cercles = $rows['cercles']; 
     $polygs = $rows['polygs']; 
+      $texts = $rows['texts'];
     echo "
     
     
@@ -24,10 +25,10 @@ include 'db.php';
     <script>
     var cerclesPhp = $cercles;
     var polygsPhp = $polygs;
-    
+    var textsPhp = $texts;
     loadCercle(cerclesPhp);
     loadPolyg(polygsPhp);
-    
+    loadText(textsPhp);
 
     
     

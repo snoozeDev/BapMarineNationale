@@ -581,6 +581,7 @@ function initialize() { //fonction qui permet de charger la carte au lancement d
     var texte = [];
     var tex = 0;
     var currentMarker = {}; //Empty object to be used later;
+var textJson = {};
 
     drawMarkerButton.addEventListener('click', function () {
 
@@ -594,7 +595,6 @@ function initialize() { //fonction qui permet de charger la carte au lancement d
         $('#toolbar').show();
         map.off('click', addLatLngToMarker); //Stop listening for clicks on map.
         var elem = "texte" + tex;
-        console.log(texte[tex]);
         var form = texte[tex].options.icon.options.html;
         $( "p" ).on( "click", function() {
             $( this ).width( 208).height(0);
@@ -620,6 +620,11 @@ function initialize() { //fonction qui permet de charger la carte au lancement d
                 , iconSize: [200, 80]
             })
         }).addTo(map);
+        console.log(texte[tex]);
+        
+        textJson[tex] = [texte[tex]._latlng,text];
+        var texteJsonString = JSON.stringify(textJson);
+        $('#text').val(texteJsonString);
         stop2(); //pour ne pas dessiner d'autres cercles
 
 
@@ -1844,7 +1849,6 @@ $('.speed').change(function () {             //lorsque le coef de vitesse change
      
                 polygJson[polyg] = [polygone[polyg]._latlngs,polygone[polyg].options];
         var polygJsonString = JSON.stringify(polygJson);
-        console.log(polygJsonString);
         $('#polyg').val(polygJsonString);
         
         
@@ -1860,6 +1864,27 @@ $('.speed').change(function () {             //lorsque le coef de vitesse change
 
         map.off('click', addLatLngToPolygon); //Stop listening for clicks on map.
     }
+};
+
+function loadText(textsPhp){
+    var limit = Object.keys(textsPhp).length ;
+    var text_name = "text" + tex;
+      for (var u = 0; u < limit; u++) {
+      texte[tex] = L.marker([textsPhp[u][0].lat, textsPhp[u][0].lng], {
+            icon: L.divIcon({
+                className: text_name
+                , html: textsPhp[u][1]
+                , iconSize: [200, 80]
+            })
+        }).addTo(map);
+        console.log(texte[tex]);
+        
+        textJson[tex] = [texte[tex]._latlng,text];
+        var texteJsonString = JSON.stringify(textJson);
+        $('#text').val(texteJsonString);
+        stop2(); 
+      }
+    
 };
 
     
