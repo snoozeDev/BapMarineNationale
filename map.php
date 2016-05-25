@@ -30,8 +30,8 @@
       <p class="title"> BATIMENTS </p>
       <select class="formula" id="icone_select" name="icone_select">
         <option value="anchor">Port</option>
-        <option value="offshore">offshore</option>
-        <option value="lighthouse">phare</option>
+        <option value="offshore">Offshore</option>
+        <option value="lighthouse">Phare</option>
       </select>
       <img src="image/anchor.png" id="icone_img">
       <a href="#" class="btn"  id="drawBatiment">Ajouter le batiment</a>
@@ -120,7 +120,7 @@
    <label>Type de vehicule</label><br>
    <select class="formula" id="type_bateau" name="type_bateau">
      <option value="porte-avion">Porte-avion</option>
-     <option value="asm">ASM</option>
+     <option value="asm">FASM</option>
      <option value="bpc">BPC</option>
      <option value="fs">FS</option>
      <option value="phm">PHM</option>
@@ -199,7 +199,7 @@
               <option value="5">x5</option>
               <option value="10">x10</option>
               <option value="50">x50</option>
-              <option value="100">100</option>
+              <option value="100">x100</option>
 
 
 
@@ -254,7 +254,8 @@
                 <h1 class="parametre">Parametres</h1>
 
                 <div class="onglets">
-                  <span class="onglet_0 onglet" id="onglet_filtres" onclick="javascript:change_onglet('filtres');">Options</span>
+
+                  <span class="onglet_0 onglet" id="onglet_options" onclick="javascript:change_onglet('options');">Options</span>
                   <span class="onglet_0 onglet" id="onglet_suppression" onclick="javascript:change_onglet('suppression');">Suppression</span>
                 </div>
 
@@ -266,26 +267,28 @@
               </button> -->
 
               <!-- <div class="onglet1 is-open"> -->
-              <div class="contenu_onglet" id="contenu_onglet_filtres">
-                <div class="filtres-cont">
+              <div class="contenu_onglet" id="contenu_onglet_options">
+                <div class="options-cont">
+                  <h3 class="filtres_title">Filtres des éléments natifs</h3>
                   <div style="padding-top:30px" class="bouton">
                     <input class="checkbox" id="checkbox1"  type="checkbox">
                     <label id="profondeur" for="checkbox1"></label>
-                    <span class="filtres">Cacher les profondeurs</span>
+                    <span class="options">Cacher les profondeurs</span>
                   </div><br>
                   <div class="bouton">
                     <input class="checkbox" id="checkbox2"  type="checkbox">
                     <label  id="riv" for="checkbox2"></label>
-                    <span class="filtres">Cacher les côtes et les rivières</span>
+                    <span class="options">Cacher les côtes et les rivières</span>
                   </div><br>
                   <div class="bouton">
                     <input class="checkbox" id="checkbox3" type="checkbox">
                     <label  id="structures" for="checkbox3"></label>
-                    <span class="filtres">Cacher les structures</span>
+                    <span class="options">Cacher les structures</span>
                   </div><br>
                 </div>
                 <div>
 
+<<<<<<< HEAD
                     <form action='sauveguarde.php' method='post' id='myform' >
                         <input type="text" name="mapName">
                         <textarea name="mapDescription"></textarea>
@@ -297,6 +300,19 @@
                         <input type="hidden" id="bateau" name="bateaux">
                         <button id='insert'>Save</button>
                     </form>
+=======
+                  <form class="sauvegarde" action='sauveguarde.php' method='post' id='myform'>
+                    <h3 class="sauvegarde_title">Sauvegardez votre carte</h3>
+                    <input class="map_name" type="text" name="mapName" placeholder="Nom de la carte">
+                    <textarea class="map_description" name="mapDescription" placeholder="Description de la carte"></textarea>
+                    <input type="hidden" id="cer" name="cercles">
+                    <input type="hidden" id="polyg" name="polygs">
+                    <input type="hidden" id="text" name="texts">
+                    <input type="hidden" id="polyl" name="polyls">
+                    <input type="hidden" id="bati" name="batis">
+                    <button class="save" id='insert'>Sauvegarder</button>
+                  </form>
+>>>>>>> 643ffbfa3a15b8482d74dff1ad63a8790d6a4516
                 </div>
               </div>
 
@@ -370,7 +386,7 @@
 
 
               <script type="text/javascript">
-                var anc_onglet = 'filtres';
+                var anc_onglet = 'options';
                 change_onglet(anc_onglet);
               </script>
 
