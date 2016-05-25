@@ -287,10 +287,10 @@ text-decoration: none;
 .onglet1{
 	background:white;margin-left: 1%;margin-right: 1%;
 }
-.filtres{
+.options{
 	color:black
 }
-.filtres_cont{
+.options_cont{
 	margin-top:20px
 }
 .vitesse{
@@ -930,6 +930,13 @@ a, a:visited {
 	display:none;
 }
 
+.filtres_title
+{
+	color: black;
+	padding-left: 5px;
+	margin-bottom: 0;
+}
+
 .ligne
 {
 	margin-top: -6px;
@@ -961,8 +968,57 @@ a, a:visited {
 	border:0px 0px 1px 0px solid;
 }
 
+
 /*-------------------------------*/
 /*          Fin onglet           */
+/*-------------------------------*/
+
+
+/*-------------------------------*/
+/*          Sauvegarde           */
+/*-------------------------------*/
+
+.sauvegarde
+{
+	padding-left: 5px;
+}
+
+.sauvegarde_title
+{
+	color: black;
+	margin-top: 0;
+}
+
+.map_name
+{
+	width: 90%;
+	height: 30px;
+	font-size: 1em;
+	border: 3px solid #2C3E50;
+	margin-bottom: 5px;
+}
+
+.map_description
+{
+	width: 90%;
+	height: 60px;
+	font-size: 1em;
+	border: 3px solid #2C3E50;
+	margin-bottom: 5px;
+}
+
+.save
+{
+	background-color: #004080;
+	border: none;
+	width: 110px;
+	height: 30px;
+	font-size: 1em;
+	color: white;
+}
+
+/*-------------------------------*/
+/*        Fin sauvegarde         */
 /*-------------------------------*/
 
 
