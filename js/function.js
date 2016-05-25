@@ -2,7 +2,7 @@
  //edit de bateaux
  function editbateau(bat){
  addEventListener('click', function(){
- console.log("bien jouÃƒÂ©"+bat);
+ console.log("bien jouÃƒÆ’Ã‚Â©"+bat);
  $('#stopEditPolyline').css('display','block');
 
  bateau[bat]=moveTo([3,3], 20000);
@@ -58,7 +58,7 @@ function delete_obj(elem, form){
          */
         $(".oeilvert").css({
             'display': 'block',
-            'top': '-4',
+            'top': '1',
             left: '95',
         });
 
@@ -107,7 +107,7 @@ function delete_obj(elem, form){
 
             $(".oeilvert").css({
                 'display': 'block',
-                'top': '-4',
+                'top': '1',
             });
 
             $( "p.blast" ).one( "click", function() {
@@ -142,7 +142,7 @@ function delete_obj(elem, form){
 
             $(".oeilvert").css({
                 'display': 'block',
-                'top': '-2',
+                'top': '1',
             });
             $("#oeil" + elem).addClass('vert').removeClass('rouge');
 
@@ -163,7 +163,6 @@ function delete_obj(elem, form){
     }
 
 }
-
 
 
 
