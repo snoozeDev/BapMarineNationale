@@ -19,6 +19,7 @@ include 'db.php';
     $polygs = $rows['polygs']; 
       $texts = $rows['texts'];
     $polyls = $rows['polyls'];
+    $batis = $rows['batis'];
     
     
     if(strlen($cercles) !== 0){
@@ -39,6 +40,11 @@ include 'db.php';
      if(strlen($polyls) !== 0){
         echo "
         <script> var polylsPhp = $polyls;loadPolyl(polylsPhp);</script>
+        ";
+    }
+    if(strlen($batis) !== 0){
+        echo "
+        <script> var batisPhp = $batis;loadBati(batisPhp);</script>
         ";
     }
            endwhile;

@@ -211,13 +211,20 @@
 
 
             </div>
+
+
             <div id="console">
-            <p class="reperer">Vous ne devez pas vous faire repérer</p>
-              <ul>
+              <div id="close_console">
+                <p id="notif"></p>
+                <img id="close" src="image/close.png">
+              </div>
+              <div class="black">
+                <p class="reperer">Vous ne devez pas vous faire repérer</p>
+                <ul>
 
 
-              </ul>
-
+                </ul>
+              </div>
             </div>
             <div id="toolbar">
               <div class="forme" id="bateau"> <img src="image/bateau.png"></div>
@@ -277,6 +284,7 @@
                   </div><br>
                 </div>
                 <div>
+<<<<<<< HEAD
                   <form action='sauveguarde.php' method='post' id='myform' >
                     <input type="text" name="mapName">
                     <textarea name="mapDescription"></textarea>
@@ -286,6 +294,18 @@
                     <input type="hidden" id="polyl" name="polyls">
                     <button id='insert'>Save</button>
                   </form>
+=======
+                    <form action='sauveguarde.php' method='post' id='myform' >
+                        <input type="text" name="mapName">
+                        <textarea name="mapDescription"></textarea>
+                        <input type="hidden" id="cer" name="cercles">
+                        <input type="hidden" id="polyg" name="polygs">
+                        <input type="hidden" id="text" name="texts">
+                        <input type="hidden" id="polyl" name="polyls">
+                        <input type="hidden" id="bati" name="batis">
+                        <button id='insert'>Save</button>
+                    </form>
+>>>>>>> 10939cdd9bd2d9fb2ea74a8543d59544f2c9eadf
                 </div>
               </div>
 

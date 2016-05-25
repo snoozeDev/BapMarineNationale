@@ -12,15 +12,25 @@ html,body {
 /*-------------------------------*/
 
 #console{
-	background-color: rgba(44,62,80,0.7);
 	position: absolute;
 	width: 28%;
 	bottom: 0;
 	height: 50%;
-	overflow-y: scroll;
+	
 	color: white;
 	z-index: 100;
     display :none;
+}
+#close_console {
+	padding: 3%;
+	height: 10%;
+
+}
+#close_console img {
+	padding: 5%;
+	width: 10%;
+	float: right;
+
 }
 #console ul {
 	color: white;
@@ -40,13 +50,31 @@ html,body {
 .reperer
 {
 	padding-left: 10px;
+	padding-bottom: 15px;
 	border-bottom: 1px solid rgba(0, 0, 0, 0.1);
 }
+
 
 /*-------------------------------*/
 /*          Fin console          */
 /*-------------------------------*/
 
+
+#close_console p {
+	float: right;
+	background-color: rgba(255,0,0,0.6);
+	border-radius: 50%;
+	padding: 5%;
+
+}
+.black{
+	height: 80%;
+	width: 100%;
+	background-color: rgba(44,62,80,0.7);
+	overflow-y: scroll;
+	
+
+}
 /*pop up de batiments*/
 #ajout_batiment{
 	text-align: center;
@@ -153,7 +181,7 @@ text-decoration: none;
 	margin border-right: 5%;
 }
 #simulation{
-    display:none
+    display:none;
 }
 
 #timer{
@@ -583,7 +611,7 @@ a, a:visited {
 	background: #e74c3c;
 	height: 44px;
 	width: 44px;
-	top: -67px;
+	top: -41px;
 	left: 148.5px;
 	position: relative;
 
@@ -619,7 +647,7 @@ a, a:visited {
 	background: #27ae60;
 	height: 44px;
 	width: 44px;
-	top: -25px;
+	top: 3px;
 	left: 18.5px;
 	position: relative;
 
@@ -1203,4 +1231,28 @@ a:visited
 
 h1 {
 	margin-bottom: 70px;
+}
+
+.margebatiment{
+	margin-left: 35px;
+}
+
+.margepolygone{
+	margin-left: 2px;
+}
+
+.margepolyline{
+	margin-left: 19px;
+}
+
+.margecercle{
+	margin-left: 14px;
+}
+
+.margetexte{
+	margin-left: 15px;
+}
+
+p.blast{
+
 }

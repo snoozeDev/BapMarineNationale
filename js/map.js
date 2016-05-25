@@ -1,5 +1,5 @@
     //fonction booléenne affichage ou non
-    var valider = "non";
+    //var valider = "non";
     var simulation=false;
     var detection = [];
     var bateaux = []; //tableau de tous les bateaux
@@ -457,6 +457,7 @@ function initialize() { //fonction qui permet de charger la carte au lancement d
     var batiment = [];
     var bati = 0;
     var currentBatiment = {}; //var du batiment en cours
+    var batimentJson = {};
 
     drawBatimentButton.addEventListener('click', function () {
 
@@ -467,26 +468,25 @@ function initialize() { //fonction qui permet de charger la carte au lancement d
     });
 
     function stop3() {
+        console.log("stop3");
         $('#toolbar').show();
         map.off('click', addLatLngToBati); //on arrête d'écouter les cliques sur la map
         var elem = "batiment" + bati;    //element utile pour la suppression 
-        console.log(batiment[bati]);
         var form = batiment[bati].options.icon.options.html;
-        $( "p.blast" ).on( "click", function() {
+        $( "p" ).on( "click", function() {
             $( this ).width( 208).height(0);
         });
-        $('.delete_batiment_p').append('<li><div class="bord"><p class="form" id="' + elem + '" onclick="delete_obj(&#34;' + elem + '&#34;,&#34;' + form + '&#34;);return false">supprimer : ' + form + ' </p> <div class="oeilvert"><div class="yeux"></div></div></div></li>');
-        $( "p.blast" ).on( "click", function() {
+        $('.delete_batiment_p').append('<div class="bord"><div class="margebatiment"><p class="form" id="' + elem + '" onclick="delete_obj(&#34;' + elem + '&#34;,&#34;' + form + '&#34;);return false"> supprimer :  ' + form + '  </p> </div><div class="oeilvert"><div id="oeil'+ elem + '" class="vert yeux"></div></div></div>');
+        $( "p" ).on( "click", function() {
             $( this).off();
         });
         bati++;
+        console.log(bati);
     };
 
     function addLatLngToBati(clickEventData) {
         var iconeBatiment = $('#icone_select').val();
         var bati_name = "batiment" + bati;
-        console.log(iconeBatiment);
-        console.log(bati_name);
 
         batiment[bati] = L.marker([clickEventData.latlng.lat, clickEventData.latlng.lng], {
             icon: L.icon({
@@ -497,6 +497,11 @@ function initialize() { //fonction qui permet de charger la carte au lancement d
             })
                 
         }).addTo(map);
+        batiment[bati].type = iconeBatiment;
+        console.log(batiment[bati]);
+         batimentJson[bati] = [batiment[bati]._latlng,batiment[bati].type];
+        var batiJsonString = JSON.stringify(batimentJson);
+        $('#bati').val(batiJsonString);
         stop3(); //pour finir l'ajout
 
 
@@ -557,11 +562,11 @@ function initialize() { //fonction qui permet de charger la carte au lancement d
         
         
         var form = 'le polygone ' + color_fr + ' n°' + polyg2;
-        $( "p.blast" ).on( "click", function() {
+        $( "p" ).on( "click", function() {
             $( this ).width( 208).height(0);
         });
-        $('.delete_polygone_p').append('<li><div class="bord"><p class="form" id="' + elem + '" onclick="delete_obj(&#34;' + elem + '&#34;,&#34;' + form + '&#34;);return false">Supprimer ' + form + ' </p> <div class="oeilvert"><div id="oeil'+ elem + '" class="vert yeux"></div></div></div></li>');
-        $( "p.blast" ).on( "click", function() {
+        $('.delete_polygone_p').append('<div class="bord"><div class="margepolygone"><p class="form" id="' + elem + '" onclick="delete_obj(&#34;' + elem + '&#34;,&#34;' + form + '&#34;);return false"> Supprimer ' + form + '  </p> </div> <div class="oeilvert"><div id="oeil'+ elem + '" class="vert yeux"></div></div></div>');
+        $( "p" ).on( "click", function() {
             $( this).off();
         });
         polyg++;
@@ -596,11 +601,11 @@ var textJson = {};
         map.off('click', addLatLngToMarker); //Stop listening for clicks on map.
         var elem = "texte" + tex;
         var form = texte[tex].options.icon.options.html;
-        $( "p.blast" ).on( "click", function() {
+        $( "p" ).on( "click", function() {
             $( this ).width( 208).height(0);
         });
-        $('.delete_texte_p').append('<li><div class="bord"><p class="form" id="' + elem + '" onclick="delete_obj(&#34;' + elem + '&#34;,&#34;' + form + '&#34;);return false">Supprimer : ' + form + ' </p> <div class="oeilvert"><div id="oeil'+ elem + '" class="vert yeux"></div></div></div></li>');
-        $( "p.blast" ).on( "click", function() {
+        $('.delete_texte_p').append('<div class="bord"><div class="margetexte"><p class="form" id="' + elem + '" onclick="delete_obj(&#34;' + elem + '&#34;,&#34;' + form + '&#34;);return false">Supprimer : ' + form + ' </p> </div><div class="oeilvert"><div id="oeil'+ elem + '" class="vert yeux"></div></div></div>');
+        $( "p" ).on( "click", function() {
             $( this).off();
         });
         tex++;
@@ -666,11 +671,11 @@ var textJson = {};
             break;
         }
         var form = 'le cercle ' + color_fr + ' n°' + cer2;
-        $( "p.blast" ).on( "click", function() {
+        $( "p" ).on( "click", function() {
             $( this ).width( 208).height(0);
         });
-        $('.delete_cercle_p').append('<li><div class="bord"><p class="form" id="' + elem + '" onclick="delete_obj(&#34;' + elem + '&#34;,&#34;' + form + '&#34;);return false">Supprimer ' + form + ' </p> <div class="oeilvert"><div id="oeil'+ elem + '" class="vert yeux"></div></div></div></li>');
-        $( "p.blast" ).on( "click", function() {
+        $('.delete_cercle_p').append('<div class="bord"><div class="margecercle"><p class="form" id="' + elem + '" onclick="delete_obj(&#34;' + elem + '&#34;,&#34;' + form + '&#34;);return false">Supprimer ' + form + ' </p> </div> <div class="oeilvert"><div id="oeil'+ elem + '" class="vert yeux"></div></div></div>');
+        $( "p" ).on( "click", function() {
             $( this).off();
         });
         cer++;
@@ -744,11 +749,11 @@ var textJson = {};
         var polylineJsonString = JSON.stringify(polylineJson);
         $('#polyl').val(polylineJsonString);
         var form = 'la ligne ' + color_fr + ' n°' + poly2;
-        $( "p.blast" ).on( "click", function() {
+        $( "p" ).on( "click", function() {
             $( this ).width( 208).height(0);
         });
-        $('.delete_polyline_p').append('<li><div class="bord"><p class="form" id="' + elem + '" onclick="delete_obj(&#34;' + elem + '&#34;,&#34;' + form + '&#34;);return false">Supprimer ' + form + ' </p> <div class="oeilvert"><div id="oeil'+ elem + '" class="vert yeux"></div></div></div></li>');
-        $( "p.blast" ).on( "click", function() {
+        $('.delete_polyline_p').append('<div class="bord"><div class="margepolyline"><p class="form" id="' + elem + '" onclick="delete_obj(&#34;' + elem + '&#34;,&#34;' + form + '&#34;);return false">Supprimer ' + form + ' </p> </div> <div class="oeilvert"><div id="oeil'+ elem + '" class="vert yeux"></div></div></div>');
+        $( "p" ).on( "click", function() {
             $( this).off();
         });
         poly++;
@@ -1399,8 +1404,8 @@ var CurrentEtat;
     $('#pause').click(function () {
     simulation=false;
         for (var i = bateaux.length - 1; i >= 0; i--) {
-
-            if (bateaux[i]._latlngs == null) {} {
+            console.log("i"+bateaux[i]);
+            if (bateaux[i] && bateaux[i]!=null && bateaux[i]!="") {
                 bateaux[i].pause();
             }
 
@@ -1440,8 +1445,7 @@ $('.speed').change(function () {             //lorsque le coef de vitesse change
         console.log("bateau : "+bateaux[j]);
         boolean_vitesse = false;
         //alert( $(this).attr('id') );
-        if (bateaux[j]._latlngs != null) {    //recup beateau avant modif
-            if(bateaux[j].suppression==false){            //si ce bateau n'a été supprimé
+        if (bateaux[j]._latlngs != null && bateaux[i]!="") {    //recup beateau avant modif
 
                 editIcon = bateaux[j].editIcon;
                 editVitesse = bateaux[j].editVitesse;
@@ -1535,7 +1539,7 @@ $('.speed').change(function () {             //lorsque le coef de vitesse change
             }else{
                 map.removeLayer(bateaux[j]);
             }
-        }
+        
     };
 });
 
@@ -1587,18 +1591,19 @@ $('.speed').change(function () {             //lorsque le coef de vitesse change
     }
     //*****
     
-    $('#map').on('click', '.bateau_suppr', function () {
-        id = $(this).data('id');
-        bateaux[id].pause();
+    $('#map').on('click', '.bateau_suppr', function () {   //afficher le popup de validation de la suppression
+        id = $(this).data('id');                           //on recup la data qui stock l'id du bateau
+        bateaux[id].pause();                              //on met le bateau en pause en attendant la réponse
         $('#map').append('<div class="pop_up_inv2"><div class="pop_up"><h1>ATTENTION : Voulez-vous vraiment supprimer le bateau ? </br> Vous ne pourrez pas revenir en arriÃ¨re.</h1><a href="#" data-id="' + id + '" class="delete deleteUltim">SUPPRIMER</a><a href="#" data-id="' + id + '" class="retour deleteUltim">ANNULER</a></div></div>');
 
     });
-    $('#map').on('click', '.delete', function () {
-        id = $(this).data('id');
+    $('#map').on('click', '.delete', function () {    //supprimer le bateau
+        id = $(this).data('id');                       //on recup la data qui stock l'id du bateau
         $('.pop_up_inv2').hide();
         bateaux[id].suppression=true;
         map.removeLayer(bateaux[id]);
         map.removeLayer(bateaux[id].stock);
+        bateaux[id]="";
     });
     $('#map').on('click', '.retour', function () {
         id = $(this).data('id');
@@ -1652,7 +1657,7 @@ $('.speed').change(function () {             //lorsque le coef de vitesse change
         boolean_vitesse = false;
         //alert( $(this).attr('id') );
         id = $(this).data('id');
-        if (bateaux[id]._latlngs != null) {    //recup beateau avant modif
+        if (bateaux[id]._latlngs != null && bateaux[i]!="") {    //recup beateau avant modif
             $('#toolbar').hide();
              $('#timerbtn').hide();
             $('#editVitesse').show();
@@ -1720,7 +1725,7 @@ $('.speed').change(function () {             //lorsque le coef de vitesse change
         nouveauTrajet = true;
         $('#editVitesse').hide();
         $('#toolbar').show();
-         $('#timerbtn').show();
+        $('#timerbtn').show();
         map.off('click', editLatLngToPolyline); //Stop listening for clicks on map
         map.removeLayer(bateaux[id]);
         var edit_vitesse = $('#editVitesse').val();
@@ -1856,17 +1861,17 @@ $('.speed').change(function () {             //lorsque le coef de vitesse change
             break;
         }
      
-                polygJson[polyg] = [polygone[polyg]._latlngs,polygone[polyg].options];
+        polygJson[polyg] = [polygone[polyg]._latlngs,polygone[polyg].options];
         var polygJsonString = JSON.stringify(polygJson);
         $('#polyg').val(polygJsonString);
         
         
         var form = 'le polygone ' + color_fr + ' n°' + polyg2;
-        $( "p.blast" ).on( "click", function() {
+        $( "p" ).on( "click", function() {
             $( this ).width( 208).height(0);
         });
-        $('.delete_polygone_p').append('<li><div class="bord"><p class="form" id="' + elem + '" onclick="delete_obj(&#34;' + elem + '&#34;,&#34;' + form + '&#34;);return false">Supprimer ' + form + ' </p> <div class="oeilvert"><div id="oeil'+ elem + '" class="vert yeux"></div></div></div></li>');
-        $( "p.blast" ).on( "click", function() {
+        $('.delete_polygone_p').append('<div class="bord"><div class="margepolygone"><p class="form" id="' + elem + '" onclick="delete_obj(&#34;' + elem + '&#34;,&#34;' + form + '&#34;);return false">Supprimer ' + form + ' </p></div> <div class="oeilvert"><div id="oeil'+ elem + '" class="vert yeux"></div></div></div>');
+        $( "p" ).on( "click", function() {
             $( this).off();
         });
         polyg++;
@@ -1932,16 +1937,39 @@ function loadPolyl(polylsPhp){
         var polylineJsonString = JSON.stringify(polylineJson);
         $('#polyl').val(polylineJsonString);
         var form = 'la ligne ' + color_fr + ' n°' + poly2;
-        $( "p.blast" ).on( "click", function() {
+        $( "p" ).on( "click", function() {
             $( this ).width( 208).height(0);
         });
-        $('.delete_polyline_p').append('<li><div class="bord"><p class="form" id="' + elem + '" onclick="delete_obj(&#34;' + elem + '&#34;,&#34;' + form + '&#34;);return false">Supprimer ' + form + ' </p> <div class="oeilvert"><div id="oeil'+ elem + '" class="vert yeux"></div></div></div></li>');
-        $( "p.blast" ).on( "click", function() {
+        $('.delete_polyline_p').append('<div class="bord"><div class="margepolyline"><p class="form" id="' + elem + '" onclick="delete_obj(&#34;' + elem + '&#34;,&#34;' + form + '&#34;);return false">Supprimer ' + form + ' </p> </div><div class="oeilvert"><div id="oeil'+ elem + '" class="vert yeux"></div></div></div>');
+        $( "p" ).on( "click", function() {
             $( this).off();
         });
         poly++;
 
         map.off('click', addLatLngToPolyline); //Stop listening for clicks on map.
+    }
+};
+
+function loadBati(batisPhp){
+     var limit = Object.keys(batisPhp).length ;
+      
+        
+    for (var c = 0; c < limit; c++) {
+        var bati_name = "batiment" + bati;
+         batiment[bati] = L.marker([batisPhp[c][0].lat, batisPhp[c][0].lng], {
+            icon: L.icon({
+                iconUrl: 'image/'+batisPhp[c][1]+'.png',
+                className: bati_name,
+                iconSize:     [30, 30], // size of the icon
+                iconAnchor:   [15, 15], // point of the icon which will correspond to marker's location
+            })
+                
+        }).addTo(map);
+        batiment[bati].type = batisPhp[c][1];
+         batimentJson[bati] = [batiment[bati]._latlng,batiment[bati].type];
+        var batiJsonString = JSON.stringify(batimentJson);
+        $('#bati').val(batiJsonString);
+        stop3(); //pour finir l'ajout
     }
 }
 
@@ -1960,26 +1988,28 @@ var detection= [];
 var detection2= [];
 var message = [];
 var mes=0;
+var notif=0;
 function calculDistance(){
 
     if(simulation==true){
 
         for (var i = bateaux.length - 1; i >= 0; i--) { //fonction de message
-            if(bateaux[i].suppression==false&&bateaux[i].editColor!="blue"){        //on donne la valeur avant le changement
+            if(bateaux[i]!=""&&bateaux[i].editColor!="blue"){        //on donne la valeur avant le changement
                 detection2[i]=bateaux[i].editDetection;
             }
 
         };
         detection = [];
         for (var i = bateaux.length - 1; i >= 0; i--) {       //calcul de distance pour le radar
-            
-            suppression = bateaux[i].suppression;
-            if(bateaux[i].suppression==false&&bateaux[i].editColor=="blue"){        //le bateau n'a pas été supprimé
-                if(cercleRadar[i]){
+            if(cercleRadar[i]){
                     map.removeLayer(cercleRadar[i]);
                 }
+            suppression = bateaux[i].suppression;
+            
+            if(bateaux[i]!=""&&bateaux[i].editColor=="blue"){        //le bateau n'a pas été supprimé
                 
-                cercleRadar[i] = L.circle([bateaux[i]._latlng.lat,bateaux[i]._latlng.lng], bateaux[i].editRadar, {
+                
+                cercleRadar[i] = L.circle([bateaux[i]._latlng.lat,bateaux[i]._latlng.lng], bateaux[i].editRadar, { //on ajout un cercle de radar
                     className: "cercle-radar",
                     color: 'red',
                     fillColor: 'red',
@@ -1992,9 +2022,8 @@ function calculDistance(){
 
                   for (var j = 0; j <= bateaux.length - 1; j++) {       //calcul de distance pour le radar
                     
-                        suppression = bateaux[j].suppression;
 
-                        if(bateaux[j].suppression==false && bateaux[i].editColor != bateaux[j].editColor ){  //si le bateau est pas supprimé, pas bleu
+                        if(bateaux[j]!="" && bateaux[i].editColor != bateaux[j].editColor ){  //si le bateau est pas supprimé, pas bleu
                             
               
                             R = 6378000; //Rayon de la terre en mètre
@@ -2009,10 +2038,10 @@ function calculDistance(){
                             }*/
                             
                             
-                            if(d < bateaux[j].editRadar){ //si un bateau allié est dans le radar ennemi
-                                if(bateaux[i].editDetection==false && bateaux[j].editColor=="red"){
+                            if(d < bateaux[j].editRadar){ //distance de radar plus grande que distance entre bat
+                                if(bateaux[i].editDetection==false && bateaux[j].editColor=="red"){     //si le bateau a déjà été détecté
                                     $("#console ul").prepend("<li>"+$('#hours').text()+$('#mins').text()+" "+ bateaux[j].editType +" ennemi(e) vous a repéré</li><br>");
-                          
+                                    notif++; 
                                     bateaux[i].editDetection=true;
                                 }
                             
@@ -2021,8 +2050,9 @@ function calculDistance(){
                                 if(detection[j]!=true){  //si ce bateau n'a pas été détécté par un autre bateau dans la boucle 
 
                               
-                                    $('.'+classIdBat).hide();
-                                    $('.green').hide();
+                                    $('.'+classIdBat).hide(); //on cache le bateau en question
+                                    $('.green').hide();     //on cache les lignes (au cas ou un bateau a été ajouté pendant la simulation)
+                                    $('.red').hide();       
                                     
                                     bateaux[j].editDetection=false; //passer en etat de détection
                                     
@@ -2030,26 +2060,14 @@ function calculDistance(){
                                 
 
                             }else{  //bateau dans le radar
-                                $('.'+classIdBat).show();
+                                $('.'+classIdBat).show();     //on montre le bateau en question
                                 bateaux[j].editDetection=true;
                                 detection[j]=true;
-                                console.log(j+" "+detection[j]);
                                    
                                 
                                 
                                 
-                            }
-
-                        
-                        /*message[j]=j;
-                        console.log(j+' '+mes);
-                        console.log(message[j]);
-                        message[j][mes]=detection[j];
-                        console.log(message[j][mes-1]);
-                        console.log(message[j][mes]);
-                        if(message[j][mes-1] && message[j][mes]!=message[j][mes-1]){
-                            console.log('ça change');
-                        }        */     
+                            } 
                        
                        
                     }
@@ -2062,28 +2080,28 @@ function calculDistance(){
                 
         };
         for (var i = bateaux.length - 1; i >= 0; i--) { //fonction de message
-            if(bateaux[i].suppression==false&&bateaux[i].editColor!="blue"){        //le bateau n'a pas été supprimé
+            if(bateaux[i]!="" &&bateaux[i].editColor!="blue"){        //le bateau n'a pas été supprimé
                 if(bateaux[i].editDetection!=detection2[i]){
                     console.log('ça change');
                     lat=bateaux[i]._latlng.lat.toFixed(5);
                     lng=bateaux[i]._latlng.lng.toFixed(5);
-                    if(bateaux[i].editDetection==true){
+                    if(bateaux[i].editDetection==true){ //si le bateau est détecté on envoie le message de détection
                         if(bateaux[i].editColor=="red"){
                             etat="ennemie";
                         }else{
                             etat="neutre";
                         }
                         $("#console ul").prepend("<li>"+$('#hours').text()+$('#mins').text()+" "+ bateaux[i].editType +" "+etat+" repéré aux coordonnées "+lat+","+lng+"</li><br>");
-                                    
+                        notif++;      
                                      
-                    }else{
+                    }else{                  //bateau disparu on envoie le message de disparition
                         if(bateaux[i].editColor=="red"){
                             etat="ennemie";
                         }else{
                             etat="neutre";
                         }
                         $("#console ul").prepend("<li>"+$('#hours').text()+$('#mins').text()+" "+ bateaux[i].editType +" "+etat+" a disparu aux coordonnées "+lat+","+lng+"</li><br>");
-                                    
+                        notif++;      
                                           
                     }
                 }
@@ -2092,17 +2110,20 @@ function calculDistance(){
         };
     }
     
-    
+     $("#notif").html(notif);
     setTimeout(calculDistance,1000); /* rappel après 2 secondes = 2000 millisecondes */
 }
 
 $('#admin').on('click', function(){
+    notif=0; 
     simulation=true;
     calculDistance();
+    
    
 });
 $('#simulation').on('click',function(){
     simulation=false;
+    
 });
 
 // fin du game 
