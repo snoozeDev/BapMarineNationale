@@ -211,13 +211,19 @@
 
 
             </div>
+
             <div id="console">
-              <p>Vous ne devez pas vous faire repérer</p>
-              <ul>
+              <div id="close_console">
+                <p id="notif"></p>
+                <img id="close" src="image/close.png">
+              </div>
+              <div class="black">
+                <p>Vous ne devez pas vous faire repérer</p>
+                <ul>
 
 
-              </ul>
-
+                </ul>
+              </div>
             </div>
             <div id="toolbar">
               <div class="forme" id="bateau"> <img src="image/bateau.png"></div>

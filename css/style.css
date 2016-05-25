@@ -8,15 +8,26 @@ html,body {
 }
 /*   la console  */
 #console{
-	background-color: rgba(0,0,0,0.5);
+	
 	position: absolute;
 	width: 28%;
 	bottom: 0;
 	height: 50%;
-	overflow-y: scroll;
+	
 	color: white;
 	z-index: 100;
     display :none;
+}
+#close_console {
+	padding: 3%;
+	height: 10%;
+
+}
+#close_console img {
+	padding: 5%;
+	width: 10%;
+	float: right;
+
 }
 #console ul {
 	color: white;
@@ -24,6 +35,22 @@ html,body {
 	font-size: 0.8em;
 	height: auto;
 	background-color: transparent;
+}
+#close_console p {
+	float: right;
+	background-color: rgba(255,0,0,0.6);
+	border-radius: 50%;
+	padding: 5%;
+
+}
+.black{
+	padding-top: 5%;
+	height: 80%;
+	width: 100%;
+	background-color: rgba(0,0,0,0.5);
+	overflow-y: scroll;
+	
+
 }
 /*pop up de batiments*/
 #ajout_batiment{
@@ -131,7 +158,7 @@ text-decoration: none;
 	margin border-right: 5%;
 }
 #simulation{
-    display:none
+    display:none;
 }
 
 #timer{

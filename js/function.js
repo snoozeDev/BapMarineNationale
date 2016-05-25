@@ -171,9 +171,11 @@ $("p").css({
 
 $("#simulation").hide();
 $('#console').hide();
+$('#notif').hide();
 /*    mode simulation ou non   */
 $("#admin").click(function () {    // on lance la simulation donc on montre la console, on cache les bateaux ennemis
     $("#simulation").show();
+
     $('#console').show();
     $("#admin").hide();
     $('.red').css("display", "none");
@@ -187,7 +189,27 @@ $("#simulation").click(function () {      // on repasse en mode admin
      $('.rred2').show();
      $('#console').hide();
 });
-
+var console_message=0;
+$('#close_console').click(function(){
+    if(console_message==0){
+        notif=0;
+        $('.black').css('height',"0");
+        $('#console').css('height',"auto");
+        $('#notif').show();
+        $('#close').hide();
+        console_message=1;
+        
+    }else{
+        notif=0;
+        $('.black').css('height',"80%");
+        $('#console').css('height',"50%");
+        $('#notif').hide();
+        $('#close').show();
+        console_message=0;
+        
+    }
+    
+});
 
 /*  fonciton changement image icone    */
 $('#icone_select').change(function () {   
