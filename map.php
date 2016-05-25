@@ -157,7 +157,7 @@
 <div class="simulation">
 
   <a href="#" class="btn" id="simulation">Mode Simulation</a>
-  <a href="#" class="btn" id="admin">Mode YOlo</a>
+  <a href="#" class="btn" id="admin">Mode Administrateur</a>
 </div>
 <div class="big_btn">
  <div id="cont">
