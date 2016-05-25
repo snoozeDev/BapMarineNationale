@@ -6,9 +6,13 @@ html,body {
 	padding: 0;
 	font-family: Arial;
 }
-/*   la console  */
+
+/*-------------------------------*/
+/*            Console            */
+/*-------------------------------*/
+
 #console{
-	background-color: rgba(0,0,0,0.5);
+	background-color: rgba(44,62,80,0.7);
 	position: absolute;
 	width: 28%;
 	bottom: 0;
@@ -24,7 +28,25 @@ html,body {
 	font-size: 0.8em;
 	height: auto;
 	background-color: transparent;
+	padding-left: 20px;
 }
+
+#console li
+{
+	list-style-type: none;
+	border: none;
+}
+
+.reperer
+{
+	padding-left: 10px;
+	border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+/*-------------------------------*/
+/*          Fin console          */
+/*-------------------------------*/
+
 /*pop up de batiments*/
 #ajout_batiment{
 	text-align: center;
@@ -838,6 +860,11 @@ a, a:visited {
 /*-------------------------------*/
 /*            Onglet             */
 /*-------------------------------*/
+
+.parametre
+{
+	margin-bottom: 20px;
+}
 
 .onglet
 {
