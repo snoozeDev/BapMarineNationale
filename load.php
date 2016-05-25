@@ -20,7 +20,7 @@ include 'db.php';
       $texts = $rows['texts'];
     $polyls = $rows['polyls'];
     $batis = $rows['batis'];
-    
+    $bateaux = $rows['bateaux'];
     
     if(strlen($cercles) !== 0){
         echo "
@@ -45,6 +45,11 @@ include 'db.php';
     if(strlen($batis) !== 0){
         echo "
         <script> var batisPhp = $batis;loadBati(batisPhp);</script>
+        ";
+    }
+    if(strlen($bateaux) !== 0){
+        echo "
+        <script> var bateauxPhp = $bateaux;loadBateaux(bateauxPhp);</script>
         ";
     }
            endwhile;

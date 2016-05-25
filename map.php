@@ -253,7 +253,7 @@
                 <h1 class="parametre">Parametres</h1>
 
                 <div class="onglets">
-                  <span class="onglet_0 onglet" id="onglet_filtres" onclick="javascript:change_onglet('filtres');">Filtres</span>
+                  <span class="onglet_0 onglet" id="onglet_filtres" onclick="javascript:change_onglet('filtres');">Options</span>
                   <span class="onglet_0 onglet" id="onglet_suppression" onclick="javascript:change_onglet('suppression');">Suppression</span>
                 </div>
 
@@ -293,6 +293,7 @@
                         <input type="hidden" id="text" name="texts">
                         <input type="hidden" id="polyl" name="polyls">
                         <input type="hidden" id="bati" name="batis">
+                        <input type="hidden" id="bateau" name="bateaux">
                         <button id='insert'>Save</button>
                     </form>
                 </div>

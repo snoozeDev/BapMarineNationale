@@ -14,8 +14,11 @@
     var editVitesse;
     var editColor;
     var editTypeVitesse;
+    var editType;
+var editDetection;
+var editCurrentLine;
     var editDescription;
-
+    var suppression;
     var editSpeed;
     var changerVitesse; //booléen si c'est juste un changement de vitesse
     var nouveauTrajet; //booléan pour éviter bug
@@ -775,6 +778,7 @@ var textJson = {};
  var playOrPause = 0;
  var radar;
 var CurrentEtat;
+var bateauxJson = {};
 
 
  
@@ -1781,6 +1785,9 @@ $('.speed').change(function () {             //lorsque le coef de vitesse change
         bateaux[id].editTypeVitesse = editTypeVitesse;
 
         console.log(bateaux[id]);
+        
+        
+        
         if(simulation==true){
             $('.red').css("display", "none");
         }
