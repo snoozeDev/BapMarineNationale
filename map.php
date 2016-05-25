@@ -226,11 +226,12 @@
                 </ul>
               </div>
             </div>
+
             <div id="toolbar">
               <div class="forme" id="bateau"> <img src="image/bateau.png"></div>
 
               <div class="forme" id="forme"> <img src="image/forme.png"></div>
-              <div class="batiment" id="batiment"> <img src="image/anchor.png"></div>
+              <div class="batiment" id="batiment"> <img src="image/anchor_btn.png"></div>
             </div>
 
             <div class="stop">

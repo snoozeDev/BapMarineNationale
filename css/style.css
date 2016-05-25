@@ -12,11 +12,12 @@ html,body {
 /*-------------------------------*/
 
 #console{
+
 	position: absolute;
 	width: 28%;
 	bottom: 0;
 	height: 50%;
-	
+	background-color: rgba(44,62,80,0.7);
 	color: white;
 	z-index: 100;
     display :none;
@@ -27,7 +28,7 @@ html,body {
 
 }
 #close_console img {
-	padding: 5%;
+	padding: 2% 5% 0 0;
 	width: 10%;
 	float: right;
 
@@ -49,16 +50,11 @@ html,body {
 
 .reperer
 {
-	padding-left: 10px;
-	padding-bottom: 15px;
+	margin: 0;
+	padding: 15px 10px;
 	border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+	border-top: 1px solid rgba(0, 0, 0, 0.1);
 }
-
-
-/*-------------------------------*/
-/*          Fin console          */
-/*-------------------------------*/
-
 
 #close_console p {
 	float: right;
@@ -70,11 +66,14 @@ html,body {
 .black{
 	height: 80%;
 	width: 100%;
-	background-color: rgba(44,62,80,0.7);
 	overflow-y: scroll;
-	
-
 }
+
+/*-------------------------------*/
+/*          Fin console          */
+/*-------------------------------*/
+
+
 /*pop up de batiments*/
 #ajout_batiment{
 	text-align: center;
@@ -234,6 +233,12 @@ text-decoration: none;
 .forme {
 	padding: 10%;
 }
+
+.batiment
+{
+	padding: 10%;
+}
+
 #toolbar img {
 	width: 100%;
 }
