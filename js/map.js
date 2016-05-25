@@ -457,6 +457,7 @@ function initialize() { //fonction qui permet de charger la carte au lancement d
     var batiment = [];
     var bati = 0;
     var currentBatiment = {}; //var du batiment en cours
+    var batimentJson = {};
 
     drawBatimentButton.addEventListener('click', function () {
 
@@ -467,10 +468,10 @@ function initialize() { //fonction qui permet de charger la carte au lancement d
     });
 
     function stop3() {
+        console.log("stop3");
         $('#toolbar').show();
         map.off('click', addLatLngToBati); //on arrête d'écouter les cliques sur la map
         var elem = "batiment" + bati;    //element utile pour la suppression 
-        console.log(batiment[bati]);
         var form = batiment[bati].options.icon.options.html;
         $( "p.blast" ).on( "click", function() {
             $( this ).width( 208).height(0);
@@ -480,13 +481,12 @@ function initialize() { //fonction qui permet de charger la carte au lancement d
             $( this).off();
         });
         bati++;
+        console.log(bati);
     };
 
     function addLatLngToBati(clickEventData) {
         var iconeBatiment = $('#icone_select').val();
         var bati_name = "batiment" + bati;
-        console.log(iconeBatiment);
-        console.log(bati_name);
 
         batiment[bati] = L.marker([clickEventData.latlng.lat, clickEventData.latlng.lng], {
             icon: L.icon({
@@ -497,6 +497,11 @@ function initialize() { //fonction qui permet de charger la carte au lancement d
             })
                 
         }).addTo(map);
+        batiment[bati].type = iconeBatiment;
+        console.log(batiment[bati]);
+         batimentJson[bati] = [batiment[bati]._latlng,batiment[bati].type];
+        var batiJsonString = JSON.stringify(batimentJson);
+        $('#bati').val(batiJsonString);
         stop3(); //pour finir l'ajout
 
 
@@ -1942,6 +1947,29 @@ function loadPolyl(polylsPhp){
         poly++;
 
         map.off('click', addLatLngToPolyline); //Stop listening for clicks on map.
+    }
+};
+
+function loadBati(batisPhp){
+     var limit = Object.keys(batisPhp).length ;
+      
+        
+    for (var c = 0; c < limit; c++) {
+        var bati_name = "batiment" + bati;
+         batiment[bati] = L.marker([batisPhp[c][0].lat, batisPhp[c][0].lng], {
+            icon: L.icon({
+                iconUrl: 'image/'+batisPhp[c][1]+'.png',
+                className: bati_name,
+                iconSize:     [30, 30], // size of the icon
+                iconAnchor:   [15, 15], // point of the icon which will correspond to marker's location
+            })
+                
+        }).addTo(map);
+        batiment[bati].type = batisPhp[c][1];
+         batimentJson[bati] = [batiment[bati]._latlng,batiment[bati].type];
+        var batiJsonString = JSON.stringify(batimentJson);
+        $('#bati').val(batiJsonString);
+        stop3(); //pour finir l'ajout
     }
 }
 
