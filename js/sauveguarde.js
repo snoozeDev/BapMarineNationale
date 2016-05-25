@@ -65,9 +65,7 @@ if (bateaux[j]._latlngs && bateaux[j]._latlngs != null && bateaux[j]._latlngs[1]
     }
     console.log(bateauxJson);
     var bateauxJsonString = JSON.stringify(bateauxJson);
-    console.log(bateauxJsonString);
     $('#bateau').val(bateauxJsonString);
-    
  $.post( 
  $('#myform').attr('action'),
  $('#myform :input').serializeArray(),
