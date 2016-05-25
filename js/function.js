@@ -2,7 +2,7 @@
  //edit de bateaux
  function editbateau(bat){
  addEventListener('click', function(){
- console.log("bien jouÃ©"+bat);
+ console.log("bien jouÃƒÆ’Ã‚Â©"+bat);
  $('#stopEditPolyline').css('display','block');
 
  bateau[bat]=moveTo([3,3], 20000);
@@ -28,7 +28,7 @@ var doubleclique=0;
 function annuler(elem, form){
     $('.'+elem).css('display', 'block');
 
-    $( "p" ).one( "click", function() {
+    $( "p.blast" ).one( "click", function() {
         $( this ).width( 230).height( 8 )
     });
 
@@ -58,12 +58,13 @@ function delete_obj(elem, form){
          */
         $(".oeilvert").css({
             'display': 'block',
-            'top': '4',
+            'top': '1',
+            left: '95',
         });
 
         $('#'+elem).html('Supprimer '+form);
 
-        $( "p" ).on( "click", function() {
+        $( "p.blast" ).on( "click", function() {
             $( this ).width( 205).height( 0)
         });
 
@@ -78,7 +79,7 @@ function delete_obj(elem, form){
                 'animation-iteration-count': 'infinite'
             });
 
-            $( "p" ).one( "click", function() {
+            $( "p.blast" ).one( "click", function() {
                 $( this ).width( 44).height( 44 )
             });
 
@@ -99,19 +100,19 @@ function delete_obj(elem, form){
             $('.'+elem).removeClass('anim');
             $('.'+elem).css('display', 'none');
 
-$("p").css({
-    'width' : '250px',
-    'height': '8',
-});
+            $("p.blast").css({
+                'width' : '250px',
+                'height': '8',
+            });
 
             $(".oeilvert").css({
                 'display': 'block',
-                'top': '-5',
+                'top': '1',
             });
 
-             $( "p" ).one( "click", function() {
-             $( this ).width( 250).height( 8 )
-             });
+            $( "p.blast" ).one( "click", function() {
+                $( this ).width( 250).height( 8 )
+            });
 
 
             $("#oeil" + elem).addClass('rouge').removeClass('vert');
@@ -134,27 +135,24 @@ $("p").css({
                 'animation-iteration-count': ''
             });
 
-            $("p").css({
+            $("p.blast").css({
                 'width' : '250px',
                 'height': '8',
             });
 
             $(".oeilvert").css({
                 'display': 'block',
-                'top': '2',
+                'top': '1',
             });
             $("#oeil" + elem).addClass('vert').removeClass('rouge');
 
 
 
-            $( "p" ).one( "click", function() {
+            $( "p.blast" ).one( "click", function() {
                 $( this ).width( 250).height( 8 )
             });
 
-            $("form").css({
-                'width': '100',
-                'height':'8',
-            });
+
 
             $('#'+elem).html('Supprimer '+form);
 
@@ -165,7 +163,6 @@ $("p").css({
     }
 
 }
-
 
 
 
