@@ -25,18 +25,6 @@
  });
  */
 var doubleclique=0;
-function annuler(elem, form){
-    $('.'+elem).css('display', 'block');
-
-    $( "p.blast" ).one( "click", function() {
-        $( this ).width( 230).height( 8 )
-    });
-
-    $('#'+elem).html('Supprimer '+form);
-    doubleclique=0;
-
-
-}
 function delete_obj(elem, form){
     if($('.'+elem).css('display') == 'none'){
         $('.'+elem).css('display', 'block');
@@ -48,26 +36,8 @@ function delete_obj(elem, form){
         });
 
 
-        $('.' + elem + ' .yeux').css({'display': 'block',
-            background: '#27ae60'});
-        $("#oeil" + elem).addClass('vert').removeClass('rouge');
 
-        /*    $( "p" ).on( "click", function() {
-         $( this ).width( 230).height( 8).off ();
-         });
-         */
-        $(".oeilvert").css({
-            'display': 'block',
-            'top': '1',
-            left: '95',
-        });
-
-        $('#'+elem).html('Supprimer '+form);
-
-        $( "p.blast" ).on( "click", function() {
-            $( this ).width( 205).height( 0)
-        });
-
+        $('#'+elem).html('<div class="margepolyline">supprimer '+form+' </div><div class="oeilvert" style="top: 20px; left:95px;"><div class=" yeux vert"></div></div>');
     }else{
 
         if(doubleclique==0){
@@ -79,49 +49,14 @@ function delete_obj(elem, form){
                 'animation-iteration-count': 'infinite'
             });
 
-            $( "p.blast" ).one( "click", function() {
-                $( this ).width( 44).height( 44 )
-            });
-
-            /* $( "p" ).on( "click", function() {
-             $(this).off();
-             }); */
-            $(".oeilvert").css({
-                'display': 'none',
-            });
-
-            $('#'+elem).html('<div class="croixvalide"><div class="boutonvalide"></div><div class="boutonvalide2"></div></div><div class="croixsuppression" onclick="doubleclique=2;"><div class="boutoncroix"></div><div class="boutoncroix2"></div></div>');
-            /* $('#'+elem).append('<div class="croixsuppression" onclick="doubleclique=2;"><div class="boutoncroix"></div><div class="boutoncroix2"></div></div>');
-             */
-
-
-
+            $('#'+elem).html('<img style="height:44px;width:44px;position: relative;top:16px;left:15px;" src="image/validationsuppression.png"/> '); //mettre image valider
+            $('#'+elem).append('<img style="height:44px;width:54px;position: relative;top:16px;left:95px; " src="image/supprsuppression.png" onclick="doubleclique=2;" />');//mettre image suppression
         }else if(doubleclique==1){
             $('.'+elem).removeClass('anim');
             $('.'+elem).css('display', 'none');
-
-            $("p.blast").css({
-                'width' : '250px',
-                'height': '8',
-            });
-
-            $(".oeilvert").css({
-                'display': 'block',
-                'top': '1',
-            });
-
-            $( "p.blast" ).one( "click", function() {
-                $( this ).width( 250).height( 8 )
-            });
-
-
-            $("#oeil" + elem).addClass('rouge').removeClass('vert');
-
-            $('#'+elem).html('Remettre '+form);
+            $('#'+elem).html('<div class="margepolyline">remettre '+form+'</div><div class="oeilvert" style="top: 20px; left:95px;"><div class=" yeux rouge"></div></div>'); //mettre oeil rouge
 
             doubleclique=0;
-
-
 
         }
 
@@ -134,35 +69,14 @@ function delete_obj(elem, form){
                 'animation-delay': '',
                 'animation-iteration-count': ''
             });
-
-            $("p.blast").css({
-                'width' : '250px',
-                'height': '8',
-            });
-
-            $(".oeilvert").css({
-                'display': 'block',
-                'top': '1',
-            });
-            $("#oeil" + elem).addClass('vert').removeClass('rouge');
-
-
-
-            $( "p.blast" ).one( "click", function() {
-                $( this ).width( 250).height( 8 )
-            });
-
-
-
-            $('#'+elem).html('Supprimer '+form);
-
-
+            $('#'+elem).html('<div class="margepolyline">supprimer '+form+'</div><div class="oeilvert" style="top: 20px; left:95px;"><div class=" yeux vert"></div></div>');
             doubleclique=0;
         }
 
     }
 
 }
+
 
 
 

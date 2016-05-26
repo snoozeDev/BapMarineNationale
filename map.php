@@ -312,7 +312,7 @@
 
                   <div class="delete_batiment" style="color: white;">
                     <div class="share-wrap">
-                      <div class="main-bar5 main-bar" style="color: #2C3E50;">Batiment(s)<span><img src="http://image.noelshack.com/fichiers/2016/20/1463653455-dropdown.png"/></span></div>
+                      <div class="main-bar5 main-bar" style="color: #2C3E50;">Batiment(s)<span><img src="image/dropdown-bas%20suppression.png"/></span></div>
 
                       <ul class="batiments">
 
@@ -324,7 +324,7 @@
 
                   <div class="delete_polyline" style="color: white;">
                     <div class="share-wrap">
-                      <div class="main-bar1 main-bar" style="color: #2C3E50;">Ligne(s)<span><img src="http://image.noelshack.com/fichiers/2016/20/1463653455-dropdown.png"/></span></div>
+                      <div class="main-bar1 main-bar" style="color: #2C3E50;">Ligne(s)<span><img src="image/dropdown-bas%20suppression.png"/></span></div>
 
                       <ul class="lignes">
 
@@ -336,7 +336,7 @@
 
                   <div class="delete_cercle">
                     <div class="share-wrap">
-                      <div class="main-bar2 main-bar" style="color: #2C3E50;">Cercle(s)<span><img src="http://image.noelshack.com/fichiers/2016/20/1463653455-dropdown.png"/></span></div>
+                      <div class="main-bar2 main-bar" style="color: #2C3E50;">Cercle(s)<span><img src="image/dropdown-bas%20suppression.png"/></span></div>
                       <ul class="cercle">
                         <br/>
                         <p class="delete_cercle_p"></p>
@@ -347,7 +347,7 @@
 
                   <div class="delete_texte">
                     <div class="share-wrap">
-                      <div class="main-bar3 main-bar" style="color: #2C3E50;">Texte(s)<span><img src="http://image.noelshack.com/fichiers/2016/20/1463653455-dropdown.png"/></span></div>
+                      <div class="main-bar3 main-bar" style="color: #2C3E50;">Texte(s)<span><img src="image/dropdown-bas%20suppression.png"/></span></div>
                       <ul class="texte">
                         <br/>
                         <p class="delete_texte_p"></p>
@@ -358,7 +358,7 @@
 
                   <div class="delete_polygone">
                     <div class="share-wrap">
-                      <div class="main-bar4 main-bar" style="color: #2C3E50;">Polygone(s)<span><img src="http://image.noelshack.com/fichiers/2016/20/1463653455-dropdown.png"/></span></div>
+                      <div class="main-bar4 main-bar" style="color: #2C3E50;">Polygone(s)<span><img src="image/dropdown-bas%20suppression.png"/></span></div>
                       <ul class="polygone">
                         <br/>
                         <p class="delete_polygone_p"></p>
