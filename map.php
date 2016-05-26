@@ -30,8 +30,8 @@
       <p class="title"> BATIMENTS </p>
       <select class="formula" id="icone_select" name="icone_select">
         <option value="anchor">Port</option>
-        <option value="offshore">offshore</option>
-        <option value="lighthouse">phare</option>
+        <option value="offshore">Offshore</option>
+        <option value="lighthouse">Phare</option>
       </select>
       <img src="image/anchor.png" id="icone_img">
       <a href="#" class="btn"  id="drawBatiment">Ajouter le batiment</a>
@@ -48,59 +48,59 @@
       <a class="btn_polygone btn" id="btn_polygone">Polygone</a>
       <a class="btn_polyline btn" id="btn_polyline">Lignes</a></div>
       <div class="ligne">
-    <div id="form_text" class="formulaire hide">
-      <p class="title"> Ecrire sur la carte </p>
-      <input id="label_text" class="formula" placeholder="Votre texte"><br><br>
+        <div id="form_text" class="formulaire hide">
+          <p class="title"> Ecrire sur la carte </p>
+          <input id="label_text" class="formula" placeholder="Votre texte"><br><br>
 
 
-      <a href="#" class="btn"  id="drawText">Ajouter texte</a>
+          <a href="#" class="btn"  id="drawText">Ajouter texte</a>
+
+        </div>
+
+        <div id="form_circle" class="formulaire hide">
+         <p class="title">Créer un cercle</p>
+
+         <p class="align">Taille du cercle</p>
+         <select class="formula" id="taille_circle" name="taille_cercle">
+          <option value="50000">Petit</option>
+          <option value="100000">Moyen</option>
+          <option value="200000">Grand</option>
+        </select>
+        <p class="align">Couleur du cercle</p>
+        <select class="formula" id="color_circle" name="color_circle">
+          <option value="blue">Bleu</option>
+          <option value="red">Rouge</option>
+          <option value="green">Vert</option>
+          <option value="gray">Gris</option>
+        </select>
+
+        <a href="#" class="btn"  id="drawCircle">Ajouter Cercle</a>
+
+      </div>
+      <div id="form_polygone" class="formulaire hide">
+       <p class="title">Créer une forme</p>
+       <p class="align">Couleur de la forme</p>
+       <select class="formula" id="color_polygone" name="color_polygone">
+        <option value="blue">Bleu</option>
+        <option value="red">Rouge</option>
+        <option value="green">Vert</option>
+        <option value="gray">Gris</option>
+      </select><br>
+      <a href="#"  class="btn" id="drawPolygon">Ajouter Polygone</a>
 
     </div>
-    
-    <div id="form_circle" class="formulaire hide">
-     <p class="title">Créer un cercle</p>
-
-     <p class="align">Taille du cercle</p>
-     <select class="formula" id="taille_circle" name="taille_cercle">
-      <option value="50000">Petit</option>
-      <option value="100000">Moyen</option>
-      <option value="200000">Grand</option>
-    </select>
-    <p class="align">Couleur du cercle</p>
-    <select class="formula" id="color_circle" name="color_circle">
+    <div id="form_polyline" class="formulaire hide">
+     <p class="title">Créer une ligne</p>
+     <p>Couleur de la ligne</p>
+     <select class="formula" id="color_polyline" name="color_polyline">
       <option value="blue">Bleu</option>
       <option value="red">Rouge</option>
       <option value="green">Vert</option>
       <option value="gray">Gris</option>
-    </select>
-
-    <a href="#" class="btn"  id="drawCircle">Ajouter Cercle</a>
+    </select><br>
+    <a href="#" class="btn"  id="drawPolyline">Ajouter Polyline</a>
 
   </div>
-  <div id="form_polygone" class="formulaire hide">
-   <p class="title">Créer une forme</p>
-   <p class="align">Couleur de la forme</p>
-   <select class="formula" id="color_polygone" name="color_polygone">
-    <option value="blue">Bleu</option>
-    <option value="red">Rouge</option>
-    <option value="green">Vert</option>
-    <option value="gray">Gris</option>
-  </select><br>
-  <a href="#"  class="btn" id="drawPolygon">Ajouter Polygone</a>
-
-</div>
-<div id="form_polyline" class="formulaire hide">
- <p class="title">Créer une ligne</p>
- <p>Couleur de la ligne</p>
- <select class="formula" id="color_polyline" name="color_polyline">
-  <option value="blue">Bleu</option>
-  <option value="red">Rouge</option>
-  <option value="green">Vert</option>
-  <option value="gray">Gris</option>
-</select><br>
-<a href="#" class="btn"  id="drawPolyline">Ajouter Polyline</a>
-
-</div>
 
 </div>
 
@@ -119,30 +119,30 @@
    <p class="title"> DÉPLACEMENT </p>
    <label>Type de vehicule</label><br>
    <select class="formula" id="type_bateau" name="type_bateau">
-       <option value="porte-avion">Porte-avion</option>
-       <option value="asm">ASM</option>
-       <option value="bpc">BPC</option>
-       <option value="fs">FS</option>
-       <option value="phm">PHM</option>
-       <option value="fda">FDA</option>
-       <option value="bcr">BCR</option>
-       <option value="puma">Helico Puma</option>
-       <option value="tigre">Helico Tigre</option>
-       <option value="fennec">Helico Fennec</option>
-       <option value="avion">Mirage F1</option>
-       <option value="paquebot">Paquebot Civil</option>
-       <option value="cargo">Cargo Civil</option>
-       <option value="peche">Bateau de pêche Civil</option>
+     <option value="porte-avion">Porte-avion</option>
+     <option value="asm">FASM</option>
+     <option value="bpc">BPC</option>
+     <option value="fs">FS</option>
+     <option value="phm">PHM</option>
+     <option value="fda">FDA</option>
+     <option value="bcr">BCR</option>
+     <option value="puma">Helico Puma</option>
+     <option value="tigre">Helico Tigre</option>
+     <option value="fennec">Helico Fennec</option>
+     <option value="avion">Mirage F1</option>
+     <option value="paquebot">Paquebot Civil</option>
+     <option value="cargo">Cargo Civil</option>
+     <option value="peche">Bateau de pêche Civil</option>
 
    </select>
-  <label>Vitesse du trajet (en noeud)</label><br>
-  <input type="text" id="vitesse_bateau" value="15"><br><br>
+   <label>Vitesse du trajet (en noeud)</label><br>
+   <input type="text" id="vitesse_bateau" value="15"><br><br>
 
-  <label>Distance du radar (en km)</label><br>
-  <input type="text" id="radar" value="800"><br><br>
-  
-  <label>Alignement</label><br>
-  <select class="formula" id="color_bateau" name="color_bateau">
+   <label>Distance du radar (en km)</label><br>
+   <input type="text" id="radar" value="800"><br><br>
+
+   <label>Alignement</label><br>
+   <select class="formula" id="color_bateau" name="color_bateau">
     <option value="blue">Allié</option>
     <option value="green">Neutre</option>
     <option value="red">Ennemi</option>
@@ -154,11 +154,11 @@
 
 </div>
 </div></div>
- <div class="simulation">
+<div class="simulation">
 
-                <a href="#" class="btn" id="simulation">Mode Simulation</a>
-                <a href="#" class="btn" id="admin">Mode Administrateur</a>
-              </div>
+  <a href="#" class="btn" id="simulation">Mode Simulation</a>
+  <a href="#" class="btn" id="admin">Mode Administrateur</a>
+</div>
 <div class="big_btn">
  <div id="cont">
   <div class="timer">
@@ -199,7 +199,7 @@
               <option value="5">x5</option>
               <option value="10">x10</option>
               <option value="50">x50</option>
-              <option value="100">100</option>
+              <option value="100">x100</option>
 
 
 
@@ -212,24 +212,26 @@
 
             </div>
 
+
             <div id="console">
               <div id="close_console">
                 <p id="notif"></p>
                 <img id="close" src="image/close.png">
               </div>
               <div class="black">
-                <p>Vous ne devez pas vous faire repérer</p>
+                <p class="reperer">Vous ne devez pas vous faire repérer</p>
                 <ul>
 
 
                 </ul>
               </div>
             </div>
+
             <div id="toolbar">
               <div class="forme" id="bateau"> <img src="image/bateau.png"></div>
 
               <div class="forme" id="forme"> <img src="image/forme.png"></div>
-              <div class="batiment" id="batiment"> <img src="image/anchor.png"></div>
+              <div class="batiment" id="batiment"> <img src="image/anchor_btn.png"></div>
             </div>
 
             <div class="stop">
@@ -249,10 +251,11 @@
             </button>
             <section id="sidebar" class="sidebar">
               <div class="settings">
-                <h1>Parametres</h1>
+                <h1 class="parametre">Parametres</h1>
 
                 <div class="onglets">
-                  <span class="onglet_0 onglet" id="onglet_filtres" onclick="javascript:change_onglet('filtres');">Filtres</span>
+
+                  <span class="onglet_0 onglet" id="onglet_options" onclick="javascript:change_onglet('options');">Options</span>
                   <span class="onglet_0 onglet" id="onglet_suppression" onclick="javascript:change_onglet('suppression');">Suppression</span>
                 </div>
 
@@ -264,25 +267,28 @@
               </button> -->
 
               <!-- <div class="onglet1 is-open"> -->
-              <div class="contenu_onglet" id="contenu_onglet_filtres">
-                <div class="filtres-cont">
+              <div class="contenu_onglet" id="contenu_onglet_options">
+                <div class="options-cont">
+                  <h3 class="filtres_title">Filtres des éléments natifs</h3>
                   <div style="padding-top:30px" class="bouton">
                     <input class="checkbox" id="checkbox1"  type="checkbox">
                     <label id="profondeur" for="checkbox1"></label>
-                    <span class="filtres">Cacher les profondeurs</span>
+                    <span class="options">Cacher les profondeurs</span>
                   </div><br>
                   <div class="bouton">
                     <input class="checkbox" id="checkbox2"  type="checkbox">
                     <label  id="riv" for="checkbox2"></label>
-                    <span class="filtres">Cacher les côtes et les rivières</span>
+                    <span class="options">Cacher les côtes et les rivières</span>
                   </div><br>
                   <div class="bouton">
                     <input class="checkbox" id="checkbox3" type="checkbox">
                     <label  id="structures" for="checkbox3"></label>
-                    <span class="filtres">Cacher les structures</span>
+                    <span class="options">Cacher les structures</span>
                   </div><br>
                 </div>
                 <div>
+
+<<<<<<< HEAD
                     <form action='sauveguarde.php' method='post' id='myform' >
                         <input type="text" name="mapName">
                         <textarea name="mapDescription"></textarea>
@@ -291,8 +297,22 @@
                         <input type="hidden" id="text" name="texts">
                         <input type="hidden" id="polyl" name="polyls">
                         <input type="hidden" id="bati" name="batis">
+                        <input type="hidden" id="bateau" name="bateaux">
                         <button id='insert'>Save</button>
                     </form>
+=======
+                  <form class="sauvegarde" action='sauveguarde.php' method='post' id='myform'>
+                    <h3 class="sauvegarde_title">Sauvegardez votre carte</h3>
+                    <input class="map_name" type="text" name="mapName" placeholder="Nom de la carte">
+                    <textarea class="map_description" name="mapDescription" placeholder="Description de la carte"></textarea>
+                    <input type="hidden" id="cer" name="cercles">
+                    <input type="hidden" id="polyg" name="polygs">
+                    <input type="hidden" id="text" name="texts">
+                    <input type="hidden" id="polyl" name="polyls">
+                    <input type="hidden" id="bati" name="batis">
+                    <button class="save" id='insert'>Sauvegarder</button>
+                  </form>
+>>>>>>> 643ffbfa3a15b8482d74dff1ad63a8790d6a4516
                 </div>
               </div>
 
@@ -300,204 +320,204 @@
               <!-- <div class="onglet2 is-closed" style="background-color: #2C3E50;"> -->
               <div class="contenu_onglet" id="contenu_onglet_suppression">
 
-              <div class="delete" style="position: relative;">
-                 
+                <div class="delete" style="position: relative;">
+
                   <div class="delete_batiment" style="color: white;">
                     <div class="share-wrap">
-                      <div class="main-bar5 main-bar" style="color: #2C3E50;">Batiment(s)<span><img src="http://image.noelshack.com/fichiers/2016/20/1463653455-dropdown.png"/></span></div>
+                      <div class="main-bar5 main-bar" style="color: #2C3E50;">Batiment(s)<span><img src="image/dropdown-bas%20suppression.png"/></span></div>
 
                       <ul class="batiments">
 
                         <br/>
-                         <p class="delete_batiment_p"></p>
+                        <p class="delete_batiment_p"></p>
                       </ul>
                     </div>
                   </div>
 
                   <div class="delete_polyline" style="color: white;">
                     <div class="share-wrap">
-                      <div class="main-bar1 main-bar" style="color: #2C3E50;">Ligne(s)<span><img src="http://image.noelshack.com/fichiers/2016/20/1463653455-dropdown.png"/></span></div>
+                      <div class="main-bar1 main-bar" style="color: #2C3E50;">Ligne(s)<span><img src="image/dropdown-bas%20suppression.png"/></span></div>
 
                       <ul class="lignes">
 
                         <br/>
-                          <p class="delete_polyline_p"></p>
+                        <p class="delete_polyline_p"></p>
                       </ul>
                     </div>
-                      </div>
-
-                    <div class="delete_cercle">
-                      <div class="share-wrap">
-                        <div class="main-bar2 main-bar" style="color: #2C3E50;">Cercle(s)<span><img src="http://image.noelshack.com/fichiers/2016/20/1463653455-dropdown.png"/></span></div>
-                        <ul class="cercle">
-                          <br/>
-                           <p class="delete_cercle_p"></p>
-                        </ul>
-                      </div>
-                    </div>
-
-
-                    <div class="delete_texte">
-                      <div class="share-wrap">
-                        <div class="main-bar3 main-bar" style="color: #2C3E50;">Texte(s)<span><img src="http://image.noelshack.com/fichiers/2016/20/1463653455-dropdown.png"/></span></div>
-                        <ul class="texte">
-                          <br/>
-                           <p class="delete_texte_p"></p>
-                        </ul>
-                      </div>
-                    </div>
-
-
-                    <div class="delete_polygone">
-                      <div class="share-wrap">
-                        <div class="main-bar4 main-bar" style="color: #2C3E50;">Polygone(s)<span><img src="http://image.noelshack.com/fichiers/2016/20/1463653455-dropdown.png"/></span></div>
-                        <ul class="polygone">
-                          <br/>
-                            <p class="delete_polygone_p"></p>
-                        </ul>
-                      </div>
-                    </div>
-
                   </div>
 
-               
+                  <div class="delete_cercle">
+                    <div class="share-wrap">
+                      <div class="main-bar2 main-bar" style="color: #2C3E50;">Cercle(s)<span><img src="image/dropdown-bas%20suppression.png"/></span></div>
+                      <ul class="cercle">
+                        <br/>
+                        <p class="delete_cercle_p"></p>
+                      </ul>
+                    </div>
+                  </div>
+
+
+                  <div class="delete_texte">
+                    <div class="share-wrap">
+                      <div class="main-bar3 main-bar" style="color: #2C3E50;">Texte(s)<span><img src="image/dropdown-bas%20suppression.png"/></span></div>
+                      <ul class="texte">
+                        <br/>
+                        <p class="delete_texte_p"></p>
+                      </ul>
+                    </div>
+                  </div>
+
+
+                  <div class="delete_polygone">
+                    <div class="share-wrap">
+                      <div class="main-bar4 main-bar" style="color: #2C3E50;">Polygone(s)<span><img src="image/dropdown-bas%20suppression.png"/></span></div>
+                      <ul class="polygone">
+                        <br/>
+                        <p class="delete_polygone_p"></p>
+                      </ul>
+                    </div>
+                  </div>
+
+                </div>
+
+
 
               </div>
-             
+
 
               <script type="text/javascript">
-                var anc_onglet = 'filtres';
+                var anc_onglet = 'options';
                 change_onglet(anc_onglet);
               </script>
 
 
-                </div>
-            </section>
+            </div>
+          </section>
 
-            <script src="https://code.jquery.com/jquery-1.12.0.min.js"></script>
+          <script src="https://code.jquery.com/jquery-1.12.0.min.js"></script>
 
-            <script src="js/Leaflet-0.7.7/leaflet.js"></script> 
-             <script type="text/javascript" src="js/icone.js"></script>
-            <script type="text/javascript" src="js/map.js"></script>
-             <script src='js/coord.js'></script>
-            <script type="text/javascript" src="js/function.js"></script>
-           
-            
-
-            <script type="text/javascript" src="js/onglet.js"></script>
-            
+          <script src="js/Leaflet-0.7.7/leaflet.js"></script> 
+          <script type="text/javascript" src="js/icone.js"></script>
+          <script type="text/javascript" src="js/map.js"></script>
+          <script src='js/coord.js'></script>
+          <script type="text/javascript" src="js/function.js"></script>
 
 
-            <script src='https://api.mapbox.com/mapbox.js/plugins/leaflet-fullscreen/v1.0.1/Leaflet.fullscreen.min.js'></script>
-            <link href='https://api.mapbox.com/mapbox.js/plugins/leaflet-fullscreen/v1.0.1/leaflet.fullscreen.css' rel='stylesheet' />
 
-            <script>
+          <script type="text/javascript" src="js/onglet.js"></script>
 
 
+
+          <script src='https://api.mapbox.com/mapbox.js/plugins/leaflet-fullscreen/v1.0.1/Leaflet.fullscreen.min.js'></script>
+          <link href='https://api.mapbox.com/mapbox.js/plugins/leaflet-fullscreen/v1.0.1/leaflet.fullscreen.css' rel='stylesheet' />
+
+          <script>
 
 
 
 
 
-              var sidebar = (function() {
-                "use strict";
 
-                var $contnet         = $('#content'),
-                $sidebar         = $('#sidebar'),
-                $sidebarBtn      = $('#sidebar-btn'),
-                $toggleCol       = $('body').add($contnet).add($sidebarBtn),
-                sidebarIsVisible = false;
 
-                $sidebarBtn.on('click', function() {
+            var sidebar = (function() {
+              "use strict";
 
-                  if (!sidebarIsVisible) {
-                    bindContent();
-                  } else {
-                    unbindContent();
-                  }
+              var $contnet         = $('#content'),
+              $sidebar         = $('#sidebar'),
+              $sidebarBtn      = $('#sidebar-btn'),
+              $toggleCol       = $('body').add($contnet).add($sidebarBtn),
+              sidebarIsVisible = false;
 
+              $sidebarBtn.on('click', function() {
+
+                if (!sidebarIsVisible) {
+                  bindContent();
+                } else {
+                  unbindContent();
+                }
+
+                toggleMenu();
+              });
+
+
+              function bindContent() {
+
+                $contnet.on('click', function() {
                   toggleMenu();
+                  unbindContent();
                 });
+              }
 
+              function unbindContent() {
+                $contnet.unbind();
+              }
 
-                function bindContent() {
+              function toggleMenu() {
 
-                  $contnet.on('click', function() {
-                    toggleMenu();
-                    unbindContent();
-                  });
+                $toggleCol.toggleClass('sidebar-show');
+                $sidebar.toggleClass('show');
+
+                var image = document.getElementById('menu-stripes1');
+
+                if (!sidebarIsVisible) {
+
+                  image.src = "image/cancel.png"; 
+                  sidebarIsVisible = true;
+                } else {
+                  image.src = "image/menu.png"; 
+                  sidebarIsVisible = false;
                 }
-
-                function unbindContent() {
-                  $contnet.unbind();
-                }
-
-                function toggleMenu() {
-
-                  $toggleCol.toggleClass('sidebar-show');
-                  $sidebar.toggleClass('show');
-
-                  var image = document.getElementById('menu-stripes1');
-
-                  if (!sidebarIsVisible) {
-
-                    image.src = "image/cancel.png"; 
-                    sidebarIsVisible = true;
-                  } else {
-                    image.src = "image/menu.png"; 
-                    sidebarIsVisible = false;
-                  }
-                }
+              }
 
 
-                var $menuToggle = $sidebar.find('.menu-toggle');
+              var $menuToggle = $sidebar.find('.menu-toggle');
 
-                $menuToggle.each(function() {
+              $menuToggle.each(function() {
 
-                  var $this       = $(this),
-                  $submenuBtn = $this.children('.menu-toggle-btns').find('.menu-btn'),
-                  $submenu    = $this.children('.submenu');
+                var $this       = $(this),
+                $submenuBtn = $this.children('.menu-toggle-btns').find('.menu-btn'),
+                $submenu    = $this.children('.submenu');
 
-                  $submenuBtn.on('click', function(e) {
-                    e.preventDefault();
-                    $submenu.slideToggle();
-                    $(this).toggleClass('active');
-                  });
+                $submenuBtn.on('click', function(e) {
+                  e.preventDefault();
+                  $submenu.slideToggle();
+                  $(this).toggleClass('active');
                 });
+              });
 
-              })();
+            })();
 
-              $(document).ready(function(e){
-                $('.main-bar1').on('click',function(){
-                  $('ul.lignes').slideToggle(120);
-                });
-              })
-              $(document).ready(function(e){
-                $('.main-bar5').on('click',function(){
-                  $('ul.batiments').slideToggle(120);
-                });
-              })
-              $(document).ready(function(e){
-                $('.main-bar2').on('click',function(){
-                  $('ul.cercle').slideToggle(120);
-                });
-              })
-              $(document).ready(function(e){
-                $('.main-bar3').on('click',function(){
-                  $('ul.texte').slideToggle(120);
-                });
-              })
-              $(document).ready(function(e){
-                $('.main-bar4').on('click',function(){
-                  $('ul.polygone').slideToggle(120);
-                });
-              })
-            </script>
+            $(document).ready(function(e){
+              $('.main-bar1').on('click',function(){
+                $('ul.lignes').slideToggle(120);
+              });
+            })
+            $(document).ready(function(e){
+              $('.main-bar5').on('click',function(){
+                $('ul.batiments').slideToggle(120);
+              });
+            })
+            $(document).ready(function(e){
+              $('.main-bar2').on('click',function(){
+                $('ul.cercle').slideToggle(120);
+              });
+            })
+            $(document).ready(function(e){
+              $('.main-bar3').on('click',function(){
+                $('ul.texte').slideToggle(120);
+              });
+            })
+            $(document).ready(function(e){
+              $('.main-bar4').on('click',function(){
+                $('ul.polygone').slideToggle(120);
+              });
+            })
+          </script>
 
- <script src='js/sauveguarde.js'></script>
+          <script src='js/sauveguarde.js'></script>
 
-         <?php include 'load.php' ?>
+          <?php include 'load.php' ?>
 
-          </body>
-          </html>
+        </body>
+        </html>
 

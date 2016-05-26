@@ -6,14 +6,18 @@ html,body {
 	padding: 0;
 	font-family: Arial;
 }
-/*   la console  */
+
+/*-------------------------------*/
+/*            Console            */
+/*-------------------------------*/
+
 #console{
-	
+
 	position: absolute;
 	width: 28%;
 	bottom: 0;
 	height: 50%;
-	
+	background-color: rgba(44,62,80,0.7);
 	color: white;
 	z-index: 100;
     display :none;
@@ -24,7 +28,7 @@ html,body {
 
 }
 #close_console img {
-	padding: 5%;
+	padding: 2% 5% 0 0;
 	width: 10%;
 	float: right;
 
@@ -35,7 +39,23 @@ html,body {
 	font-size: 0.8em;
 	height: auto;
 	background-color: transparent;
+	padding-left: 20px;
 }
+
+#console li
+{
+	list-style-type: none;
+	border: none;
+}
+
+.reperer
+{
+	margin: 0;
+	padding: 15px 10px;
+	border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+	border-top: 1px solid rgba(0, 0, 0, 0.1);
+}
+
 #close_console p {
 	float: right;
 	background-color: rgba(255,0,0,0.6);
@@ -44,14 +64,16 @@ html,body {
 
 }
 .black{
-	padding-top: 5%;
 	height: 80%;
 	width: 100%;
-	background-color: rgba(0,0,0,0.5);
 	overflow-y: scroll;
-	
-
 }
+
+/*-------------------------------*/
+/*          Fin console          */
+/*-------------------------------*/
+
+
 /*pop up de batiments*/
 #ajout_batiment{
 	text-align: center;
@@ -211,6 +233,12 @@ text-decoration: none;
 .forme {
 	padding: 10%;
 }
+
+.batiment
+{
+	padding: 10%;
+}
+
 #toolbar img {
 	width: 100%;
 }
@@ -259,10 +287,10 @@ text-decoration: none;
 .onglet1{
 	background:white;margin-left: 1%;margin-right: 1%;
 }
-.filtres{
+.options{
 	color:black
 }
-.filtres_cont{
+.options_cont{
 	margin-top:20px
 }
 .vitesse{
@@ -653,7 +681,7 @@ a, a:visited {
 	transform: rotate(42deg);
 }
 
-.oeilvert{
+.oeilvert {
 
 	width:30px;
 	height:20px;
@@ -664,7 +692,7 @@ a, a:visited {
 	border-style: solid;
 	border-width: 2px;
 
-	left: 95px;
+	left: 85px;
 	top: -4px;
 
 }
@@ -673,7 +701,7 @@ a, a:visited {
 
 
 
-.yeux{
+.yeux {
 	width: 16px;
 	height: 16px;
 	border-radius: 12px;
@@ -688,10 +716,10 @@ a, a:visited {
 	top: 1px;
 }
 
-.rouge{
+.rouge {
 	background: red
 }
-.vert{
+.vert {
 	background:green;
 	color : green;
 }
@@ -866,6 +894,11 @@ a, a:visited {
 /*            Onglet             */
 /*-------------------------------*/
 
+.parametre
+{
+	margin-bottom: 20px;
+}
+
 .onglet
 {
 	margin-top: 30px;
@@ -895,6 +928,13 @@ a, a:visited {
 	margin:-1 3px;
 	padding:5px;
 	display:none;
+}
+
+.filtres_title
+{
+	color: black;
+	padding-left: 5px;
+	margin-bottom: 0;
 }
 
 .ligne
@@ -928,8 +968,57 @@ a, a:visited {
 	border:0px 0px 1px 0px solid;
 }
 
+
 /*-------------------------------*/
 /*          Fin onglet           */
+/*-------------------------------*/
+
+
+/*-------------------------------*/
+/*          Sauvegarde           */
+/*-------------------------------*/
+
+.sauvegarde
+{
+	padding-left: 5px;
+}
+
+.sauvegarde_title
+{
+	color: black;
+	margin-top: 0;
+}
+
+.map_name
+{
+	width: 90%;
+	height: 30px;
+	font-size: 1em;
+	border: 3px solid #2C3E50;
+	margin-bottom: 5px;
+}
+
+.map_description
+{
+	width: 90%;
+	height: 60px;
+	font-size: 1em;
+	border: 3px solid #2C3E50;
+	margin-bottom: 5px;
+}
+
+.save
+{
+	background-color: #004080;
+	border: none;
+	width: 110px;
+	height: 30px;
+	font-size: 1em;
+	color: white;
+}
+
+/*-------------------------------*/
+/*        Fin sauvegarde         */
 /*-------------------------------*/
 
 
@@ -1206,15 +1295,19 @@ h1 {
 }
 
 .margebatiment{
-	margin-left: 35px;
+	margin-left: 9px;
 }
 
 .margepolygone{
 	margin-left: 2px;
 }
 
+.margepolygone2{
+	margin-left: 4px;
+}
+
 .margepolyline{
-	margin-left: 19px;
+	margin-left: 2px;
 }
 
 .margecercle{
@@ -1224,6 +1317,7 @@ h1 {
 .margetexte{
 	margin-left: 15px;
 }
+
 
 p.blast{
 

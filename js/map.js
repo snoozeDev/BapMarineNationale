@@ -15,8 +15,11 @@
     var editVitesse;
     var editColor;
     var editTypeVitesse;
+    var editType;
+var editDetection;
+var editCurrentLine;
     var editDescription;
-
+    var suppression;
     var editSpeed;
     var changerVitesse; //booléen si c'est juste un changement de vitesse
     var nouveauTrajet; //booléan pour éviter bug
@@ -477,7 +480,7 @@ function initialize() { //fonction qui permet de charger la carte au lancement d
         $( "p" ).on( "click", function() {
             $( this ).width( 208).height(0);
         });
-        $('.delete_batiment_p').append('<div class="bord"><div class="margebatiment"><p class="form" id="' + elem + '" onclick="delete_obj(&#34;' + elem + '&#34;,&#34;' + form + '&#34;);return false"> supprimer :  ' + form + '  </p> </div><div class="oeilvert"><div id="oeil'+ elem + '" class="vert yeux"></div></div></div>');
+        $('.delete_batiment_p').append('<div class="bord"> <div class="margebatiment" class="form" id="' + elem + '" onclick="delete_obj(&#34;' + elem + '&#34;,&#34;' + form + '&#34;);return false"><p>Supprimer ' + form + ' </p> <div class="oeilvert" id="oeil"><div id="oeil'+ elem + '" class="vert yeux"></div></div></div> </div>');
         $( "p" ).on( "click", function() {
             $( this).off();
         });
@@ -566,10 +569,11 @@ function initialize() { //fonction qui permet de charger la carte au lancement d
         $( "p" ).on( "click", function() {
             $( this ).width( 208).height(0);
         });
-        $('.delete_polygone_p').append('<div class="bord"><div class="margepolygone"><p class="form" id="' + elem + '" onclick="delete_obj(&#34;' + elem + '&#34;,&#34;' + form + '&#34;);return false"> Supprimer ' + form + '  </p> </div> <div class="oeilvert"><div id="oeil'+ elem + '" class="vert yeux"></div></div></div>');
+        $('.delete_polygone_p').append('<div class="bord"> <div class="margepolygone" class="form" id="' + elem + '" onclick="delete_obj(&#34;' + elem + '&#34;,&#34;' + form + '&#34;);return false"><p>Supprimer ' + form + ' </p> <div class="oeilvert" id="oeil"><div id="oeil'+ elem + '" class="vert yeux"></div></div></div> </div>');
         $( "p" ).on( "click", function() {
             $( this).off();
         });
+
         polyg++;
 
         map.off('click', addLatLngToPolygon); //Stop listening for clicks on map.
@@ -605,7 +609,7 @@ var textJson = {};
         $( "p" ).on( "click", function() {
             $( this ).width( 208).height(0);
         });
-        $('.delete_texte_p').append('<div class="bord"><div class="margetexte"><p class="form" id="' + elem + '" onclick="delete_obj(&#34;' + elem + '&#34;,&#34;' + form + '&#34;);return false">Supprimer : ' + form + ' </p> </div><div class="oeilvert"><div id="oeil'+ elem + '" class="vert yeux"></div></div></div>');
+        $('.delete_texte_p').append('<div class="bord"> <div class="margetexte" class="form" id="' + elem + '" onclick="delete_obj(&#34;' + elem + '&#34;,&#34;' + form + '&#34;);return false"><p>Supprimer ' + form + ' </p> <div class="oeilvert" id="oeil"><div id="oeil'+ elem + '" class="vert yeux"></div></div></div> </div>');
         $( "p" ).on( "click", function() {
             $( this).off();
         });
@@ -675,7 +679,7 @@ var textJson = {};
         $( "p" ).on( "click", function() {
             $( this ).width( 208).height(0);
         });
-        $('.delete_cercle_p').append('<div class="bord"><div class="margecercle"><p class="form" id="' + elem + '" onclick="delete_obj(&#34;' + elem + '&#34;,&#34;' + form + '&#34;);return false">Supprimer ' + form + ' </p> </div> <div class="oeilvert"><div id="oeil'+ elem + '" class="vert yeux"></div></div></div>');
+        $('.delete_cercle_p').append('<div class="bord"> <div class="margecercle" class="form" id="' + elem + '" onclick="delete_obj(&#34;' + elem + '&#34;,&#34;' + form + '&#34;);return false"><p>Supprimer ' + form + ' </p> <div class="oeilvert" id="oeil"><div id="oeil'+ elem + '" class="vert yeux"></div></div></div> </div>');
         $( "p" ).on( "click", function() {
             $( this).off();
         });
@@ -750,13 +754,7 @@ var textJson = {};
         var polylineJsonString = JSON.stringify(polylineJson);
         $('#polyl').val(polylineJsonString);
         var form = 'la ligne ' + color_fr + ' n°' + poly2;
-        $( "p" ).on( "click", function() {
-            $( this ).width( 208).height(0);
-        });
-        $('.delete_polyline_p').append('<div class="bord"><div class="margepolyline"><p class="form" id="' + elem + '" onclick="delete_obj(&#34;' + elem + '&#34;,&#34;' + form + '&#34;);return false">Supprimer ' + form + ' </p> </div> <div class="oeilvert"><div id="oeil'+ elem + '" class="vert yeux"></div></div></div>');
-        $( "p" ).on( "click", function() {
-            $( this).off();
-        });
+        $('.delete_polyline_p').append('<div class="bord" ><div class="margepolyline" class="form" id="' + elem + '"onclick="delete_obj(&#34;' + elem + '&#34;,&#34;' + form + '&#34;);return false"><p>Supprimer ' + form + ' </p> <div class="oeilvert" id="oeil"><div id="oeil'+ elem + '" class="vert yeux"></div></div></div> </div> ');
         poly++;
 
         map.off('click', addLatLngToPolyline); //Stop listening for clicks on map.
@@ -776,6 +774,7 @@ var textJson = {};
  var playOrPause = 0;
  var radar;
 var CurrentEtat;
+var bateauxJson = {};
 
 
  
@@ -1782,6 +1781,9 @@ $('.speed').change(function () {             //lorsque le coef de vitesse change
         bateaux[id].editTypeVitesse = editTypeVitesse;
 
         console.log(bateaux[id]);
+        
+        
+        
         if(simulation==true){
             $('.red').css("display", "none");
         }
