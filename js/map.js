@@ -1,6 +1,7 @@
     //fonction booléenne affichage ou non
     //var valider = "non";
     var simulation=false;
+    
     var detection = [];
     var bateaux = []; //tableau de tous les bateaux
   bat = 0;
@@ -1670,7 +1671,6 @@ $('.speed').change(function () {             //lorsque le coef de vitesse change
             editType = bateaux[id].editType;
             editSpeed = bateaux[id].editSpeed;
             editRadar = bateaux[id].editRadar;
-
             editDetection = bateaux[id].editDetection;
 
             console.log(bateaux[id]);
@@ -1721,7 +1721,8 @@ $('.speed').change(function () {             //lorsque le coef de vitesse change
         currentPolyline2.addLatLng(clickEventData.latlng);
 
     }
-    stopEditPolyline.addEventListener('click', function () {
+     var stopEdtiPolyline = document.getElementById('stopEditPolyline');
+    stopEdtiPolyline.addEventListener('click', function () {
         nouveauTrajet = true;
         $('#editVitesse').hide();
         $('#toolbar').show();
