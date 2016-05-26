@@ -11,10 +11,9 @@ $texts = $_POST['texts'];
 $polyls = $_POST['polyls'];
 $batis = $_POST['batis'];
 $bateaux = $_POST['bateaux'];
-$sql = "INSERT INTO save_marine_table (mapName, mapDescription, cercles, polygs, texts, polyls, batis, bateaux) VALUES ('$name','$description','$cercles','$polygs', '$texts', '$polyls', '$batis', 'zob')";
+$sql = "INSERT INTO save_marine_table (mapName, mapDescription, cercles, polygs, texts, polyls, batis, bateaux) VALUES ('$name','$description','$cercles','$polygs', '$texts', '$polyls', '$batis', '$bateaux')";
 
-echo "<script>console.log($bateaux + 'boats')</script>";
-
+var_dump($_POST);
  if(mysqli_query($con, $sql)){
  
  }

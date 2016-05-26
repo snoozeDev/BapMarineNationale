@@ -288,19 +288,6 @@
                 </div>
                 <div>
 
-<<<<<<< HEAD
-                    <form action='sauveguarde.php' method='post' id='myform' >
-                        <input type="text" name="mapName">
-                        <textarea name="mapDescription"></textarea>
-                        <input type="hidden" id="cer" name="cercles">
-                        <input type="hidden" id="polyg" name="polygs">
-                        <input type="hidden" id="text" name="texts">
-                        <input type="hidden" id="polyl" name="polyls">
-                        <input type="hidden" id="bati" name="batis">
-                        <input type="hidden" id="bateau" name="bateaux">
-                        <button id='insert'>Save</button>
-                    </form>
-=======
                   <form class="sauvegarde" action='sauveguarde.php' method='post' id='myform'>
                     <h3 class="sauvegarde_title">Sauvegardez votre carte</h3>
                     <input class="map_name" type="text" name="mapName" placeholder="Nom de la carte">
@@ -310,9 +297,10 @@
                     <input type="hidden" id="text" name="texts">
                     <input type="hidden" id="polyl" name="polyls">
                     <input type="hidden" id="bati" name="batis">
+                    <input type="hidden" id="bateau" name="bateaux">
                     <button class="save" id='insert'>Sauvegarder</button>
                   </form>
->>>>>>> 643ffbfa3a15b8482d74dff1ad63a8790d6a4516
+
                 </div>
               </div>
 
