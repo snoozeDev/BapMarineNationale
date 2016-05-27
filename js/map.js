@@ -1,4 +1,4 @@
-    //fonction booléenne affichage ou non
+        //fonction booléenne affichage ou non
     //var valider = "non";
     var simulation=false;
     
@@ -1389,7 +1389,7 @@ var bateauxJson = {};
     // editer une trajectoire 
 
     $('#play').click(function () {
-        simulation=true;
+        //simulation=true;
         for (var i = bateaux.length - 1; i >= 0; i--) {
             if(bateaux[i]._latlngs){
                 if (bateaux[i]._latlngs[1]){
@@ -1402,7 +1402,7 @@ var bateauxJson = {};
     })
 
     $('#pause').click(function () {
-    simulation=false;
+        //simulation=false;
         for (var i = bateaux.length - 1; i >= 0; i--) {
             console.log("i"+bateaux[i]);
             if (bateaux[i] && bateaux[i]!=null && bateaux[i]!="") {
@@ -2130,7 +2130,7 @@ $('#simulation').on('click',function(){
 });
 
 // fin du game 
-
+/*
 $('#fin').on('click', function() {
     $('.fin').hide();
     $('#timerbtn').hide();
@@ -2146,7 +2146,7 @@ $('#fin').on('click', function() {
     $("#admin").show();
      $('.red').css("display", "block");
      $('.rred2').show();
-});
+});*/
 
 
 
