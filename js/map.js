@@ -775,7 +775,7 @@ var trajetEnCours=false;
 
 
         $('#ajout_bateau').css('display', 'none');
-        $('#stopDrawTrajet').css('display', 'block');
+        
         $('#timerbtn').hide();
         currentTrajet = new L.polyline([], {
             color: color_bateau,
@@ -885,6 +885,7 @@ var trajetEnCours=false;
     bool_bateau = 0;
 
     function addLatLngToTrajet(clickEventData) {
+        $('#stopDrawTrajet').css('display', 'block');
         var type_bateau = $('#type_bateau option:selected').val();
         var color_bateau = $('#color_bateau option:selected').val();
 
@@ -1284,7 +1285,7 @@ var trajetEnCours=false;
                         };
                     } else if (color_bateau == "red") {
                         CurrentMarkerTrajet = L.marker([clickEventData.latlng.lat, clickEventData.latlng.lng], {
-                            icon: fpaquebot_ennemi
+                            icon: paquebot_ennemi
                         }).addTo(map);
 
                         CurrentIcon = {
@@ -1751,7 +1752,7 @@ $('.speed').change(function () {             //lorsque le coef de vitesse change
         var dureeTrajet = 1000*DistanceTotaleM / (editVitesse/1.9438399999515);
         dureeTrajet = parseInt(dureeTrajet/(editSpeed*60));
         TOTAL = dureeTrajet;
-        //var dureeTrajet = DistanceTotaleM / 500 ;
+  
 
         bateaux[id] = new L.Marker.movingMarker(currentPolyline2._latlngs
             , TOTAL, editIcon).addTo(map);
