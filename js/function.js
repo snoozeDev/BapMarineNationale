@@ -90,7 +90,7 @@ $("#admin").click(function () {    // on lance la simulation donc on montre la c
     $('#console').show();
     $("#admin").hide();
     $('.red').css("display", "none");
-    $('#boussole').css("left", "27%")
+
     $('.rred2').hide();
 });
 $("#simulation").click(function () {      // on repasse en mode admin
