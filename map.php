@@ -34,6 +34,10 @@
         <option value="lighthouse">Phare</option>
       </select>
       <img src="image/anchor.png" id="icone_img">
+
+      <label>Description (facutatif)</label><br>
+      <textarea class="formula" id="bati_describ" name="description"></textarea>
+
       <a href="#" class="btn"  id="drawBatiment">Ajouter le batiment</a>
     </div>
   </div>

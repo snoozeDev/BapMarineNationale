@@ -487,6 +487,7 @@ function initialize() { //fonction qui permet de charger la carte au lancement d
     function addLatLngToBati(clickEventData) {
         var iconeBatiment = $('#icone_select').val();
         var bati_name = "batiment" + bati;
+        var bati_describ = $('#bati_describ').val();
 
         batiment[bati] = L.marker([clickEventData.latlng.lat, clickEventData.latlng.lng], {
             icon: L.icon({
@@ -497,6 +498,7 @@ function initialize() { //fonction qui permet de charger la carte au lancement d
             })
                 
         }).addTo(map);
+        batiment[bati] = batiment[bati].bindPopup(iconeBatiment+" : "+bati_describ);
         batiment[bati].type = iconeBatiment;
         console.log(batiment[bati]);
          batimentJson[bati] = [batiment[bati]._latlng,batiment[bati].type];
@@ -1426,10 +1428,10 @@ $('.speed').change(function () {             //lorsque le coef de vitesse change
                //faire la modif de vitesse sur tous les bateaux
                //debut de récupération des données du bateau
         console.log("j : "+j);
-        console.log("bateau : "+bateaux[j]);
+        console.log(bateaux[j]);
         boolean_vitesse = false;
         //alert( $(this).attr('id') );
-        if (bateaux[j]._latlngs != null && bateaux[i]!="") {    //recup beateau avant modif
+        if (bateaux[j]._latlngs != null && bateaux[j]!="") {    //recup beateau avant modif
 
                 editIcon = bateaux[j].editIcon;
                 editVitesse = bateaux[j].editVitesse;
@@ -1441,7 +1443,7 @@ $('.speed').change(function () {             //lorsque le coef de vitesse change
                 editDescription = bateaux[j].editDescription;
                 editSpeed = bateaux[j].editSpeed;
                 editDetection = bateaux[j].editDetection;
-                editCurrentPoint = bateaux[j]._currentLine[1]; //recup position
+                
                 editCurrentLine = bateaux[j]._latlngs; //recup trajet
 
                 map.removeLayer(bateaux[j].stock);   //enlever le trajet
@@ -1449,17 +1451,27 @@ $('.speed').change(function () {             //lorsque le coef de vitesse change
                     color: editColor,
                     className: editColor
                 }).addTo(map);
-                currentPolyline2.addLatLng(bateaux[j]._latlng);    // ajouter la position actuelle
-                for (var i = 0; i <= editCurrentLine.length - 1; i++) {    //recup trajet à partir du point
 
-                    if (editCurrentLine[i] == editCurrentPoint) {
-                        boolean_vitesse = true;
-                    }
-                    if (boolean_vitesse == true) {   //if pour reprendre le trajet à partir des points ou l'on en est
-                        currentPolyline2.addLatLng(editCurrentLine[i]);
-                    }
-                    /*bateaux[i]._latlngs*/
-                };
+                if( bateaux[j]._currentLine.length!=0){
+                    editCurrentPoint = bateaux[j]._currentLine[1]; //recup position
+                    
+                }else{
+                    editCurrentPoint = bateaux[j]._latlngs[0];
+                }
+                
+
+                currentPolyline2.addLatLng(bateaux[j]._latlng);    // ajouter la position actuelle
+                    for (var i = 0; i <= editCurrentLine.length - 1; i++) {    //recup trajet à partir du point
+
+                        if (editCurrentLine[i] == editCurrentPoint) {
+                            boolean_vitesse = true;
+                        }
+                        if (boolean_vitesse == true) {   //if pour reprendre le trajet à partir des points ou l'on en est
+                            currentPolyline2.addLatLng(editCurrentLine[i]);
+                        }
+                        /*bateaux[i]._latlngs*/
+                    };
+
                 boolean_vitesse = false;
                 map.removeLayer(bateaux[j]);
                 edit_vitesse = "";
@@ -1520,9 +1532,11 @@ $('.speed').change(function () {             //lorsque le coef de vitesse change
                 } else {
                     bateaux[j].pause();
                 }
-            }else{
+            }
+            if( bateaux[j]==""){
                 map.removeLayer(bateaux[j]);
             }
+
         
     };
 });
@@ -1643,7 +1657,7 @@ $('.speed').change(function () {             //lorsque le coef de vitesse change
         id = $(this).data('id');
         if (bateaux[id]._latlngs != null && bateaux[i]!="") {    //recup beateau avant modif
             $('#toolbar').hide();
-             $('#timerbtn').hide();
+            $('#timerbtn').hide();
             $('#editVitesse').show();
             editIcon = bateaux[id].editIcon;
             editVitesse = bateaux[id].editVitesse;
