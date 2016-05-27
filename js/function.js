@@ -87,7 +87,7 @@ $('#close_console').show();
 /*    mode simulation ou non   */
 $("#admin").click(function () {    // on lance la simulation donc on montre la console, on cache les bateaux ennemis
     $("#simulation").show();
-
+    $('.cercle-radar').show();
     $('#console').show();
     $("#admin").hide();
     $('.red').css("display", "none");
@@ -96,6 +96,7 @@ $("#admin").click(function () {    // on lance la simulation donc on montre la c
 });
 $("#simulation").click(function () {      // on repasse en mode admin
     $("#simulation").hide();
+     $('.cercle-radar').hide();
     $("#admin").show();
      $('.red').css("display", "block");
      $('.rred2').show();

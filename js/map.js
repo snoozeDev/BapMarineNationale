@@ -762,12 +762,14 @@ var textJson = {};
 var CurrentEtat;
 var bateauxJson = {};
 
-
+var trajetEnCours=false;
  
 
 
     drawTrajetButton.addEventListener('click', function () {
         $('#toolbar').hide();
+        trajetEnCours=true;
+        
         var color_bateau = $('#color_bateau option:selected').val();
         var type_bateau = $('#type_bateau option:selected').val();
 
@@ -787,6 +789,8 @@ var bateauxJson = {};
     });
 
     stopDrawTrajet.addEventListener('click', function () {
+        //$('.bateau').show();
+         trajetEnCours=false;
         $('#toolbar').show();
         $('#timerbtn').show();
         bool_bateau = 0;
@@ -845,8 +849,7 @@ var bateauxJson = {};
 
         if (description_bateau.length == 0) {
             bateaux[bat] = bateaux[bat].bindPopup('<label>Type d\'unité : </label>' + CurrentType + '<br><a href="#" id="' + bat + '" class="bateau">Changer Trajet</a><br><a href="#" data-id="' + bat + '" class="bateau_vitesse">Changer Vitesse</a><br><a href="#" data-id="' + bat + '" class="bateau_suppr">Supprimer bateau</a>');
-            bateaux[bat].editDescription = '<label>Type d\'unité : </label>' + CurrentType + '<br><a href="#" id="' + bat + '" class="bateau">Changer Trajet</a><br><a href="#" data-id="' + bat + '" class="bateau_vitesse">Changer Vitesse</a><br><a href="#" data-id="' + bat + '" class="bateau_suppr">Supprimer bateau</a>';
-         
+            bateaux[bat].editDescription = '<label>Type d\'unité : </label>' + CurrentType + '<br><a href="#" id="' + bat + '" class="bateau">Changer Trajet</a><br><a href="#" data-id="' + bat + '" class="bateau_vitesse">Changer Vitesse</a><br><a href="#" data-id="' + bat + '" class="bateau_suppr">Supprimer bateau</a>';        
         } else {
             bateaux[bat] = bateaux[bat].bindPopup('<label>Type d\'unité : </label>' + CurrentType + '<br>' + '<label>Description : </label><br>' + description_bateau + '<a href="#" id="' + bat + '" class="bateau">Changer Trajet</a><br><a href="#" data-id="' + bat + '" class="bateau_vitesse">Changer Vitesse</a><br><a href="#" data-id="' + bat + '" class="bateau_suppr">Supprimer bateau</a>');
             bateaux[bat].editDescription = '<label>Type d\'unité : </label>' + CurrentType + '<br>' + '<label>Description : </label><br>' + description_bateau + '<a href="#" id="' + bat + '" class="bateau">Changer Trajet</a><br><a href="#" data-id="' + bat + '" class="bateau_vitesse">Changer Vitesse</a><br><a href="#" data-id="' + bat + '" class="bateau_suppr">Supprimer bateau</a>';
@@ -1609,106 +1612,111 @@ $('.speed').change(function () {             //lorsque le coef de vitesse change
         bateaux[id].resume();
     });
     $('#map').on('click', '.bateau', function () { // changer trajet
-        if (nouveauTrajet == false) {
-            map.removeLayer(currentPolyline2);
-        }
-        nouveauTrajet = false;
+        if( trajetEnCours==false){
+            trajetEnCours=true;
+            if (nouveauTrajet == false) {
+                map.removeLayer(currentPolyline2);
+            }
+            nouveauTrajet = false;
 
-        //alert( $(this).attr('id') );
-        id = $(this).attr('id');
-        $('#toolbar').hide();
-         $('#timerbtn').hide();
-        editIcon = bateaux[id].editIcon;
-        editVitesse = bateaux[id].editVitesse;
-        editColor = bateaux[id].editColor;
-        suppression = bateaux[id].suppression;
-        editTypeVitesse = bateaux[id].editTypeVitesse;
-        editSpeed = bateaux[id].editSpeed;
-        editType= bateaux[id].editType;
-        editRadar = bateaux[id].editRadar;
-        editDescription = bateaux[id].editDescription;
-
-        editDetection =bateaux[id].editDetection;
-        $('#stopEditPolyline').css('display', 'block');
-        $('#editVitesse').show();
-
-
-        // console.log(bateau[bat]);
-
-        bateaux[id].pause();
-       
-        map.removeLayer(bateaux[id].stock);   //suppression du trajet
-        //bateaux[id].moveTo(bateaux[id]._currentLine[1], 20000);
-        currentPolyline2 = L.polyline([], {
-            color: editColor,
-            className: editColor
-        }).addTo(map);
-        currentPolyline2.addLatLng(bateaux[id]._latlng);
-
-        map.on('click', editLatLngToPolyline); //Listen for clicks on map.*/
-
-
-
-    });
-    $('#map').on('click', '.bateau_vitesse', function () {   //changement vitesse
-
-        boolean_vitesse = false;
-        //alert( $(this).attr('id') );
-        id = $(this).data('id');
-        if (bateaux[id]._latlngs != null && bateaux[i]!="") {    //recup beateau avant modif
+            //alert( $(this).attr('id') );
+            id = $(this).attr('id');
             $('#toolbar').hide();
-            $('#timerbtn').hide();
-            $('#editVitesse').show();
+             $('#timerbtn').hide();
             editIcon = bateaux[id].editIcon;
             editVitesse = bateaux[id].editVitesse;
             editColor = bateaux[id].editColor;
             suppression = bateaux[id].suppression;
             editTypeVitesse = bateaux[id].editTypeVitesse;
-            editDescription = bateaux[id].editDescription;
-            editType = bateaux[id].editType;
             editSpeed = bateaux[id].editSpeed;
+            editType= bateaux[id].editType;
             editRadar = bateaux[id].editRadar;
-            editDetection = bateaux[id].editDetection;
+            editDescription = bateaux[id].editDescription;
 
-            console.log(bateaux[id]);
-            editCurrentLine = bateaux[id]._latlngs; //recup trajet
-            if(bateaux[id]._currentLine[1]){                  //si le bateau n'a pas encore bougé il n'a pas de currentline
-                editCurrentPoint = bateaux[id]._currentLine[1]; //recup position
-            }else {
-                editCurrentPoint=editCurrentLine[0];
-            }
-            
-            console.log(bateaux[id]._currentLine[1]);
-            
+            editDetection =bateaux[id].editDetection;
             $('#stopEditPolyline').css('display', 'block');
+            $('#editVitesse').show();
 
 
             // console.log(bateau[bat]);
 
             bateaux[id].pause();
-            console.log(editCurrentLine);
-            map.removeLayer(bateaux[id].stock);   //enlever le trajet
+           
+            map.removeLayer(bateaux[id].stock);   //suppression du trajet
             //bateaux[id].moveTo(bateaux[id]._currentLine[1], 20000);
             currentPolyline2 = L.polyline([], {
                 color: editColor,
                 className: editColor
             }).addTo(map);
-            currentPolyline2.addLatLng(bateaux[id]._latlng);    // ajouter la position actuelle
-            for (var i = 0; i <= editCurrentLine.length - 1; i++) {    //recup trajet à partir du point
+            currentPolyline2.addLatLng(bateaux[id]._latlng);
 
-                if (editCurrentLine[i] == editCurrentPoint) {
-                    boolean_vitesse = true;
-                }
-                if (boolean_vitesse == true) {   //if pour reprendre le trajet à partir des points ou l'on en est
-                    currentPolyline2.addLatLng(editCurrentLine[i]);
-                }
-                /*bateaux[i]._latlngs*/
-            };
-            boolean_vitesse = false;
+            map.on('click', editLatLngToPolyline); //Listen for clicks on map.*/
 
         }
 
+    });
+    $('#map').on('click', '.bateau_vitesse', function () {   //changement vitesse
+        if(trajetEnCours==false){
+            trajetEnCours=true;
+            
+            trajetEnCours=true;
+            boolean_vitesse = false;
+            //alert( $(this).attr('id') );
+            id = $(this).data('id');
+            if (bateaux[id]._latlngs != null && bateaux[i]!="") {    //recup beateau avant modif
+                $('#toolbar').hide();
+                $('#timerbtn').hide();
+                $('#editVitesse').show();
+                editIcon = bateaux[id].editIcon;
+                editVitesse = bateaux[id].editVitesse;
+                editColor = bateaux[id].editColor;
+                suppression = bateaux[id].suppression;
+                editTypeVitesse = bateaux[id].editTypeVitesse;
+                editDescription = bateaux[id].editDescription;
+                editType = bateaux[id].editType;
+                editSpeed = bateaux[id].editSpeed;
+                editRadar = bateaux[id].editRadar;
+                editDetection = bateaux[id].editDetection;
 
+                console.log(bateaux[id]);
+                editCurrentLine = bateaux[id]._latlngs; //recup trajet
+                if(bateaux[id]._currentLine[1]){                  //si le bateau n'a pas encore bougé il n'a pas de currentline
+                    editCurrentPoint = bateaux[id]._currentLine[1]; //recup position
+                }else {
+                    editCurrentPoint=editCurrentLine[0];
+                }
+                
+                console.log(bateaux[id]._currentLine[1]);
+                
+                $('#stopEditPolyline').css('display', 'block');
+
+
+                // console.log(bateau[bat]);
+
+                bateaux[id].pause();
+                console.log(editCurrentLine);
+                map.removeLayer(bateaux[id].stock);   //enlever le trajet
+                //bateaux[id].moveTo(bateaux[id]._currentLine[1], 20000);
+                currentPolyline2 = L.polyline([], {
+                    color: editColor,
+                    className: editColor
+                }).addTo(map);
+                currentPolyline2.addLatLng(bateaux[id]._latlng);    // ajouter la position actuelle
+                for (var i = 0; i <= editCurrentLine.length - 1; i++) {    //recup trajet à partir du point
+
+                    if (editCurrentLine[i] == editCurrentPoint) {
+                        boolean_vitesse = true;
+                    }
+                    if (boolean_vitesse == true) {   //if pour reprendre le trajet à partir des points ou l'on en est
+                        currentPolyline2.addLatLng(editCurrentLine[i]);
+                    }
+                    /*bateaux[i]._latlngs*/
+                };
+                boolean_vitesse = false;
+
+            }
+
+        }
     });
 
     function editLatLngToPolyline(clickEventData) {
@@ -1721,6 +1729,7 @@ $('.speed').change(function () {             //lorsque le coef de vitesse change
      var stopEdtiPolyline = document.getElementById('stopEditPolyline');
     stopEdtiPolyline.addEventListener('click', function () {
         nouveauTrajet = true;
+        trajetEnCours=false;
         $('#editVitesse').hide();
         $('#toolbar').show();
         $('#timerbtn').show();
