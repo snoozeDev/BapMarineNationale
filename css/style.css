@@ -826,7 +826,9 @@ a, a:visited {
 	font-size: 20px;
 	padding: 10px 20px 10px 20px;
 	border: solid #1f628d 2px 2px 0px 2px;
-	display: inline-block;
+	position: relative;
+	right: 20px;
+
 }
 
 .btn_simulation:hover {
@@ -843,7 +845,7 @@ a, a:visited {
 	font-size: 20px;
 	padding: 10px 20px 10px 20px;
 	border: solid #1f628d 2px 2px 0px 2px;
-	display: inline-block;
+
 }
 
 .btn_admin:hover {
