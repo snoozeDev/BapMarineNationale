@@ -2025,13 +2025,15 @@ function preparationSaveBoats(){
 
             }
 
-            bateauxJson[j] = [editIcon, editVitesse, editColor, suppression, editTypeVitesse, editDescription, editType, editSpeed, editRadar, editDetection, editCurrentLine2];
+            bateauxJson[j] = [editIcon, editVitesse, editColor, suppression, editTypeVitesse, "zob", editType, editSpeed, editRadar, editDetection, editCurrentLine2];
         }
+        console.log(bateauxJson[j]);
     }
     var bateauxJsonString = [];
     bateauxJsonString = JSON.stringify(bateauxJson);
     $('#bateau_save').val(bateauxJsonString);
     console.log($('#bateau_save').val());
+    
 }
 
     

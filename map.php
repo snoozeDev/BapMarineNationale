@@ -154,11 +154,7 @@
 
 </div>
 </div></div>
-<div class="simulation">
 
-  <a href="#" class="btn" id="simulation">Mode Simulation</a>
-  <a href="#" class="btn" id="admin">Mode Administrateur</a>
-</div>
 <div class="big_btn">
  <div id="cont">
   <div class="timer">
@@ -302,6 +298,12 @@
                   </form>
 
                 </div>
+
+                  <div class="simulation">
+
+                      <a href="#" class="btn" id="simulation">Mode Simulation</a>
+                      <a href="#" class="btn" id="admin">Mode Administrateur</a>
+                  </div>
               </div>
 
 
