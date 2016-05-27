@@ -287,7 +287,7 @@
                   </div><br>
                 </div>
                 <div>
-
+<button onclick="preparationSaveBoats()">Sauvegarder</button>
                   <form class="sauvegarde" action='sauveguarde.php' method='post' id='myform'>
                     <h3 class="sauvegarde_title">Sauvegardez votre carte</h3>
                     <input class="map_name" type="text" name="mapName" placeholder="Nom de la carte">
@@ -297,7 +297,7 @@
                     <input type="hidden" id="text" name="texts">
                     <input type="hidden" id="polyl" name="polyls">
                     <input type="hidden" id="bati" name="batis">
-                    <input type="hidden" id="bateau" name="bateaux">
+                    <input type="hidden" id="bateau_save" name="bateau_save">
                     <button class="save" id='insert'>Sauvegarder</button>
                   </form>
 
