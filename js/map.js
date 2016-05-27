@@ -1,4 +1,4 @@
-    //fonction booléenne affichage ou non
+        //fonction booléenne affichage ou non
     //var valider = "non";
     var simulation=false;
     
@@ -477,13 +477,9 @@ function initialize() { //fonction qui permet de charger la carte au lancement d
         map.off('click', addLatLngToBati); //on arrête d'écouter les cliques sur la map
         var elem = "batiment" + bati;    //element utile pour la suppression 
         var form = batiment[bati].options.icon.options.html;
-        $( "p" ).on( "click", function() {
-            $( this ).width( 208).height(0);
-        });
+      
         $('.delete_batiment_p').append('<div class="bord"> <div class="margebatiment" class="form" id="' + elem + '" onclick="delete_obj(&#34;' + elem + '&#34;,&#34;' + form + '&#34;);return false"><p>Supprimer ' + form + ' </p> <div class="oeilvert" id="oeil"><div id="oeil'+ elem + '" class="vert yeux"></div></div></div> </div>');
-        $( "p" ).on( "click", function() {
-            $( this).off();
-        });
+        
         bati++;
         console.log(bati);
     };
@@ -566,13 +562,9 @@ function initialize() { //fonction qui permet de charger la carte au lancement d
         
         
         var form = 'le polygone ' + color_fr + ' n°' + polyg2;
-        $( "p" ).on( "click", function() {
-            $( this ).width( 208).height(0);
-        });
+      
         $('.delete_polygone_p').append('<div class="bord"> <div class="margepolygone" class="form" id="' + elem + '" onclick="delete_obj(&#34;' + elem + '&#34;,&#34;' + form + '&#34;);return false"><p>Supprimer ' + form + ' </p> <div class="oeilvert" id="oeil"><div id="oeil'+ elem + '" class="vert yeux"></div></div></div> </div>');
-        $( "p" ).on( "click", function() {
-            $( this).off();
-        });
+        
 
         polyg++;
 
@@ -606,13 +598,9 @@ var textJson = {};
         map.off('click', addLatLngToMarker); //Stop listening for clicks on map.
         var elem = "texte" + tex;
         var form = texte[tex].options.icon.options.html;
-        $( "p" ).on( "click", function() {
-            $( this ).width( 208).height(0);
-        });
+      
         $('.delete_texte_p').append('<div class="bord"> <div class="margetexte" class="form" id="' + elem + '" onclick="delete_obj(&#34;' + elem + '&#34;,&#34;' + form + '&#34;);return false"><p>Supprimer ' + form + ' </p> <div class="oeilvert" id="oeil"><div id="oeil'+ elem + '" class="vert yeux"></div></div></div> </div>');
-        $( "p" ).on( "click", function() {
-            $( this).off();
-        });
+        
         tex++;
     };
 
@@ -676,13 +664,9 @@ var textJson = {};
             break;
         }
         var form = 'le cercle ' + color_fr + ' n°' + cer2;
-        $( "p" ).on( "click", function() {
-            $( this ).width( 208).height(0);
-        });
+      
         $('.delete_cercle_p').append('<div class="bord"> <div class="margecercle" class="form" id="' + elem + '" onclick="delete_obj(&#34;' + elem + '&#34;,&#34;' + form + '&#34;);return false"><p>Supprimer ' + form + ' </p> <div class="oeilvert" id="oeil"><div id="oeil'+ elem + '" class="vert yeux"></div></div></div> </div>');
-        $( "p" ).on( "click", function() {
-            $( this).off();
-        });
+        
         cer++;
     
 
@@ -855,15 +839,15 @@ var bateauxJson = {};
 
         var description_bateau = $('#description').val();
         //edit de bateaux
-
+        CurrentType = $('#type_bateau option:selected').val();
 
         if (description_bateau.length == 0) {
-            bateaux[bat] = bateaux[bat].bindPopup('<label>Type d\'unité : </label>' + type_bateau + '<br><a href="#" id="' + bat + '" class="bateau">Changer Trajet</a><br><a href="#" data-id="' + bat + '" class="bateau_vitesse">Changer Vitesse</a><br><a href="#" data-id="' + bat + '" class="bateau_suppr">Supprimer bateau</a>');
-            bateaux[bat].editDescription = '<label>Type d\'unité : </label>' + type_bateau + '<br><a href="#" id="' + bat + '" class="bateau">Changer Trajet</a><br><a href="#" data-id="' + bat + '" class="bateau_vitesse">Changer Vitesse</a><br><a href="#" data-id="' + bat + '" class="bateau_suppr">Supprimer bateau</a>';
+            bateaux[bat] = bateaux[bat].bindPopup('<label>Type d\'unité : </label>' + CurrentType + '<br><a href="#" id="' + bat + '" class="bateau">Changer Trajet</a><br><a href="#" data-id="' + bat + '" class="bateau_vitesse">Changer Vitesse</a><br><a href="#" data-id="' + bat + '" class="bateau_suppr">Supprimer bateau</a>');
+            bateaux[bat].editDescription = '<label>Type d\'unité : </label>' + CurrentType + '<br><a href="#" id="' + bat + '" class="bateau">Changer Trajet</a><br><a href="#" data-id="' + bat + '" class="bateau_vitesse">Changer Vitesse</a><br><a href="#" data-id="' + bat + '" class="bateau_suppr">Supprimer bateau</a>';
          
         } else {
-            bateaux[bat] = bateaux[bat].bindPopup('<label>Type d\'unité : </label>' + type_bateau + '<br>' + '<label>Description : </label><br>' + description_bateau + '<a href="#" id="' + bat + '" class="bateau">Changer Trajet</a><br><a href="#" data-id="' + bat + '" class="bateau_vitesse">Changer Vitesse</a><br><a href="#" data-id="' + bat + '" class="bateau_suppr">Supprimer bateau</a>');
-            bateaux[bat].editDescription = '<label>Type d\'unité : </label>' + type_bateau + '<br>' + '<label>Description : </label><br>' + description_bateau + '<a href="#" id="' + bat + '" class="bateau">Changer Trajet</a><br><a href="#" data-id="' + bat + '" class="bateau_vitesse">Changer Vitesse</a><br><a href="#" data-id="' + bat + '" class="bateau_suppr">Supprimer bateau</a>';
+            bateaux[bat] = bateaux[bat].bindPopup('<label>Type d\'unité : </label>' + CurrentType + '<br>' + '<label>Description : </label><br>' + description_bateau + '<a href="#" id="' + bat + '" class="bateau">Changer Trajet</a><br><a href="#" data-id="' + bat + '" class="bateau_vitesse">Changer Vitesse</a><br><a href="#" data-id="' + bat + '" class="bateau_suppr">Supprimer bateau</a>');
+            bateaux[bat].editDescription = '<label>Type d\'unité : </label>' + CurrentType + '<br>' + '<label>Description : </label><br>' + description_bateau + '<a href="#" id="' + bat + '" class="bateau">Changer Trajet</a><br><a href="#" data-id="' + bat + '" class="bateau_vitesse">Changer Vitesse</a><br><a href="#" data-id="' + bat + '" class="bateau_suppr">Supprimer bateau</a>';
         }
         var stock = currentTrajet;
 
@@ -873,7 +857,7 @@ var bateauxJson = {};
         $(bateaux[bat]._icon).addClass(classId);
         bateaux[bat].suppression=false;
         bateaux[bat].editVitesse = CurrentVitesse;
-        CurrentType = $('#type_bateau option:selected').val();
+       
         bateaux[bat].editType = CurrentType;
         
 
@@ -1389,7 +1373,7 @@ var bateauxJson = {};
     // editer une trajectoire 
 
     $('#play').click(function () {
-        simulation=true;
+        //simulation=true;
         for (var i = bateaux.length - 1; i >= 0; i--) {
             if(bateaux[i]._latlngs){
                 if (bateaux[i]._latlngs[1]){
@@ -1402,7 +1386,7 @@ var bateauxJson = {};
     })
 
     $('#pause').click(function () {
-    simulation=false;
+        //simulation=false;
         for (var i = bateaux.length - 1; i >= 0; i--) {
             console.log("i"+bateaux[i]);
             if (bateaux[i] && bateaux[i]!=null && bateaux[i]!="") {
@@ -1870,13 +1854,9 @@ $('.speed').change(function () {             //lorsque le coef de vitesse change
         
         
         var form = 'le polygone ' + color_fr + ' n°' + polyg2;
-        $( "p" ).on( "click", function() {
-            $( this ).width( 208).height(0);
-        });
+        
         $('.delete_polygone_p').append('<div class="bord"><div class="margepolygone"><p class="form" id="' + elem + '" onclick="delete_obj(&#34;' + elem + '&#34;,&#34;' + form + '&#34;);return false">Supprimer ' + form + ' </p></div> <div class="oeilvert"><div id="oeil'+ elem + '" class="vert yeux"></div></div></div>');
-        $( "p" ).on( "click", function() {
-            $( this).off();
-        });
+       
         polyg++;
 
         map.off('click', addLatLngToPolygon); //Stop listening for clicks on map.
@@ -1940,13 +1920,9 @@ function loadPolyl(polylsPhp){
         var polylineJsonString = JSON.stringify(polylineJson);
         $('#polyl').val(polylineJsonString);
         var form = 'la ligne ' + color_fr + ' n°' + poly2;
-        $( "p" ).on( "click", function() {
-            $( this ).width( 208).height(0);
-        });
+     
         $('.delete_polyline_p').append('<div class="bord"><div class="margepolyline"><p class="form" id="' + elem + '" onclick="delete_obj(&#34;' + elem + '&#34;,&#34;' + form + '&#34;);return false">Supprimer ' + form + ' </p> </div><div class="oeilvert"><div id="oeil'+ elem + '" class="vert yeux"></div></div></div>');
-        $( "p" ).on( "click", function() {
-            $( this).off();
-        });
+        
         poly++;
 
         map.off('click', addLatLngToPolyline); //Stop listening for clicks on map.
@@ -2190,7 +2166,7 @@ $('#simulation').on('click',function(){
 });
 
 // fin du game 
-
+/*
 $('#fin').on('click', function() {
     $('.fin').hide();
     $('#timerbtn').hide();
@@ -2206,7 +2182,7 @@ $('#fin').on('click', function() {
     $("#admin").show();
      $('.red').css("display", "block");
      $('.rred2').show();
-});
+});*/
 
 
 

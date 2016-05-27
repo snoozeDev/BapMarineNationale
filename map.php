@@ -318,7 +318,7 @@
 
                       <ul class="batiments">
 
-                        <br/>
+                        
                         <p class="delete_batiment_p"></p>
                       </ul>
                     </div>
@@ -330,7 +330,7 @@
 
                       <ul class="lignes">
 
-                        <br/>
+                        
                         <p class="delete_polyline_p"></p>
                       </ul>
                     </div>
@@ -340,7 +340,7 @@
                     <div class="share-wrap">
                       <div class="main-bar2 main-bar" style="color: #2C3E50;">Cercle(s)<span><img src="image/dropdown-bas%20suppression.png"/></span></div>
                       <ul class="cercle">
-                        <br/>
+                        
                         <p class="delete_cercle_p"></p>
                       </ul>
                     </div>
@@ -351,7 +351,7 @@
                     <div class="share-wrap">
                       <div class="main-bar3 main-bar" style="color: #2C3E50;">Texte(s)<span><img src="image/dropdown-bas%20suppression.png"/></span></div>
                       <ul class="texte">
-                        <br/>
+                        
                         <p class="delete_texte_p"></p>
                       </ul>
                     </div>
@@ -362,7 +362,7 @@
                     <div class="share-wrap">
                       <div class="main-bar4 main-bar" style="color: #2C3E50;">Polygone(s)<span><img src="image/dropdown-bas%20suppression.png"/></span></div>
                       <ul class="polygone">
-                        <br/>
+                        
                         <p class="delete_polygone_p"></p>
                       </ul>
                     </div>
