@@ -528,6 +528,7 @@ ul {
 	margin-top:-1px;
 	background:#2C3E50;
 
+
 }
 .batiments p{
 	margin: 0;
@@ -544,24 +545,35 @@ ul.lignes{
 	display:none;
 	margin-top:-1px;
 	background:#2C3E50;
+	height: 20%;
 }
 
 ul.cercle{
 	display:none;
 	margin-top:-1px;
 	background:#2C3E50;
+	height: 20%;
 }
 
 ul.texte{
 	display:none;
 	margin-top:-1px;
 	background:#2C3E50;
+	height: 20%;
 }
 
 ul.polygone{
 	display:none;
 	margin-top:-1px;
 	background:#2C3E50;
+	height: 20%;
+}
+
+ul.batiments{
+	display:none;
+	margin-top:-1px;
+	background:#2C3E50;
+	height: 20%;
 }
 
 li {
