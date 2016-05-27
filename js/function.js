@@ -37,7 +37,7 @@ function delete_obj(elem, form){
 
 
 
-        $('#'+elem).html('<div class="margepolyline">supprimer '+form+' </div><div class="oeilvert" style="top: 20px; left:95px;"><div class=" yeux vert"></div></div>');
+        $('#'+elem).html('<div class="margepolyline">supprimer '+form+' </div><div class="oeilvert"><div class=" yeux vert"></div></div>');
     }else{
 
         if(doubleclique==0){
@@ -49,12 +49,12 @@ function delete_obj(elem, form){
                 'animation-iteration-count': 'infinite'
             });
 
-            $('#'+elem).html('<img style="height:44px;width:44px;position: relative;top:16px;left:15px;" src="image/validationsuppression.png"/> '); //mettre image valider
-            $('#'+elem).append('<img style="height:44px;width:54px;position: relative;top:16px;left:95px; " src="image/supprsuppression.png" onclick="doubleclique=2;" />');//mettre image suppression
+            $('#'+elem).html('<img src="image/validationsuppression.png"/> '); //mettre image valider
+            $('#'+elem).append('<img src="image/supprsuppression.png" onclick="doubleclique=2;" />');//mettre image suppression
         }else if(doubleclique==1){
             $('.'+elem).removeClass('anim');
             $('.'+elem).css('display', 'none');
-            $('#'+elem).html('<div class="margepolyline">remettre '+form+'</div><div class="oeilvert" style="top: 20px; left:95px;"><div class=" yeux rouge"></div></div>'); //mettre oeil rouge
+            $('#'+elem).html('<div class="margepolyline">remettre '+form+'</div><div class="oeilvert"><div class=" yeux rouge"></div></div>'); //mettre oeil rouge
 
             doubleclique=0;
 
@@ -69,7 +69,7 @@ function delete_obj(elem, form){
                 'animation-delay': '',
                 'animation-iteration-count': ''
             });
-            $('#'+elem).html('<div class="margepolyline">supprimer '+form+'</div><div class="oeilvert" style="top: 20px; left:95px;"><div class=" yeux vert"></div></div>');
+            $('#'+elem).html('<div class="margepolyline">supprimer '+form+'</div><div class="oeilvert"><div class=" yeux vert"></div></div>');
             doubleclique=0;
         }
 

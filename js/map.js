@@ -477,13 +477,9 @@ function initialize() { //fonction qui permet de charger la carte au lancement d
         map.off('click', addLatLngToBati); //on arrête d'écouter les cliques sur la map
         var elem = "batiment" + bati;    //element utile pour la suppression 
         var form = batiment[bati].options.icon.options.html;
-        $( "p" ).on( "click", function() {
-            $( this ).width( 208).height(0);
-        });
+      
         $('.delete_batiment_p').append('<div class="bord"> <div class="margebatiment" class="form" id="' + elem + '" onclick="delete_obj(&#34;' + elem + '&#34;,&#34;' + form + '&#34;);return false"><p>Supprimer ' + form + ' </p> <div class="oeilvert" id="oeil"><div id="oeil'+ elem + '" class="vert yeux"></div></div></div> </div>');
-        $( "p" ).on( "click", function() {
-            $( this).off();
-        });
+        
         bati++;
         console.log(bati);
     };
@@ -566,13 +562,9 @@ function initialize() { //fonction qui permet de charger la carte au lancement d
         
         
         var form = 'le polygone ' + color_fr + ' n°' + polyg2;
-        $( "p" ).on( "click", function() {
-            $( this ).width( 208).height(0);
-        });
+      
         $('.delete_polygone_p').append('<div class="bord"> <div class="margepolygone" class="form" id="' + elem + '" onclick="delete_obj(&#34;' + elem + '&#34;,&#34;' + form + '&#34;);return false"><p>Supprimer ' + form + ' </p> <div class="oeilvert" id="oeil"><div id="oeil'+ elem + '" class="vert yeux"></div></div></div> </div>');
-        $( "p" ).on( "click", function() {
-            $( this).off();
-        });
+        
 
         polyg++;
 
@@ -606,13 +598,9 @@ var textJson = {};
         map.off('click', addLatLngToMarker); //Stop listening for clicks on map.
         var elem = "texte" + tex;
         var form = texte[tex].options.icon.options.html;
-        $( "p" ).on( "click", function() {
-            $( this ).width( 208).height(0);
-        });
+      
         $('.delete_texte_p').append('<div class="bord"> <div class="margetexte" class="form" id="' + elem + '" onclick="delete_obj(&#34;' + elem + '&#34;,&#34;' + form + '&#34;);return false"><p>Supprimer ' + form + ' </p> <div class="oeilvert" id="oeil"><div id="oeil'+ elem + '" class="vert yeux"></div></div></div> </div>');
-        $( "p" ).on( "click", function() {
-            $( this).off();
-        });
+        
         tex++;
     };
 
@@ -676,13 +664,9 @@ var textJson = {};
             break;
         }
         var form = 'le cercle ' + color_fr + ' n°' + cer2;
-        $( "p" ).on( "click", function() {
-            $( this ).width( 208).height(0);
-        });
+      
         $('.delete_cercle_p').append('<div class="bord"> <div class="margecercle" class="form" id="' + elem + '" onclick="delete_obj(&#34;' + elem + '&#34;,&#34;' + form + '&#34;);return false"><p>Supprimer ' + form + ' </p> <div class="oeilvert" id="oeil"><div id="oeil'+ elem + '" class="vert yeux"></div></div></div> </div>');
-        $( "p" ).on( "click", function() {
-            $( this).off();
-        });
+        
         cer++;
     
 
@@ -1870,13 +1854,9 @@ $('.speed').change(function () {             //lorsque le coef de vitesse change
         
         
         var form = 'le polygone ' + color_fr + ' n°' + polyg2;
-        $( "p" ).on( "click", function() {
-            $( this ).width( 208).height(0);
-        });
+        
         $('.delete_polygone_p').append('<div class="bord"><div class="margepolygone"><p class="form" id="' + elem + '" onclick="delete_obj(&#34;' + elem + '&#34;,&#34;' + form + '&#34;);return false">Supprimer ' + form + ' </p></div> <div class="oeilvert"><div id="oeil'+ elem + '" class="vert yeux"></div></div></div>');
-        $( "p" ).on( "click", function() {
-            $( this).off();
-        });
+       
         polyg++;
 
         map.off('click', addLatLngToPolygon); //Stop listening for clicks on map.
@@ -1940,13 +1920,9 @@ function loadPolyl(polylsPhp){
         var polylineJsonString = JSON.stringify(polylineJson);
         $('#polyl').val(polylineJsonString);
         var form = 'la ligne ' + color_fr + ' n°' + poly2;
-        $( "p" ).on( "click", function() {
-            $( this ).width( 208).height(0);
-        });
+     
         $('.delete_polyline_p').append('<div class="bord"><div class="margepolyline"><p class="form" id="' + elem + '" onclick="delete_obj(&#34;' + elem + '&#34;,&#34;' + form + '&#34;);return false">Supprimer ' + form + ' </p> </div><div class="oeilvert"><div id="oeil'+ elem + '" class="vert yeux"></div></div></div>');
-        $( "p" ).on( "click", function() {
-            $( this).off();
-        });
+        
         poly++;
 
         map.off('click', addLatLngToPolyline); //Stop listening for clicks on map.

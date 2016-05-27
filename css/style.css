@@ -537,11 +537,21 @@ body.sidebar-show {
 }
 ul {
 	display:none;
+	padding: 0;
+	width: 100%;
 	margin-top:-1px;
 	background:#2C3E50;
-	overflow-y: scroll;
-	height:200px;
 
+}
+.batiments p{
+	margin: 0;
+
+
+
+}
+.batiments img{
+	display: inline-block;
+	width: 25%;
 }
 
 ul.lignes{
@@ -660,41 +670,31 @@ a, a:visited {
 }
 
 .boutonvalide {
-	position: relative;
 	height: 4px;
 	width: 35px;
-	top: 20px;
-	left: 8px;
 	background-color: #FFF;
 	border-radius: 5px;
 	transform: rotate(116deg);
 }
 
 .boutonvalide2 {
-	position: relative;
 	height: 4px;
 	width: 15px;
-	top: 26px;
-	left: 6px;
 	background-color: #FFF;
 	border-radius: 5px;
 	transform: rotate(42deg);
 }
 
 .oeilvert {
-
-	width:30px;
-	height:20px;
-	background-color:rgba(200,200,200,0.5);
-
-
-	position: relative;
-	border-style: solid;
-	border-width: 2px;
-
-	left: 85px;
-	top: -4px;
-
+    width: 30px;
+    height: 20px;
+    background-color: rgba(200,200,200,0.5);
+    /* position: relative; */
+    border-style: solid;
+    margin: auto;
+    border-width: 2px;
+    /* left: 85px; */
+    /* top: -4px; */
 }
 
 
@@ -1280,44 +1280,20 @@ a:visited
 	color: #ffffff;
 }
 
-
+.delete_batiment_p {
+	margin: 0;
+}
 
 .bord{
-	border: solid white;
-	width: 228px;
-	position: relative;
-	right:2px;
-	height: 80px;
+	border: 1px solid rgba(255,255,255,0.8);
+	width: 96%;
+	text-align: center;
+	padding: 2%;
 }
 
 h1 {
 	margin-bottom: 70px;
 }
-
-.margebatiment{
-	margin-left: 9px;
-}
-
-.margepolygone{
-	margin-left: 2px;
-}
-
-.margepolygone2{
-	margin-left: 4px;
-}
-
-.margepolyline{
-	margin-left: 2px;
-}
-
-.margecercle{
-	margin-left: 14px;
-}
-
-.margetexte{
-	margin-left: 15px;
-}
-
 
 p.blast{
 
