@@ -37,7 +37,7 @@ function delete_obj(elem, form){
 
 
 
-        $('#'+elem).html('<div class="margepolyline">supprimer '+form+' </div><div class="oeilvert"><div class=" yeux vert"></div></div>');
+        $('#'+elem).html('<div class="margepolyline">cacher '+form+' </div><div class="oeilvert"><div class=" yeux vert"></div></div>');
     }else{
 
         if(doubleclique==0){
@@ -69,7 +69,7 @@ function delete_obj(elem, form){
                 'animation-delay': '',
                 'animation-iteration-count': ''
             });
-            $('#'+elem).html('<div class="margepolyline">supprimer '+form+'</div><div class="oeilvert"><div class=" yeux vert"></div></div>');
+            $('#'+elem).html('<div class="margepolyline">cacher '+form+'</div><div class="oeilvert"><div class=" yeux vert"></div></div>');
             doubleclique=0;
         }
 
@@ -83,10 +83,11 @@ function delete_obj(elem, form){
 $("#simulation").hide();
 $('#console').hide();
 $('#notif').hide();
+$('#close_console').show();
 /*    mode simulation ou non   */
 $("#admin").click(function () {    // on lance la simulation donc on montre la console, on cache les bateaux ennemis
     $("#simulation").show();
-
+    $('.cercle-radar').show();
     $('#console').show();
     $("#admin").hide();
     $('.red').css("display", "none");
@@ -95,6 +96,7 @@ $("#admin").click(function () {    // on lance la simulation donc on montre la c
 });
 $("#simulation").click(function () {      // on repasse en mode admin
     $("#simulation").hide();
+     $('.cercle-radar').hide();
     $("#admin").show();
      $('.red').css("display", "block");
      $('.rred2').show();
@@ -105,6 +107,7 @@ $('#close_console').click(function(){
     if(console_message==0){
         notif=0;
         $('.black').css('height',"0");
+        $('#close_console').css('height',"60");
         $('#console').css('height',"auto");
         $('#notif').show();
         $('#close').hide();
@@ -113,6 +116,7 @@ $('#close_console').click(function(){
     }else{
         notif=0;
         $('.black').css('height',"80%");
+        $('#close_console').css('height',"25");
         $('#console').css('height',"50%");
         $('#notif').hide();
         $('#close').show();
