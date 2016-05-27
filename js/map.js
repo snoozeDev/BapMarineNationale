@@ -616,6 +616,7 @@ var textJson = {};
                 className: text_name
                 , html: text
                 , iconSize: [200, 80]
+                ,iconAnchor:   [70, 0],
             })
         }).addTo(map);
         console.log(texte[tex]);
@@ -824,7 +825,7 @@ var bateauxJson = {};
         
         bateaux[bat] = L.Marker.movingMarker(currentTrajet._latlngs
             , TOTAL, CurrentIcon).addTo(map);
-
+console.log(currentTrajet._latlngs);
         if(playOrPause == 1){
             if (bateaux[bat]._latlngs){
                 if (currentTrajet._latlngs[1]){
@@ -1471,6 +1472,7 @@ $('.speed').change(function () {             //lorsque le coef de vitesse change
                     DistanceTotaleM += currentPolyline2._latlngs[i].distanceTo(currentPolyline2._latlngs[i - 1]);
                 }
                 editSpeed = speed;
+                
                 var dureeTrajet = 1000*DistanceTotaleM / (editVitesse/1.9438399999515);
                 dureeTrajet = parseInt(dureeTrajet/(editSpeed*60));
                 TOTAL = dureeTrajet;
@@ -1952,10 +1954,130 @@ function loadBati(batisPhp){
     }
 };
 
+function getDistanceFromLatLonInKm(lat1,lon1,lat2,lon2) {
+  var R = 6371; // Radius of the earth in km
+  var dLat = deg2rad(lat2-lat1);  // deg2rad below
+  var dLon = deg2rad(lon2-lon1); 
+  var a = 
+    Math.sin(dLat/2) * Math.sin(dLat/2) +
+    Math.cos(deg2rad(lat1)) * Math.cos(deg2rad(lat2)) * 
+    Math.sin(dLon/2) * Math.sin(dLon/2)
+    ; 
+  var c = 2 * Math.atan2(Math.sqrt(a), Math.sqrt(1-a)); 
+  var d = R * c; // Distance in km
+  return d;
+}
+
+function deg2rad(deg) {
+  return deg * (Math.PI/180)
+}
+
 function loadBateaux(bateauxPhp){
+    var limit = Object.keys(bateauxPhp).length;
+    for (var a = 0; a < limit; a++) {
+        console.log(bateauxPhp[a]);
+                nouveauTrajet = true;
+//        $('#editVitesse').hide();
+//        $('#toolbar').show();
+//        $('#timerbtn').show();
+//        map.off('click', editLatLngToPolyline); //Stop listening for clicks on map
+//        map.removeLayer(bateaux[id]);
+//        var edit_vitesse = $('#editVitesse').val();
+//        if (edit_vitesse.length > 0) {
+//            editVitesse = edit_vitesse;
+//        }
+//        edit_vitesse = "";
+        
+        
+        var editVitesse = bateauxPhp[i];
+        var nombreDePoints = bateauxPhp[a][9].length;
+        var DistanceTotaleM = 0;
+        var stock = [];
+        if(nombreDePoints !== 1){
+            for (var u = 1; u < nombreDePoints; u++) {
+                var before = [bateauxPhp[a][9][u].lat,bateauxPhp[a][9][u].lng];
+                var after = [bateauxPhp[a][9][u - 1].lat,bateauxPhp[a][9][u-1].lng];
+//                console.log(before);
+//                console.log(after);
+ DistanceTotaleM += getDistanceFromLatLonInKm(bateauxPhp[a][9][u].lat,bateauxPhp[a][9][u].lng,bateauxPhp[a][9][u - 1].lat,bateauxPhp[a][9][u-1].lng);
+////                console.log(bateauxPhp[a][9][u].lat);
+////                 console.log(bateauxPhp[a][9][u].lng);
+////                 console.log(bateauxPhp[a][9][u - 1].lat);
+////                 console.log(bateauxPhp[a][9][u - 1].lng)
+                  
+            }
+        }
+var currentPolyline2 = [];
+        for (var p = 0; p < nombreDePoints; p++) {
+//        stock[p] = [bateauxPhp[a][9][p].lat,bateauxPhp[a][9][p].lng];
+
+        }
+
+//console.log(stock);
+        
+        
+         
+        
+        var dureeTrajet = 1000*DistanceTotaleM / (editVitesse/1.9438399999515);
+        dureeTrajet = parseInt(dureeTrajet/(editSpeed*60));
+        TOTAL = dureeTrajet;
+  
+        bateaux[a] = new L.Marker.movingMarker(currentPolyline2
+            , TOTAL, {
+                            icon: cargo_ennemi
+                        }).addTo(map);
+       //edit de bateaux
+//       
+//       
     
-    console.log(bateauxPhp);
-    
+//        bateaux[a] =  bateaux[a].bindPopup(editDescription);
+//        bateaux[a].editDescription = editDescription;
+        
+//
+//
+        classId=bateauxPhp[a][2]+a;
+//         console.log(editColor);
+//         console.log(id);
+        $(bateaux[a]._icon).addClass(classId);
+//        bateaux[a].stock = currentPolyline2;
+//        // console.log(('#grosbateau').id);
+//        var edit_vitesse = $('#editVitesse').val();
+//        //edit de bateaux
+//
+//
+//
+        bateaux[a].editVitesse = bateauxPhp[a][1] ;
+//        bateaux[a].suppression=suppression;
+//        bateaux[a].editSpeed = editSpeed;
+        bateaux[a].editRadar = bateauxPhp[a][7] ;
+//
+        bateaux[a].editDetection = bateauxPhp[a][3];
+        bateaux[a].editIcon = {
+                            icon: cargo_ennemi
+                        };
+        bateaux[a].editType = bateauxPhp[a][5];
+        bateaux[a].editColor = bateauxPhp[a][2];
+//        bateaux[id].editTypeVitesse = editTypeVitesse;
+//
+        console.log(bateaux[a]);
+//        
+//        
+//        
+        if(simulation==true){
+            $('.red').css("display", "none");
+        }
+        
+        if (bateaux[a]._latlngs){
+            if (playOrPause == 1) {
+            
+                if (bateaux[a]._latlngs[1]){
+                    bateaux[a].start();
+                }
+            }else {
+            bateaux[a].pause();
+            }
+        } 
+    }
 }
 
 
