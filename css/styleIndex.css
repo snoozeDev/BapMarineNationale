@@ -25,6 +25,7 @@ main .helper {
   background: rgba(0, 0, 0, 0);
   color: #ffffff;
   
+  margin-left: 10%;
   top: 50%;
   left: 40%;
   transform: translate3d(-50%, -50%, 0);
