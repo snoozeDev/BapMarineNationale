@@ -185,6 +185,9 @@ text-decoration: none;
 
 #timer{
 	font-size:180%;
+	position: relative;
+	top: 50px;
+	right: 130px;
 
 
 }
@@ -823,7 +826,9 @@ a, a:visited {
 	font-size: 20px;
 	padding: 10px 20px 10px 20px;
 	border: solid #1f628d 2px 2px 0px 2px;
-	display: inline-block;
+	position: relative;
+	right: 20px;
+
 }
 
 .btn_simulation:hover {
@@ -840,7 +845,7 @@ a, a:visited {
 	font-size: 20px;
 	padding: 10px 20px 10px 20px;
 	border: solid #1f628d 2px 2px 0px 2px;
-	display: inline-block;
+
 }
 
 .btn_admin:hover {
@@ -862,7 +867,7 @@ a, a:visited {
 	color: white;
 	margin: 0 0 8px;
 	font-family: sans-serif;
-	background-color: #004080;  
+	background-color: #004080;
 	padding: 8px;
 	font-size: 1.2em;
 	width: 80%;
@@ -871,6 +876,8 @@ a, a:visited {
 	margin-left: 10%;
 	margin-right: 10%;
 	border-radius: 10px;
+	position: relative;
+	left: 145px;
 
 }
 .pop_up {
