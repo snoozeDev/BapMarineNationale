@@ -121,7 +121,7 @@
 <div id="ajout_bateau" class="pop_up_inv hide"><div  class="pop_up">
  <div class="formulaire_bat">
    <p class="title"> DÉPLACEMENT </p>
-   <label>Type de vehicule</label><br>
+   <label>Type de vehicule</label>
    <select class="formula" id="type_bateau" name="type_bateau">
      <option value="porte-avion">Porte-avion</option>
      <option value="asm">FASM</option>
@@ -139,20 +139,20 @@
      <option value="peche">Bateau de pêche Civil</option>
 
    </select>
-   <label>Vitesse du trajet (en noeud)</label><br>
-   <input type="text" id="vitesse_bateau" value="15"><br><br>
+   <label>Vitesse du trajet (en noeud)</label>
+   <input class="formula" type="text" id="vitesse_bateau" value="15">
 
-   <label>Distance du radar (en km)</label><br>
-   <input type="text" id="radar" value="800"><br><br>
+   <label>Distance du radar (en km)</label>
+   <input class="formula" type="text" id="radar" value="800">
 
-   <label>Alignement</label><br>
+   <label>Alignement</label>
    <select class="formula" id="color_bateau" name="color_bateau">
     <option value="blue">Allié</option>
     <option value="green">Neutre</option>
     <option value="red">Ennemi</option>
-  </select><br>
+  </select>
 
-  <label>Description (facutatif)</label><br>
+  <label>Description (facutatif)</label>
   <textarea class="formula" id="description" name="description"></textarea>
   <a href="#" class="btn" id="drawTrajet">Ajouter Trajet</a>
 
@@ -163,14 +163,14 @@
  <div id="cont">
   <div class="timer">
     <div id="timerbtn">
-     <img src="image/play.png" style="display:inline-block" id="play" class="btntime">
-     <img src="image/pause.png" style="display:none"  id="pause" class="btntime">
+      <img src="image/play.png" style="position: relative;top: 110px;" id="play" class="btntime">
+      <img src="image/pause.png" style="display:none;position: relative;top: 110px;"  id="pause" class="btntime">
    </div>
    
    <div id="timer">
 
 
-     <span id="days">00J</span><br> 
+     <span id="days">00J</span>
      <span id="hours">00H</span>
      <span id="mins">00</span>  
 
