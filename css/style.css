@@ -535,7 +535,8 @@ body.sidebar-show {
 	cursor:pointer;
 	color: #82C9BD;
 }
-ul {
+.contenu_onglet ul {
+	    margin-bottom: 0;
 	display:none;
 	padding: 0;
 	width: 100%;
@@ -543,42 +544,19 @@ ul {
 	background:#2C3E50;
 
 }
-.batiments p{
+.contenu_onglet p{
 	margin: 0;
 
 
 
 }
-.batiments img{
+.contenu_onglet img{
 	display: inline-block;
-	width: 25%;
+	width: 15%;
+	padding: 0 5% 0 5%;
 }
 
-ul.lignes{
-	display:none;
-	margin-top:-1px;
-	background:#2C3E50;
-}
-
-ul.cercle{
-	display:none;
-	margin-top:-1px;
-	background:#2C3E50;
-}
-
-ul.texte{
-	display:none;
-	margin-top:-1px;
-	background:#2C3E50;
-}
-
-ul.polygone{
-	display:none;
-	margin-top:-1px;
-	background:#2C3E50;
-}
-
-li {
+.contenu_onglet li {
 	border-bottom:1px solid rgba(0, 0, 0, 0.1);
 }
 

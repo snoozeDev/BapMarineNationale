@@ -472,11 +472,11 @@ function initialize() { //fonction qui permet de charger la carte au lancement d
     });
 
     function stop3() {
-        console.log("stop3");
+        console.log(batiment[bati]);
         $('#toolbar').show();
         map.off('click', addLatLngToBati); //on arrête d'écouter les cliques sur la map
         var elem = "batiment" + bati;    //element utile pour la suppression 
-        var form = batiment[bati].options.icon.options.html;
+        var form = batiment[bati].type;
       
         $('.delete_batiment_p').append('<div class="bord"> <div class="margebatiment" class="form" id="' + elem + '" onclick="delete_obj(&#34;' + elem + '&#34;,&#34;' + form + '&#34;);return false"><p>Supprimer ' + form + ' </p> <div class="oeilvert" id="oeil"><div id="oeil'+ elem + '" class="vert yeux"></div></div></div> </div>');
         
