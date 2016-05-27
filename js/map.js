@@ -1950,7 +1950,14 @@ function loadBati(batisPhp){
         $('#bati').val(batiJsonString);
         stop3(); //pour finir l'ajout
     }
+};
+
+function loadBateaux(bateauxPhp){
+    
+    console.log(bateauxPhp);
+    
 }
+
 
     
 //Conversion des degrés en radian

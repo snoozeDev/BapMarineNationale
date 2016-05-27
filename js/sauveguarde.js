@@ -3,16 +3,13 @@ $('#myform').submit(function () {
 });
 
 $('#insert').click(function () {
-    var bateauxJson = {};
+       var bateauxJson = {};
 
     var boolean_vitesse = false;
     var current2;
-    console.log(bateaux.length);
     for (var j = 0; j < bateaux.length; j++) {
         var editCurrentLine2 = [];
-        console.log(j + "J");
         if (bateaux[j] != "") {
-            console.log(bateaux[j]);
             currentPolyline2 = {};
             editIcon = bateaux[j].editIcon;
             editVitesse = bateaux[j].editVitesse;
@@ -24,10 +21,7 @@ $('#insert').click(function () {
             editDescription = bateaux[j].editDescription;
             editSpeed = bateaux[j].editSpeed;
             editDetection = bateaux[j].editDetection;
-            console.log(bateaux[j]);
             if (bateaux[j]._latlngs && bateaux[j]._latlngs != null && bateaux[j]._latlngs[1]) {
-                console.log("jai un trajet");
-
                 if (bateaux[j]._currentLine[1] != null) {
                     editCurrentPoint = bateaux[j]._currentLine[1]; //recup position
                     editCurrentLine = bateaux[j]._latlngs;
@@ -52,21 +46,19 @@ $('#insert').click(function () {
 
 
             } else {
-                console.log('je passe âr la');
                 editCurrentLine2[0] = bateaux[j]._latlng;
                 console.log('edit :' + editCurrentLine2);
 
             }
 
-            bateauxJson[j] = [editIcon, editVitesse, editColor, suppression, editTypeVitesse, editDescription, editType, editSpeed, editRadar, editDetection, editCurrentLine2];
+            bateauxJson[j] = [editIcon, editVitesse, editColor, suppression, editTypeVitesse, editType, editSpeed, editRadar, editDetection, editCurrentLine2];
         }
+        console.log(bateauxJson[j]);
     }
-    console.log(bateauxJson);
     var bateauxJsonString = [];
-    
     bateauxJsonString = JSON.stringify(bateauxJson);
-    $('#bateau').val(bateauxJsonString);
-    console.log($('#bateau').val());
+    $('#bateau_save').val(bateauxJsonString);
+    console.log($('#bateau_save').val());
     $.post(
         $('#myform').attr('action')
         , $('#myform :input').serializeArray()
