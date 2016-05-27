@@ -839,15 +839,15 @@ var bateauxJson = {};
 
         var description_bateau = $('#description').val();
         //edit de bateaux
-
+        CurrentType = $('#type_bateau option:selected').val();
 
         if (description_bateau.length == 0) {
-            bateaux[bat] = bateaux[bat].bindPopup('<label>Type d\'unité : </label>' + type_bateau + '<br><a href="#" id="' + bat + '" class="bateau">Changer Trajet</a><br><a href="#" data-id="' + bat + '" class="bateau_vitesse">Changer Vitesse</a><br><a href="#" data-id="' + bat + '" class="bateau_suppr">Supprimer bateau</a>');
-            bateaux[bat].editDescription = '<label>Type d\'unité : </label>' + type_bateau + '<br><a href="#" id="' + bat + '" class="bateau">Changer Trajet</a><br><a href="#" data-id="' + bat + '" class="bateau_vitesse">Changer Vitesse</a><br><a href="#" data-id="' + bat + '" class="bateau_suppr">Supprimer bateau</a>';
+            bateaux[bat] = bateaux[bat].bindPopup('<label>Type d\'unité : </label>' + CurrentType + '<br><a href="#" id="' + bat + '" class="bateau">Changer Trajet</a><br><a href="#" data-id="' + bat + '" class="bateau_vitesse">Changer Vitesse</a><br><a href="#" data-id="' + bat + '" class="bateau_suppr">Supprimer bateau</a>');
+            bateaux[bat].editDescription = '<label>Type d\'unité : </label>' + CurrentType + '<br><a href="#" id="' + bat + '" class="bateau">Changer Trajet</a><br><a href="#" data-id="' + bat + '" class="bateau_vitesse">Changer Vitesse</a><br><a href="#" data-id="' + bat + '" class="bateau_suppr">Supprimer bateau</a>';
          
         } else {
-            bateaux[bat] = bateaux[bat].bindPopup('<label>Type d\'unité : </label>' + type_bateau + '<br>' + '<label>Description : </label><br>' + description_bateau + '<a href="#" id="' + bat + '" class="bateau">Changer Trajet</a><br><a href="#" data-id="' + bat + '" class="bateau_vitesse">Changer Vitesse</a><br><a href="#" data-id="' + bat + '" class="bateau_suppr">Supprimer bateau</a>');
-            bateaux[bat].editDescription = '<label>Type d\'unité : </label>' + type_bateau + '<br>' + '<label>Description : </label><br>' + description_bateau + '<a href="#" id="' + bat + '" class="bateau">Changer Trajet</a><br><a href="#" data-id="' + bat + '" class="bateau_vitesse">Changer Vitesse</a><br><a href="#" data-id="' + bat + '" class="bateau_suppr">Supprimer bateau</a>';
+            bateaux[bat] = bateaux[bat].bindPopup('<label>Type d\'unité : </label>' + CurrentType + '<br>' + '<label>Description : </label><br>' + description_bateau + '<a href="#" id="' + bat + '" class="bateau">Changer Trajet</a><br><a href="#" data-id="' + bat + '" class="bateau_vitesse">Changer Vitesse</a><br><a href="#" data-id="' + bat + '" class="bateau_suppr">Supprimer bateau</a>');
+            bateaux[bat].editDescription = '<label>Type d\'unité : </label>' + CurrentType + '<br>' + '<label>Description : </label><br>' + description_bateau + '<a href="#" id="' + bat + '" class="bateau">Changer Trajet</a><br><a href="#" data-id="' + bat + '" class="bateau_vitesse">Changer Vitesse</a><br><a href="#" data-id="' + bat + '" class="bateau_suppr">Supprimer bateau</a>';
         }
         var stock = currentTrajet;
 
@@ -857,7 +857,7 @@ var bateauxJson = {};
         $(bateaux[bat]._icon).addClass(classId);
         bateaux[bat].suppression=false;
         bateaux[bat].editVitesse = CurrentVitesse;
-        CurrentType = $('#type_bateau option:selected').val();
+       
         bateaux[bat].editType = CurrentType;
         
 
