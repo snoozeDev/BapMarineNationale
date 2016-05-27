@@ -289,8 +289,8 @@
                 <div>
                   <form class="sauvegarde" action='sauveguarde.php' method='post' id='myform'>
                     <h3 class="sauvegarde_title">Sauvegardez votre carte</h3>
-                    <input class="map_name" type="text" name="mapName" placeholder="Nom de la carte">
-                    <textarea class="map_description" name="mapDescription" placeholder="Description de la carte"></textarea>
+                    <input class="formula" type="text" name="mapName" placeholder="Nom de la carte">
+                    <textarea class="formula" name="mapDescription" placeholder="Description de la carte"></textarea>
                     <input type="hidden" id="cer" name="cercles">
                     <input type="hidden" id="polyg" name="polygs">
                     <input type="hidden" id="text" name="texts">
@@ -304,8 +304,8 @@
 
                   <div class="simulation">
 
-                      <a href="#" class="btn" id="simulation">Mode Simulation</a>
-                      <a href="#" class="btn" id="admin">Mode Administrateur</a>
+                      <a href="#" class="btn_simulation" id="simulation">Mode Simulation</a>
+                      <a href="#" class="btn_admin" id="admin">Mode Administrateur</a>
                   </div>
               </div>
 
