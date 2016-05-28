@@ -525,6 +525,7 @@ body.sidebar-show {
 	color: #82C9BD;
 }
 .contenu_onglet ul {
+	min-height: 50px;
 	    margin-bottom: 0;
 	display:none;
 	padding: 0;
