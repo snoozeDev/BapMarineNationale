@@ -171,10 +171,6 @@ var fennec_allie = L.icon({
     iconAnchor:   [15, 15], // point of the icon which will correspond to marker's location
     popupAnchor:  [-0, -9] // point from which the popup should open relative to the iconAnchor
 });
-
-
-
-
 var fs_neutre = L.icon({
     iconUrl: 'image/fs-neutre.png',
 

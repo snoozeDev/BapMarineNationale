@@ -304,8 +304,8 @@
 
                   <div class="simulation">
 
-                      <a href="#" class="btn_simulation" id="simulation">Mode Simulation</a>
-                      <a href="#" class="btn_admin" id="admin">Mode Administrateur</a>
+                      <a href="#" class="btn_simulation" id="simulation">Arreter la simulation</a>
+                      <a href="#" class="btn_admin" id="admin">Lancer la simulation</a>
                   </div>
               </div>
 

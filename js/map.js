@@ -618,6 +618,7 @@ var textJson = {};
                 className: text_name
                 , html: text
                 , iconSize: [200, 80]
+                ,iconAnchor:   [70, 0],
             })
         }).addTo(map);
         console.log(texte[tex]);
@@ -830,7 +831,7 @@ var trajetEnCours=false;
         
         bateaux[bat] = L.Marker.movingMarker(currentTrajet._latlngs
             , TOTAL, CurrentIcon).addTo(map);
-
+console.log(currentTrajet._latlngs);
         if(playOrPause == 1){
             if (bateaux[bat]._latlngs){
                 if (currentTrajet._latlngs[1]){
@@ -1487,6 +1488,7 @@ $('.speed').change(function () {             //lorsque le coef de vitesse change
                     DistanceTotaleM += currentPolyline2._latlngs[i].distanceTo(currentPolyline2._latlngs[i - 1]);
                 }
                 editSpeed = speed;
+                
                 var dureeTrajet = 1000*DistanceTotaleM / (editVitesse/1.9438399999515);
                 dureeTrajet = parseInt(dureeTrajet/(editSpeed*60));
                 TOTAL = dureeTrajet;
@@ -1976,10 +1978,29 @@ function loadBati(batisPhp){
     }
 };
 
+function getDistanceFromLatLonInKm(lat1,lon1,lat2,lon2) {
+  var R = 6371; // Radius of the earth in km
+  var dLat = deg2rad(lat2-lat1);  // deg2rad below
+  var dLon = deg2rad(lon2-lon1); 
+  var a = 
+    Math.sin(dLat/2) * Math.sin(dLat/2) +
+    Math.cos(deg2rad(lat1)) * Math.cos(deg2rad(lat2)) * 
+    Math.sin(dLon/2) * Math.sin(dLon/2)
+    ; 
+  var c = 2 * Math.atan2(Math.sqrt(a), Math.sqrt(1-a)); 
+  var d = R * c; // Distance in km
+  return d;
+}
+
+function deg2rad(deg) {
+  return deg * (Math.PI/180)
+}
+
 function loadBateaux(bateauxPhp){
-    
-    console.log(bateauxPhp);
-    
+    var limit = Object.keys(bateauxPhp).length;
+    for (var a = 0; a < limit; a++) {
+        console.log(bateauxPhp[a])
+    }
 }
 
 
