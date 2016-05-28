@@ -22,11 +22,6 @@ $().ready(function() {
      console.log("dashboard");
    });
    
-         $('.resource--article').click(function(){ //faire apparaittre le popup des bateaux
-           
-          alert("zob");
-          
-        });
 
      $('.icon-dashboard').click(function(){ //faire apparaittre le popup des bateaux
        

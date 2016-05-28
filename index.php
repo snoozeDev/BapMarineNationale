@@ -4,7 +4,7 @@
   <link rel="stylesheet" type="text/css" href="css/styleIndex.css">
 </head>
 
-
+<body>
 <nav class="menu" tabindex="0">
 	<div class="smartphone-menu-trigger"></div>
 	<header class="avatar">
@@ -20,7 +20,7 @@
 </nav>
 
 <main>
-	<div class="helper">
+	<div style="z-index:1" class="helper">
 		<div id="indexDiv">
       
       BAP MARINE NATIONALE
@@ -46,32 +46,43 @@
   <div  id="loadDiv" style="z-index:100"> 
     <h4 style="padding-bottom: 5%">Charger une carte sauvegardée</h4>
     
-    <ul class="" style="z-index:100">
+    <?php
+    include 'db.php';   
+ 
+     
+
+    
+    
+    
+    $conn = new mysqli($dbhost, $dbuser, $dbpass, $db);
+    
+    if ($conn->connect_error) {
+    die("Connection failed: " . $conn->connect_error);
+} 
+$sql = "SELECT id, mapName, mapDescription, cercles, polygs, texts, polyls, batis, bateaux FROM save_marine_table";
+$result = $conn->query($sql);
+
+    
+    
+    while($row = $result->fetch_assoc()) {
+        
+       echo '
+        
+           <ul class="" style="position:relative;z-index:1000">
       <li class="resource--article ">
-        <h10 class="resource__title" style="color:black">Carte 1</h10>
-        <p class="resource__summary">Non ergo erunt homines deliciis diffluentes audiendi, si quando de amicitia, quam nec usu nec ratione habent cognitam, disputabunt. Nam quis est, pro deorum fidem atque hominum! qui velit, ut neque diligat quemquam nec ipse ab ullo diligatur, circumfluere omnibus copiis atque in omnium rerum abundantia vivere? Haec enim est tyrannorum vita nimirum, in qua nulla fides, nulla caritas, nulla stabilis benevolentiae potest esse fiducia, omnia semper suspecta atque sollicita, nullus locus amicitiae.</p>
-        <a href="#" class="btn"  id="Load">Charger la carte</a>
+        <h10 class="resource__title" style="color:black">'.$row["mapName"].'</h10>
+        <p class="resource__summary">'.$row["mapDescription"].'</p>
+        <a href="map.php?id='.$row["id"].'" style="cursor: pointer;" class="btn"  id="Load">Charger la carte</a>
         
 
       </ul>
+        
+       ';
+        
+    }
+?>
+    
 
-      <ul class="" style="z-index:100">
-        <li class="resource--article ">
-          <h10 class="resource__title" style="color:black">Carte 2</h10>
-          <p class="resource__summary">Non ergo erunt homines deliciis diffluentes audiendi, si quando de amicitia, quam nec usu nec ratione habent cognitam, disputabunt. Nam quis est, pro deorum fidem atque hominum! qui velit, ut neque diligat quemquam nec ipse ab ullo diligatur, circumfluere omnibus copiis atque in omnium rerum abundantia vivere? Haec enim est tyrannorum vita nimirum, in qua nulla fides, nulla caritas, nulla stabilis benevolentiae potest esse fiducia, omnia semper suspecta atque sollicita, nullus locus amicitiae.</p>
-          <a href="#" class="btn"  id="Load">Charger la carte</a>
-          
-
-        </ul>
-
-        <ul class="" style=" z-index:100">
-          <li class="resource--article ">
-            <h10 class="resource__title" style="color:black">Carte 3</h10>
-            <p class="resource__summary">Non ergo erunt homines deliciis diffluentes audiendi, si quando de amicitia, quam nec usu nec ratione habent cognitam, disputabunt. Nam quis est, pro deorum fidem atque hominum! qui velit, ut neque diligat quemquam nec ipse ab ullo diligatur, circumfluere omnibus copiis atque in omnium rerum abundantia vivere? Haec enim est tyrannorum vita nimirum, in qua nulla fides, nulla caritas, nulla stabilis benevolentiae potest esse fiducia, omnia semper suspecta atque sollicita, nullus locus amicitiae.</p>
-            <a href="#" class="btn"  id="Load">Charger la carte</a>
-            
-
-          </ul>
           
         </div>
         <div  id="tutoDiv" class="tuto">
@@ -164,4 +175,4 @@
 <script type="text/javascript" charset="utf-8" src="js/jquery.tubular.1.0.js"></script>
 <script type="text/javascript" charset="utf-8" src="js/scriptIndex.js"></script>
 
-</main>
+</main></body>
