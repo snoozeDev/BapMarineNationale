@@ -73,6 +73,7 @@ $result = $conn->query($sql);
         <h10 class="resource__title" style="color:black">'.$row["mapName"].'</h10>
         <p class="resource__summary">'.$row["mapDescription"].'</p>
         <a href="map.php?id='.$row["id"].'" style="cursor: pointer;" class="btn"  id="Load">Charger la carte</a>
+         <a href="delete.php?id='.$row["id"].'" style="cursor: pointer;" class="btn"  id="Load">Supprimer la carte</a>
         
 
       </ul>
