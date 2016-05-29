@@ -304,8 +304,8 @@
                     <br>
                 </div>
                 <div>
-
-                    <?php 
+                    <form class="sauvegarde" action='sauveguarde.php' method='post' id='myform'>
+                        <?php 
                     if(isset($_GET['id']) && ($_GET['id'] !=null)){
                       
                         include 'db.php';   
@@ -327,15 +327,16 @@ $result = $conn->query($sql);
     
     while($row = $result->fetch_assoc()) {
         if($row["id"] == $_GET["id"]){  
-          echo '<h3 class="sauvegarde_title" style="color:black">Carte actuelle :</h3><p style="color:black">'.$row["mapName"].'</p>';
+          echo '<h3 class="sauvegarde_title" style="color:black">Carte actuelle :</h3><p style="color:black">'.$row["mapName"].'</p><br><input name="idUpdate" type="hidden" value="'.$row["id"].'"><button name="update" class="save" >Ecraser la sauvegarde</button>';
         }
     }
     
 }
 ?>
-                        <br><br>
-                        <h3 class="sauvegarde_title">Sauvegardez une nouvelle carte</h3>
-                        <form class="sauvegarde" action='sauveguarde.php' method='post' id='myform'>
+                            <br>
+                            <br>
+                            <h3 class="sauvegarde_title">Sauvegardez une nouvelle carte</h3>
+
 
 
 
@@ -348,9 +349,9 @@ $result = $conn->query($sql);
                             <input type="hidden" id="polyl" name="polyls">
                             <input type="hidden" id="bati" name="batis">
                             <input type="hidden" id="bateau_save" name="bateau_save">
-                            <a href="reload.php"><button class="save" id='insert'>Sauvegarder</button></a>
-                     
-                        </form>
+                            <button class="save" name="save"  id='insert'>Sauvegarder</button>
+
+                    </form>
 
                 </div>
 

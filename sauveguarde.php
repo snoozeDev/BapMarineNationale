@@ -11,16 +11,31 @@ $texts = $_POST['texts'];
 $polyls = $_POST['polyls'];
 $batis = $_POST['batis'];
 $bateaux = $_POST['bateau_save'];
-$sql = "INSERT INTO save_marine_table (mapName, mapDescription, cercles, polygs, texts, polyls, batis, bateaux) VALUES ('$name','$description','$cercles','$polygs', '$texts', '$polyls', '$batis', '$bateaux')";
+$idUpdate = $_POST['idUpdate'];
+
+
+if (isset($_POST['update'])) {
+    
+    $sql = "UPDATE save_marine_table SET cercles='$cercles', polygs='$polygs', texts='$texts', polyls='$polyls', batis='$batis', bateaux='$bateaux' WHERE id=$idUpdate";
+    
+    
+} else if (isset($_POST['save'])) {
+    $sql = "INSERT INTO save_marine_table (mapName, mapDescription, cercles, polygs, texts, polyls, batis, bateaux) VALUES ('$name','$description','$cercles','$polygs', '$texts', '$polyls', '$batis', '$bateaux')";
+}
+
 
  if(mysqli_query($con, $sql)){
  
  }
-function phpAlert($msg) {
-    echo '<script type="text/javascript">alert("' . $msg . '")</script>';
-} 
+
+
+if (isset($_POST['update'])) {
+    $last_id = $idUpdate;
+} else if (isset($_POST['save'])) {
  $last_id = mysqli_insert_id($con);
-phpAlert($last_id);
-header('Location: map.php?id='.$last_id)
+}
+   header('Location: map.php?id='.$last_id)
+
+
 
 ?>     

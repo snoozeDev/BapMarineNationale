@@ -1026,8 +1026,24 @@ a, a:visited {
 	height: 35px;
 	font-size: 1em;
 	color: white;
+    cursor: pointer
 }
-
+.ecraser{
+      webkit-border-radius: 0;
+    -moz-border-radius: 0;
+    border-radius: 0px;
+    color: #ffffff;
+    font-size: 20px;
+    background: #216996;
+    padding: 10px 20px 10px 20px;
+    border: solid #1f628d 2px 2px 0px 2px;
+    text-decoration: none;
+    display: inline-block;
+}
+.ecraser:hover{
+      background: #1d64ab;
+  text-decoration: none;
+}
 /*-------------------------------*/
 /*        Fin sauvegarde         */
 /*-------------------------------*/
