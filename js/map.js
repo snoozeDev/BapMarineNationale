@@ -1509,6 +1509,7 @@ $('.speed').change(function () {             //lorsque le coef de vitesse change
 
                 if(simulation==true){
                     $('.red').css("display", "none");
+                    $('.green').css("display", "none");
                 }
                 
                 classId=editColor+j;
