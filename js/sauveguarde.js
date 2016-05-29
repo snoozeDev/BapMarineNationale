@@ -58,11 +58,5 @@ $('#insert').click(function () {
     $('#bateau_save').val(bateauxJsonString);
     console.log($('#bateau_save').val());
     alert("Nouvelle carte sauvegardee");
-    $.post(
-        $('#myform').attr('action')
-        , $('#myform :input').serializeArray()
-        , function (result) {
-            $('#result').html(result);
-        }
-    );
+  
 });

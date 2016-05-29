@@ -16,7 +16,11 @@ $sql = "INSERT INTO save_marine_table (mapName, mapDescription, cercles, polygs,
  if(mysqli_query($con, $sql)){
  
  }
-
-
+function phpAlert($msg) {
+    echo '<script type="text/javascript">alert("' . $msg . '")</script>';
+} 
+ $last_id = mysqli_insert_id($con);
+phpAlert($last_id);
+header('Location: map.php?id='.$last_id)
 
 ?>     
