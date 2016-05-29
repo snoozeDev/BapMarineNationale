@@ -1,6 +1,4 @@
-$('#myform').submit(function () {
-    return false;
-});
+
 
 $('#insert').click(function () {
        var bateauxJson = {};

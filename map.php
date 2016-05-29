@@ -326,7 +326,7 @@ $result = $conn->query($sql);
     
     
     while($row = $result->fetch_assoc()) {
-        if($row["id"] == $_GET[id]){  
+        if($row["id"] == $_GET["id"]){  
           echo '<h3 class="sauvegarde_title" style="color:black">Carte actuelle :</h3><p style="color:black">'.$row["mapName"].'</p>';
         }
     }
@@ -348,7 +348,8 @@ $result = $conn->query($sql);
                             <input type="hidden" id="polyl" name="polyls">
                             <input type="hidden" id="bati" name="batis">
                             <input type="hidden" id="bateau_save" name="bateau_save">
-                            <button class="save" id='insert'>Sauvegarder</button>
+                            <a href="reload.php"><button class="save" id='insert'>Sauvegarder</button></a>
+                     
                         </form>
 
                 </div>

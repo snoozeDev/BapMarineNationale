@@ -17,4 +17,6 @@ $sql = "INSERT INTO save_marine_table (mapName, mapDescription, cercles, polygs,
  
  }
 
+
+
 ?>     
