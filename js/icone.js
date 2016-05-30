@@ -1,8 +1,8 @@
 //toutes les icones
 
 
-var lights_icon = L.icon({
-    iconUrl: 'image/lighthouse.png',
+var phare = L.icon({
+    iconUrl: 'image/phare.png',
 
     iconSize:     [30, 30], // size of the icon
     iconAnchor:   [15, 15], // point of the icon which will correspond to marker's location
@@ -114,7 +114,7 @@ var tigre_ennemi = L.icon({
     popupAnchor:  [-0, -9] // point from which the popup should open relative to the iconAnchor
 });
 var port = L.icon({
-    iconUrl: 'image/anchor.png',
+    iconUrl: 'image/port.png',
 
     iconSize:     [30, 30], // size of the icon
     iconAnchor:   [15, 15], // point of the icon which will correspond to marker's location
@@ -320,6 +320,20 @@ var cargo_allie = L.icon({
 });
 var paquebot_allie = L.icon({
     iconUrl: 'image/paquebot-allie.png',
+    iconSize:     [30, 30], // size of the icon
+    iconAnchor:   [15, 15], // point of the icon which will correspond to marker's location
+    popupAnchor:  [-0, -9] // point from which the popup should open relative to the iconAnchor
+});
+
+var ville = L.icon({
+    iconUrl: 'image/ville.png',
+    iconSize:     [100, 100], // size of the icon
+    iconAnchor:   [15, 15], // point of the icon which will correspond to marker's location
+    popupAnchor:  [-0, -9] // point from which the popup should open relative to the iconAnchor
+});
+
+var village = L.icon({
+    iconUrl: 'image/village.png',
     iconSize:     [30, 30], // size of the icon
     iconAnchor:   [15, 15], // point of the icon which will correspond to marker's location
     popupAnchor:  [-0, -9] // point from which the popup should open relative to the iconAnchor

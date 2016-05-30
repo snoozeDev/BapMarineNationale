@@ -1,3 +1,4 @@
+<!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="fr">
 
 <head>
@@ -29,11 +30,14 @@
         <div class="pop_up">
             <p class="title"> BATIMENTS </p>
             <select class="formula" id="icone_select" name="icone_select">
-                <option value="anchor">Port</option>
+                <option value="port">Port</option>
                 <option value="offshore">Offshore</option>
-                <option value="lighthouse">Phare</option>
+                <option value="phare">Phare</option>
+                <option value="ville">Ville</option>
+                <option value="village">Village</option>
+
             </select>
-            <img src="image/anchor.png" id="icone_img">
+            <img src="image/port.png" id="icone_img">
 
             <label>Description (facutatif)</label>
             <br>
@@ -42,7 +46,11 @@
             <a href="#" class="btn" id="drawBatiment">Ajouter le batiment</a>
         </div>
     </div>
+    <div class="grade_circle">
+        <div class="value">0</div>
+        <input id="grade" type="range" min="10" max="1500" step="10" value="50">
 
+    </div>
     <div id="ajout_pins" class="pop_up_inv hide">
         <div class="pop_up">
 
@@ -70,9 +78,9 @@
 
                         <p class="align">Taille du cercle</p>
                         <select class="formula" id="taille_circle" name="taille_cercle">
-                            <option value="50000">Petit</option>
-                            <option value="100000">Moyen</option>
-                            <option value="200000">Grand</option>
+                            <option value="50000">100 km</option>
+                            <option value="250000">500 km</option>
+                            <option value="500000">1000 km</option>
                         </select>
                         <p class="align">Couleur du cercle</p>
                         <select class="formula" id="color_circle" name="color_circle">
@@ -253,6 +261,7 @@
 
         <div class="hide btn_finish forme" id="stopDraw"> <img src="image/formev2.png"></div>
         <div class="hide btn_finish forme" id="stopDrawPolyline"> <img src="image/formev2.png"></div>
+        <div class="hide btn_finish forme" id="stopDrawCircle"> <img src="image/formev2.png"></div>
         <div class="hide btn_finish forme" id="stopEditPolyline"> <img src="image/bateauv2.png"></div>
         <div class="hide btn_finish forme" id="stopDrawTrajet"> <img src="image/bateauv2.png"></div>
 
@@ -264,6 +273,19 @@
         <img id="menu-stripes1" src="image/menu.png">
     </button>
     <section id="sidebar" class="sidebar">
+
+        <br/>
+        <div class="btnretourarriere">
+            <div class="btn-back">
+                <p class="question" >quitter sans sauvegarder ?</p>
+                <button class="yes"><a href="index.php"> Oui</a></button>
+                <button class="no">Non</button>
+            </div>
+            <div class="btn-front">retour en arrière</div>
+        </div>
+
+        <br/>
+
         <div class="settings">
             <h1 class="parametre">Parametres</h1>
 
@@ -444,7 +466,7 @@ $result = $conn->query($sql);
 
     <script src="js/Leaflet-0.7.7/leaflet.js"></script>
     <script type="text/javascript" src="js/icone.js"></script>
-    <script type="text/javascript" src="js/map.js"></script>
+    <script type="text/javascript" src="js/map.js" charset="UTF-8"></script>
     <script src='js/coord.js'></script>
     <script type="text/javascript" src="js/function.js"></script>
 
@@ -552,6 +574,46 @@ $result = $conn->query($sql);
             });
         })
     </script>
+
+
+    /* btn en arriere */
+    <script>window.onload = function() {
+            var btn = document.querySelector( '.btnretourarriere' );
+            var btnFront = btn.querySelector( '.btn-front' ),
+                btnYes = btn.querySelector( '.btn-back .yes' ),
+                btnNo = btn.querySelector( '.btn-back .no' );
+            btnFront.addEventListener( 'click', function( event ) {
+                var mx = event.clientX - btn.offsetLeft,
+                    my = event.clientY - btn.offsetTop;
+                var w = btn.offsetWidth,
+                    h = btn.offsetHeight;
+                var directions = [
+                    { id: 'top', x: w/2, y: 0 },
+                    { id: 'right', x: w, y: h/2 },
+                    { id: 'bottom', x: w/2, y: h },
+                    { id: 'left', x: 0, y: h/2 }
+                ];
+                directions.sort( function( a, b ) {
+                    return distance( mx, my, a.x, a.y ) - distance( mx, my, b.x, b.y );
+                } );
+                btn.setAttribute( 'data-direction', directions.shift().id );
+                btn.classList.add( 'is-open' );
+            } );
+            btnYes.addEventListener( 'click', function( event ) {
+                btn.classList.remove( 'is-open' );
+            } );
+            btnNo.addEventListener( 'click', function( event ) {
+                btn.classList.remove( 'is-open' );
+            } );
+            function distance( x1, y1, x2, y2 ) {
+                var dx = x1-x2;
+                var dy = y1-y2;
+                return Math.sqrt( dx*dx + dy*dy );
+            }
+        };</script>
+
+
+
 
     <script src='js/sauveguarde.js'></script>
 

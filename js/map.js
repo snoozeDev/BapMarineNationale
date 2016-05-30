@@ -34,6 +34,8 @@ function initialize() { //fonction qui permet de charger la carte au lancement d
 
     map.setView([-1.743, 4.8], 5);
 
+
+
    
     var osmLayer = L.tileLayer('http://{s}.tile.osm.org/{z}/{x}/{y}.png', {
         attribution: ' <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
@@ -618,7 +620,7 @@ var textJson = {};
                 className: text_name
                 , html: text
                 , iconSize: [200, 80]
-                ,iconAnchor:   [70, 0],
+                ,iconAnchor:   [100, 17],
             })
         }).addTo(map);
         console.log(texte[tex]);
@@ -633,19 +635,57 @@ var textJson = {};
 
     //dessiner un cercle
     var drawCircleButton = document.getElementById('drawCircle');
+    var stopDrawCircle = document.getElementById('stopDrawCircle');
     var cercle = []; //tableau de tous les cercles
     cer = 0; //equivalent de bat pour les bateaux
     var currentCircle = {}; //Empty object to be used later;
     var cercleJson = {};
-
+    var taille;
+    var color;
+    var cercle_name;
     drawCircleButton.addEventListener('click', function () {
         $('#toolbar').hide();
         $('#ajout_pins').css('display', 'none');
+        $('#stopDrawCircle').show();
         map.on('click', addLatLngToCircle); //Listen for clicks on map.
     });
-
-    function stop() {
+    stopDrawCircle.addEventListener('click', function arrete() {
         $('#toolbar').show();
+        $('#stopDrawCircle').hide();
+        $('.grade_circle').hide();
+        cercleJson[cer] = [cercle[cer]._mRadius,cercle[cer]._latlng,cercle[cer].options];
+        var cercleJsonString = JSON.stringify(cercleJson);
+        $('#cer').val(cercleJsonString);
+        cer++;
+    });
+    var rangeGradeCircle = document.querySelector('input[type="range"]');   //cercle changement valeur du grade
+    var target = document.querySelector('.value');
+    target = document.querySelector('.value');
+    target.innerHTML = 0+" km";
+    var rangeValue = function(){
+      var newValue = rangeGradeCircle.value;
+      target = document.querySelector('.value');
+      target.innerHTML = newValue+" km";
+    }
+
+    rangeGradeCircle.addEventListener("input", rangeValue);
+
+    $('.grade_circle').change(function(){
+        latlng=cercle[cer]._latlng;
+        taille=$('#grade').val()*500;
+        map.removeLayer(cercle[cer]);
+        cercle[cer] = L.circle(latlng, taille, {
+            className: cercle_name,
+            color: color,
+            fillColor: color,
+            fillOpacity: 0.5,
+            clickable: false
+        }).addTo(map);
+            
+
+    });
+     function stop() {
+        
         map.off('click', addLatLngToCircle); //Stop listening for clicks on map.    
         var elem = "cercle" + cer;
         var color_fr = cercle[cer].options.color;
@@ -670,17 +710,20 @@ var textJson = {};
       
         $('.delete_cercle_p').append('<div class="bord"> <div class="margecercle" class="form" id="' + elem + '" onclick="delete_obj(&#34;' + elem + '&#34;,&#34;' + form + '&#34;);return false"><p>cacher ' + form + ' </p> <div class="oeilvert" id="oeil"><div id="oeil'+ elem + '" class="vert yeux"></div></div></div> </div>');
         
-        cer++;
-    
+        
+        $('.grade_circle').show();
+        
 
 
-    };
+    }
+   
 
     function addLatLngToCircle(clickEventData) {
-        var taille = $('#taille_circle option:selected').val();
-        var color = $('#color_circle option:selected').val();
-        var cercle_name = "cercle" + cer;
-
+        taille = $('#taille_circle option:selected').val();
+        color = $('#color_circle option:selected').val();
+        cercle_name = "cercle" + cer;
+        $('#grade').val(taille/500);  
+        target.innerHTML = taille/500+" km";
         cercle[cer] = L.circle([clickEventData.latlng.lat, clickEventData.latlng.lng], taille, {
             className: cercle_name,
             color: color,
@@ -1589,10 +1632,11 @@ $('.speed').change(function () {             //lorsque le coef de vitesse change
     //*****
     
     $('#map').on('click', '.bateau_suppr', function () {   //afficher le popup de validation de la suppression
-        id = $(this).data('id');                           //on recup la data qui stock l'id du bateau
-        bateaux[id].pause();                              //on met le bateau en pause en attendant la réponse
-        $('#map').append('<div class="pop_up_inv2"><div class="pop_up"><h1>ATTENTION : Voulez-vous vraiment supprimer le bateau ? </br> Vous ne pourrez pas revenir en arriÃ¨re.</h1><a href="#" data-id="' + id + '" class="delete deleteUltim">SUPPRIMER</a><a href="#" data-id="' + id + '" class="retour deleteUltim">ANNULER</a></div></div>');
-
+        if( trajetEnCours==false){
+            id = $(this).data('id');                           //on recup la data qui stock l'id du bateau
+            bateaux[id].pause();                              //on met le bateau en pause en attendant la réponse
+            $('#map').append('<div class="pop_up_inv2"><div class="pop_up"><h1>ATTENTION : Voulez-vous vraiment supprimer le bateau ? </br> Vous ne pourrez pas revenir en arrière.</h1><a href="#" data-id="' + id + '" class="delete deleteUltim">SUPPRIMER</a><a href="#" data-id="' + id + '" class="retour deleteUltim">ANNULER</a></div></div>');
+        }
     });
     $('#map').on('click', '.delete', function () {    //supprimer le bateau
         id = $(this).data('id');                       //on recup la data qui stock l'id du bateau
@@ -1817,6 +1861,7 @@ $('.speed').change(function () {             //lorsque le coef de vitesse change
         var colorcercle = cerclesPhp[e][2].color;
         var latcercle = cerclesPhp[e][1].lat;
         var lngcercle = cerclesPhp[e][1].lng;
+
         cercle[cer] = L.circle([latcercle, lngcercle], taillecercle, {
             className: cercle_name
             , color: colorcercle
@@ -1825,13 +1870,21 @@ $('.speed').change(function () {             //lorsque le coef de vitesse change
             , clickable: false
         , }).addTo(map);
       cercleJson[cer] = [cercle[cer]._mRadius,cercle[cer]._latlng,cercle[cer].options];
+        var elem = "cercle" + cer;
+        var color_fr = cercle[cer].options.color;
         var cercleJsonString = JSON.stringify(cercleJson);
-        $('#cer').val(cercleJsonString);
-        stop();
+        var form = 'le cercle ' + color_fr + ' n°' + cer;
+      
+        $('.delete_cercle_p').append('<div class="bord"> <div class="margecercle" class="form" id="' + elem + '" onclick="delete_obj(&#34;' + elem + '&#34;,&#34;' + form + '&#34;);return false"><p>cacher ' + form + ' </p> <div class="oeilvert" id="oeil"><div id="oeil'+ elem + '" class="vert yeux"></div></div></div> </div>');
         
-    }
-};
+        
+        cer++;
+        $('#cer').val(cercleJsonString);
 
+        //stop();
+        
+    };
+}
  function loadPolyg(polygsPhp){
        var limit = Object.keys(polygsPhp).length ;
     for (var e = 0; e < limit; e++) {
@@ -1874,8 +1927,9 @@ $('.speed').change(function () {             //lorsque le coef de vitesse change
         
         var form = 'le polygone ' + color_fr + ' n°' + polyg2;
         
-        $('.delete_polygone_p').append('<div class="bord"><div class="margepolygone"><p class="form" id="' + elem + '" onclick="delete_obj(&#34;' + elem + '&#34;,&#34;' + form + '&#34;);return false">Cacher ' + form + ' </p></div> <div class="oeilvert"><div id="oeil'+ elem + '" class="vert yeux"></div></div></div>');
-       
+        $('.delete_polygone_p').append('<div class="bord"> <div class="margepolygone" class="form" id="' + elem + '" onclick="delete_obj(&#34;' + elem + '&#34;,&#34;' + form + '&#34;);return false"><p>cacher ' + form + ' </p> <div class="oeilvert" id="oeil"><div id="oeil'+ elem + '" class="vert yeux"></div></div></div> </div>');
+        
+
         polyg++;
 
         map.off('click', addLatLngToPolygon); //Stop listening for clicks on map.
