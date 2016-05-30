@@ -1949,8 +1949,7 @@ function loadText(textsPhp){
                 ,iconAnchor:   [15, 15],
             })
         }).addTo(map);
-        
-        textJson[tex] = [texte[tex]._latlng,text];
+        textJson[tex] = [texte[tex]._latlng,textsPhp[u][1]];
         var texteJsonString = JSON.stringify(textJson);
         $('#text').val(texteJsonString);
         stop2(); 
