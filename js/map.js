@@ -862,6 +862,7 @@ var trajetEnCours=false;
         var dureeTrajet = 1000*DistanceTotaleM / (CurrentVitesse/1.9438399999515);
         dureeTrajet = parseInt(dureeTrajet/(CurrentSpeed*60));
         TOTAL = dureeTrajet;
+        console.log(TOTAL);
         //var dureeTrajet = DistanceTotaleM / 500 ;
         var elem = "bateau" + bat;
         /*if(bat>0){
@@ -2448,7 +2449,7 @@ function loadBateaux(bateauxPhp){
             currentPolyline.addLatLng(bateauxPhp[a][9][q]);
         };
         
-             CurrentSpeed=CurrentVitesse;
+             CurrentSpeed=1;
 
          for (var i = 1; i < nombreDePoints; i++) {
             DistanceTotaleM += getDistanceFromLatLonInKm(bateauxPhp[a][9][i].lat,bateauxPhp[a][9][i].lng,bateauxPhp[a][9][i - 1].lat,bateauxPhp[a][9][i - 1].lng) ;
@@ -2456,7 +2457,8 @@ function loadBateaux(bateauxPhp){
         
         var dureeTrajet = 1000*DistanceTotaleM / (CurrentVitesse/1.9438399999515);
         dureeTrajet = parseInt(dureeTrajet/(CurrentSpeed*60));
-        TOTAL = dureeTrajet;   
+        console.log(CurrentVitesse+" avec un coef de "+speed);
+        TOTAL = dureeTrajet*1000;   
         console.log(TOTAL);
 //  
 ////        for (var i = 0; i < nombreDePoints; i++) {
