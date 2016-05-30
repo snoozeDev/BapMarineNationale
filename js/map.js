@@ -618,7 +618,7 @@ var textJson = {};
                 className: text_name
                 , html: text
                 , iconSize: [200, 80]
-                ,iconAnchor:   [70, 0],
+                ,iconAnchor:   [100, 17],
             })
         }).addTo(map);
         console.log(texte[tex]);
@@ -1597,10 +1597,11 @@ $('.speed').change(function () {             //lorsque le coef de vitesse change
     //*****
     
     $('#map').on('click', '.bateau_suppr', function () {   //afficher le popup de validation de la suppression
-        id = $(this).data('id');                           //on recup la data qui stock l'id du bateau
-        bateaux[id].pause();                              //on met le bateau en pause en attendant la réponse
-        $('#map').append('<div class="pop_up_inv2"><div class="pop_up"><h1>ATTENTION : Voulez-vous vraiment supprimer le bateau ? </br> Vous ne pourrez pas revenir en arriÃ¨re.</h1><a href="#" data-id="' + id + '" class="delete deleteUltim">SUPPRIMER</a><a href="#" data-id="' + id + '" class="retour deleteUltim">ANNULER</a></div></div>');
-
+        if( trajetEnCours==false){
+            id = $(this).data('id');                           //on recup la data qui stock l'id du bateau
+            bateaux[id].pause();                              //on met le bateau en pause en attendant la réponse
+            $('#map').append('<div class="pop_up_inv2"><div class="pop_up"><h1>ATTENTION : Voulez-vous vraiment supprimer le bateau ? </br> Vous ne pourrez pas revenir en arrière.</h1><a href="#" data-id="' + id + '" class="delete deleteUltim">SUPPRIMER</a><a href="#" data-id="' + id + '" class="retour deleteUltim">ANNULER</a></div></div>');
+        }
     });
     $('#map').on('click', '.delete', function () {    //supprimer le bateau
         id = $(this).data('id');                       //on recup la data qui stock l'id du bateau

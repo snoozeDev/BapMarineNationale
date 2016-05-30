@@ -1,3 +1,4 @@
+<!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="fr">
 
 <head>
@@ -29,11 +30,11 @@
         <div class="pop_up">
             <p class="title"> BATIMENTS </p>
             <select class="formula" id="icone_select" name="icone_select">
-                <option value="anchor">Port</option>
+                <option value="port">Port</option>
                 <option value="offshore">Offshore</option>
-                <option value="lighthouse">Phare</option>
+                <option value="phare">Phare</option>
             </select>
-            <img src="image/anchor.png" id="icone_img">
+            <img src="image/port.png" id="icone_img">
 
             <label>Description (facutatif)</label>
             <br>
@@ -444,7 +445,7 @@ $result = $conn->query($sql);
 
     <script src="js/Leaflet-0.7.7/leaflet.js"></script>
     <script type="text/javascript" src="js/icone.js"></script>
-    <script type="text/javascript" src="js/map.js"></script>
+    <script type="text/javascript" src="js/map.js" charset="UTF-8"></script>
     <script src='js/coord.js'></script>
     <script type="text/javascript" src="js/function.js"></script>
 
