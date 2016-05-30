@@ -864,14 +864,43 @@ a, a:visited {
 	background: #1d64ab;
 	text-decoration: none;
 }
+.value {
+  text-align: center;
+  font-weight: bold;
+  width: 300px; 
+  line-height: 60px;
+  margin: 20px auto;
+  letter-spacing: -.07em;
+}
 .grade_circle {
 	width: 50%;
 	position: absolute;
 	z-index: 1000;
 	margin-left: 25%;
 	display: none;
-	bottom: 20%;
+	bottom: 25%;
+	text-align: center;
 }
+input[type="range"] {
+  display: block;
+  -webkit-appearance: none;
+  background-color: white;
+  width: 300px;
+  height: 5px;
+  border-radius: 5px;
+  margin: 0 auto;
+  outline: 0;
+}
+input[type="range"]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  background-color: #e74c3c;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  border: 2px solid white;
+  cursor: pointer;
+  transition: .3s ease-in-out;
+}​
 .title {
 	font-size: 35px;
 

@@ -649,21 +649,26 @@ var textJson = {};
         $('#stopDrawCircle').show();
         map.on('click', addLatLngToCircle); //Listen for clicks on map.
     });
-    stopDrawCircle.addEventListener('click', function () {
+    stopDrawCircle.addEventListener('click', function arrete() {
         $('#toolbar').show();
         $('#stopDrawCircle').hide();
         $('.grade_circle').hide();
+        cercleJson[cer] = [cercle[cer]._mRadius,cercle[cer]._latlng,cercle[cer].options];
+        var cercleJsonString = JSON.stringify(cercleJson);
+        $('#cer').val(cercleJsonString);
         cer++;
     });
-    var elem = document.querySelector('input[type="range"]');   //cercle changement valeur du grade
-
+    var rangeGradeCircle = document.querySelector('input[type="range"]');   //cercle changement valeur du grade
+    var target = document.querySelector('.value');
+    target = document.querySelector('.value');
+    target.innerHTML = 0+" km";
     var rangeValue = function(){
-      var newValue = elem.value;
-      var target = document.querySelector('.value');
-      target.innerHTML = newValue;
+      var newValue = rangeGradeCircle.value;
+      target = document.querySelector('.value');
+      target.innerHTML = newValue+" km";
     }
 
-    elem.addEventListener("input", rangeValue);
+    rangeGradeCircle.addEventListener("input", rangeValue);
 
     $('.grade_circle').change(function(){
         latlng=cercle[cer]._latlng;
@@ -676,9 +681,7 @@ var textJson = {};
             fillOpacity: 0.5,
             clickable: false
         }).addTo(map);
-            cercleJson[cer] = [cercle[cer]._mRadius,cercle[cer]._latlng,cercle[cer].options];
-        var cercleJsonString = JSON.stringify(cercleJson);
-        $('#cer').val(cercleJsonString);
+            
 
     });
      function stop() {
@@ -1857,6 +1860,7 @@ $('.speed').change(function () {             //lorsque le coef de vitesse change
         var colorcercle = cerclesPhp[e][2].color;
         var latcercle = cerclesPhp[e][1].lat;
         var lngcercle = cerclesPhp[e][1].lng;
+
         cercle[cer] = L.circle([latcercle, lngcercle], taillecercle, {
             className: cercle_name
             , color: colorcercle
@@ -1865,8 +1869,17 @@ $('.speed').change(function () {             //lorsque le coef de vitesse change
             , clickable: false
         , }).addTo(map);
       cercleJson[cer] = [cercle[cer]._mRadius,cercle[cer]._latlng,cercle[cer].options];
+        var elem = "cercle" + cer;
+        var color_fr = cercle[cer].options.color;
         var cercleJsonString = JSON.stringify(cercleJson);
+        var form = 'le cercle ' + color_fr + ' n°' + cer;
+      
+        $('.delete_cercle_p').append('<div class="bord"> <div class="margecercle" class="form" id="' + elem + '" onclick="delete_obj(&#34;' + elem + '&#34;,&#34;' + form + '&#34;);return false"><p>cacher ' + form + ' </p> <div class="oeilvert" id="oeil"><div id="oeil'+ elem + '" class="vert yeux"></div></div></div> </div>');
+        
+        
+        cer++;
         $('#cer').val(cercleJsonString);
+
         //stop();
         
     };
@@ -1913,8 +1926,9 @@ $('.speed').change(function () {             //lorsque le coef de vitesse change
         
         var form = 'le polygone ' + color_fr + ' n°' + polyg2;
         
-        $('.delete_polygone_p').append('<div class="bord"><div class="margepolygone"><p class="form" id="' + elem + '" onclick="delete_obj(&#34;' + elem + '&#34;,&#34;' + form + '&#34;);return false">Cacher ' + form + ' </p></div> <div class="oeilvert"><div id="oeil'+ elem + '" class="vert yeux"></div></div></div>');
-       
+        $('.delete_polygone_p').append('<div class="bord"> <div class="margepolygone" class="form" id="' + elem + '" onclick="delete_obj(&#34;' + elem + '&#34;,&#34;' + form + '&#34;);return false"><p>cacher ' + form + ' </p> <div class="oeilvert" id="oeil"><div id="oeil'+ elem + '" class="vert yeux"></div></div></div> </div>');
+        
+
         polyg++;
 
         map.off('click', addLatLngToPolygon); //Stop listening for clicks on map.
