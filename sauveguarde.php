@@ -16,7 +16,7 @@ $idUpdate = $_POST['idUpdate'];
 
 if (isset($_POST['update'])) {
     
-    $sql = "UPDATE save_marine_table SET cercles='$cercles', polygs='$polygs', texts='$texts', polyls='$polyls', batis='$batis', bateaux='$bateaux' WHERE id=$idUpdate";
+    $sql = "UPDATE save_marine_table SET cercles='$cercles', polygs='$polygs', texts='$texts', polyls='$polyls', batis='$batis', bateaux='$bateaux' WHERE id='$idUpdate'";
     
     
 } else if (isset($_POST['save'])) {

@@ -345,7 +345,7 @@ $result = $conn->query($sql);
     
     while($row = $result->fetch_assoc()) {
         if($row["id"] == $_GET["id"]){  
-          echo '<h3 class="sauvegarde_title" style="color:black">Carte actuelle :</h3><p style="color:black">'.$row["mapName"].'</p><br><input name="idUpdate" type="hidden" value="'.$row["id"].'"><button name="update" class="save" >Ecraser la sauvegarde</button>';
+          echo '<h3 class="sauvegarde_title" style="color:black">Carte actuelle :</h3><p style="color:black">'.$row["mapName"].'</p><br><input name="idUpdate" type="hidden" value="'.$row["id"].'"><button id="insert2" name="update" class="save" >Ecraser la sauvegarde</button>';
         }
     }
     

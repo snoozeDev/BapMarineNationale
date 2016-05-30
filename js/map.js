@@ -1946,6 +1946,7 @@ function loadText(textsPhp){
                 className: text_name
                 , html: textsPhp[u][1]
                 , iconSize: [200, 80]
+                ,iconAnchor:   [15, 15],
             })
         }).addTo(map);
         
