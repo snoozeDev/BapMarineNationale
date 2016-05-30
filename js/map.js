@@ -722,7 +722,8 @@ var textJson = {};
         taille = $('#taille_circle option:selected').val();
         color = $('#color_circle option:selected').val();
         cercle_name = "cercle" + cer;
-
+        $('#grade').val(taille/500);  
+        target.innerHTML = taille/500+" km";
         cercle[cer] = L.circle([clickEventData.latlng.lat, clickEventData.latlng.lng], taille, {
             className: cercle_name,
             color: color,

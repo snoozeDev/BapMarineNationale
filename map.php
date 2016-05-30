@@ -48,7 +48,7 @@
     </div>
     <div class="grade_circle">
         <div class="value">0</div>
-        <input id="grade" type="range" min="10" max="1000" step="20" value="50">
+        <input id="grade" type="range" min="10" max="1500" step="10" value="50">
 
     </div>
     <div id="ajout_pins" class="pop_up_inv hide">
