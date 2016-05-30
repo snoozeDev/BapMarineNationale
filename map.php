@@ -173,8 +173,8 @@
         <div id="cont">
             <div class="timer">
                 <div id="timerbtn">
-                    <img src="image/play.png" style="position: relative;top: 110px;" id="play" class="btntime">
-                    <img src="image/pause.png" style="display:none;position: relative;top: 110px;" id="pause" class="btntime">
+                    <img src="image/play.png" style="position: relative;top: -10px;" id="play" class="btntime">
+                    <img src="image/pause.png" style="display:none;position: relative;top: -10px;" id="pause" class="btntime">
                 </div>
 
                 <div id="timer">
