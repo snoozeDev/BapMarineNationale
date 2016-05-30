@@ -870,6 +870,7 @@ var trajetEnCours=false;
         bateaux[bat].editDetection = false;
 
         bateaux[bat].editTypeVitesse = vitesse_bateau;
+        console.log(bateaux[bat]);
         bat++;
 
 
@@ -1387,7 +1388,6 @@ var trajetEnCours=false;
     $('#pause').click(function () {
         //simulation=false;
         for (var i = bateaux.length - 1; i >= 0; i--) {
-            console.log("i"+bateaux[i]);
             if (bateaux[i] && bateaux[i]!=null && bateaux[i]!="") {
                 bateaux[i].pause();
             }
@@ -1992,7 +1992,466 @@ function deg2rad(deg) {
 function loadBateaux(bateauxPhp){
     var limit = Object.keys(bateauxPhp).length;
     for (var a = 0; a < limit; a++) {
-        console.log(bateauxPhp[a])
+        console.log(bateauxPhp[a]);
+        var currentPolyline = [];
+        var name = "bateau" + a;
+         trajetEnCours=false;
+        $('#toolbar').show();
+        $('#timerbtn').show();
+        bool_bateau = 0;
+        map.off('click', addLatLngToTrajet); 
+
+        var CurrentVitesse = bateauxPhp[a][1];
+        var radar = bateauxPhp[a][7];
+
+        var nombreDePoints = bateauxPhp[a][9].length;
+        var DistanceTotaleM = 0;
+        var color_bateau = bateauxPhp[a][2];
+                    switch (bateauxPhp[a][5]) {
+
+                case 'porte-avion':
+
+
+                    if (color_bateau == "blue") {
+                     
+                        CurrentIcon = {
+                            icon: porte_avion_allie
+                        };
+
+
+                    } else if (color_bateau == "red") {
+                     
+                        CurrentIcon = {
+                            icon: porte_avion_ennemi
+                        };
+                    } else {
+                    
+                        CurrentIcon = {
+                            icon: porte_avion_neutre
+                        };
+                    }
+
+
+
+                    break;
+
+
+
+
+
+
+                case 'asm':
+
+
+                    if (color_bateau == "blue") {
+                 
+                        CurrentIcon = {
+                            icon: asm_allie
+                        };
+                    } else if (color_bateau == "red") {
+                 
+                        CurrentIcon = {
+                            icon: asm_ennemi
+                        };
+                    } else {
+                 
+                        CurrentIcon = {
+                            icon: asm_neutre
+                        };
+                    }
+
+
+                    break;
+
+
+
+
+                case 'bpc':
+
+                    if (color_bateau == "blue") {
+             
+
+                        CurrentIcon = {
+                            icon: bpc_allie
+                        };
+
+                    } else if (color_bateau == "red") {
+                     
+                        CurrentIcon = {
+                            icon: bpc_ennemi
+                        };
+                    } else {
+                       
+                        CurrentIcon = {
+                            icon: bpc_neutre
+                        };
+                    }
+
+
+
+                    break;
+
+                case 'fs':
+
+                    if (color_bateau == "blue") {
+                    
+
+                        CurrentIcon = {
+                            icon: fs_allie
+                        };
+
+                    } else if (color_bateau == "red") {
+                  
+
+                        CurrentIcon = {
+                            icon: fs_ennemi
+                        };
+                    } else {
+                     
+
+                        CurrentIcon = {
+                            icon: fs_neutre
+                        };
+                    }
+
+
+
+                    break;
+
+                case 'phm':
+
+                    if (color_bateau == "blue") {
+                  
+
+                        CurrentIcon = {
+                            icon: phm_allie
+                        };
+
+                    } else if (color_bateau == "red") {
+                   
+
+                        CurrentIcon = {
+                            icon: phm_ennemi
+                        };
+                    } else {
+                  
+
+                        CurrentIcon = {
+                            icon: phm_neutre
+                        };
+                    }
+
+
+
+                    break;
+
+                case 'fda':
+
+                    if (color_bateau == "blue") {
+                  
+
+                        CurrentIcon = {
+                            icon: fda_allie
+                        };
+
+                    } else if (color_bateau == "red") {
+                      
+
+                        CurrentIcon = {
+                            icon: fda_ennemi
+                        };
+                    } else {
+
+
+                        CurrentIcon = {
+                            icon: fda_neutre
+                        };
+                    }
+
+
+
+                    break;
+
+
+                case 'bcr':
+
+                    if (color_bateau == "blue") {
+                     
+                        CurrentIcon = {
+                            icon: bcr_allie
+                        };
+
+                    } else if (color_bateau == "red") {
+                  
+                        CurrentIcon = {
+                            icon: bcr_ennemi
+                        };
+                    } else {
+              
+
+                        CurrentIcon = {
+                            icon: bcr_neutre
+                        };
+                    }
+
+
+
+                    break;
+
+
+
+
+
+
+                case 'avion':
+
+                    if (color_bateau == "blue") {
+              
+                        CurrentIcon = {
+                            icon: avion_allie
+                        };
+                    } else if (color_bateau == "red") {
+               
+                        CurrentIcon = {
+                            icon: avion_ennemi
+                        };
+                    } else {
+                   
+                        CurrentIcon = {
+                            icon: avion_neutre
+                        };
+                    }
+
+                    break;
+
+
+
+
+                case 'tigre':
+
+                    if (color_bateau == "blue") {
+                   
+
+                        CurrentIcon = {
+                            icon: tigre_allie
+                        };
+                    } else if (color_bateau == "red") {
+                   
+
+                        CurrentIcon = {
+                            icon: tigre_ennemi
+                        };
+                    } else {
+        
+                        CurrentIcon = {
+                            icon: tigre_neutre
+                        };
+                    }
+
+
+
+                    break;
+
+                case 'puma':
+
+                    if (color_bateau == "blue") {
+                
+
+                        CurrentIcon = {
+                            icon: puma_allie
+                        };
+                    } else if (color_bateau == "red") {
+                
+
+                        CurrentIcon = {
+                            icon: puma_ennemi
+                        };
+                    } else {
+                   
+
+                        CurrentIcon = {
+                            icon: puma_neutre
+                        };
+                    }
+
+                    break;
+
+
+
+
+                case 'fennec':
+
+                    if (color_bateau == "blue") {
+             
+
+                        CurrentIcon = {
+                            icon: fennec_allie
+                        };
+                    } else if (color_bateau == "red") {
+                 
+
+                        CurrentIcon = {
+                            icon: fennec_ennemi
+                        };
+                    } else {
+                
+                        CurrentIcon = {
+                            icon: fennec_neutre
+                        };
+                    }
+
+
+
+                    break;
+
+                case 'paquebot':
+
+                    if (color_bateau == "blue") {
+                       
+
+                        CurrentIcon = {
+                            icon: paquebot_allie
+                        };
+                    } else if (color_bateau == "red") {
+                      
+
+                        CurrentIcon = {
+                            icon: paquebot_ennemi
+                        };
+                    } else {
+                  
+
+                        CurrentIcon = {
+                            icon: paquebot_neutre
+                        };
+                    }
+
+
+
+                    break;
+
+                case 'cargo':
+
+                    if (color_bateau == "blue") {
+                   
+                        CurrentIcon = {
+                            icon: cargo_allie
+                        };
+                    } else if (color_bateau == "red") {
+                 
+
+                        CurrentIcon = {
+                            icon: cargo_ennemi
+                        };
+                    } else {
+                   
+
+                        CurrentIcon = {
+                            icon: cargo_neutre
+                        };
+                    }
+
+
+
+                    break;
+
+                case 'peche':
+
+                    if (color_bateau == "blue") {
+                      
+
+                        CurrentIcon = {
+                            icon: peche_allie
+                        };
+                    } else if (color_bateau == "red") {
+           
+
+                        CurrentIcon = {
+                            icon: peche_ennemi
+                        };
+                    } else {
+               
+
+                        CurrentIcon = {
+                            icon: peche_neutre
+                        };
+                    }
+
+
+
+                    break;
+
+            }
+        
+        console.log(CurrentIcon);
+        
+                 currentPolyline = new L.polyline([], {
+            color: bateauxPhp[a][2]
+            , className: name
+        }).addTo(map);
+        
+    for (var q= 0; q < bateauxPhp[a][9].length; q++) {
+            currentPolyline.addLatLng(bateauxPhp[a][9][q]);
+        };
+        
+             CurrentSpeed=CurrentVitesse;
+
+         for (var i = 1; i < nombreDePoints; i++) {
+            DistanceTotaleM += getDistanceFromLatLonInKm(bateauxPhp[a][9][i].lat,bateauxPhp[a][9][i].lng,bateauxPhp[a][9][i - 1].lat,bateauxPhp[a][9][i - 1].lng) ;
+        };
+        
+        var dureeTrajet = 1000*DistanceTotaleM / (CurrentVitesse/1.9438399999515);
+        dureeTrajet = parseInt(dureeTrajet/(CurrentSpeed*60));
+        TOTAL = dureeTrajet;   
+        console.log(TOTAL);
+//  
+////        for (var i = 0; i < nombreDePoints; i++) {
+//             bateaux[bat] = L.Marker.movingMarker(currentPolyline
+//            , TOTAL, CurrentIcon).addTo(map);
+//        };
+
+//        var elem = "bateau" + bat;
+        bateaux[a] = L.Marker.movingMarker(currentPolyline._latlngs
+            , TOTAL, CurrentIcon).addTo(map);
+   console.log(TOTAL + "total");
+//        
+//       
+//
+//        map.removeLayer(CurrentMarkerTrajet);
+//
+//        var description_bateau = $('#description').val();
+        CurrentType = bateauxPhp[a][5];
+//
+//        if (description_bateau.length == 0) {
+            bateaux[bat] = bateaux[bat].bindPopup('<label>Type d\'unité : </label>' + CurrentType + '<br><a href="#" id="' + bat + '" class="bateau">Changer Trajet</a><br><a href="#" data-id="' + bat + '" class="bateau_vitesse">Changer Vitesse</a><br><a href="#" data-id="' + bat + '" class="bateau_suppr">Supprimer bateau</a>');
+            bateaux[bat].editDescription = '<label>Type d\'unité : </label>' + CurrentType + '<br><a href="#" id="' + bat + '" class="bateau">Changer Trajet</a><br><a href="#" data-id="' + bat + '" class="bateau_vitesse">Changer Vitesse</a><br><a href="#" data-id="' + bat + '" class="bateau_suppr">Supprimer bateau</a>';        
+//        } else {
+//            bateaux[bat] = bateaux[bat].bindPopup('<label>Type d\'unité : </label>' + CurrentType + '<br>' + '<label>Description : </label><br>' + description_bateau + '<a href="#" id="' + bat + '" class="bateau">Changer Trajet</a><br><a href="#" data-id="' + bat + '" class="bateau_vitesse">Changer Vitesse</a><br><a href="#" data-id="' + bat + '" class="bateau_suppr">Supprimer bateau</a>');
+//            bateaux[bat].editDescription = '<label>Type d\'unité : </label>' + CurrentType + '<br>' + '<label>Description : </label><br>' + description_bateau + '<a href="#" id="' + bat + '" class="bateau">Changer Trajet</a><br><a href="#" data-id="' + bat + '" class="bateau_vitesse">Changer Vitesse</a><br><a href="#" data-id="' + bat + '" class="bateau_suppr">Supprimer bateau</a>';
+//        }
+//        var stock = currentPolyline;
+//
+        bateaux[a].stock = currentPolyline;
+        classId=bateaux[a].stock.options.color+a;
+        $(bateaux[a]._icon).addClass(classId);
+        bateaux[a].suppression=false;
+        bateaux[a].editVitesse = CurrentVitesse;
+////       
+        bateaux[a].editType = bateauxPhp[a][5];
+////        
+////
+        bateaux[a].editSpeed = bateauxPhp[a][1];
+        bateaux[a].editRadar = bateauxPhp[a][7];
+        bateaux[a].editIcon = CurrentIcon;
+        bateaux[a].editColor = bateaux[a].stock.options.color;
+//        
+        bateaux[a].editDetection = false;
+
+        bateaux[a].editTypeVitesse = bateauxPhp[a][1];
+        bat++;
+//
+//        
+        
     }
 }
 
