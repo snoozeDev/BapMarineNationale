@@ -33,6 +33,9 @@
                 <option value="port">Port</option>
                 <option value="offshore">Offshore</option>
                 <option value="phare">Phare</option>
+                <option value="ville">Ville</option>
+                <option value="village">Village</option>
+
             </select>
             <img src="image/port.png" id="icone_img">
 
@@ -43,7 +46,11 @@
             <a href="#" class="btn" id="drawBatiment">Ajouter le batiment</a>
         </div>
     </div>
+    <div class="grade_circle">
+        <div class="value">0</div>
+        <input id="grade" type="range" min="10" max="1000" step="20" value="50">
 
+    </div>
     <div id="ajout_pins" class="pop_up_inv hide">
         <div class="pop_up">
 
@@ -71,9 +78,9 @@
 
                         <p class="align">Taille du cercle</p>
                         <select class="formula" id="taille_circle" name="taille_cercle">
-                            <option value="50000">Petit</option>
-                            <option value="100000">Moyen</option>
-                            <option value="200000">Grand</option>
+                            <option value="50000">100 km</option>
+                            <option value="250000">500 km</option>
+                            <option value="500000">1000 km</option>
                         </select>
                         <p class="align">Couleur du cercle</p>
                         <select class="formula" id="color_circle" name="color_circle">
@@ -254,6 +261,7 @@
 
         <div class="hide btn_finish forme" id="stopDraw"> <img src="image/formev2.png"></div>
         <div class="hide btn_finish forme" id="stopDrawPolyline"> <img src="image/formev2.png"></div>
+        <div class="hide btn_finish forme" id="stopDrawCircle"> <img src="image/formev2.png"></div>
         <div class="hide btn_finish forme" id="stopEditPolyline"> <img src="image/bateauv2.png"></div>
         <div class="hide btn_finish forme" id="stopDrawTrajet"> <img src="image/bateauv2.png"></div>
 

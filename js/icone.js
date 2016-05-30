@@ -324,3 +324,17 @@ var paquebot_allie = L.icon({
     iconAnchor:   [15, 15], // point of the icon which will correspond to marker's location
     popupAnchor:  [-0, -9] // point from which the popup should open relative to the iconAnchor
 });
+
+var ville = L.icon({
+    iconUrl: 'image/ville.png',
+    iconSize:     [100, 100], // size of the icon
+    iconAnchor:   [15, 15], // point of the icon which will correspond to marker's location
+    popupAnchor:  [-0, -9] // point from which the popup should open relative to the iconAnchor
+});
+
+var village = L.icon({
+    iconUrl: 'image/village.png',
+    iconSize:     [30, 30], // size of the icon
+    iconAnchor:   [15, 15], // point of the icon which will correspond to marker's location
+    popupAnchor:  [-0, -9] // point from which the popup should open relative to the iconAnchor
+});

@@ -864,7 +864,14 @@ a, a:visited {
 	background: #1d64ab;
 	text-decoration: none;
 }
-
+.grade_circle {
+	width: 50%;
+	position: absolute;
+	z-index: 1000;
+	margin-left: 25%;
+	display: none;
+	bottom: 20%;
+}
 .title {
 	font-size: 35px;
 
