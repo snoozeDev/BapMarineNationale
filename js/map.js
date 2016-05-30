@@ -810,19 +810,15 @@ var trajetEnCours=false;
 
 
         var nombreDePoints = currentTrajet._latlngs.length;
-        console.log(nombreDePoints);
-
         var DistanceTotaleM = 0;
         for (var i = 1; i < nombreDePoints; i++) {
             DistanceTotaleM += currentTrajet._latlngs[i].distanceTo(currentTrajet._latlngs[i - 1]);
-            console.log(DistanceTotaleM);
         }
         CurrentSpeed=speed;//recupere coef speed
 
         var dureeTrajet = 1000*DistanceTotaleM / (CurrentVitesse/1.9438399999515);
         dureeTrajet = parseInt(dureeTrajet/(CurrentSpeed*60));
         TOTAL = dureeTrajet;
-        console.log(TOTAL);
         //var dureeTrajet = DistanceTotaleM / 500 ;
         var elem = "bateau" + bat;
         /*if(bat>0){
@@ -831,7 +827,6 @@ var trajetEnCours=false;
         
         bateaux[bat] = L.Marker.movingMarker(currentTrajet._latlngs
             , TOTAL, CurrentIcon).addTo(map);
-console.log(currentTrajet._latlngs);
         if(playOrPause == 1){
             if (bateaux[bat]._latlngs){
                 if (currentTrajet._latlngs[1]){
@@ -875,9 +870,6 @@ console.log(currentTrajet._latlngs);
         bateaux[bat].editDetection = false;
 
         bateaux[bat].editTypeVitesse = vitesse_bateau;
-
-
-        console.log(bateaux[bat]);
         bat++;
 
 
