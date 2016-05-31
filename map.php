@@ -359,7 +359,7 @@ $result = $conn->query($sql);
 
 
 
-                            <input class="formula" type="text" name="mapName" placeholder="Nom de la carte">
+                            <input class="formula" type="text" name="mapName"  placeholder="Nom de la carte">
                             <textarea class="formula" name="mapDescription" placeholder="Description de la carte"></textarea>
                             <input type="hidden" id="cer" name="cercles">
                             <input type="hidden" id="polyg" name="polygs">
