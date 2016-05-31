@@ -5,7 +5,7 @@
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 
     <link rel="stylesheet" type="text/css" href="css/style.css">
-    <link rel="stylesheet" href="js/Leaflet-0.7.7/leaflet.css" />
+    <link rel="stylesheet" href="css/leaflet.css" />
     <script src='https://api.mapbox.com/mapbox.js/v2.4.0/mapbox.js'></script>
 
 
