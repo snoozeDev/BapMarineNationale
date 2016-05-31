@@ -238,6 +238,13 @@ text-decoration: none;
 .profondeur{
     pointer-events: none;
 }
+.port{
+    pointer-events: none;
+}
+.phare{
+    pointer-events: none;
+
+}
 
 .stop{
 	position: absolute;
