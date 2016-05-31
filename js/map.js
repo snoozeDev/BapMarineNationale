@@ -843,7 +843,6 @@ var trajetEnCours=false;
         var CurrentVitesse = $('#vitesse_bateau').val();
         var radar = $('#radar').val();
         radar=radar*100;
-        CurrentVitesse = CurrentVitesse;
         vitesse_bateau = 1;
 
         // Calcul longeur Trajet*********************************   
@@ -1945,6 +1944,7 @@ function loadText(textsPhp){
                 className: text_name
                 , html: textsPhp[u][1]
                 , iconSize: [200, 80]
+                , clickable: false
             })
         }).addTo(map);
         

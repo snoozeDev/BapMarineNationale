@@ -859,7 +859,9 @@ a, a:visited {
 	border: solid #1f628d 2px 2px 0px 2px;
 
 }
-
+.leaflet-marker-icon {
+	z-index: 3000;
+}
 .btn_admin:hover {
 	background: #1d64ab;
 	text-decoration: none;
