@@ -5,12 +5,12 @@
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 
     <link rel="stylesheet" type="text/css" href="css/style.css">
-    <link rel="stylesheet" href="js/Leaflet-0.7.7/leaflet.css" />
+    <link rel="stylesheet" href="css/leaflet.css" />
     <script src='https://api.mapbox.com/mapbox.js/v2.4.0/mapbox.js'></script>
 
 
 
-    <link href='https://api.mapbox.com/mapbox.js/plugins/leaflet-fullscreen/v1.0.1/leaflet.fullscreen.css' rel='stylesheet' />
+<!--    <link href='https://api.mapbox.com/mapbox.js/plugins/leaflet-fullscreen/v1.0.1/leaflet.fullscreen.css' rel='stylesheet' />-->
 
     <script type="text/javascript">
         function change_onglet(name) {
@@ -302,24 +302,24 @@
             <div class="contenu_onglet" id="contenu_onglet_options">
                 <div class="options-cont">
                     <h3 class="filtres_title">Filtres des éléments natifs</h3>
-                    <div style="padding-top:30px" class="bouton">
+                    <div  class="bouton  filtres">
                         <input class="checkbox" id="checkbox1" type="checkbox">
                         <label id="profondeur" for="checkbox1"></label>
                         <span class="options">Cacher les profondeurs</span>
                     </div>
-                    <br>
+                    
                     <div class="bouton">
                         <input class="checkbox" id="checkbox2" type="checkbox">
                         <label id="riv" for="checkbox2"></label>
                         <span class="options">Cacher les côtes et les rivières</span>
                     </div>
-                    <br>
+                    
                     <div class="bouton">
                         <input class="checkbox" id="checkbox3" type="checkbox">
                         <label id="structures" for="checkbox3"></label>
                         <span class="options">Cacher les structures</span>
                     </div>
-                    <br>
+                    
                 </div>
                 <div>
                     <form class="sauvegarde" action='sauveguarde.php' method='post' id='myform'>
@@ -345,21 +345,21 @@ $result = $conn->query($sql);
     
     while($row = $result->fetch_assoc()) {
         if($row["id"] == $_GET["id"]){  
-          echo '<h3 class="sauvegarde_title" style="color:black">Carte actuelle :</h3><p style="color:black">'.$row["mapName"].'</p><br><input name="idUpdate" type="hidden" value="'.$row["id"].'"><button id="insert2" name="update" class="save" >Ecraser la sauvegarde</button>';
+          echo '<h3 class="sauvegarde_title" style="color:black">Carte actuelle :</h3><p style="color:black;text-align:center">'.$row["mapName"].'</p><input name="idUpdate" type="hidden" value="'.$row["id"].'"><button id="insert2" name="update" class="save" >Ecraser la sauvegarde</button>';
         }
     }
     
 }
 ?>
-                            <br>
-                            <br>
+                          
+                           
                             <h3 class="sauvegarde_title">Sauvegardez une nouvelle carte</h3>
 
 
 
 
 
-                            <input class="formula" type="text" name="mapName" placeholder="Nom de la carte">
+                            <input class="formula" type="text" name="mapName"  placeholder="Nom de la carte">
                             <textarea class="formula" name="mapDescription" placeholder="Description de la carte"></textarea>
                             <input type="hidden" id="cer" name="cercles">
                             <input type="hidden" id="polyg" name="polygs">
@@ -460,7 +460,7 @@ $result = $conn->query($sql);
 
     <script src="https://code.jquery.com/jquery-1.12.0.min.js"></script>
 
-    <script src="js/Leaflet-0.7.7/leaflet.js"></script>
+    <script src="js/leaflet.js"></script>
     <script type="text/javascript" src="js/icone.js"></script>
     <script type="text/javascript" src="js/map.js" charset="UTF-8"></script>
     <script src='js/coord.js'></script>
@@ -472,103 +472,13 @@ $result = $conn->query($sql);
 
 
 
+<!--
     <script src='https://api.mapbox.com/mapbox.js/plugins/leaflet-fullscreen/v1.0.1/Leaflet.fullscreen.min.js'></script>
     <link href='https://api.mapbox.com/mapbox.js/plugins/leaflet-fullscreen/v1.0.1/leaflet.fullscreen.css' rel='stylesheet' />
+-->
 
     <script>
-        var sidebar = (function () {
-            "use strict";
 
-            var $contnet = $('#content')
-                , $sidebar = $('#sidebar')
-                , $sidebarBtn = $('#sidebar-btn')
-                , $toggleCol = $('body').add($contnet).add($sidebarBtn)
-                , sidebarIsVisible = false;
-
-            $sidebarBtn.on('click', function () {
-
-                if (!sidebarIsVisible) {
-                    bindContent();
-                } else {
-                    unbindContent();
-                }
-
-                toggleMenu();
-            });
-
-
-            function bindContent() {
-
-                $contnet.on('click', function () {
-                    toggleMenu();
-                    unbindContent();
-                });
-            }
-
-            function unbindContent() {
-                $contnet.unbind();
-            }
-
-            function toggleMenu() {
-
-                $toggleCol.toggleClass('sidebar-show');
-                $sidebar.toggleClass('show');
-
-                var image = document.getElementById('menu-stripes1');
-
-                if (!sidebarIsVisible) {
-
-                    image.src = "image/cancel.png";
-                    sidebarIsVisible = true;
-                } else {
-                    image.src = "image/menu.png";
-                    sidebarIsVisible = false;
-                }
-            }
-
-
-            var $menuToggle = $sidebar.find('.menu-toggle');
-
-            $menuToggle.each(function () {
-
-                var $this = $(this)
-                    , $submenuBtn = $this.children('.menu-toggle-btns').find('.menu-btn')
-                    , $submenu = $this.children('.submenu');
-
-                $submenuBtn.on('click', function (e) {
-                    e.preventDefault();
-                    $submenu.slideToggle();
-                    $(this).toggleClass('active');
-                });
-            });
-
-        })();
-
-        $(document).ready(function (e) {
-            $('.main-bar1').on('click', function () {
-                $('ul.lignes').slideToggle(120);
-            });
-        })
-        $(document).ready(function (e) {
-            $('.main-bar5').on('click', function () {
-                $('ul.batiments').slideToggle(120);
-            });
-        })
-        $(document).ready(function (e) {
-            $('.main-bar2').on('click', function () {
-                $('ul.cercle').slideToggle(120);
-            });
-        })
-        $(document).ready(function (e) {
-            $('.main-bar3').on('click', function () {
-                $('ul.texte').slideToggle(120);
-            });
-        })
-        $(document).ready(function (e) {
-            $('.main-bar4').on('click', function () {
-                $('ul.polygone').slideToggle(120);
-            });
-        })
     </script>
 
 

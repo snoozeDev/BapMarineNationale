@@ -55,7 +55,7 @@ d$('#insert, #insert2').click(function () {
     bateauxJsonString = JSON.stringify(bateauxJson);
     $('#bateau_save').val(bateauxJsonString);
     console.log($('#bateau_save').val());
-    alert("Nouvelle carte sauvegardee");
+    alert("Carte sauvegardee");
     $.post(
         $('#myform').attr('action')
         , $('#myform :input').serializeArray()

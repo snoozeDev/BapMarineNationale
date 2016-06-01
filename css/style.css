@@ -1,10 +1,13 @@
 
+
 html,body {
 	width: 100%;
 	height: 100%;
 	margin: 0;
 	padding: 0;
 	font-family: Arial;
+    overflow: hidden;
+    position:relative; 
 }
 
 /*-------------------------------*/
@@ -101,6 +104,8 @@ html,body {
 	height: 100%;
 	display: inline-block;
 	vertical-align: top;
+        overflow: hidden;
+    position:relative; 
 
 }
 .settings {
@@ -152,7 +157,6 @@ html,body {
 
 .simulation {
 	z-index: 1000;
-	position: absolute;
 	padding: 5%;
 	bottom:0;
 	right:20px;
@@ -238,6 +242,13 @@ text-decoration: none;
 .profondeur{
     pointer-events: none;
 }
+.port{
+    pointer-events: none;
+}
+.phare{
+    pointer-events: none;
+
+}
 
 .stop{
 	position: absolute;
@@ -275,6 +286,7 @@ text-decoration: none;
 	text-align: center;
 	border-radius: 10px;
 	margin-left:10%;
+/*    -ms-touch-action: none !important; */
 }
 #cont{
 	width: 200px;
@@ -380,6 +392,7 @@ body.sidebar-show {
 .menu-stripes,
 .content {
 	transition: transform .5s ease-in-out;
+    overflow-x: auto;
 }
 
 .content {
@@ -1000,6 +1013,11 @@ input[type="range"]::-webkit-slider-thumb {
 	margin-bottom: 0;
 }
 
+.filtres{
+    padding-top: 30px;
+}
+
+
 .ligne
 {
 	margin-top: -6px;
@@ -1072,6 +1090,7 @@ input[type="range"]::-webkit-slider-thumb {
 
 .save
 {
+    margin-top:3px;
 	margin-left: 28%;
 	background-color: #004080;
 	border: none;
@@ -1395,4 +1414,15 @@ p.blast{
 	right:-100px;
 }
 
+/*MediaQueries*/
+
+@media screen and (min-width: 0px) and (max-width: 1200px) {
+    .filtres{padding-top: 10px;}
+    .bouton{margin-bottom: 5px}
+    h3{margin-bottom:3px}
+    .save{margin-top: 3px;}
+    .onglet{margin-top: 5px}
+}
+
+/*fin mediaqueries*/
 
