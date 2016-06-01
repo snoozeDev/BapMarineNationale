@@ -6,12 +6,12 @@ $().ready(function() {
   $('#newDiv').css('display', 'none');
   $('#loadDiv').css('display', 'none');
   $('#tutoDiv').css('display', 'none');
-//		$('.helper').tubular({videoId: 'VOuRqBnBYrY'}); // where idOfYourVideo is the YouTube ID.
+		$('.helper').tubular({videoId: 'VOuRqBnBYrY'}); // where idOfYourVideo is the YouTube ID.
 	});
 
    $('header').click(function(){ //faire apparaittre le popup des bateaux
      
-     $('#indexDiv').css('display', 'block');
+     $('.helper').css('display', 'block');
      $('#newDiv').css('display', 'none');
      $('#new').removeClass('active');
      $('#tuto').removeClass('active');
@@ -25,7 +25,7 @@ $().ready(function() {
 
      $('.icon-dashboard').click(function(){ //faire apparaittre le popup des bateaux
        
-       $('#indexDiv').css('display', 'none');
+       $('.helper').css('display', 'none');
        $('#newDiv').css('display', 'block');
        $('#new').addClass('active');
        $('#tuto').removeClass('active');
@@ -34,12 +34,14 @@ $().ready(function() {
        $('#tubular-container').css('display', 'none');
        $('#tutoDiv').css('display', 'none');
        console.log("new");
-       window.location.href = "map.php";  //will call the function after 2 secs.
+       setTimeout(function () {
+       window.location.href = "map.php"; //will redirect to your blog page (an ex: blog.html)
+    }, 0); //will call the function after 2 secs.
 
      });
            $('.icon-customers').click(function(){ //faire apparaittre le popup des bateaux
              
-             $('#indexDiv').css('display', 'none');
+             $('.helper').css('display', 'none');
              $('#load').addClass('active');
              $('#tuto').removeClass('active');
              $('#new').removeClass('active');
@@ -51,7 +53,7 @@ $().ready(function() {
            });
            $('.icon-users').click(function(){ //faire apparaittre le popup des bateaux
              
-             $('#indexDiv').css('display', 'none');
+             $('.helper').css('display', 'none');
              $('#newDiv').css('display', 'none');
              $('#tuto').addClass('active');
              $('#new').removeClass('active');

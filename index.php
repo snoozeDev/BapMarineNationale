@@ -20,16 +20,17 @@
 </nav>
 
 <main>
-<div id="indexDiv">
+	<div style="z-index:1" class="helper">
+		<div id="indexDiv">
       
-    <h1>BAP MARINE NATIONALE</h1>
+      BAP MARINE NATIONALE
       <span>Prototype d'un outil de briefing militaire destiné à simuler des opérations navales</span>
       
     </div>
     
+  </div>
   <div  id="newDiv" style="color:red">
     <div class='container'>
-<!--
       <div class='loading'>
         <span></span>
         <span></span>
@@ -40,7 +41,6 @@
         <span></span>
         <span></span>
       </div>
--->
     </div>
   </div>
   <div  id="loadDiv" style="z-index:100"> 
