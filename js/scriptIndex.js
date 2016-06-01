@@ -34,9 +34,7 @@ $().ready(function() {
        $('#tubular-container').css('display', 'none');
        $('#tutoDiv').css('display', 'none');
        console.log("new");
-       setTimeout(function () {
-       window.location.href = "map.php"; //will redirect to your blog page (an ex: blog.html)
-    }, 0); //will call the function after 2 secs.
+       window.location.href = "map.php";  //will call the function after 2 secs.
 
      });
            $('.icon-customers').click(function(){ //faire apparaittre le popup des bateaux

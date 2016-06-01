@@ -31,6 +31,7 @@
   </div>
   <div  id="newDiv" style="color:red">
     <div class='container'>
+<!--
       <div class='loading'>
         <span></span>
         <span></span>
@@ -41,6 +42,7 @@
         <span></span>
         <span></span>
       </div>
+-->
     </div>
   </div>
   <div  id="loadDiv" style="z-index:100"> 
