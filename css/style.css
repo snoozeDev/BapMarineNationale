@@ -139,21 +139,20 @@ html,body {
 }
 .pop_up_inv {
 	height: 50%;
-	padding: 5% 15% 45% 15%;
+	margin-left: 15%;
+	margin-top: 5%;
 	z-index: 1000;
 	position: absolute;
 	width: 70%;
-	background-color: rgba(0,0,0,0.2);
-	margin: 0;
 }
 .pop_up_inv2 {
 	height: 50%;
-	padding: 25% 15% 25% 15%;
+	margin-right: auto;
+	margin-left: 15%;
+	margin-top: 5%;
 	z-index: 1000;
 	position: absolute;
 	width: 70%;
-	background-color: rgba(0,0,0,0.2);
-	margin: 0;
 }
 
 .simulation {
@@ -218,10 +217,7 @@ text-decoration: none;
 	
 	background-color: rgba(255,255,255,0.5);
 	width: 100%;
-	
 	min-height: 100%;
-	margin-top: 10%;
-	margin-left: 10%;
 }
 
 .pop {
@@ -273,7 +269,6 @@ text-decoration: none;
 }
 .pop_up {
 	text-align: center;
-	padding: 2%;
 }
 
 .big_btn {
@@ -951,13 +946,9 @@ input[type="range"]::-webkit-slider-thumb {
 	z-index: 2000;
 	border-radius: 10px;
 	background-color:white;
-	width: 80%;
 	border: solid #ffffff 1px;
-	min-height: 30%;
 	max-height: auto;
-	margin-top: 2%;
 
-	margin-left: 10%;
 	-moz-box-shadow: 6px 6px 6px 1px rgba(0,0,0,0.1);
 	-webkit-box-shadow: 6px 6px 6px 1px rgba(0,0,0,0.1);
 	-o-box-shadow: 6px 6px 6px 1px rgba(0,0,0,0.1);
