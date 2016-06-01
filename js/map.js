@@ -401,7 +401,7 @@ function initialize() { //fonction qui permet de charger la carte au lancement d
      /*$('#ajout_bateau').click(function(){
         $('#ajout_bateau').hide();
     });*/
-    $(document).click(function (e) {              //clique en dehors
+    $('html').click(function (e) {              //clique en dehors
         var container = $("#ajout_pins");
         if (e.target.id != 'ajout_pins_inv' && e.target.id == "ajout_pins"){
             container.hide();
