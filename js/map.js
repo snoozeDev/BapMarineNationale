@@ -398,16 +398,24 @@ function initialize() { //fonction qui permet de charger la carte au lancement d
         $('#ajout_batiment').hide();
         $('#ajout_bateau').hide();
     });
+     /*$('#ajout_bateau').click(function(){
+        $('#ajout_bateau').hide();
+    });*/
     $(document).mouseup(function (e) {              //clique en dehors
         var container = $("#ajout_pins");
-        if (container.has(e.target).length === 0)
+        if (e.target.id != 'ajout_pins_inv' && e.target.id == "ajout_pins"){
             container.hide();
+        }
+            
         var container2 = $("#ajout_bateau");
-        if (container2.has(e.target).length === 0)
+        if (e.target.id != 'ajout_bateau_inv' && e.target.id == "ajout_bateau"){
             container2.hide();
+        }
         var container3 = $("#ajout_batiment");
-        if (container3.has(e.target).length === 0)
+        if (e.target.id != 'ajout_batiment_inv' && e.target.id == "ajout_batiment"){
             container3.hide();
+        }
+            
     });
 
     $('.btn_finish').click(function () { //faire disparaitre le bouton draw finish

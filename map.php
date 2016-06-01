@@ -27,7 +27,7 @@
 
 <body>
     <div id="ajout_batiment" class="pop_up_inv hide">
-        <div class="pop_up">
+        <div class="pop_up" id="ajout_batiment_inv">
             <p class="title"> BATIMENTS </p>
             <select class="formula" id="icone_select" name="icone_select">
                 <option value="port">Port</option>
@@ -52,7 +52,7 @@
 
     </div>
     <div id="ajout_pins" class="pop_up_inv hide">
-        <div class="pop_up">
+        <div class="pop_up" id="ajout_pins_inv">
 
             <form>
                 <p class="title"> FORMES </p>
@@ -135,7 +135,7 @@
     </div>
     <div id="ajout_bateau" class="pop_up_inv hide">
         <div class="pop_up">
-            <div class="formulaire_bat">
+            <div class="formulaire_bat" id="ajout_bateau_inv">
                 <p class="title"> DÉPLACEMENT </p>
                 <label>Type de vehicule</label>
                 <select class="formula" id="type_bateau" name="type_bateau">
