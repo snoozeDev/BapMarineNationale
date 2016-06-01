@@ -393,6 +393,11 @@ function initialize() { //fonction qui permet de charger la carte au lancement d
     $('#batiment').click(function () { //faire apparaittre le popup des batiments
         $('#ajout_batiment').css('display', 'block');
     });
+    $('#map').click(function(){
+        $("#ajout_pins").hide();
+        $('#ajout_batiment').hide();
+        $('#ajout_bateau').hide();
+    });
     $(document).mouseup(function (e) {              //clique en dehors
         var container = $("#ajout_pins");
         if (container.has(e.target).length === 0)
@@ -1651,9 +1656,7 @@ $('.speed').change(function () {             //lorsque le coef de vitesse change
         $('.pop_up_inv2').hide();
         bateaux[id].resume();
     });
-    $('#map').click(function(){
-        $('.pop_up').hide();
-    });
+    
     $('#map').on('click', '.bateau', function () { // changer trajet
         if( trajetEnCours==false){
             trajetEnCours=true;
