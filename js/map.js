@@ -1651,6 +1651,9 @@ $('.speed').change(function () {             //lorsque le coef de vitesse change
         $('.pop_up_inv2').hide();
         bateaux[id].resume();
     });
+    $('.pop_up_inv2').on('click', function(){
+        $('.pop_up').hide();
+    });
     $('#map').on('click', '.bateau', function () { // changer trajet
         if( trajetEnCours==false){
             trajetEnCours=true;
