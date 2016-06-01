@@ -177,7 +177,6 @@ tableau[increment].visible = 0;
             $('#'+elem).html('<div class="margepolyline">cacher '+form+'</div><div class="oeilvert"><div class=" yeux vert"></div></div>');
             doubleclique=0;
             tableau[increment].visible = 1;
-            console.log(tableau[increment]);
              
         }
 

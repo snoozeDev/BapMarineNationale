@@ -478,9 +478,9 @@ function initialize() { //fonction qui permet de charger la carte au lancement d
         map.off('click', addLatLngToBati); //on arrête d'écouter les cliques sur la map
         var elem = "batiment" + bati;    //element utile pour la suppression 
         var form = batiment[bati].type;
-      
-        $('.delete_batiment_p').append('<div class="bord"> <div class="margebatiment" class="form" id="' + elem + '" onclick="delete_obj(&#34;' + elem + '&#34;,&#34;' + form + '&#34;);return false"><p>cacher ' + form + ' </p> <div class="oeilvert" id="oeil"><div id="oeil'+ elem + '" class="vert yeux"></div></div></div> </div>');
         
+        $('.delete_batiment_p').append('<div class="bord"> <div class="margebatiment" class="form" id="' + elem + '" onclick="delete_obj(&#34;' + elem + '&#34;,&#34;' + form + '&#34;);return false"><p>cacher ' + form + ' </p> <div class="oeilvert" id="oeil"><div id="oeil'+ elem + '" class="vert yeux"></div></div></div> </div>');
+        console.log(batiment[bati].visible);
         bati++;
     };
 
@@ -500,7 +500,8 @@ function initialize() { //fonction qui permet de charger la carte au lancement d
         }).addTo(map);
         batiment[bati] = batiment[bati].bindPopup(iconeBatiment+" : "+bati_describ);
         batiment[bati].type = iconeBatiment;
-         batimentJson[bati] = [batiment[bati]._latlng,batiment[bati].type];
+        batiment[bati].visible = 1;
+         batimentJson[bati] = [batiment[bati]._latlng,batiment[bati].type,batiment[bati].visible];
         var batiJsonString = JSON.stringify(batimentJson);
         $('#bati').val(batiJsonString);
         stop3(); //pour finir l'ajout
@@ -555,15 +556,16 @@ function initialize() { //fonction qui permet de charger la carte au lancement d
         default:
             break;
         }
-     
-                polygJson[polyg] = [polygone[polyg]._latlngs,polygone[polyg].options];
+     polygone[poly].visible = 1;
+                polygJson[polyg] = [polygone[polyg]._latlngs,polygone[polyg].options,polygone[poly].visible];
         var polygJsonString = JSON.stringify(polygJson);
         console.log(polygJsonString);
         $('#polyg').val(polygJsonString);
         
         
         var form = 'le polygone ' + color_fr + ' n°' + polyg2;
-      
+            
+
         $('.delete_polygone_p').append('<div class="bord"> <div class="margepolygone" class="form" id="' + elem + '" onclick="delete_obj(&#34;' + elem + '&#34;,&#34;' + form + '&#34;);return false"><p>cacher ' + form + ' </p> <div class="oeilvert" id="oeil"><div id="oeil'+ elem + '" class="vert yeux"></div></div></div> </div>');
         
 
@@ -584,7 +586,7 @@ function initialize() { //fonction qui permet de charger la carte au lancement d
     var texte = [];
     var tex = 0;
     var currentMarker = {}; //Empty object to be used later;
-var textJson = {};
+    var textJson = {};
 
     drawMarkerButton.addEventListener('click', function () {
 
@@ -599,7 +601,7 @@ var textJson = {};
         map.off('click', addLatLngToMarker); //Stop listening for clicks on map.
         var elem = "texte" + tex;
         var form = texte[tex].options.icon.options.html;
-      
+        texte[tex].visible = 1;
         $('.delete_texte_p').append('<div class="bord"> <div class="margetexte" class="form" id="' + elem + '" onclick="delete_obj(&#34;' + elem + '&#34;,&#34;' + form + '&#34;);return false"><p>cacher ' + form + ' </p> <div class="oeilvert" id="oeil"><div id="oeil'+ elem + '" class="vert yeux"></div></div></div> </div>');
         
         tex++;
@@ -622,7 +624,7 @@ var textJson = {};
         }).addTo(map);
         console.log(texte[tex]);
         
-        textJson[tex] = [texte[tex]._latlng,text];
+        textJson[tex] = [texte[tex]._latlng,text, texte[tex].visible];
         var texteJsonString = JSON.stringify(textJson);
         $('#text').val(texteJsonString);
         stop2(); //pour ne pas dessiner d'autres cercles
@@ -728,7 +730,8 @@ var textJson = {};
             fillOpacity: 0.5,
             clickable: false
         }).addTo(map);
-            cercleJson[cer] = [cercle[cer]._mRadius,cercle[cer]._latlng,cercle[cer].options];
+        cercle[cer].visible = 1;
+            cercleJson[cer] = [cercle[cer]._mRadius,cercle[cer]._latlng,cercle[cer].options,cercle[cer].visible];
         var cercleJsonString = JSON.stringify(cercleJson);
         $('#cer').val(cercleJsonString);
         stop(); //pour ne pas dessiner d'autres cercles
@@ -777,7 +780,8 @@ var textJson = {};
         default:
             break;
         }
-          polylineJson[poly] = [polyline[poly]._latlngs,polyline[poly].options];
+        polyline[poly].visible = 1;
+          polylineJson[poly] = [polyline[poly]._latlngs,polyline[poly].options,polyline[poly].visible];
         var polylineJsonString = JSON.stringify(polylineJson);
         $('#polyl').val(polylineJsonString);
         var form = 'la ligne ' + color_fr + ' n°' + poly2;
@@ -2004,6 +2008,7 @@ function loadBati(batisPhp){
       
         
     for (var c = 0; c < limit; c++) {
+        console.log(batisPhp[c]);
         var bati_name = "batiment" + bati;
          batiment[bati] = L.marker([batisPhp[c][0].lat, batisPhp[c][0].lng], {
             icon: L.icon({
@@ -2014,6 +2019,7 @@ function loadBati(batisPhp){
             })
                 
         }).addTo(map);
+        batiment[bati].visible = batisPhp[c][2];
         batiment[bati].type = batisPhp[c][1];
          batimentJson[bati] = [batiment[bati]._latlng,batiment[bati].type];
         var batiJsonString = JSON.stringify(batimentJson);
