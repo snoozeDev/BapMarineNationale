@@ -302,24 +302,24 @@
             <div class="contenu_onglet" id="contenu_onglet_options">
                 <div class="options-cont">
                     <h3 class="filtres_title">Filtres des éléments natifs</h3>
-                    <div style="padding-top:30px" class="bouton">
+                    <div  class="bouton  filtres">
                         <input class="checkbox" id="checkbox1" type="checkbox">
                         <label id="profondeur" for="checkbox1"></label>
                         <span class="options">Cacher les profondeurs</span>
                     </div>
-                    <br>
+                    
                     <div class="bouton">
                         <input class="checkbox" id="checkbox2" type="checkbox">
                         <label id="riv" for="checkbox2"></label>
                         <span class="options">Cacher les côtes et les rivières</span>
                     </div>
-                    <br>
+                    
                     <div class="bouton">
                         <input class="checkbox" id="checkbox3" type="checkbox">
                         <label id="structures" for="checkbox3"></label>
                         <span class="options">Cacher les structures</span>
                     </div>
-                    <br>
+                    
                 </div>
                 <div>
                     <form class="sauvegarde" action='sauveguarde.php' method='post' id='myform'>
@@ -345,14 +345,14 @@ $result = $conn->query($sql);
     
     while($row = $result->fetch_assoc()) {
         if($row["id"] == $_GET["id"]){  
-          echo '<h3 class="sauvegarde_title" style="color:black">Carte actuelle :</h3><p style="color:black">'.$row["mapName"].'</p><br><input name="idUpdate" type="hidden" value="'.$row["id"].'"><button id="insert2" name="update" class="save" >Ecraser la sauvegarde</button>';
+          echo '<h3 class="sauvegarde_title" style="color:black">Carte actuelle :</h3><p style="color:black;text-align:center">'.$row["mapName"].'</p><input name="idUpdate" type="hidden" value="'.$row["id"].'"><button id="insert2" name="update" class="save" >Ecraser la sauvegarde</button>';
         }
     }
     
 }
 ?>
-                            <br>
-                            <br>
+                          
+                           
                             <h3 class="sauvegarde_title">Sauvegardez une nouvelle carte</h3>
 
 
