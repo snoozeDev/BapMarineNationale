@@ -20,15 +20,13 @@
 </nav>
 
 <main>
-	<div style="z-index:1" class="helper">
 <div id="indexDiv">
       
-      BAP MARINE NATIONALE
+    <h1>BAP MARINE NATIONALE</h1>
       <span>Prototype d'un outil de briefing militaire destiné à simuler des opérations navales</span>
       
     </div>
     
-  </div>
   <div  id="newDiv" style="color:red">
     <div class='container'>
 <!--

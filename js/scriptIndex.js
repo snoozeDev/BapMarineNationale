@@ -11,7 +11,7 @@ $().ready(function() {
 
    $('header').click(function(){ //faire apparaittre le popup des bateaux
      
-     $('.helper').css('display', 'block');
+     $('#indexDiv').css('display', 'block');
      $('#newDiv').css('display', 'none');
      $('#new').removeClass('active');
      $('#tuto').removeClass('active');
@@ -25,7 +25,7 @@ $().ready(function() {
 
      $('.icon-dashboard').click(function(){ //faire apparaittre le popup des bateaux
        
-       $('.helper').css('display', 'none');
+       $('#indexDiv').css('display', 'none');
        $('#newDiv').css('display', 'block');
        $('#new').addClass('active');
        $('#tuto').removeClass('active');
@@ -39,7 +39,7 @@ $().ready(function() {
      });
            $('.icon-customers').click(function(){ //faire apparaittre le popup des bateaux
              
-             $('.helper').css('display', 'none');
+             $('#indexDiv').css('display', 'none');
              $('#load').addClass('active');
              $('#tuto').removeClass('active');
              $('#new').removeClass('active');
@@ -51,7 +51,7 @@ $().ready(function() {
            });
            $('.icon-users').click(function(){ //faire apparaittre le popup des bateaux
              
-             $('.helper').css('display', 'none');
+             $('#indexDiv').css('display', 'none');
              $('#newDiv').css('display', 'none');
              $('#tuto').addClass('active');
              $('#new').removeClass('active');
