@@ -383,36 +383,47 @@ function initialize() { //fonction qui permet de charger la carte au lancement d
     
 
     //affichage toolbar et popup
-
+ /*   $('#map').click(function(){
+         $('#ajout_bateau').hide();
+          $('#ajout_pins').hide();
+           $('#ajout_batiment').hide();
+    });*/
     $('#bateau').click(function () { //faire apparaittre le popup des bateaux
         $('#ajout_bateau').css('display', 'block');
     });
+    
     $('#forme').click(function () { //faire apparaittre le popup des formes
         $('#ajout_pins').css('display', 'block');
     });
     $('#batiment').click(function () { //faire apparaittre le popup des batiments
         $('#ajout_batiment').css('display', 'block');
     });
-    $('#map').click(function(){
-        $("#ajout_pins").hide();
-        $('#ajout_batiment').hide();
-        $('#ajout_bateau').hide();
+
+    $('#ajout_bateau').click(function (e){
+        if(e.target.id!='ajout_bateau_inv'){
+            $('#ajout_bateau').hide();
+        }
+        
     });
-     /*$('#ajout_bateau').click(function(){
-        $('#ajout_bateau').hide();
-    });*/
-    $('html').click(function (e) {              //clique en dehors
+    $('#ajout_pins').click(function (){
+        $('#ajout_pins').hide();
+    });
+    $('#ajout_batiment').click(function (){
+        $('#ajout_batiment').hide();
+    });
+   $(document).mouseup(function (e) {              //clique en dehors
         var container = $("#ajout_pins");
-        if (e.target.id != 'ajout_pins_inv' && e.target.id == "ajout_pins"){
+        if (container.has(e.target).length === 0){
             container.hide();
         }
             
         var container2 = $("#ajout_bateau");
-        if (e.target.id != 'ajout_bateau_inv' && e.target.id == "ajout_bateau"){
+        if (container2.has(e.target).length === 0){
             container2.hide();
         }
+            
         var container3 = $("#ajout_batiment");
-        if (e.target.id != 'ajout_batiment_inv' && e.target.id == "ajout_batiment"){
+        if (container3.has(e.target).length === 0){
             container3.hide();
         }
             
@@ -1664,7 +1675,6 @@ $('.speed').change(function () {             //lorsque le coef de vitesse change
         $('.pop_up_inv2').hide();
         bateaux[id].resume();
     });
-    
     $('#map').on('click', '.bateau', function () { // changer trajet
         if( trajetEnCours==false){
             trajetEnCours=true;
