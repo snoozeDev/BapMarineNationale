@@ -474,7 +474,6 @@ function initialize() { //fonction qui permet de charger la carte au lancement d
     });
 
     function stop3() {
-        console.log(batiment[bati]);
         $('#toolbar').show();
         map.off('click', addLatLngToBati); //on arrête d'écouter les cliques sur la map
         var elem = "batiment" + bati;    //element utile pour la suppression 
@@ -483,7 +482,6 @@ function initialize() { //fonction qui permet de charger la carte au lancement d
         $('.delete_batiment_p').append('<div class="bord"> <div class="margebatiment" class="form" id="' + elem + '" onclick="delete_obj(&#34;' + elem + '&#34;,&#34;' + form + '&#34;);return false"><p>cacher ' + form + ' </p> <div class="oeilvert" id="oeil"><div id="oeil'+ elem + '" class="vert yeux"></div></div></div> </div>');
         
         bati++;
-        console.log(bati);
     };
 
     function addLatLngToBati(clickEventData) {
@@ -502,7 +500,6 @@ function initialize() { //fonction qui permet de charger la carte au lancement d
         }).addTo(map);
         batiment[bati] = batiment[bati].bindPopup(iconeBatiment+" : "+bati_describ);
         batiment[bati].type = iconeBatiment;
-        console.log(batiment[bati]);
          batimentJson[bati] = [batiment[bati]._latlng,batiment[bati].type];
         var batiJsonString = JSON.stringify(batimentJson);
         $('#bati').val(batiJsonString);

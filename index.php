@@ -21,7 +21,7 @@
 
 <main>
 	<div style="z-index:1" class="helper">
-		<div id="indexDiv">
+<div id="indexDiv">
       
       BAP MARINE NATIONALE
       <span>Prototype d'un outil de briefing militaire destiné à simuler des opérations navales</span>

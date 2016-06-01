@@ -1417,7 +1417,6 @@ p.blast{
 /*MediaQueries*/
 
 @media screen and (min-width: 0px) and (max-width: 1200px) {
-    .filtres_title{color:pink}
     .filtres{padding-top: 10px;}
     .bouton{margin-bottom: 5px}
     h3{margin-bottom:3px}

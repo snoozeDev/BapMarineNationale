@@ -6,7 +6,7 @@ $().ready(function() {
   $('#newDiv').css('display', 'none');
   $('#loadDiv').css('display', 'none');
   $('#tutoDiv').css('display', 'none');
-		$('.helper').tubular({videoId: 'VOuRqBnBYrY'}); // where idOfYourVideo is the YouTube ID.
+//		$('.helper').tubular({videoId: 'VOuRqBnBYrY'}); // where idOfYourVideo is the YouTube ID.
 	});
 
    $('header').click(function(){ //faire apparaittre le popup des bateaux
