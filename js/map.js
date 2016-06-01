@@ -2047,7 +2047,10 @@ function loadBateaux(bateauxPhp){
     var limit = Object.keys(bateauxPhp).length;
     for (var a = 0; a < limit; a++) {
         console.log(bateauxPhp[a]);
-        var currentPolyline = [];
+        var currentPolyline = = new L.polyline([], {
+            color: color_bateau,
+            className: color_bateau
+        }).addTo(map);;
         var name = "bateau" + a;
          trajetEnCours=false;
         $('#toolbar').show();

@@ -1,4 +1,4 @@
-$('#insert, #insert2').click(function () {
+d$('#insert, #insert2').click(function () {
        var bateauxJson = {};
 
     var boolean_vitesse = false;
