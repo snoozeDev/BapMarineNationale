@@ -161,6 +161,7 @@ html,body {
 	bottom:0;
 	right:20px;
 	background-color: transparent;
+    text-align: center;
 }
 @keyframes animation {
 	from {opacity: 0.5;}
@@ -1099,6 +1100,19 @@ input[type="range"]::-webkit-slider-thumb {
 	font-size: 1em;
 	color: white;
     cursor: pointer
+}
+.save2
+{
+    margin-top:3px;
+	margin-left: 28%;
+	background-color: #004080;
+	border: none;
+	width: 110px;
+	height: 40px;
+	font-size: 1em;
+	color: white;
+    cursor: pointer;
+    margin-bottom:5px;
 }
 .ecraser{
       webkit-border-radius: 0;
