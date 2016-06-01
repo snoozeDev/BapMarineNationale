@@ -286,7 +286,7 @@ text-decoration: none;
 	text-align: center;
 	border-radius: 10px;
 	margin-left:10%;
-/*    -ms-touch-action: none !important; */
+    touch-action: none;
 }
 #cont{
 	width: 200px;

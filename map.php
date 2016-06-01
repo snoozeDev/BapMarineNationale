@@ -3,7 +3,7 @@
 
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-
+<meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' name='viewport' />
     <link rel="stylesheet" type="text/css" href="css/style.css">
     <link rel="stylesheet" href="css/leaflet.css" />
     <script src='https://api.mapbox.com/mapbox.js/v2.4.0/mapbox.js'></script>
