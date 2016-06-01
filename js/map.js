@@ -399,18 +399,7 @@ function initialize() { //fonction qui permet de charger la carte au lancement d
         $('#ajout_batiment').css('display', 'block');
     });
 
-    $('#ajout_bateau').click(function (e){
-        if(e.target.id!='ajout_bateau_inv'){
-            $('#ajout_bateau').hide();
-        }
-        
-    });
-    $('#ajout_pins').click(function (){
-        $('#ajout_pins').hide();
-    });
-    $('#ajout_batiment').click(function (){
-        $('#ajout_batiment').hide();
-    });
+   
    $(document).mouseup(function (e) {              //clique en dehors
         var container = $("#ajout_pins");
         if (container.has(e.target).length === 0){
