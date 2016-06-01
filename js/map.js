@@ -383,11 +383,11 @@ function initialize() { //fonction qui permet de charger la carte au lancement d
     
 
     //affichage toolbar et popup
- /*   $('#map').click(function(){
+    $('#map').click(function(){
          $('#ajout_bateau').hide();
           $('#ajout_pins').hide();
            $('#ajout_batiment').hide();
-    });*/
+    });
     $('#bateau').click(function () { //faire apparaittre le popup des bateaux
         $('#ajout_bateau').css('display', 'block');
     });
