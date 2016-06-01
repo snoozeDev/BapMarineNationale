@@ -2,8 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ff471cc4-f97b-4747-a921-9bcef0e2f4ca" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/css/style.css" afterPath="$PROJECT_DIR$/css/style.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/map.php" afterPath="$PROJECT_DIR$/map.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/css/styleIndex.css" afterPath="$PROJECT_DIR$/css/styleIndex.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/index.php" afterPath="$PROJECT_DIR$/index.php" />
     </list>
     <ignored path="marinenational.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -28,23 +28,77 @@
       <file leaf-file-name="style.css" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/css/style.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-6.372549">
-              <caret line="1390" column="1" selection-start-line="1390" selection-start-column="1" selection-end-line="1390" selection-end-column="1" />
+            <state vertical-scroll-proportion="-0.625">
+              <caret line="1390" column="0" selection-start-line="1390" selection-start-column="0" selection-end-line="1390" selection-end-column="0" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="map.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="map.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/map.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.68586385">
-              <caret line="284" column="12" selection-start-line="284" selection-start-column="12" selection-end-line="284" selection-end-column="12" />
+            <state vertical-scroll-proportion="-16.333334">
+              <caret line="284" column="0" selection-start-line="284" selection-start-column="0" selection-end-line="284" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="styleIndex.css" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/css/styleIndex.css">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-6.372549">
+              <caret line="710" column="3" selection-start-line="710" selection-start-column="3" selection-end-line="710" selection-end-column="3" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="index.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/index.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-14.666667">
+              <caret line="263" column="14" selection-start-line="263" selection-start-column="14" selection-end-line="263" selection-end-column="14" />
               <folding>
-                <marker date="1464609359000" expanded="true" signature="13091:13196" placeholder="SELECT id, m... save_marine_table" />
-                <marker date="1464609359000" expanded="true" signature="13376:13387" placeholder="..." />
-                <marker date="1464609359000" expanded="true" signature="13420:13431" placeholder="..." />
+                <element signature="n#style#0;n#div#0;n#main#0;n#body#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#1;n#main#0;n#body#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#2;n#main#0;n#body#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#h4#0;n#div#2;n#main#0;n#body#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#h2#0;n#a#0;n#div#3;n#main#0;n#body#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#h2#0;n#a#1;n#div#3;n#main#0;n#body#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#h2#0;n#a#2;n#div#3;n#main#0;n#body#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#h2#0;n#a#3;n#div#3;n#main#0;n#body#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#h2#0;n#a#4;n#div#3;n#main#0;n#body#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#h2#0;n#a#5;n#div#3;n#main#0;n#body#0;n#!!top" expanded="true" />
+                <marker date="1464786967000" expanded="true" signature="1722:1827" placeholder="SELECT id, m... save_marine_table" />
+                <marker date="1464786967000" expanded="true" signature="1956:1986" placeholder="..." />
+                <marker date="1464786967000" expanded="true" signature="1987:2437" placeholder="..." />
+                <marker date="1464786967000" expanded="true" signature="2025:2432" placeholder="..." />
+                <marker date="1464786967000" expanded="true" signature="2071:2082" placeholder="..." />
+                <marker date="1464786967000" expanded="true" signature="2229:2245" placeholder="..." />
+                <marker date="1464786967000" expanded="true" signature="2346:2377" placeholder="..." />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="db.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/db.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.2748691">
+              <caret line="7" column="2" selection-start-line="7" selection-start-column="2" selection-end-line="7" selection-end-column="2" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="db.php.example" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/db.php.example">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="8" column="2" selection-start-line="8" selection-start-column="2" selection-end-line="8" selection-end-column="2" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -69,11 +123,13 @@
       <list>
         <option value="$PROJECT_DIR$/index.html" />
         <option value="$PROJECT_DIR$/js/icone.js" />
-        <option value="$PROJECT_DIR$/db.php" />
         <option value="$PROJECT_DIR$/js/map.js" />
         <option value="$PROJECT_DIR$/js/function.js" />
         <option value="$PROJECT_DIR$/css/style.css" />
         <option value="$PROJECT_DIR$/map.php" />
+        <option value="$PROJECT_DIR$/css/styleIndex.css" />
+        <option value="$PROJECT_DIR$/index.php" />
+        <option value="$PROJECT_DIR$/db.php" />
       </list>
     </option>
   </component>
@@ -87,7 +143,8 @@
   </component>
   <component name="PhpWorkspaceProjectConfiguration" backward_compatibility_performed="true" />
   <component name="ProjectFrameBounds">
-    <option name="y" value="57" />
+    <option name="x" value="18" />
+    <option name="y" value="45" />
     <option name="width" value="1280" />
     <option name="height" value="692" />
   </component>
@@ -116,8 +173,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
-      <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -136,36 +191,10 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="BapMarineNationale" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="BapMarineNationale" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="js" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="BapMarineNationale" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="BapMarineNationale" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="css" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
         </subPane>
       </pane>
+      <pane id="Scope" />
+      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -224,10 +253,10 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="57" width="1280" height="692" extended-state="0" />
+    <frame x="18" y="45" width="1280" height="692" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.23505655" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.23828755" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -306,11 +335,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="367" column="17" selection-start-line="367" selection-start-column="17" selection-end-line="367" selection-end-column="17" />
-          <folding>
-            <marker date="1464609359000" expanded="true" signature="13091:13196" placeholder="SELECT id, m... save_marine_table" />
-            <marker date="1464609359000" expanded="true" signature="13376:13387" placeholder="..." />
-            <marker date="1464609359000" expanded="true" signature="13420:13431" placeholder="..." />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -341,11 +366,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="367" column="17" selection-start-line="367" selection-start-column="17" selection-end-line="367" selection-end-column="17" />
-          <folding>
-            <marker date="1464609359000" expanded="true" signature="13091:13196" placeholder="SELECT id, m... save_marine_table" />
-            <marker date="1464609359000" expanded="true" signature="13376:13387" placeholder="..." />
-            <marker date="1464609359000" expanded="true" signature="13420:13431" placeholder="..." />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -376,11 +397,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="367" column="17" selection-start-line="367" selection-start-column="17" selection-end-line="367" selection-end-column="17" />
-          <folding>
-            <marker date="1464609359000" expanded="true" signature="13091:13196" placeholder="SELECT id, m... save_marine_table" />
-            <marker date="1464609359000" expanded="true" signature="13376:13387" placeholder="..." />
-            <marker date="1464609359000" expanded="true" signature="13420:13431" placeholder="..." />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -411,11 +428,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="367" column="17" selection-start-line="367" selection-start-column="17" selection-end-line="367" selection-end-column="17" />
-          <folding>
-            <marker date="1464609359000" expanded="true" signature="13091:13196" placeholder="SELECT id, m... save_marine_table" />
-            <marker date="1464609359000" expanded="true" signature="13376:13387" placeholder="..." />
-            <marker date="1464609359000" expanded="true" signature="13420:13431" placeholder="..." />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -446,11 +459,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="367" column="17" selection-start-line="367" selection-start-column="17" selection-end-line="367" selection-end-column="17" />
-          <folding>
-            <marker date="1464609359000" expanded="true" signature="13091:13196" placeholder="SELECT id, m... save_marine_table" />
-            <marker date="1464609359000" expanded="true" signature="13376:13387" placeholder="..." />
-            <marker date="1464609359000" expanded="true" signature="13420:13431" placeholder="..." />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -488,11 +497,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="357" column="17" selection-start-line="357" selection-start-column="17" selection-end-line="357" selection-end-column="17" />
-          <folding>
-            <marker date="1464609359000" expanded="true" signature="13091:13196" placeholder="SELECT id, m... save_marine_table" />
-            <marker date="1464609359000" expanded="true" signature="13376:13387" placeholder="..." />
-            <marker date="1464609359000" expanded="true" signature="13420:13431" placeholder="..." />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -523,11 +528,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="357" column="17" selection-start-line="357" selection-start-column="17" selection-end-line="357" selection-end-column="17" />
-          <folding>
-            <marker date="1464609359000" expanded="true" signature="13091:13196" placeholder="SELECT id, m... save_marine_table" />
-            <marker date="1464609359000" expanded="true" signature="13376:13387" placeholder="..." />
-            <marker date="1464609359000" expanded="true" signature="13420:13431" placeholder="..." />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -558,11 +559,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="357" column="17" selection-start-line="357" selection-start-column="17" selection-end-line="357" selection-end-column="17" />
-          <folding>
-            <marker date="1464609359000" expanded="true" signature="13091:13196" placeholder="SELECT id, m... save_marine_table" />
-            <marker date="1464609359000" expanded="true" signature="13376:13387" placeholder="..." />
-            <marker date="1464609359000" expanded="true" signature="13420:13431" placeholder="..." />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -582,29 +579,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/boussole.png">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/db.php.example">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="1" column="0" selection-start-line="1" selection-start-column="0" selection-end-line="8" selection-end-column="2" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/.gitignore">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/map.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.40509915">
-          <caret line="61761" column="12" selection-start-line="61761" selection-start-column="7" selection-end-line="61761" selection-end-column="12" />
         </state>
       </provider>
     </entry>
@@ -620,7 +598,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.16997167">
           <caret line="4" column="12" selection-start-line="4" selection-start-column="11" selection-end-line="4" selection-end-column="12" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -654,13 +631,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/css/styleIndex.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-0.16109422">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/css/reset.css">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -676,23 +646,69 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/css/style.css">
+    <entry file="file://$PROJECT_DIR$/css/styleIndex.css">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-6.372549">
-          <caret line="1390" column="1" selection-start-line="1390" selection-start-column="1" selection-end-line="1390" selection-end-column="1" />
+          <caret line="710" column="3" selection-start-line="710" selection-start-column="3" selection-end-line="710" selection-end-column="3" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/css/style.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-0.625">
+          <caret line="1390" column="0" selection-start-line="1390" selection-start-column="0" selection-end-line="1390" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/map.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.68586385">
-          <caret line="284" column="12" selection-start-line="284" selection-start-column="12" selection-end-line="284" selection-end-column="12" />
+        <state vertical-scroll-proportion="-16.333334">
+          <caret line="284" column="0" selection-start-line="284" selection-start-column="0" selection-end-line="284" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/index.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-14.666667">
+          <caret line="263" column="14" selection-start-line="263" selection-start-column="14" selection-end-line="263" selection-end-column="14" />
           <folding>
-            <marker date="1464609359000" expanded="true" signature="13091:13196" placeholder="SELECT id, m... save_marine_table" />
-            <marker date="1464609359000" expanded="true" signature="13376:13387" placeholder="..." />
-            <marker date="1464609359000" expanded="true" signature="13420:13431" placeholder="..." />
+            <element signature="n#style#0;n#div#0;n#main#0;n#body#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#1;n#main#0;n#body#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#2;n#main#0;n#body#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#h4#0;n#div#2;n#main#0;n#body#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#h2#0;n#a#0;n#div#3;n#main#0;n#body#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#h2#0;n#a#1;n#div#3;n#main#0;n#body#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#h2#0;n#a#2;n#div#3;n#main#0;n#body#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#h2#0;n#a#3;n#div#3;n#main#0;n#body#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#h2#0;n#a#4;n#div#3;n#main#0;n#body#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#h2#0;n#a#5;n#div#3;n#main#0;n#body#0;n#!!top" expanded="true" />
+            <marker date="1464786967000" expanded="true" signature="1722:1827" placeholder="SELECT id, m... save_marine_table" />
+            <marker date="1464786967000" expanded="true" signature="1956:1986" placeholder="..." />
+            <marker date="1464786967000" expanded="true" signature="1987:2437" placeholder="..." />
+            <marker date="1464786967000" expanded="true" signature="2025:2432" placeholder="..." />
+            <marker date="1464786967000" expanded="true" signature="2071:2082" placeholder="..." />
+            <marker date="1464786967000" expanded="true" signature="2229:2245" placeholder="..." />
+            <marker date="1464786967000" expanded="true" signature="2346:2377" placeholder="..." />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/db.php.example">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="8" column="2" selection-start-line="8" selection-start-column="2" selection-end-line="8" selection-end-column="2" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/db.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.2748691">
+          <caret line="7" column="2" selection-start-line="7" selection-start-column="2" selection-end-line="7" selection-end-column="2" />
+          <folding />
         </state>
       </provider>
     </entry>
