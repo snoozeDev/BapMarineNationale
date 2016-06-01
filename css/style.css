@@ -159,7 +159,6 @@ html,body {
 	z-index: 1000;
 	padding: 5%;
 	bottom:0;
-	right:20px;
 	background-color: transparent;
     text-align: center;
 }
@@ -856,7 +855,6 @@ a, a:visited {
 	padding: 10px 20px 10px 20px;
 	border: solid #1f628d 2px 2px 0px 2px;
 	position: relative;
-	right: 20px;
 
 }
 
