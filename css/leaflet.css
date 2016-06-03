@@ -477,3 +477,17 @@
 	background: #fff;
 	border: 1px solid #666;
 	}
+
+/* Media Query */
+@media screen and (min-width: 1200px){
+	.leaflet-top {
+		top: inherit;
+		bottom: 70px;
+	};
+	.leaflet-control {
+		position: relative;
+		z-index: 7;
+		pointer-events: auto;
+
+	};
+}
