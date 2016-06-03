@@ -346,7 +346,7 @@ text-decoration: none;
 	height: 150px;
 	z-index: 1000;
 	position: absolute;
-	bottom: .5%;
+	top: .5%;
 	width: 150px;
 	left: .5%;
 	text-align: center;
