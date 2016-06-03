@@ -482,7 +482,7 @@
 @media screen and (min-width: 1200px){
 	.leaflet-top {
 		top: inherit;
-		bottom: 70px;
+		bottom: 60px;
 	};
 	.leaflet-control {
 		position: relative;

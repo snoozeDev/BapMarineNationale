@@ -231,9 +231,10 @@ text-decoration: none;
 }
 #toolbar{
 	position: absolute;
-	top :25%;
-	left:1%;
+	top :88%;
+	left:15%;
 	width: 4%;
+	display: -webkit-inline-box;
 
 }
 .profondeur{
@@ -1431,7 +1432,17 @@ p.blast{
 
 /* TV SCREEN QUERY */
 @media screen and (min-width: 1200px){
-	.sidebar-btn {top : 90%;};
+	.sidebar-btn {top : 87%;};
+	#boussole{
+		height: 150px;
+		z-index: 1000;
+		position: absolute;
+		bottom: 1.5%;
+		width: 150px;
+		left:80%;
+		text-align: center;
+
+}
 }
 
 /*fin mediaqueries*/
