@@ -305,19 +305,19 @@
                     <div  class="bouton  filtres">
                         <input class="checkbox" id="checkbox1" type="checkbox">
                         <label id="profondeur" for="checkbox1"></label>
-                        <span class="options">Cacher les profondeurs</span>
+                        <span class="options">Profondeurs</span>
                     </div>
                     
                     <div class="bouton">
                         <input class="checkbox" id="checkbox2" type="checkbox">
                         <label id="riv" for="checkbox2"></label>
-                        <span class="options">Cacher les côtes et les rivières</span>
+                        <span class="options">Côtes & rivières</span>
                     </div>
                     
                     <div class="bouton">
                         <input class="checkbox" id="checkbox3" type="checkbox">
                         <label id="structures" for="checkbox3"></label>
-                        <span class="options">Cacher les structures</span>
+                        <span class="options">Structures</span>
                     </div>
                     
                 </div>
