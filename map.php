@@ -303,19 +303,19 @@
                 <div class="options-cont">
                     <h3 class="filtres_title">Filtres des éléments natifs</h3>
                     <div  class="bouton  filtres">
-                        <input class="checkbox" id="checkbox1" type="checkbox">
+                        <input class="checkbox" id="checkbox1" type="checkbox" checked="true">
                         <label id="profondeur" for="checkbox1"></label>
                         <span class="options">Profondeurs</span>
                     </div>
                     
                     <div class="bouton">
-                        <input class="checkbox" id="checkbox2" type="checkbox">
+                        <input class="checkbox" id="checkbox2" type="checkbox" checked="true">
                         <label id="riv" for="checkbox2"></label>
                         <span class="options">Côtes & rivières</span>
                     </div>
                     
                     <div class="bouton">
-                        <input class="checkbox" id="checkbox3" type="checkbox">
+                        <input class="checkbox" id="checkbox3" type="checkbox" checked="true">
                         <label id="structures" for="checkbox3"></label>
                         <span class="options">Structures</span>
                     </div>
