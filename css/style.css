@@ -232,9 +232,9 @@ text-decoration: none;
 #toolbar{
 	position: absolute;
 	top :25%;
-	//left:15%;
+	/* left:15%; */
 	width: 4%;
-	//display: -webkit-inline-box;
+	/* display: -webkit-inline-box; */
 
 }
 .profondeur{
