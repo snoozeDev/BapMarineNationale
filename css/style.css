@@ -231,10 +231,10 @@ text-decoration: none;
 }
 #toolbar{
 	position: absolute;
-	top :88%;
-	left:15%;
+	top :25%;
+	//left:15%;
 	width: 4%;
-	display: -webkit-inline-box;
+	//display: -webkit-inline-box;
 
 }
 .profondeur{
@@ -1422,6 +1422,7 @@ p.blast{
 /*MediaQueries*/
 
 /* SMALL SCREEN QUERY */
+/*
 @media screen and (min-width: 0px) and (max-width: 1200px) {
     .filtres{padding-top: 10px;}
     .bouton{margin-bottom: 5px}
@@ -1429,8 +1430,10 @@ p.blast{
     .save{margin-top: 3px;}
     .onglet{margin-top: 5px}
 }
+*/
 
 /* TV SCREEN QUERY */
+/*
 @media screen and (min-width: 1200px){
 	.sidebar-btn {top : 87%;};
 	#boussole{
@@ -1443,7 +1446,7 @@ p.blast{
 		text-align: center;
 
 }
-}
+*/
 
 /*fin mediaqueries*/
 
