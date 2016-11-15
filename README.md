@@ -3,18 +3,17 @@
 Notes techniques sur la BapMarineNationale; réalisée au second semestre de l'année 2015/2016.
 Projet réalisé par Quentin Delamare, Simon Antonelli, Theo Hinfray, Mathieu Rella et Nicolas Gauvin dans le cadre de l'agence MDR.
 
-<h2>Pour les A2 | Installation complète :</h2>
+<h2>Installation complète (Windows):</h2>
 
-<strong>Nécessite MAMP (Mac) / WAMP (Windows) ET Git ( Lien Windows : <a href="https://git-scm.com/download/win">https://git-scm.com/download/win</a>)</strong>
+<h3>Installation de WAMP et mise en place des dossier :</h3>
 
-<strong>Utilisation de Git</strong> : <a href="http://www.commentcamarche.net/faq/13094-utiliser-git-sous-windows">http://www.commentcamarche.net/faq/13094-utiliser-git-sous-windows</a> (sans faire le test)
 
-### Windows :
-<ol>
-	<li> Allez dans le dossier /htdocs de WAMP et creez un dossier pour le projet.</li>
-	<li> </li>
-</ol>
 
+<h3>Installation de Git for Windows :</h3> 
+
+1. Téléchargez <a href="https://github.com/git-for-windows/git/releases/v2.10.2.windows.1">Git for Windows</a> (en bas de la page).
+2. Installez dans "C:/Program Files/Git", puis séléctionnez toutes les cases sauf la dernière, puis séléctionnez "Use Git from Git Bash only", puis laisez tout par défault.
+3. Trouvez Git Bash sur votre Bureau et lancez-le. Ceci est votre <strong>Console Git</strong> dans laquelle vous ferez vos commandes Git.
 
 <h2>Setup de l'installation :</h2>
 
