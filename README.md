@@ -5,10 +5,15 @@ Projet réalisé par Quentin Delamare, Simon Antonelli, Theo Hinfray, Mathieu Re
 
 <h2>Pour les A2 | Installation complète :</h2>
 
-<strong>Nécessite MAMP (Mac) ou WAMP (Windows)</strong>
+<strong>Nécessite MAMP (Mac) / WAMP (Windows) ET Git ( Lien Windows : <a href="https://git-scm.com/download/win">https://git-scm.com/download/win</a>)</strong>
 
-### Mac :
+<strong>Utilisation de Git</strong> : <a href="http://www.commentcamarche.net/faq/13094-utiliser-git-sous-windows">http://www.commentcamarche.net/faq/13094-utiliser-git-sous-windows</a> (sans faire le test)
 
+### Windows :
+<ol>
+	<li> Allez dans le dossier /htdocs de WAMP et creez un dossier pour le projet.</li>
+	<li> </li>
+</ol>
 
 
 <h2>Setup de l'installation :</h2>
