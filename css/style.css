@@ -231,10 +231,10 @@ text-decoration: none;
 }
 #toolbar{
 	position: absolute;
-	top :25%;
-	/* left:15%; */
-	width: 4%;
-	/* display: -webkit-inline-box; */
+	bottom :10%;
+	left:10%;
+	width: 5%;
+	display: -webkit-inline-box;
 
 }
 .profondeur{
