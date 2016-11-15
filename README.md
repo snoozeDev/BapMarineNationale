@@ -15,7 +15,7 @@ Projet réalisé par Quentin Delamare, Simon Antonelli, Theo Hinfray, Mathieu Re
 
 1. Dans le dossier "C:/MAMP/htdocs", créez un dossier qui sera votre dossier du projet.
 2. Ouvrez votre Console Git et tapez <code>cd C:/MAMP/htdocs/votre_dossier</code> et appuyez sur Entrée.
-3. Puis tapez <code>git clone https://github.com/jblafon/BapMarine2017.git</code> et appuyez sur Entrée.
+3. Puis tapez <code>git clone https://github.com/NicolasGauvin/BapMarineNationale.git</code> et appuyez sur Entrée.
 
 <h2>Commandes Git</h2>
 
@@ -23,14 +23,14 @@ Git va nous permettre de travailler sur le même projet en même temps mais <str
 
 <h3>Envoyer un fichier vers le git :</h3>
 1. ouvrir la Console Git
-2. tapez <code>cd C:/MAMP/htdocs/Votre_dossier/BapMarine2017</code>
+2. tapez <code>cd C:/MAMP/htdocs/Votre_dossier/BapMarineNationale</code>
 3. tapez <code>git add le_fichier_modifié.html</code> pour ajouter le fichier à la liste de push (répetez si vous avez modifié plusieurs fichiers)
 4. tapez <code>git commit -m "descriptif de vos modifs"</code> <strong>N'oubliez pas de décrire vos modifs svp</strong>
 5. tapez <code>git origin master</code>
 
 <h3>Récuperer les fichier depuis le Git :</h3>
 1. ouvrir la Console Git
-2. tapez <code>cd C:/MAMP/htdocs/Votre_dossier/BapMarine2017</code>
+2. tapez <code>cd C:/MAMP/htdocs/Votre_dossier/BapMarineNationale</code>
 3. tapez <code>git pull</code>
 
 <h2>Mise en place de la base de donnée :</h2>
@@ -39,10 +39,10 @@ Git va nous permettre de travailler sur le même projet en même temps mais <str
 
 1. Allez sur PhpMyAdmin de votre localhost.
 2. Créez une nouvelle base de donnée en collation <code>ut8_general_ci</code>.
-3. Cliquez sur la base de donnée puis sur l'onglet "Import" et importez le fichier "votre_dossier/BapMarine2017/sql/marine_nationale_db.sql".
+3. Cliquez sur la base de donnée puis sur l'onglet "Import" et importez le fichier "votre_dossier/BapMarineNationale/sql/marine_nationale_db.sql".
 
 <h3>Changement des identifiants de connection à la base de donnée:</h3>
-1. Dans "BapMarine2017", créez un fichier "db.php"
+1. Dans "BapMarineNationale", créez un fichier "db.php"
 2. Ouvrez le fichier "db.php.example" et copiez le contenu dans "db.php"
 3. Remplacer la ligne 6 par <code>$db = 'votre_base_de_données';</code>
 
