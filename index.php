@@ -213,13 +213,13 @@
     <h3>1 – Fonction zoom/dé-zoom</h3>
     </br>
     <div> <p class="tutoriel">Pour zoomer et dé-zoomer,
-        utilisez les boutons "+" et "-" situés en haut à gauche de la carte.</p>
+        utilisez les boutons "+" et "-" sur la carte.</p>
       <img class="gif" src="image/9.gif" border="0"></div>
 
     <h3>2 - Cacher certains éléments de la carte</h3>
     </br>
     <div> <p class="tutoriel">En déployant le pannel situé à la droite de la carte,
-        vous pouvez cocher certaines cases qui vous permettent de masquer certaines éléments de la carte
+        vous pouvez décocher certaines cases qui vous permettent de masquer certains éléments de la carte
         comme les infrastructures, les cours d'eaux ou encore les profondeurs.</p>
       <img class="gif" src="image/10.gif" border="0"></div>
 

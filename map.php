@@ -187,8 +187,8 @@
                 <div id="timer">
 
 
-                    <span id="days">00J</span>
-                    <span id="hours">00H</span>
+                    <span id="days">0 j</span>
+                    <span id="hours">00 :</span>
                     <span id="mins">00</span>
 
                 </div>
@@ -283,7 +283,7 @@
             </div>
 
 
-            <h1 class="parametre">Parametres</h1>
+            <h1 class="parametre">Paramètres</h1>
 
             <div class="onglets">
 
