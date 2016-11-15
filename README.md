@@ -11,11 +11,22 @@ Projet réalisé par Quentin Delamare, Simon Antonelli, Theo Hinfray, Mathieu Re
 2. Installez dans "C:/Program Files/Git", puis séléctionnez toutes les cases sauf la dernière, puis séléctionnez "Use Git from Git Bash only", puis laisez tout par défault.
 3. Trouvez Git Bash sur votre Bureau et lancez-le. Ceci est votre <strong>Console Git</strong> dans laquelle vous ferez vos commandes Git.
 
-<h2>Mise en place des fichiers :</h2>
+<h3>Mise en place des fichiers :</h3>
 
 1. Dans le dossier "C:/MAMP/htdocs", créez un dossier qui sera votre dossier du projet.
 2. Ouvrez votre Console Git et tapez <code>cd C:/MAMP/htdocs/votre_dossier</code> et appuyez sur Enter.
 3. Puis tapez <code>git clone https://github.com/NicolasGauvin/BapMarineNationale.git</code> et appuyez sur Enter.
+
+<h2>Commandes Git</h2>
+
+Git va nous permettre de travailler sur le même projet en même temps mais <strong>NE JAMAIS ÊTRE SUR UN MÊME FICHIER EN MÊME TEMPS !!!</strong>
+
+<h4>Envoyer un fichier vers le git :</h4>
+1. ouvrir la Console Git
+2. tapez <code>cd C:/MAMP/htdocs/Votre_dossier/BapMarineNationale</code>
+3. tapez <code>git add le_fichier_modifié.html</code> pour ajouter le fichier à la liste de push (répetez si vous avez modifié plusieurs fichiers)
+4. tapez <code>git commit -m "descriptif de vos modifs"</code> <strong>N'oubliez pas de décrire vos modifs svp</strong>
+5. tapez git 
 
 <strong>Importation de la base de données:</strong><br>
 Importer sur PhpMyAdmin la fichier .sql de votre choix. Vous trouverez ce fichier dans le fichier "sql".<br>
