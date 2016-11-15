@@ -8,27 +8,45 @@ Projet réalisé par Quentin Delamare, Simon Antonelli, Theo Hinfray, Mathieu Re
 <h3>Installation de Git for Windows :</h3> 
 
 1. Téléchargez <a href="https://github.com/git-for-windows/git/releases/v2.10.2.windows.1">Git for Windows</a> (en bas de la page).
-2. Installez dans "C:/Program Files/Git", puis séléctionnez toutes les cases sauf la dernière, puis séléctionnez "Use Git from Git Bash only", puis laisez tout par défault.
+2. Installez dans "C:/Program Files/Git", puis séléctionnez toutes les cases sauf la dernière, puis séléctionnez "Use Git from Git Bash only", puis laissez tout par défault.
 3. Trouvez Git Bash sur votre Bureau et lancez-le. Ceci est votre <strong>Console Git</strong> dans laquelle vous ferez vos commandes Git.
 
-<h2>Mise en place des fichiers :</h2>
+<h3>Mise en place des fichiers :</h3>
 
 1. Dans le dossier "C:/MAMP/htdocs", créez un dossier qui sera votre dossier du projet.
-2. Ouvrez votre Console Git et tapez <code>cd C:/MAMP/htdocs/votre_dossier</code> et appuyez sur Enter.
-3. Puis tapez <code>git clone https://github.com/NicolasGauvin/BapMarineNationale.git</code> et appuyez sur Enter.
+2. Ouvrez votre Console Git et tapez <code>cd C:/MAMP/htdocs/votre_dossier</code> et appuyez sur Entrée.
+3. Puis tapez <code>git clone https://github.com/NicolasGauvin/BapMarineNationale.git</code> et appuyez sur Entrée.
 
-<strong>Importation de la base de données:</strong><br>
-Importer sur PhpMyAdmin la fichier .sql de votre choix. Vous trouverez ce fichier dans le fichier "sql".<br>
-Si vous souhaitez importer la base de donnée, prenez le fichier marine_nationale_db.<br>
-Si vous souhaitez seulement la table , prenez le fichier marine_nationale_table.<br>
+<h2>Commandes Git</h2>
 
-<strong>Changement des identifiants de connection à la base de donnée:</strong><br>
-Copiez/collez le contenu de "db.php.example" dans un nouveau fichier que vous nommerez "db.php".<br>
-Remplacez les informations par celles de votre base de données.<br>
+Git va nous permettre de travailler sur le même projet en même temps mais <strong>NE JAMAIS ÊTRE SUR UN MÊME FICHIER EN MÊME TEMPS !!!</strong>
+
+<h3>Envoyer un fichier vers le git :</h3>
+1. ouvrir la Console Git
+2. tapez <code>cd C:/MAMP/htdocs/Votre_dossier/BapMarineNationale</code>
+3. tapez <code>git add le_fichier_modifié.html</code> pour ajouter le fichier à la liste de push (répetez si vous avez modifié plusieurs fichiers)
+4. tapez <code>git commit -m "descriptif de vos modifs"</code> <strong>N'oubliez pas de décrire vos modifs svp</strong>
+5. tapez <code>git origin master</code>
+
+<h3>Récuperer les fichier depuis le Git :</h3>
+1. ouvrir la Console Git
+2. tapez <code>cd C:/MAMP/htdocs/Votre_dossier/BapMarineNationale</code>
+3. tapez <code>git pull</code>
+
+<h2>Mise en place de la base de donnée :</h2>
+
+<h3>Importation de la base de données:</h3>
+
+1. Allez sur PhpMyAdmin de votre localhost.
+2. Créez une nouvelle base de donnée en collation <code>ut8_general_ci</code>.
+3. Cliquez sur la base de donnée puis sur l'onglet "Import" et importez le fichier "votre_dossier/BapMarineNationale/sql/marine_nationale_db.sql".
+
+<h3>Changement des identifiants de connection à la base de donnée:</h3>
+1. Dans "BapMarineNationale", créez un fichier "db.php"
+2. Ouvrez le fichier "db.php.example" et copiez le contenu dans "db.php"
+3. Remplacer la ligne 6 par <code>$db = 'votre_base_de_données';</code>
+
 (<i>ATTENTION</i> :  ne pas supprimer ou renommer le fichier initial)<br>
-
-<strong>Mise en place de la repository:</strong><br>
-Clonez la repository dans le dossier web de la de votre serveur local (MAMP,WAMP...) ou uploadez la sur votre serveur en ligne.<br>
 
 
 <h2>Architecture du code :</h2>
