@@ -3,6 +3,8 @@
 Notes techniques sur la BapMarineNationale; réalisée au second semestre de l'année 2015/2016.
 Projet réalisé par Quentin Delamare, Simon Antonelli, Theo Hinfray, Mathieu Rella et Nicolas Gauvin dans le cadre de l'agence MDR.
 
+<h2>Pour les A2 | Installation complète :</h2>
+
 <h2>Setup de l'installation :</h2>
 
 <strong>Importation de la base de données:</strong><br>
