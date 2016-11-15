@@ -26,7 +26,12 @@ Git va nous permettre de travailler sur le même projet en même temps mais <str
 2. tapez <code>cd C:/MAMP/htdocs/Votre_dossier/BapMarineNationale</code>
 3. tapez <code>git add le_fichier_modifié.html</code> pour ajouter le fichier à la liste de push (répetez si vous avez modifié plusieurs fichiers)
 4. tapez <code>git commit -m "descriptif de vos modifs"</code> <strong>N'oubliez pas de décrire vos modifs svp</strong>
-5. tapez git 
+5. tapez <code>git origin master</code>
+
+<h4>Récuperer les fichier depuis le Git :</h4>
+1. ouvrir la Console Git
+2. tapez <code>cd C:/MAMP/htdocs/Votre_dossier/BapMarineNationale</code>
+3. tapez <code>git pull</code>
 
 <strong>Importation de la base de données:</strong><br>
 Importer sur PhpMyAdmin la fichier .sql de votre choix. Vous trouverez ce fichier dans le fichier "sql".<br>
