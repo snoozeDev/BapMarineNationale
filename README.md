@@ -5,17 +5,17 @@ Projet réalisé par Quentin Delamare, Simon Antonelli, Theo Hinfray, Mathieu Re
 
 <h2>Installation complète (Windows):</h2>
 
-<h3>Installation de WAMP et mise en place des dossier :</h3>
-
-
-
 <h3>Installation de Git for Windows :</h3> 
 
 1. Téléchargez <a href="https://github.com/git-for-windows/git/releases/v2.10.2.windows.1">Git for Windows</a> (en bas de la page).
 2. Installez dans "C:/Program Files/Git", puis séléctionnez toutes les cases sauf la dernière, puis séléctionnez "Use Git from Git Bash only", puis laisez tout par défault.
 3. Trouvez Git Bash sur votre Bureau et lancez-le. Ceci est votre <strong>Console Git</strong> dans laquelle vous ferez vos commandes Git.
 
-<h2>Setup de l'installation :</h2>
+<h2>Mise en place des fichiers :</h2>
+
+1. Dans le dossier "C:/MAMP/htdocs", créez un dossier qui sera votre dossier du projet.
+2. Ouvrez votre Console Git et tapez <code>cd C:/MAMP/htdocs/votre_dossier</code> et appuyez sur Enter.
+3. Puis tapez <code>git clone https://github.com/NicolasGauvin/BapMarineNationale.git</code> et appuyez sur Enter.
 
 <strong>Importation de la base de données:</strong><br>
 Importer sur PhpMyAdmin la fichier .sql de votre choix. Vous trouverez ce fichier dans le fichier "sql".<br>
